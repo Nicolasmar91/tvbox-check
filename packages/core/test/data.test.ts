@@ -61,7 +61,9 @@ describe("verdicts sur la base réelle", () => {
   });
 
   it("une valeur communautaire ne peut pas être `verified`", () => {
-    const raw = structuredClone(loadRawDatabase()) as { socs: { id: string; ram_max_gb: any }[] };
+    const raw = structuredClone(loadRawDatabase()) as {
+      socs: { id: string; ram_max_gb: { status: string } }[];
+    };
     const s905w = raw.socs.find((s) => s.id === "amlogic-s905w")!;
     s905w.ram_max_gb.status = "verified";
     expect(validateDatabase(raw).ok).toBe(false);
