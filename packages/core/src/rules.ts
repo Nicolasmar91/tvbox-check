@@ -1,7 +1,7 @@
 import { messagesFr as m } from "./messages.fr.ts";
-import type { Database, Soc, Status, VideoLevel } from "./schemas.ts";
+import type { Basis, Database, Soc, Status, VideoLevel } from "./schemas.ts";
 import { worstVerdict } from "./verdict.ts";
-import type { CheckInput, CheckResult, CriterionResult, Verdict } from "./verdict.ts";
+import type { CheckInput, CheckResult, Criterion, CriterionResult, Verdict } from "./verdict.ts";
 
 const VIDEO_ORDER: readonly VideoLevel[] = ["1080p", "4K", "6K", "8K"];
 
@@ -61,81 +61,123 @@ export function evaluate(input: CheckInput, db: Database): CheckResult {
     }
   }
 
-  if (criteria.length === 0) {
-    return { overall: "unknown", criteria };
-  }
+  if (criteria.length === 0) return { overall: "unknown", criteria };
   return { overall: worstVerdict(criteria.map((c) => c.verdict)), criteria };
 }
 
-function missing(
-  criterion: CriterionResult["criterion"],
-  field: string,
-  soc: Soc,
-): CriterionResult {
+interface Sourced<T> {
+  value: T;
+  status: Status;
+  basis: Basis;
+  sources: string[];
+}
+
+interface Comparison<T> {
+  criterion: Criterion;
+  field: string;
+  claimed: string | number;
+  limit: Sourced<T> | null;
+  exceeds: (limit: T) => boolean;
+  messages: {
+    plausible: string;
+    impossible: string;
+    suspect: string;
+  };
+}
+
+/**
+ * Compare une valeur annoncée à une limite sourcée :
+ * - limite inconnue (`null`) ou simple hypothèse non sourcée : `unknown` ;
+ * - limite dépassée : `impossible` si vérifiée (datasheet/fiche constructeur), sinon `suspect` ;
+ * - sinon : `plausible`.
+ */
+function compare<T extends string | number>(soc: Soc, c: Comparison<T>): CriterionResult {
+  const { limit } = c;
+  if (!limit) {
+    return {
+      criterion: c.criterion,
+      verdict: "unknown",
+      message: m.dataMissing(c.field, soc.name),
+      sources: [],
+    };
+  }
+  const base = {
+    criterion: c.criterion,
+    claimed: c.claimed,
+    limit: limit.value as string | number,
+    status: limit.status,
+    basis: limit.basis,
+    sources: limit.sources,
+  };
+  if (limit.basis === "hypothesis") {
+    return { ...base, verdict: "unknown", message: m.hypothesis(c.field, soc.name) };
+  }
+  if (!c.exceeds(limit.value)) {
+    return { ...base, verdict: "plausible", message: c.messages.plausible };
+  }
   return {
-    criterion,
-    verdict: "unknown",
-    message: m.dataMissing(field, soc.name),
-    sources: [],
+    ...base,
+    verdict: breach(limit.status),
+    message: limit.status === "verified" ? c.messages.impossible : c.messages.suspect,
   };
 }
 
 function checkRam(input: CheckInput, soc: Soc, out: CriterionResult[]): void {
-  if (input.ramGb === undefined) return;
-  const max = soc.ram_max_gb;
-  if (!max) return void out.push(missing("ram", "RAM maximale", soc));
-  const bad = input.ramGb > max.value;
-  out.push({
-    criterion: "ram",
-    verdict: bad ? breach(max.status) : "plausible",
-    message: !bad
-      ? m.ramPlausible(input.ramGb, max.value)
-      : max.status === "verified"
-        ? m.ramImpossible(input.ramGb, max.value)
-        : m.ramSuspect(input.ramGb, max.value),
-    claimed: input.ramGb,
-    limit: max.value,
-    status: max.status,
-    sources: max.sources,
-  });
+  const claimed = input.ramGb;
+  if (claimed === undefined) return;
+  const max = soc.ram_max_gb?.value ?? 0;
+  out.push(
+    compare(soc, {
+      criterion: "ram",
+      field: "RAM maximale",
+      claimed,
+      limit: soc.ram_max_gb,
+      exceeds: (limit) => claimed > limit,
+      messages: {
+        plausible: m.ramPlausible(claimed, max),
+        impossible: m.ramImpossible(claimed, max),
+        suspect: m.ramSuspect(claimed, max),
+      },
+    }),
+  );
 }
 
 function checkEthernet(input: CheckInput, soc: Soc, out: CriterionResult[]): void {
-  if (input.ethernet === undefined) return;
-  const max = soc.ethernet_max_mbps;
-  if (!max) return void out.push(missing("ethernet", "débit Ethernet maximal", soc));
-  const bad = input.ethernet === "1G" && max.value <= 100;
-  out.push({
-    criterion: "ethernet",
-    verdict: bad ? breach(max.status) : "plausible",
-    message: !bad
-      ? m.ethernetPlausible
-      : max.status === "verified"
-        ? m.ethernetImpossible(max.value)
-        : m.ethernetSuspect(max.value),
-    claimed: input.ethernet,
-    limit: max.value,
-    status: max.status,
-    sources: max.sources,
-  });
+  const claimed = input.ethernet;
+  if (claimed === undefined) return;
+  const max = soc.ethernet_max_mbps?.value ?? 0;
+  out.push(
+    compare(soc, {
+      criterion: "ethernet",
+      field: "débit Ethernet maximal",
+      claimed,
+      limit: soc.ethernet_max_mbps,
+      exceeds: (limit) => claimed === "1G" && limit <= 100,
+      messages: {
+        plausible: m.ethernetPlausible,
+        impossible: m.ethernetImpossible(max),
+        suspect: m.ethernetSuspect(max),
+      },
+    }),
+  );
 }
 
 function checkVideo(input: CheckInput, soc: Soc, out: CriterionResult[]): void {
-  if (input.videoMax === undefined) return;
-  const max = soc.video_max_decode;
-  if (!max) return void out.push(missing("video", "décodage vidéo maximal", soc));
-  const bad = VIDEO_ORDER.indexOf(input.videoMax) > VIDEO_ORDER.indexOf(max.value);
-  out.push({
-    criterion: "video",
-    verdict: bad ? breach(max.status) : "plausible",
-    message: !bad
-      ? m.videoPlausible(input.videoMax, max.value)
-      : max.status === "verified"
-        ? m.videoImpossible(input.videoMax, max.value)
-        : m.videoSuspect(input.videoMax, max.value),
-    claimed: input.videoMax,
-    limit: max.value,
-    status: max.status,
-    sources: max.sources,
-  });
+  const claimed = input.videoMax;
+  if (claimed === undefined) return;
+  const max = soc.video_max_decode?.value ?? "";
+  out.push(
+    compare(soc, {
+      criterion: "video",
+      field: "décodage vidéo maximal",
+      claimed,
+      limit: soc.video_max_decode,
+      exceeds: (limit) => VIDEO_ORDER.indexOf(claimed) > VIDEO_ORDER.indexOf(limit),
+      messages: {
+        plausible: m.videoPlausible(claimed, max),
+        impossible: m.videoImpossible(claimed, max),
+        suspect: m.videoSuspect(claimed, max),
+      },
+    }),
+  );
 }

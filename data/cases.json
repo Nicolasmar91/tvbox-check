@@ -60,6 +60,26 @@
     "added": "2026-10-24"
   },
   {
+    "id": "x88-pro-x3-s905x3-4gb",
+    "marketed_name": "X88 Pro X3",
+    "marketed": {
+      "soc": "amlogic-s905x3",
+      "ram_gb": 4,
+      "storage_gb": null
+    },
+    "observed": {
+      "soc": "amlogic-s905x3",
+      "ram_gb": 2,
+      "storage_gb": null,
+      "confidence": "reported"
+    },
+    "how_observed": ["bootloader-log"],
+    "type": "inflated-specs",
+    "summary_fr": "Annoncée 4 Go ; des utilisateurs CoreELEC rapportent que le bootloader n'en détecte que 2 Go et que seul le DTB 2 Go démarre. Un autre fil conteste en comptant 8 puces mémoire : à lire au cas par cas.",
+    "sources": ["src-coreelec-x88prox3-dtb", "src-coreelec-x88prox3-fake4gb"],
+    "added": "2026-10-24"
+  },
+  {
     "id": "x96-mini-s905w-4-32",
     "marketed_name": "X96 mini",
     "marketed": {

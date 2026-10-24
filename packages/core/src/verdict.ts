@@ -1,4 +1,4 @@
-import type { Case, Status, VideoLevel } from "./schemas.ts";
+import type { Basis, Case, Status, VideoLevel } from "./schemas.ts";
 
 export type Verdict = "impossible" | "suspect" | "unknown" | "plausible";
 
@@ -23,6 +23,8 @@ export interface CriterionResult {
   limit?: string | number;
   /** Statut de la donnée utilisée pour la comparaison. */
   status?: Status;
+  /** Nature de la preuve de la donnée utilisée (datasheet, communauté, hypothèse). */
+  basis?: Basis;
   sources: string[];
   /** Cas documenté associé (critère `knownCase`). */
   case?: Case;

@@ -104,6 +104,7 @@
         "enum": [
           "armbian-boot",
           "uart-log",
+          "bootloader-log",
           "chip-photo",
           "datasheet",
           "aida64",

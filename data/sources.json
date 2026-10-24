@@ -1,5 +1,19 @@
 [
   {
+    "id": "src-allwinner-h6-datasheet",
+    "url": "https://files.pine64.org/doc/datasheet/pine-h64/Allwinner_H6%20V200_Datasheet_V1.1.pdf",
+    "title": "Allwinner, H6 V200 Datasheet v1.1 (hébergée par Pine64)",
+    "type": "datasheet",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-amlogic-s905x-datasheet",
+    "url": "https://www.scs.stanford.edu/~zyedidia/docs/amlogic/s905x.pdf",
+    "title": "Amlogic, S905X Datasheet rév. 0.2 (copie hébergée par un tiers)",
+    "type": "datasheet",
+    "accessed": "2026-10-24"
+  },
+  {
     "id": "src-androidpctv-q96x3",
     "url": "https://androidpctv.com/?p=35824",
     "title": "AndroidPCTV, annonces Q96 X3 (H313)",
@@ -21,10 +35,143 @@
     "accessed": "2026-10-24"
   },
   {
+    "id": "src-armbian-rk322x",
+    "url": "https://forum.armbian.com/topic/34923-csc-armbian-for-rk322x-tv-box-boards/",
+    "title": "Armbian forum, Armbian pour les boxes RK322x",
+    "type": "forum",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-armbian-rk3328-vs-rk3318",
+    "url": "https://forum.armbian.com/topic/11639-rk3328-vs-rk3318-which-one-should-i-choose/",
+    "title": "Armbian forum, RK3328 vs RK3318",
+    "type": "forum",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-armbian-s905w-1gb-of-2gb",
+    "url": "https://forum.armbian.com/topic/29446-armbian-shows-~1gb-out-of-2gb/",
+    "title": "Armbian forum, Armbian n'affiche que ~1 Go sur 2 Go",
+    "type": "forum",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-armbian-s905x-2gb",
+    "url": "https://forum.armbian.com/topic/13851-curious-problem-2gb-ram-s905x",
+    "title": "Armbian forum, problème curieux sur une S905X 2 Go",
+    "type": "forum",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-armbian-tx10pro-h313",
+    "url": "https://forum.armbian.com/topic/60883-installing-armbian-on-the-tx10-pro-allwinner-h313/",
+    "title": "Armbian forum, Armbian sur TX10 Pro (H313)",
+    "type": "forum",
+    "accessed": "2026-10-24"
+  },
+  {
     "id": "src-armbian-tx3mini",
     "url": "https://forum.armbian.com/topic/26966-armbian-on-android-tv-box-tx3-mini-4gb-32gb-only-recognized-1gb-ram-and-6gb-rom/",
     "title": "Armbian forum, Tx3 mini 4GB/32GB reconnu 1GB/6GB",
     "type": "forum",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-armbian-x96q-h313",
+    "url": "https://forum.armbian.com/topic/28292-fake-chinese-x96q-the-18-gb-with-the-h313/",
+    "title": "Armbian forum, X96Q avec H313 aux specs douteuses",
+    "type": "forum",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-cnx-rk3229",
+    "url": "https://www.cnx-software.com/2016/01/12/rockchip-rk3229-and-rk3399-32-bit-and-64-bit-processors-support-4k-10-bit-h-265-and-hdmi-2-0/",
+    "title": "CNX Software, présentation du RK3229",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-cnx-s905m-s912-roadmap",
+    "url": "https://www.cnx-software.com/2015/12/17/amlogic-s905m-and-s912-processors-to-support-4k-vp9-hdmi-2-0a-built-in-dac-and-more/",
+    "title": "CNX Software, S905X et S912 : 4K VP9, HDMI 2.0a",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-cnx-s905x2-vs-s905x3",
+    "url": "https://cnx-software.com/?p=68038",
+    "title": "CNX Software, S905X2 vs S905X3",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-cnx-s905x3-specs",
+    "url": "https://www.cnx-software.com/2019/04/12/amlogic-s905x3-specifications-block-diagram/",
+    "title": "CNX Software, spécifications du S905X3",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-cnx-s912-specs",
+    "url": "https://www.cnx-software.com/2016/04/06/amlogic-s912-processor-specifications/",
+    "title": "CNX Software, spécifications du S912",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-cnx-tx3mini",
+    "url": "https://www.cnx-software.com/2017/08/14/tanix-tx3-mini-tv-box-is-powered-by-amlogic-s905w-soc/",
+    "title": "CNX Software, Tanix TX3 Mini (S905W)",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-cnx-x88pro-rk3318",
+    "url": "https://www.cnx-software.com/2019/05/09/wechip-x88-pro-rk3318-tv-box/",
+    "title": "CNX Software, Wechip X88 Pro (RK3318)",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-coreelec-x88prox3-dtb",
+    "url": "https://discourse.coreelec.org/t/x88-pro-x3-choose-dtb-and-install-to-emmc/11089?page=2",
+    "title": "CoreELEC, X88 Pro X3 : choisir le DTB",
+    "type": "forum",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-coreelec-x88prox3-fake4gb",
+    "url": "https://discourse.coreelec.org/t/x88-pro-x3-with-fake-4gb-ram/15921",
+    "title": "CoreELEC, X88 Pro X3 avec 4 Go de RAM douteux",
+    "type": "forum",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-linux-sunxi-h3",
+    "url": "https://linux-sunxi.org/H3",
+    "title": "linux-sunxi, Allwinner H3",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-linux-sunxi-h313",
+    "url": "https://linux-sunxi.org/H313",
+    "title": "linux-sunxi, Allwinner H313",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-linux-sunxi-h616",
+    "url": "https://linux-sunxi.org/H616",
+    "title": "linux-sunxi, Allwinner H616",
+    "type": "article",
+    "accessed": "2026-10-24"
+  },
+  {
+    "id": "src-rockchip-rk3328-datasheet",
+    "url": "https://rockchip.fr/RK3328%20datasheet%20V1.2.pdf",
+    "title": "Rockchip, RK3328 Datasheet v1.2",
+    "type": "datasheet",
     "accessed": "2026-10-24"
   },
   {

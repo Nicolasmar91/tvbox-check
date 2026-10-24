@@ -45,6 +45,11 @@ export function validateDatabase(raw: unknown): ValidationResult {
       checkSources(`socs/${soc.id}/${f}`, soc[f]?.sources ?? []);
     }
   }
+  for (const soc of db.socs) {
+    soc.community_findings.forEach((f, i) =>
+      checkSources(`socs/${soc.id}/community_findings/${i}`, f.sources),
+    );
+  }
   for (const c of db.cases) {
     checkSources(`cases/${c.id}`, c.sources);
     for (const side of ["marketed", "observed"] as const) {

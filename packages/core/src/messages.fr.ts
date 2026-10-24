@@ -5,6 +5,8 @@ export const messagesFr = {
     `Le SoC « ${soc} » n'est pas dans la base. Vous pouvez contribuer en l'ajoutant.`,
   dataMissing: (field: string, soc: string) =>
     `La donnée « ${field} » n'est pas connue pour le SoC ${soc}.`,
+  hypothesis: (field: string, soc: string) =>
+    `La valeur attendue pour « ${field} » (SoC ${soc}) n'est pas encore sourcée : pas de verdict.`,
   ramPlausible: (claimed: number, max: number) =>
     `${claimed} Go de RAM annoncés, le SoC en gère jusqu'à ${max} Go : plausible.`,
   ramImpossible: (claimed: number, max: number) =>

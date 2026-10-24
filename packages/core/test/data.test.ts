@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { evaluate } from "../src/rules.ts";
 import { validateDatabase } from "../src/validate.ts";
 import { loadRawDatabase } from "../../../scripts/load-data.ts";
 
@@ -40,5 +41,29 @@ describe("validateDatabase", () => {
     const db = base() as unknown as { socs: { ram_max_gb: unknown }[] };
     db.socs[0]!.ram_max_gb = { value: 2, status: "verified", sources: [] };
     expect(validateDatabase(db).ok).toBe(false);
+  });
+});
+
+describe("verdicts sur la base réelle", () => {
+  const db = () => validateDatabase(loadRawDatabase()).db!;
+
+  it("S905X : 4 Go impossible (datasheet), 3 Go plausible", () => {
+    expect(evaluate({ soc: "amlogic-s905x", ramGb: 4 }, db()).overall).toBe("impossible");
+    expect(evaluate({ soc: "amlogic-s905x", ramGb: 3 }, db()).overall).toBe("plausible");
+  });
+
+  it("S905W : 4 Go suspect seulement (base communautaire)", () => {
+    expect(evaluate({ soc: "amlogic-s905w", ramGb: 4 }, db()).overall).toBe("suspect");
+  });
+
+  it("H6 : limite de RAM contradictoire, donc aucun verdict", () => {
+    expect(evaluate({ soc: "allwinner-h6", ramGb: 8 }, db()).overall).toBe("unknown");
+  });
+
+  it("une valeur communautaire ne peut pas être `verified`", () => {
+    const raw = structuredClone(loadRawDatabase()) as { socs: { id: string; ram_max_gb: any }[] };
+    const s905w = raw.socs.find((s) => s.id === "amlogic-s905w")!;
+    s905w.ram_max_gb.status = "verified";
+    expect(validateDatabase(raw).ok).toBe(false);
   });
 });

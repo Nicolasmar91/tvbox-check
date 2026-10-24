@@ -9,12 +9,29 @@
     "ram_max_gb": {
       "value": 2,
       "status": "unverified",
+      "basis": "hypothesis",
       "sources": []
     },
-    "ram_types": null,
-    "ethernet_max_mbps": null,
-    "video_max_decode": null,
-    "notes_fr": null
+    "ram_types": {
+      "value": ["LPDDR2", "LPDDR3", "DDR3", "DDR3L"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-linux-sunxi-h3"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-linux-sunxi-h3"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-linux-sunxi-h3"]
+    },
+    "community_findings": [],
+    "notes_fr": "Capacité maximale de RAM non sourcée (2 Go attendus). Le MAC gigabit nécessite un PHY externe : le PHY intégré est 10/100."
   },
   {
     "id": "allwinner-h313",
@@ -27,40 +44,93 @@
     "ram_types": null,
     "ethernet_max_mbps": null,
     "video_max_decode": null,
-    "notes_fr": "Limite de RAM à rechercher. Des annonces à 8 Go ont été signalées (voir le cas Q96 X3)."
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Le wiki linux-sunxi présente le H313 comme une variante d'entrée de gamme du H616 pour TV box.",
+        "sources": ["src-linux-sunxi-h313"]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "Des fils Armbian signalent des boxes H313 dont la RAM réelle est de 1 Go malgré une annonce de 4 Go, et d'autres à 4 Go DDR3 authentiques : le SoC ne suffit pas à trancher, il faut lire les puces.",
+        "sources": ["src-armbian-tx10pro-h313", "src-armbian-x96q-h313"]
+      }
+    ],
+    "notes_fr": "Limite de RAM à rechercher (aucune source trouvée)."
   },
   {
     "id": "allwinner-h6",
     "vendor": "Allwinner",
     "name": "H6",
-    "aliases": ["H6"],
+    "aliases": ["H6", "H6 V200"],
     "cores": null,
     "arch": null,
     "ram_max_gb": {
       "value": 3,
       "status": "unverified",
-      "sources": []
+      "basis": "hypothesis",
+      "sources": ["src-allwinner-h6-datasheet"]
     },
-    "ram_types": null,
-    "ethernet_max_mbps": null,
-    "video_max_decode": null,
-    "notes_fr": "Limite fréquemment rappelée sur les forums : même une box 4 Go n'en exploiterait que 3."
+    "ram_types": {
+      "value": ["DDR4", "DDR3", "DDR3L", "LPDDR2", "LPDDR3"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-allwinner-h6-datasheet"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-allwinner-h6-datasheet"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-allwinner-h6-datasheet"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "La datasheet H6 V200 mentionne « jusqu'à 2 Go d'espace d'adressage » avec 2 chip selects, ce qui est ambigu ; des forums rappellent par ailleurs qu'une box 4 Go n'en exploiterait que 3 Go. Les deux affirmations divergent : aucune limite n'est retenue.",
+        "sources": ["src-allwinner-h6-datasheet", "src-armbian-choice-of-tv-box"]
+      }
+    ],
+    "notes_fr": "Limite de RAM contradictoire entre la datasheet (2 Go d'espace d'adressage) et les retours de forums (3 Go) : valeur 3 Go conservée comme hypothèse, sans verdict."
   },
   {
     "id": "allwinner-h616",
     "vendor": "Allwinner",
     "name": "H616",
     "aliases": ["H616"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A53",
     "ram_max_gb": {
       "value": 4,
       "status": "unverified",
-      "sources": []
+      "basis": "community",
+      "sources": ["src-linux-sunxi-h616"]
     },
-    "ram_types": null,
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR3", "LPDDR4"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-linux-sunxi-h616"]
+    },
     "ethernet_max_mbps": null,
-    "video_max_decode": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-linux-sunxi-h616"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "Le wiki linux-sunxi indique jusqu'à 4 Go (DDR3, DDR3L, DDR4, LPDDR3, LPDDR4) et précise que le plan mémoire dépasse 4 Go pour accueillir 4 Go complets.",
+        "sources": ["src-linux-sunxi-h616"]
+      }
+    ],
     "notes_fr": null
   },
   {
@@ -73,80 +143,180 @@
     "ram_max_gb": {
       "value": 2,
       "status": "unverified",
+      "basis": "community",
       "sources": ["src-armbian-tx3mini"]
     },
-    "ram_types": null,
-    "ethernet_max_mbps": null,
-    "video_max_decode": null,
-    "notes_fr": "Limite de RAM fréquemment rappelée sur les forums Armbian (source forum seulement pour l'instant)."
+    "ram_types": {
+      "value": ["DDR3"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-tx3mini"]
+    },
+    "ethernet_max_mbps": {
+      "value": 100,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-tx3mini"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-tx3mini"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "Sous Armbian, une TX3 Mini annoncée 4 Go n'a été reconnue qu'avec 1 Go ; la lecture des puces mémoire a conclu à une 1/8.",
+        "sources": ["src-armbian-tx3mini"]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "Attention aux faux positifs : un fil Armbian décrit une box réellement à 2 Go dont seul 1 Go était visible, à cause du fichier DTB utilisé. Lire les puces avant de conclure.",
+        "sources": ["src-armbian-s905w-1gb-of-2gb"]
+      },
+      {
+        "topic": "identity",
+        "summary_fr": "Article CNX : le S905W est présenté comme un S905X allégé, limité au 4K à 30 images/s, avec Ethernet 10/100.",
+        "sources": ["src-cnx-tx3mini"]
+      }
+    ],
+    "notes_fr": "Aucune datasheet publique trouvée pour le S905W : valeurs d'après les retours communautaires."
   },
   {
     "id": "amlogic-s905x",
     "vendor": "Amlogic",
     "name": "S905X",
     "aliases": ["S905X"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A53",
     "ram_max_gb": {
-      "value": 2,
-      "status": "unverified",
-      "sources": []
+      "value": 3,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-amlogic-s905x-datasheet"]
     },
-    "ram_types": null,
-    "ethernet_max_mbps": null,
-    "video_max_decode": null,
-    "notes_fr": null
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR2", "LPDDR3"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-amlogic-s905x-datasheet"]
+    },
+    "ethernet_max_mbps": {
+      "value": 100,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-amlogic-s905x-datasheet"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-amlogic-s905x-datasheet"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "La datasheet annonce jusqu'à 3 Go, alors que les retours communautaires portent surtout sur des boxes à 2 Go (un fil Armbian décrit une box 2 Go dont Linux n'exploite qu'environ 720 Mo, cause non résolue).",
+        "sources": ["src-amlogic-s905x-datasheet", "src-armbian-s905x-2gb"]
+      }
+    ],
+    "notes_fr": "Datasheet Amlogic révision 0.2 (distribution Wesion), consultée via une copie hébergée par un tiers."
   },
   {
     "id": "amlogic-s905x2",
     "vendor": "Amlogic",
     "name": "S905X2",
     "aliases": ["S905X2"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A53",
     "ram_max_gb": {
       "value": 4,
       "status": "unverified",
-      "sources": []
+      "basis": "community",
+      "sources": ["src-cnx-s905x2-vs-s905x3"]
     },
-    "ram_types": null,
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR3", "LPDDR4"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905x2-vs-s905x3"]
+    },
     "ethernet_max_mbps": null,
     "video_max_decode": null,
-    "notes_fr": "DDR4."
+    "community_findings": [
+      {
+        "topic": "ethernet",
+        "summary_fr": "Le débit Ethernet dépend de la carte : l'X96 Max (S905X2) a existé en versions 100M et gigabit.",
+        "sources": ["src-cnx-s905x2-vs-s905x3"]
+      }
+    ],
+    "notes_fr": "Aucune datasheet trouvée."
   },
   {
     "id": "amlogic-s905x3",
     "vendor": "Amlogic",
     "name": "S905X3",
     "aliases": ["S905X3"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A55",
     "ram_max_gb": {
       "value": 4,
       "status": "unverified",
-      "sources": []
+      "basis": "community",
+      "sources": ["src-cnx-s905x2-vs-s905x3"]
     },
     "ram_types": null,
     "ethernet_max_mbps": null,
-    "video_max_decode": null,
-    "notes_fr": "DDR4."
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905x3-specs"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "Plusieurs fils CoreELEC rapportent des boxes S905X3 (X88 Pro X3) vendues 4 Go où le bootloader n'en détecte que 2 Go ; un autre fil contredit en comptant 8 puces et conclut à 4 Go. À lire au cas par cas.",
+        "sources": ["src-coreelec-x88prox3-fake4gb", "src-coreelec-x88prox3-dtb"]
+      }
+    ],
+    "notes_fr": "Une datasheet publique existe (copie Hardkernel, marquée confidentielle) mais son fichier est trop volumineux pour la lecture automatique : à relire manuellement avant de passer en verified."
   },
   {
     "id": "amlogic-s912",
     "vendor": "Amlogic",
     "name": "S912",
     "aliases": ["S912"],
-    "cores": null,
-    "arch": null,
+    "cores": 8,
+    "arch": "Cortex-A53",
     "ram_max_gb": {
-      "value": 3,
+      "value": 4,
       "status": "unverified",
-      "sources": []
+      "basis": "community",
+      "sources": ["src-cnx-s905m-s912-roadmap"]
     },
     "ram_types": null,
     "ethernet_max_mbps": null,
-    "video_max_decode": null,
-    "notes_fr": null
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s912-specs"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "Les documents de 2015-2016 relayés par CNX divergent : jusqu'à 4 Go d'un côté, 2 Go de l'autre. Limite retenue : 4 Go (borne haute, pour éviter de faux soupçons).",
+        "sources": ["src-cnx-s905m-s912-roadmap", "src-cnx-s912-specs"]
+      },
+      {
+        "topic": "ethernet",
+        "summary_fr": "Le MAC gigabit mentionné dans un document préliminaire a été retiré des documents suivants : aucune valeur retenue.",
+        "sources": ["src-cnx-s912-specs"]
+      }
+    ],
+    "notes_fr": "Aucune datasheet trouvée."
   },
   {
     "id": "rockchip-rk3228a",
@@ -158,62 +328,118 @@
     "ram_max_gb": {
       "value": 2,
       "status": "unverified",
+      "basis": "hypothesis",
       "sources": []
     },
     "ram_types": null,
     "ethernet_max_mbps": null,
     "video_max_decode": null,
-    "notes_fr": null
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "Des fils Armbian rapportent des boxes RK3228A / RK3229 réellement à 2 Go (DDR3 Micron), et des cas à 1 Go : aucune limite matérielle n'y est énoncée.",
+        "sources": ["src-armbian-rk322x"]
+      }
+    ],
+    "notes_fr": "Limite de RAM (2 Go attendus) non sourcée."
   },
   {
     "id": "rockchip-rk3229",
     "vendor": "Rockchip",
     "name": "RK3229",
     "aliases": ["RK3229"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A7",
     "ram_max_gb": {
       "value": 2,
       "status": "unverified",
+      "basis": "hypothesis",
       "sources": []
     },
-    "ram_types": null,
-    "ethernet_max_mbps": null,
-    "video_max_decode": null,
-    "notes_fr": null
+    "ram_types": {
+      "value": ["DDR3"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-rk3229"]
+    },
+    "ethernet_max_mbps": {
+      "value": 100,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-rk3229"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-rk3229"]
+    },
+    "community_findings": [
+      {
+        "topic": "ethernet",
+        "summary_fr": "Selon l'article de lancement, Ethernet 10/100 (PHY 100 Mbit/s) ; certaines descriptions du code U-Boot parlent de gigabit : les sources divergent.",
+        "sources": ["src-cnx-rk3229"]
+      }
+    ],
+    "notes_fr": "Limite de RAM (2 Go attendus) non sourcée."
   },
   {
     "id": "rockchip-rk3318",
     "vendor": "Rockchip",
     "name": "RK3318",
     "aliases": ["RK3318"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A53",
     "ram_max_gb": {
       "value": 4,
       "status": "unverified",
-      "sources": []
+      "basis": "community",
+      "sources": ["src-armbian-rk3328-vs-rk3318", "src-cnx-x88pro-rk3318"]
     },
     "ram_types": null,
     "ethernet_max_mbps": null,
     "video_max_decode": null,
-    "notes_fr": null
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Le RK3318 est décrit comme une version économique du RK3328, sans documentation officielle ; des boxes RK3318 à 4 Go (puces mémoire comptées) existent.",
+        "sources": ["src-armbian-rk3328-vs-rk3318", "src-cnx-x88pro-rk3318"]
+      }
+    ],
+    "notes_fr": "Aucune datasheet propre au RK3318 ; la valeur suit celle du RK3328."
   },
   {
     "id": "rockchip-rk3328",
     "vendor": "Rockchip",
     "name": "RK3328",
     "aliases": ["RK3328"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A53",
     "ram_max_gb": {
       "value": 4,
-      "status": "unverified",
-      "sources": []
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3328-datasheet"]
     },
-    "ram_types": null,
-    "ethernet_max_mbps": null,
-    "video_max_decode": null,
-    "notes_fr": null
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "LPDDR3", "DDR4"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3328-datasheet"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3328-datasheet"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3328-datasheet"]
+    },
+    "community_findings": [],
+    "notes_fr": "Datasheet Rockchip v1.2 : GMAC 10/100/1000 (RGMII) ; PHY intégré 10/100 seulement."
   }
 ]

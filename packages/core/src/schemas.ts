@@ -3,16 +3,32 @@ import { z } from "zod";
 export const StatusSchema = z.enum(["verified", "unverified"]);
 export type Status = z.infer<typeof StatusSchema>;
 
+/**
+ * Nature de la preuve derrière une valeur :
+ * - `datasheet` / `vendor` : document constructeur lu (seuls à pouvoir donner `verified`) ;
+ * - `community` : constats de forums/articles (`unverified`, verdict maximal `suspect`) ;
+ * - `hypothesis` : valeur attendue non sourcée (aucun verdict, `unknown`).
+ */
+export const BasisSchema = z.enum(["datasheet", "vendor", "community", "hypothesis"]);
+export type Basis = z.infer<typeof BasisSchema>;
+
 /** Valeur technique accompagnée de sa provenance. `null` = inconnu (jamais inventé). */
 function sourced<T extends z.ZodType>(value: T) {
   return z
     .object({
       value,
       status: StatusSchema,
+      basis: BasisSchema,
       sources: z.array(z.string()),
     })
-    .refine((v) => v.status !== "verified" || v.sources.length > 0, {
-      message: "une valeur `verified` exige au moins une source",
+    .refine((v) => v.status !== "verified" || v.basis === "datasheet" || v.basis === "vendor", {
+      message: "une valeur `verified` exige une base `datasheet` ou `vendor`",
+    })
+    .refine((v) => v.basis === "hypothesis" || v.sources.length > 0, {
+      message: "une valeur non `hypothesis` exige au moins une source",
+    })
+    .refine((v) => v.basis !== "hypothesis" || v.status === "unverified", {
+      message: "une `hypothesis` ne peut pas être `verified`",
     })
     .nullable();
 }
@@ -29,6 +45,13 @@ export const SourceSchema = z.object({
 });
 export type Source = z.infer<typeof SourceSchema>;
 
+export const CommunityFindingSchema = z.object({
+  topic: z.enum(["ram", "ethernet", "video", "identity", "other"]),
+  summary_fr: z.string().min(1),
+  sources: z.array(z.string()).min(1),
+});
+export type CommunityFinding = z.infer<typeof CommunityFindingSchema>;
+
 export const SocSchema = z.object({
   id: z.string().min(1),
   vendor: z.string().min(1),
@@ -40,6 +63,7 @@ export const SocSchema = z.object({
   ram_types: sourced(z.array(z.string())),
   ethernet_max_mbps: sourced(z.number().positive()),
   video_max_decode: sourced(VideoLevelSchema),
+  community_findings: z.array(CommunityFindingSchema),
   notes_fr: z.string().nullable(),
 });
 export type Soc = z.infer<typeof SocSchema>;
@@ -47,6 +71,7 @@ export type Soc = z.infer<typeof SocSchema>;
 export const HowObservedSchema = z.enum([
   "armbian-boot",
   "uart-log",
+  "bootloader-log",
   "chip-photo",
   "datasheet",
   "aida64",

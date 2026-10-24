@@ -2,8 +2,14 @@ import { describe, expect, it } from "vitest";
 import { evaluate, normalizeName } from "../src/rules.ts";
 import type { Database } from "../src/schemas.ts";
 
-function sourced<T>(value: T, status: "verified" | "unverified" = "unverified") {
-  return { value, status, sources: status === "verified" ? ["src-a"] : [] };
+function sourced<T>(
+  value: T,
+  status: "verified" | "unverified" = "unverified",
+  basis: "datasheet" | "community" | "hypothesis" = status === "verified"
+    ? "datasheet"
+    : "community",
+) {
+  return { value, status, basis, sources: basis === "hypothesis" ? [] : ["src-a"] };
 }
 
 function makeDb(status: "verified" | "unverified"): Database {
@@ -29,6 +35,7 @@ function makeDb(status: "verified" | "unverified"): Database {
         ram_types: sourced(["DDR3"], status),
         ethernet_max_mbps: sourced(100, status),
         video_max_decode: sourced("4K", status),
+        community_findings: [],
         notes_fr: null,
       },
       {
@@ -42,6 +49,7 @@ function makeDb(status: "verified" | "unverified"): Database {
         ram_types: null,
         ethernet_max_mbps: null,
         video_max_decode: null,
+        community_findings: [],
         notes_fr: null,
       },
     ],
@@ -98,6 +106,23 @@ describe("RAM", () => {
 
   it("résout un SoC par alias, insensible à la casse", () => {
     expect(evaluate({ soc: "s905w", ramGb: 4 }, verifiedDb).overall).toBe("impossible");
+  });
+});
+
+describe("Base de la donnée", () => {
+  it("suspect avec une base communautaire, impossible avec une datasheet", () => {
+    const community = evaluate({ soc: "amlogic-s905w", ramGb: 4 }, unverifiedDb);
+    expect(community.criteria[0]).toMatchObject({ verdict: "suspect", basis: "community" });
+    const datasheet = evaluate({ soc: "amlogic-s905w", ramGb: 4 }, verifiedDb);
+    expect(datasheet.criteria[0]).toMatchObject({ verdict: "impossible", basis: "datasheet" });
+  });
+
+  it("une hypothèse non sourcée ne produit jamais de verdict de fraude", () => {
+    const db = makeDb("unverified");
+    db.socs[0]!.ram_max_gb = sourced(2, "unverified", "hypothesis");
+    const r = evaluate({ soc: "amlogic-s905w", ramGb: 8 }, db);
+    expect(r.overall).toBe("unknown");
+    expect(r.criteria[0]).toMatchObject({ verdict: "unknown", basis: "hypothesis" });
   });
 });
 
