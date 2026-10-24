@@ -1,0 +1,219 @@
+[
+  {
+    "id": "allwinner-h3",
+    "vendor": "Allwinner",
+    "name": "H3",
+    "aliases": ["H3"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 2,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": null
+  },
+  {
+    "id": "allwinner-h313",
+    "vendor": "Allwinner",
+    "name": "H313",
+    "aliases": ["H313"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": "Limite de RAM à rechercher. Des annonces à 8 Go ont été signalées (voir le cas Q96 X3)."
+  },
+  {
+    "id": "allwinner-h6",
+    "vendor": "Allwinner",
+    "name": "H6",
+    "aliases": ["H6"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 3,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": "Limite fréquemment rappelée sur les forums : même une box 4 Go n'en exploiterait que 3."
+  },
+  {
+    "id": "allwinner-h616",
+    "vendor": "Allwinner",
+    "name": "H616",
+    "aliases": ["H616"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 4,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": null
+  },
+  {
+    "id": "amlogic-s905w",
+    "vendor": "Amlogic",
+    "name": "S905W",
+    "aliases": ["S905W", "meson-gxl-s905w"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": {
+      "value": 2,
+      "status": "unverified",
+      "sources": ["src-armbian-tx3mini"]
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": "Limite de RAM fréquemment rappelée sur les forums Armbian (source forum seulement pour l'instant)."
+  },
+  {
+    "id": "amlogic-s905x",
+    "vendor": "Amlogic",
+    "name": "S905X",
+    "aliases": ["S905X"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 2,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": null
+  },
+  {
+    "id": "amlogic-s905x2",
+    "vendor": "Amlogic",
+    "name": "S905X2",
+    "aliases": ["S905X2"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 4,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": "DDR4."
+  },
+  {
+    "id": "amlogic-s905x3",
+    "vendor": "Amlogic",
+    "name": "S905X3",
+    "aliases": ["S905X3"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 4,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": "DDR4."
+  },
+  {
+    "id": "amlogic-s912",
+    "vendor": "Amlogic",
+    "name": "S912",
+    "aliases": ["S912"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 3,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": null
+  },
+  {
+    "id": "rockchip-rk3228a",
+    "vendor": "Rockchip",
+    "name": "RK3228A",
+    "aliases": ["RK3228A"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 2,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": null
+  },
+  {
+    "id": "rockchip-rk3229",
+    "vendor": "Rockchip",
+    "name": "RK3229",
+    "aliases": ["RK3229"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 2,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": null
+  },
+  {
+    "id": "rockchip-rk3318",
+    "vendor": "Rockchip",
+    "name": "RK3318",
+    "aliases": ["RK3318"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 4,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": null
+  },
+  {
+    "id": "rockchip-rk3328",
+    "vendor": "Rockchip",
+    "name": "RK3328",
+    "aliases": ["RK3328"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": {
+      "value": 4,
+      "status": "unverified",
+      "sources": []
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "notes_fr": null
+  }
+]

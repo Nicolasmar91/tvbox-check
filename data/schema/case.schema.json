@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "marketed_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "marketed": {
+      "type": "object",
+      "properties": {
+        "soc": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ram_gb": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "storage_gb": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "soc",
+        "ram_gb",
+        "storage_gb"
+      ],
+      "additionalProperties": false
+    },
+    "observed": {
+      "type": "object",
+      "properties": {
+        "soc": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ram_gb": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "storage_gb": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "confirmed",
+            "probable",
+            "reported"
+          ]
+        }
+      },
+      "required": [
+        "soc",
+        "ram_gb",
+        "storage_gb",
+        "confidence"
+      ],
+      "additionalProperties": false
+    },
+    "how_observed": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "armbian-boot",
+          "uart-log",
+          "chip-photo",
+          "datasheet",
+          "aida64",
+          "f3-test",
+          "linux-proc"
+        ]
+      }
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "inflated-specs",
+        "wrong-soc",
+        "impossible-claim",
+        "relabeled"
+      ]
+    },
+    "summary_fr": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sources": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "added": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    }
+  },
+  "required": [
+    "id",
+    "marketed_name",
+    "marketed",
+    "observed",
+    "how_observed",
+    "type",
+    "summary_fr",
+    "sources",
+    "added"
+  ],
+  "additionalProperties": false
+}

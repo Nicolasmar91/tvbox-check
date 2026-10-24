@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "soc_detected": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ram_total_mb": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "storage_total_gb": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "ethernet_speed": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "100M",
+            "1G",
+            "none"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "kernel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dtb": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tool": {
+      "type": "string"
+    },
+    "tool_version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "soc_detected",
+    "ram_total_mb",
+    "storage_total_gb",
+    "ethernet_speed",
+    "kernel",
+    "dtb",
+    "tool",
+    "tool_version"
+  ],
+  "additionalProperties": false
+}

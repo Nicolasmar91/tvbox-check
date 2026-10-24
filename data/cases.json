@@ -1,0 +1,82 @@
+[
+  {
+    "id": "hk1-max-rk3318-4-64",
+    "marketed_name": "HK1 Max",
+    "marketed": {
+      "soc": "rockchip-rk3318",
+      "ram_gb": 4,
+      "storage_gb": 64
+    },
+    "observed": {
+      "soc": "rockchip-rk3318",
+      "ram_gb": 1,
+      "storage_gb": 16,
+      "confidence": "probable"
+    },
+    "how_observed": ["armbian-boot", "uart-log"],
+    "type": "inflated-specs",
+    "summary_fr": "Annoncée 4/64 ; 1 Go de RAM et 16 Go de stockage rapportés sous Armbian, la RAM de 1 Go étant confirmée par un log de boot d'après un contributeur.",
+    "sources": ["src-armbian-hk1max"],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "q96-x3-h313",
+    "marketed_name": "Q96 X3",
+    "marketed": {
+      "soc": "allwinner-h313",
+      "ram_gb": 8,
+      "storage_gb": 128
+    },
+    "observed": {
+      "soc": null,
+      "ram_gb": null,
+      "storage_gb": null,
+      "confidence": "reported"
+    },
+    "how_observed": [],
+    "type": "impossible-claim",
+    "summary_fr": "Annonces jusqu'à 8 Go de RAM et 128 Go de stockage sous Android 13, présentées comme impossibles pour ce SoC d'entrée de gamme.",
+    "sources": ["src-androidpctv-q96x3"],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "tx3-mini-4-32",
+    "marketed_name": "TX3 Mini",
+    "marketed": {
+      "soc": "amlogic-s905w",
+      "ram_gb": 4,
+      "storage_gb": 32
+    },
+    "observed": {
+      "soc": "amlogic-s905w",
+      "ram_gb": 1,
+      "storage_gb": 6,
+      "confidence": "probable"
+    },
+    "how_observed": ["armbian-boot"],
+    "type": "inflated-specs",
+    "summary_fr": "Annoncée 4/32 ; environ 1 Go de RAM et 6 Go de stockage vus sous Armbian. Le consensus du fil évoque plutôt une 1/8.",
+    "sources": ["src-armbian-tx3mini"],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "x96-mini-s905w-4-32",
+    "marketed_name": "X96 mini",
+    "marketed": {
+      "soc": "amlogic-s905w",
+      "ram_gb": 4,
+      "storage_gb": 32
+    },
+    "observed": {
+      "soc": "rockchip-rk3228a",
+      "ram_gb": 1,
+      "storage_gb": 8,
+      "confidence": "reported"
+    },
+    "how_observed": ["armbian-boot"],
+    "type": "wrong-soc",
+    "summary_fr": "Autocollant annonçant un S905W en 4/32 ; un témoignage unique fait état d'un RK3228A avec 1 Go de RAM et 8 Go de stockage sous Armbian.",
+    "sources": ["src-travis-x96mini"],
+    "added": "2026-10-24"
+  }
+]
