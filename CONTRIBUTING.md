@@ -34,3 +34,12 @@ pnpm --filter @tvbox-check/web dev
 ```
 
 Commits conventionnels (`feat:`, `fix:`, `data:`, `docs:`).
+
+## Votre pull request
+
+1. Forkez le dépôt, créez une branche, faites **un seul sujet** par PR.
+2. Lancez `pnpm check` en local : la CI fait exactement les mêmes contrôles.
+3. Ouvrez la PR en remplissant le modèle. Elle sera relue avec la grille publique [REVIEW.md](REVIEW.md).
+4. Corrigez ce qui est demandé ; le mainteneur fusionne quand la CI est verte et la relecture favorable.
+
+Des idées à prendre : [ROADMAP.md](ROADMAP.md). Règles de conduite : [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).

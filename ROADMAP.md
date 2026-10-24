@@ -1,0 +1,26 @@
+# Idées à prendre
+
+Choisissez une idée, ouvrez une issue pour dire que vous la prenez, puis proposez une PR. Les niveaux : **[données]** sans code, **[contenu]** rédaction, **[code]** développement.
+
+## Données
+
+- **[données]** Datasheet officielle pour un SoC resté « communautaire » : S905W, S905X2, S912, H3, H616, RK3229, RK3228A. Il faut une datasheet **lue**, avec sa révision.
+- **[données]** Lever la contradiction sur la RAM maximale du H6 (2 Go d'espace d'adressage selon la datasheet, 3 Go selon les forums).
+- **[données]** Ajouter des SoC fréquents : S905L, S905D, S922X, RK3399, H618, H313 (limite de RAM à sourcer).
+- **[données]** Documenter un cas avec des **preuves fortes** : photos des puces, log UART, test f3 ou H2testw.
+- **[données]** Ajouter une source qui confirme ou contredit un cas existant.
+
+## Contenu
+
+- **[contenu]** Relire le guide « vérifier les vraies specs » et signaler ce qui est faux ou flou.
+- **[contenu]** Traduire le site en anglais (les textes sont centralisés dans `apps/web/src/i18n/`).
+- **[contenu]** Ajouter au guide la lecture des puces mémoire courantes (Samsung, Micron, SK hynix) avec des exemples de références.
+
+## Code
+
+- **[code]** Mesurer Lighthouse mobile (cible ≥ 95) et corriger ce qui bloque.
+- **[code]** Tests de parcours (Playwright) : saisie, verdict, URL partageable.
+- **[code]** Vérification de types des pages `.astro` (l'outil `astro check` ne fonctionne pas encore avec Astro 7).
+- **[code]** Scanner en ligne de commande (niveau 2) qui produit un `Report` (schéma déjà défini dans `packages/core`).
+- **[code]** Import d'un rapport AIDA64 ou Termux (niveau 3).
+- **[code]** Compteurs de votes « moi aussi » par modèle (Worker Cloudflare), en gardant le site statique par défaut.
