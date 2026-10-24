@@ -14,6 +14,13 @@
     "accessed": "2026-10-24"
   },
   {
+    "id": "src-amlogic-s905x3-datasheet",
+    "url": "https://download.kamami.pl/p579347-S905X3_Public_Datasheet_Hardkernel.pdf",
+    "title": "Amlogic, S905X3 Datasheet rév. 02 (copie Hardkernel hébergée par un tiers)",
+    "type": "datasheet",
+    "accessed": "2026-10-24"
+  },
+  {
     "id": "src-androidpctv-q96x3",
     "url": "https://androidpctv.com/?p=35824",
     "title": "AndroidPCTV, annonces Q96 X3 (H313)",
