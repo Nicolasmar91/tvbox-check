@@ -6,17 +6,19 @@
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --check .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p apps/web",
     "test": "vitest run",
     "validate": "tsx scripts/validate-data.ts",
     "schemas": "tsx scripts/generate-schemas.ts",
-    "check": "pnpm lint && pnpm format && pnpm typecheck && pnpm validate && pnpm test"
+    "check": "pnpm lint && pnpm format && pnpm typecheck && pnpm validate && pnpm test && pnpm build",
+    "build": "pnpm --filter @tvbox-check/web build"
   },
   "devDependencies": {
     "@tvbox-check/core": "workspace:^",
     "@types/node": "^26.6.5",
     "eslint": "^10.13.0",
     "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.2",
     "tsx": "^4.23.15",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.72.0",

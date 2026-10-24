@@ -1,0 +1,62 @@
+---
+import { config } from "../config";
+import { fr } from "../i18n/fr";
+
+interface Props {
+  term: string;
+}
+const { term } = Astro.props;
+const enabled = Boolean(config.repo && config.giscus.repoId && config.giscus.categoryId);
+---
+
+<section aria-labelledby="comments-title">
+  <h2 id="comments-title">{fr.model.comments}</h2>
+  {enabled ? (
+    <div>
+      <button
+        type="button"
+        class="btn secondary"
+        id="load-comments"
+        data-term={term}
+        data-repo={config.repo}
+        data-repo-id={config.giscus.repoId}
+        data-category={config.giscus.category}
+        data-category-id={config.giscus.categoryId}
+      >
+        {fr.model.showComments}
+      </button>
+      <div id="comments-host" />
+    </div>
+  ) : (
+    <p class="muted">{fr.model.commentsSoon}</p>
+  )}
+</section>
+
+<script>
+  // giscus n'est chargé qu'à la demande : aucun script ni cookie tiers avant le clic.
+  const btn = document.getElementById("load-comments");
+  btn?.addEventListener("click", () => {
+    const d = btn.dataset;
+    const s = document.createElement("script");
+    s.src = "https://giscus.app/client.js";
+    s.async = true;
+    s.crossOrigin = "anonymous";
+    const attrs: Record<string, string> = {
+      "data-repo": d.repo ?? "",
+      "data-repo-id": d.repoId ?? "",
+      "data-category": d.category ?? "",
+      "data-category-id": d.categoryId ?? "",
+      "data-mapping": "specific",
+      "data-term": d.term ?? "",
+      "data-reactions-enabled": "1",
+      "data-emit-metadata": "0",
+      "data-input-position": "top",
+      "data-theme": "preferred_color_scheme",
+      "data-lang": "fr",
+      "data-loading": "lazy",
+    };
+    for (const [k, v] of Object.entries(attrs)) s.setAttribute(k, v);
+    document.getElementById("comments-host")?.appendChild(s);
+    btn.remove();
+  });
+</script>

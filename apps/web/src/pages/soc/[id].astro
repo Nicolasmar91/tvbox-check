@@ -1,0 +1,128 @@
+---
+import Base from "../../layouts/Base.astro";
+import SourceList from "../../components/SourceList.astro";
+import { db, casesForSoc } from "../../lib/db";
+import { fr } from "../../i18n/fr";
+import type { Soc } from "@tvbox-check/core";
+
+export function getStaticPaths() {
+  return db.socs.map((soc) => ({ params: { id: soc.id }, props: { soc } }));
+}
+
+interface Props {
+  soc: Soc;
+}
+const { soc } = Astro.props;
+const title = `${soc.vendor} ${soc.name} : limites matérielles`;
+const cases = casesForSoc(soc);
+
+const rows = [
+  {
+    label: fr.fields.ramMax,
+    data: soc.ram_max_gb,
+    show: (v: number) => `${v} ${fr.fields.gb}`,
+  },
+  {
+    label: fr.fields.ramTypes,
+    data: soc.ram_types,
+    show: (v: string[]) => v.join(", "),
+  },
+  {
+    label: fr.fields.ethernetMax,
+    data: soc.ethernet_max_mbps,
+    show: (v: number) => `${v} ${fr.fields.mbps}`,
+  },
+  {
+    label: fr.fields.videoMax,
+    data: soc.video_max_decode,
+    show: (v: string) => v,
+  },
+];
+
+const description = `Limites matérielles du SoC ${soc.vendor} ${soc.name} (RAM maximale, Ethernet, vidéo), avec statut et sources, et box documentées.`;
+---
+
+<Base title={title} description={description}>
+  <p>
+    <a href="/soc/">← {fr.soc.indexTitle}</a>
+  </p>
+  <h1>
+    {soc.vendor} {soc.name}
+  </h1>
+  {(soc.cores || soc.arch) && (
+    <p class="lead">
+      {soc.cores ? `${soc.cores} cœurs` : ""}
+      {soc.cores && soc.arch ? " · " : ""}
+      {soc.arch ?? ""}
+    </p>
+  )}
+
+  <h2>{fr.soc.limits}</h2>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Caractéristique</th>
+          <th scope="col">Valeur</th>
+          <th scope="col">Statut</th>
+          <th scope="col">Sources</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <th scope="row">{r.label}</th>
+            <td>
+              {r.data ? (r.show as (v: unknown) => string)(r.data.value) : fr.fields.unknownValue}
+            </td>
+            <td>
+              {r.data ? (
+                <>
+                  <span class={`tag ${r.data.status}`}>{fr.status[r.data.status]}</span>
+                  <span class="tag">{fr.basis[r.data.basis]}</span>
+                </>
+              ) : (
+                "—"
+              )}
+            </td>
+            <td>{r.data ? <SourceList ids={r.data.sources} /> : "—"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  {soc.notes_fr && <p class="notice">{soc.notes_fr}</p>}
+
+  {soc.community_findings.length > 0 && (
+    <>
+      <h2>{fr.soc.findings}</h2>
+      <ul class="plain">
+        {soc.community_findings.map((f) => (
+          <li class="card">
+            <span class="tag">{fr.topic[f.topic]}</span> {f.summary_fr}
+            <SourceList ids={f.sources} />
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <h2>{fr.soc.boxes}</h2>
+  {cases.length === 0 ? (
+    <p class="muted">{fr.soc.noBoxes}</p>
+  ) : (
+    <ul>
+      {cases.map((c) => (
+        <li>
+          <a href={`/modele/${c.id}/`}>{c.marketed_name}</a>
+        </li>
+      ))}
+    </ul>
+  )}
+
+  <p class="actions">
+    <a class="btn" href={`/?soc=${encodeURIComponent(soc.name)}`}>
+      {fr.soc.check}
+    </a>
+  </p>
+</Base>

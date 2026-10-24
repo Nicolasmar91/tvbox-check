@@ -1,0 +1,24 @@
+---
+import { getSources } from "../lib/db";
+
+interface Props {
+  ids: readonly string[];
+}
+const { ids } = Astro.props;
+const list = getSources(ids);
+---
+
+{list.length > 0 && (
+  <ul class="plain" style="margin:0.3rem 0">
+    {list.map((s) => (
+      <li>
+        <a href={s.url} rel="noopener noreferrer" target="_blank">
+          {s.title}
+        </a>{" "}
+        <span class="hint">
+          ({s.type}, consultée le {s.accessed})
+        </span>
+      </li>
+    ))}
+  </ul>
+)}

@@ -1,0 +1,50 @@
+name: Signaler un cas
+description: Un modèle dont les specs annoncées diffèrent du matériel observé.
+title: "Cas : "
+labels: ["cas"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Décrivez une **observation** avec vos mots, sans accusation envers un vendeur ou une marque. Ne copiez pas de texte de forum : résumez et donnez le lien.
+  - type: input
+    id: model
+    attributes:
+      label: Nom du modèle
+    validations:
+      required: true
+  - type: input
+    id: soc
+    attributes:
+      label: SoC annoncé et SoC observé
+      description: Exemple, annoncé S905W, observé RK3228A.
+  - type: textarea
+    id: announced
+    attributes:
+      label: Specs annoncées
+      description: RAM, stockage, Ethernet, vidéo.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Ce que vous avez observé
+    validations:
+      required: true
+  - type: checkboxes
+    id: proof
+    attributes:
+      label: Preuves dont vous disposez
+      options:
+        - label: Photo lisible des puces (RAM, stockage, SoC)
+        - label: Journal UART ou log de bootloader
+        - label: Test de stockage complet (f3 ou H2testw)
+        - label: Démarrage sous Linux ou Armbian
+        - label: Autre (à préciser ci-dessous)
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Adresses des pages, avec leur titre. Joignez vos photos et logs à cette issue.
+    validations:
+      required: true

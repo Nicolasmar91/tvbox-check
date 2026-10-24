@@ -1,0 +1,91 @@
+---
+import Base from "../layouts/Base.astro";
+import { config, issueUrl } from "../config";
+
+const newCase = issueUrl("nouveau-cas.yml");
+const fix = issueUrl("correction-donnee.yml");
+const repoUrl = config.repo ? `https://github.com/${config.repo}` : null;
+---
+
+<Base
+  title="Contribuer"
+  description="Ajouter un cas, un SoC ou corriger une donnée : comment contribuer à la base ouverte tvbox-check."
+>
+  <h1>Contribuer</h1>
+  <p class="lead">
+    La base est ouverte et vit sur GitHub. Chaque donnée a une source et un statut, et c'est ce qui
+    la rend utile.
+  </p>
+
+  <div class="actions">
+    {newCase && (
+      <a class="btn" href={newCase} rel="noopener noreferrer">
+        Signaler un cas
+      </a>
+    )}
+    {fix && (
+      <a class="btn secondary" href={fix} rel="noopener noreferrer">
+        Corriger une donnée
+      </a>
+    )}
+    {repoUrl && (
+      <a class="btn secondary" href={repoUrl} rel="noopener noreferrer">
+        Dépôt GitHub
+      </a>
+    )}
+  </div>
+  {!repoUrl && (
+    <p class="notice">
+      Le dépôt GitHub n'est pas encore public. En attendant, écrivez à{" "}
+      <a href={`mailto:${config.contactEmail}`}>{config.contactEmail}</a>.
+    </p>
+  )}
+
+  <h2>Ce qu'on accepte</h2>
+  <ul>
+    <li>
+      Un <strong>cas</strong> : un modèle dont les specs annoncées diffèrent du matériel observé.
+    </li>
+    <li>
+      Un <strong>SoC</strong> manquant, ou la correction d'une de ses limites matérielles.
+    </li>
+    <li>
+      Une <strong>source</strong> plus solide (datasheet, fiche constructeur) pour une donnée.
+    </li>
+  </ul>
+
+  <h2>Règles de revue</h2>
+  <ul>
+    <li>
+      Un cas passe à <strong>« confirmé »</strong> seulement avec une preuve forte : photo des
+      puces, journal UART ou test de stockage, plus une source.
+    </li>
+    <li>
+      Une valeur passe à <strong>« vérifié »</strong> seulement avec une datasheet ou une fiche
+      constructeur. Les retours de forum seuls plafonnent à « suspect ».
+    </li>
+    <li>Pas de copier-coller de forum : résumez avec vos mots et mettez le lien.</li>
+    <li>
+      Vocabulaire neutre : « cas signalé », « écart observé ». Pas d'accusation envers un vendeur ou
+      une marque.
+    </li>
+  </ul>
+
+  <h2>Bien préparer son signalement</h2>
+  <h3>Photos des puces</h3>
+  <p>
+    Photographiez chaque puce de RAM et de stockage de face, sans reflet, avec le marquage lisible,
+    plus une vue d'ensemble de la carte. Indiquez le nom exact du modèle et l'endroit d'achat (sans
+    nom de vendeur individuel).
+  </p>
+  <h3>Commandes sous Linux</h3>
+  <pre><code>free -m
+lsblk
+cat /proc/cpuinfo | head -20
+dmesg | grep -i -E "memory|mmc|dram"</code></pre>
+  <h3>Citer une source</h3>
+  <p>
+    Donnez l'adresse exacte de la page, son titre et la date de consultation. Pour une datasheet,
+    indiquez la révision du document.
+  </p>
+</Base>

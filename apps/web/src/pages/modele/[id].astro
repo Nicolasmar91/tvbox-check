@@ -1,0 +1,101 @@
+---
+import Base from "../../layouts/Base.astro";
+import SourceList from "../../components/SourceList.astro";
+import Giscus from "../../components/Giscus.astro";
+import { db, socName } from "../../lib/db";
+import { fr } from "../../i18n/fr";
+import { config, issueUrl } from "../../config";
+import type { Case } from "@tvbox-check/core";
+
+export function getStaticPaths() {
+  return db.cases.map((c) => ({ params: { id: c.id }, props: { c } }));
+}
+
+interface Props {
+  c: Case;
+}
+const { c } = Astro.props;
+
+const fmtGb = (v: number | null) => (v === null ? fr.fields.unknownValue : `${v} ${fr.fields.gb}`);
+const rows = [
+  { label: fr.model.soc, a: socName(c.marketed.soc), b: socName(c.observed.soc) },
+  { label: fr.model.ram, a: fmtGb(c.marketed.ram_gb), b: fmtGb(c.observed.ram_gb) },
+  { label: fr.model.storage, a: fmtGb(c.marketed.storage_gb), b: fmtGb(c.observed.storage_gb) },
+];
+const title = `${c.marketed_name} : specs annoncées et observées`;
+const description = `Cas signalé pour ${c.marketed_name} : ${c.summary_fr}`.slice(0, 300);
+const socLinks = [c.marketed.soc, c.observed.soc].filter(
+  (id, i, arr): id is string => Boolean(id) && arr.indexOf(id) === i,
+);
+const correction =
+  issueUrl("correction-donnee.yml", { title: `Correction : ${c.marketed_name}` }) ??
+  `mailto:${config.contactEmail}?subject=${encodeURIComponent(`Correction : ${c.marketed_name}`)}`;
+---
+
+<Base title={title} description={description}>
+  <p>
+    <a href="/modele/">← {fr.model.indexTitle}</a>
+  </p>
+  <h1>{c.marketed_name}</h1>
+  <p>
+    <span class="tag">{fr.caseType[c.type]}</span>
+    <span class="tag">{fr.confidence[c.observed.confidence]}</span>
+  </p>
+  <p class="lead">{c.summary_fr}</p>
+  <p class="notice">{fr.model.disclaimer}</p>
+
+  <h2>Annoncé et observé</h2>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Caractéristique</th>
+          <th scope="col">{fr.model.marketed}</th>
+          <th scope="col">{fr.model.observed}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <th scope="row">{r.label}</th>
+            <td>{r.a}</td>
+            <td>{r.b}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>{fr.model.proofs}</h2>
+  {c.how_observed.length > 0 ? (
+    <p>
+      {c.how_observed.map((h) => (
+        <span class="tag">{fr.howObserved[h]}</span>
+      ))}
+    </p>
+  ) : (
+    <p class="muted">{fr.model.noProof}</p>
+  )}
+
+  <h2>{fr.model.sources}</h2>
+  <SourceList ids={c.sources} />
+  <p class="hint">Ajouté le {c.added}.</p>
+
+  {socLinks.length > 0 && (
+    <p>
+      {socLinks.map((id, i) => (
+        <>
+          {i > 0 && " · "}
+          <a href={`/soc/${id}/`}>{socName(id)}</a>
+        </>
+      ))}
+    </p>
+  )}
+  <p class="actions">
+    <a class="btn secondary" href={correction}>
+      Demander une correction ou un retrait
+    </a>
+  </p>
+
+  <Giscus term={`modele/${c.id}`} />
+</Base>

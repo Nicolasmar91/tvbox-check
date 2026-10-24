@@ -1,0 +1,27 @@
+---
+import Base from "../layouts/Base.astro";
+import Search from "../components/Search";
+import type { SearchEntry } from "../components/Search";
+import { db } from "../lib/db";
+import { fr } from "../i18n/fr";
+
+const entries: SearchEntry[] = [
+  ...db.socs.map((s) => ({
+    type: "soc" as const,
+    href: `/soc/${s.id}/`,
+    title: `${s.vendor} ${s.name}`,
+    text: [s.id, ...s.aliases, s.arch ?? ""].join(" "),
+  })),
+  ...db.cases.map((c) => ({
+    type: "case" as const,
+    href: `/modele/${c.id}/`,
+    title: c.marketed_name,
+    text: [c.id, c.summary_fr].join(" "),
+  })),
+];
+---
+
+<Base title={fr.search.title} description={fr.search.description}>
+  <h1>{fr.search.title}</h1>
+  <Search client:load entries={entries} />
+</Base>

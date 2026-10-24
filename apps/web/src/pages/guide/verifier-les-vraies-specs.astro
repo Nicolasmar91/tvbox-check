@@ -1,0 +1,206 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const title = "Comment vérifier les vraies specs d'une TV box Android";
+const description =
+  "Guide pratique pour savoir si la RAM et le stockage d'une TV box sont réels : lire les puces, démarrer sous Linux, utiliser l'UART et tester la mémoire de stockage.";
+
+const faq = [
+  {
+    q: "Pourquoi Android affiche-t-il parfois de fausses specs ?",
+    a: "Sur certaines box, le firmware est modifié pour déclarer plus de RAM ou de stockage que le matériel n'en contient. Les applications qui lisent ces informations depuis Android ne font que relayer ce que le système leur déclare.",
+  },
+  {
+    q: "Quelle est la méthode la plus fiable ?",
+    a: "Lire les références imprimées sur les puces mémoire de la carte, puis confirmer en démarrant un système Linux indépendant d'Android. Un test d'écriture complet du stockage lève les derniers doutes.",
+  },
+  {
+    q: "Un verdict « plausible » prouve-t-il qu'une box est authentique ?",
+    a: "Non. Il signifie seulement qu'aucune impossibilité n'a été détectée avec les données connues du SoC.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+---
+
+<Base title={title} description={description} jsonLd={jsonLd}>
+  <h1>{title}</h1>
+  <p class="lead">
+    Ce guide explique, du plus simple au plus fiable, comment contrôler la RAM, le stockage et le
+    SoC d'une TV box. Aucune méthode ne dépend d'Android, puisque c'est lui qui peut mentir.
+  </p>
+
+  <nav aria-label="Sommaire du guide" class="card">
+    <ol>
+      <li>
+        <a href="#pourquoi">Pourquoi les specs affichées ne suffisent pas</a>
+      </li>
+      <li>
+        <a href="#comparer">Étape 1 : comparer avec les limites du SoC</a>
+      </li>
+      <li>
+        <a href="#puces">Étape 2 : ouvrir le boîtier et lire les puces</a>
+      </li>
+      <li>
+        <a href="#linux">Étape 3 : démarrer un système Linux</a>
+      </li>
+      <li>
+        <a href="#uart">Étape 4 : lire le journal de démarrage (UART)</a>
+      </li>
+      <li>
+        <a href="#stockage">Étape 5 : tester le stockage</a>
+      </li>
+      <li>
+        <a href="#interpreter">Interpréter les résultats sans se tromper</a>
+      </li>
+      <li>
+        <a href="#faq">Questions fréquentes</a>
+      </li>
+    </ol>
+  </nav>
+
+  <h2 id="pourquoi">Pourquoi les specs affichées ne suffisent pas</h2>
+  <p>
+    Dans les paramètres d'Android, la RAM et le stockage sont des valeurs que le système déclare.
+    Sur une partie des box bon marché, ces valeurs sont réécrites dans le firmware : une box dotée
+    de 1 Go de RAM peut afficher 4 Go. Les applications de diagnostic qui tournent sous Android
+    lisent surtout ce que le noyau leur annonce, donc elles peuvent être trompées de la même façon.
+    L'application gratuite <em>TV Box Specs</em> (TV Box Stop) reste utile comme outil
+    complémentaire, à condition de se rappeler que la RAM qu'elle affiche vient du noyau.
+  </p>
+  <p class="notice">
+    Un écart n'est pas toujours une fraude : une erreur de fichier de configuration (DTB) peut faire
+    afficher moitié moins de RAM que ce que la carte contient. Contrôlez avant de conclure.
+  </p>
+
+  <h2 id="comparer">Étape 1 : comparer avec les limites du SoC</h2>
+  <p>
+    Chaque SoC a une quantité de RAM maximale qu'il sait adresser. Si l'annonce dépasse cette
+    limite, elle est impossible sans qu'il soit nécessaire d'ouvrir quoi que ce soit. C'est ce que
+    fait le
+    <a href="/">vérificateur</a> de ce site, en s'appuyant sur les{" "}
+    <a href="/soc/">fiches des SoC</a>. Regardez bien le statut de chaque donnée : « vérifié »
+    signifie qu'une datasheet constructeur a été lue, « retours de la communauté » signifie que la
+    limite reste à confirmer.
+  </p>
+
+  <h2 id="puces">Étape 2 : ouvrir le boîtier et lire les puces</h2>
+  <p>
+    C'est la méthode la plus directe. Débranchez la box, ouvrez le boîtier (souvent quelques vis ou
+    des clips sous les pieds en caoutchouc) et repérez :
+  </p>
+  <ul>
+    <li>
+      <strong>Le SoC</strong> : la plus grande puce, souvent sous un petit dissipateur. Son marquage
+      (par exemple Amlogic, Rockchip ou Allwinner suivi d'une référence) doit correspondre à
+      l'annonce.
+    </li>
+    <li>
+      <strong>Les puces de RAM</strong> : généralement de 1 à 8 puces rectangulaires noires autour
+      du SoC, marquées Samsung, Micron, SK hynix, Nanya, etc.
+    </li>
+    <li>
+      <strong>La puce de stockage (eMMC)</strong> : une puce carrée avec une référence de capacité.
+    </li>
+  </ul>
+  <h3>Calculer la capacité de RAM</h3>
+  <p>
+    Relevez la référence imprimée sur chaque puce de RAM, cherchez sa fiche technique (la référence
+    suffit dans un moteur de recherche) pour connaître la densité d'une puce, puis multipliez par le
+    nombre de puces. Exemple : quatre puces de 4 gigabits (Gb) font 16 Gb, soit 2 gigaoctets (Go).
+    Attention à ne pas confondre gigabits (Gb) et gigaoctets (Go) : il faut diviser par 8.
+  </p>
+  <h3>Bien photographier les puces</h3>
+  <ul>
+    <li>Lumière rasante, sans reflet, photo nette de chaque puce prise de face.</li>
+    <li>Plusieurs prises si le marquage est effacé ou très petit.</li>
+    <li>Une photo d'ensemble de la carte, pour compter les puces.</li>
+  </ul>
+
+  <h2 id="linux">Étape 3 : démarrer un système Linux</h2>
+  <p>
+    Démarrer Linux (par exemple Armbian ou CoreELEC) depuis une carte SD ou une clé USB, sans
+    toucher à la mémoire interne, permet de lire la RAM telle que le matériel la voit. Sous Linux,
+    deux commandes suffisent :
+  </p>
+  <pre><code>free -m
+cat /proc/meminfo | head -3</code></pre>
+  <p>
+    Pour le stockage interne et le SoC, <code>lsblk</code> et <code>cat /proc/cpuinfo</code> donnent
+    des indications supplémentaires. Une réserve importante : la RAM visible dépend aussi du fichier
+    de configuration du matériel (DTB) choisi. Si une box reconnue à 1 Go semble en contenir 2
+    d'après les puces, essayez un autre DTB avant de conclure à une fausse annonce.
+  </p>
+  <p class="notice">
+    Évitez d'installer un système non prévu dans la mémoire interne tant que vous n'avez pas
+    sauvegardé le firmware d'origine : une installation ratée peut rendre la box inutilisable.
+  </p>
+
+  <h2 id="uart">Étape 4 : lire le journal de démarrage (UART)</h2>
+  <p>
+    Beaucoup de cartes exposent trois ou quatre points de contact (TX, RX, GND) pour une liaison
+    série. Avec un adaptateur USB-série 3,3 V, vous pouvez lire le journal du bootloader dès la mise
+    sous tension. Ce journal indique généralement la quantité de RAM détectée avant même le
+    démarrage d'Android, ce qui en fait une preuve forte. Branchez uniquement TX, RX et GND, jamais
+    le 5 V, et vérifiez la tension du signal (3,3 V) avant de connecter l'adaptateur.
+  </p>
+
+  <h2 id="stockage">Étape 5 : tester le stockage</h2>
+  <p>
+    Un stockage truqué annonce une capacité supérieure à la réalité : les écritures dépassant la
+    capacité réelle reviennent au début de la mémoire et écrasent les anciennes données. Des outils
+    écrivent des données de test sur toute la capacité puis les relisent pour le détecter :
+  </p>
+  <ul>
+    <li>
+      <strong>f3</strong> (<code>f3write</code> et <code>f3read</code>) sous Linux ou macOS ;
+    </li>
+    <li>
+      <strong>H2testw</strong> sous Windows, pour une carte ou un disque monté sur le PC.
+    </li>
+  </ul>
+  <p>
+    Un test complet est long et efface les données du support testé : faites-le sur un support vidé.
+    Pour une eMMC interne, démarrez depuis une carte SD et testez la partition de données.
+  </p>
+
+  <h2 id="interpreter">Interpréter les résultats sans se tromper</h2>
+  <ul>
+    <li>
+      <strong>Preuves fortes</strong> : photo lisible des puces, journal UART, test de stockage
+      complet. Elles permettent de qualifier un cas de « confirmé » sur ce site.
+    </li>
+    <li>
+      <strong>Preuves moyennes</strong> : lecture sous Linux ou sous Armbian. Elles sont fiables si
+      le fichier DTB correspond bien à la carte.
+    </li>
+    <li>
+      <strong>Preuves faibles</strong> : tout ce qui est lu depuis Android seul.
+    </li>
+  </ul>
+  <p>
+    Les revendeurs changent parfois les composants (RAM, Wi-Fi, version de carte) sans changer le
+    nom du modèle : deux box du même nom ne sont pas forcément identiques.
+  </p>
+
+  <h2 id="faq">Questions fréquentes</h2>
+  {faq.map((f) => (
+    <details>
+      <summary>{f.q}</summary>
+      <p>{f.a}</p>
+    </details>
+  ))}
+
+  <p>
+    Vous avez fait ces vérifications sur une box ? <a href="/contribuer/">Contribuez</a> avec vos
+    photos et vos relevés pour enrichir la base.
+  </p>
+</Base>

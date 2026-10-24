@@ -1,0 +1,158 @@
+import type { Basis, Status, Verdict } from "@tvbox-check/core";
+
+/** Tous les textes de l'interface sont ici pour faciliter l'ajout d'une langue. */
+export const fr = {
+  lang: "fr",
+  nav: {
+    checker: "Vérificateur",
+    socs: "SoC",
+    models: "Modèles signalés",
+    search: "Recherche",
+    guide: "Guide",
+    contribute: "Contribuer",
+    about: "À propos",
+  },
+  skip: "Aller au contenu",
+  home: {
+    title: "Vérifier les specs d'une TV box Android",
+    description:
+      "Saisissez les specs annoncées d'une TV box : le site détecte les impossibilités matérielles et les écarts déjà signalés par la communauté.",
+    intro:
+      "Renseignez ce que le vendeur annonce. Le site compare avec les limites matérielles connues du SoC et avec les écarts déjà signalés.",
+    caveat:
+      "Ce site ne prouve jamais qu'une box est authentique : il détecte des impossibilités et des cas signalés.",
+  },
+  form: {
+    model: "Nom du modèle",
+    modelHint: "Exemple : TX3 Mini",
+    soc: "SoC annoncé",
+    socUnknown: "Je ne sais pas",
+    ram: "RAM annoncée (Go)",
+    storage: "Stockage annoncé (Go)",
+    ethernet: "Ethernet annoncé",
+    video: "Vidéo maximale annoncée",
+    unspecified: "Non précisé",
+    ethernetOptions: { "100M": "100 Mbit/s", "1G": "Gigabit", none: "Aucun" },
+    reset: "Effacer",
+  },
+  result: {
+    title: "Résultat",
+    empty: "Renseignez au moins le SoC ou le nom du modèle pour lancer la vérification.",
+    noCriteria:
+      "Aucun critère n'a pu être évalué avec ces informations. Ajoutez un SoC connu et au moins une spec annoncée.",
+    plausibleCaveat: "Plausible ne veut pas dire authentique.",
+    plausibleLink: "Voir comment vérifier",
+    unknownSoc: "Ce SoC n'est pas dans la base.",
+    addSoc: "Ajouter ce SoC",
+    report: "Signaler un cas ou corriger une donnée",
+    share: "Lien de cette vérification",
+    copy: "Copier le lien",
+    copied: "Lien copié",
+    sources: "Sources",
+    basisLabel: "Base",
+    viewSoc: "Voir la fiche du SoC",
+    viewCase: "Voir le cas documenté",
+  },
+  verdicts: {
+    impossible: { label: "Impossible", icon: "✖" },
+    suspect: { label: "Suspect", icon: "⚠" },
+    unknown: { label: "Inconnu", icon: "?" },
+    plausible: { label: "Plausible", icon: "✔" },
+  } satisfies Record<Verdict, { label: string; icon: string }>,
+  verdictSummary: {
+    impossible:
+      "Au moins une spec annoncée est impossible pour ce SoC (donnée vérifiée par datasheet).",
+    suspect: "Au moins une spec annoncée est suspecte ou correspond à un cas déjà signalé.",
+    unknown: "Les données connues ne permettent pas de conclure.",
+    plausible: "Aucune impossibilité détectée avec les données connues.",
+  } satisfies Record<Verdict, string>,
+  criteria: {
+    soc: "SoC",
+    ram: "RAM",
+    ethernet: "Ethernet",
+    video: "Vidéo",
+    knownCase: "Cas signalé",
+  },
+  status: {
+    verified: "Vérifié",
+    unverified: "Non vérifié",
+  } satisfies Record<Status, string>,
+  basis: {
+    datasheet: "Datasheet constructeur",
+    vendor: "Fiche constructeur",
+    community: "Retours de la communauté",
+    hypothesis: "Hypothèse non sourcée",
+  } satisfies Record<Basis, string>,
+  confidence: {
+    confirmed: "Confirmé",
+    probable: "Probable",
+    reported: "Signalé",
+  },
+  caseType: {
+    "inflated-specs": "Specs gonflées",
+    "wrong-soc": "SoC différent de l'annonce",
+    "impossible-claim": "Annonce impossible",
+    relabeled: "Boîtier réétiqueté",
+  },
+  howObserved: {
+    "armbian-boot": "Démarrage sous Armbian",
+    "uart-log": "Log UART",
+    "bootloader-log": "Log du bootloader",
+    "chip-photo": "Photo des puces",
+    datasheet: "Datasheet",
+    aida64: "AIDA64",
+    "f3-test": "Test f3 / H2testw",
+    "linux-proc": "Lecture sous Linux (/proc)",
+  },
+  topic: { ram: "RAM", ethernet: "Ethernet", video: "Vidéo", identity: "Identité", other: "Autre" },
+  fields: {
+    ramMax: "RAM maximale",
+    ramTypes: "Types de RAM",
+    ethernetMax: "Ethernet maximal",
+    videoMax: "Décodage vidéo maximal",
+    unknownValue: "Inconnu",
+    gb: "Go",
+    mbps: "Mbit/s",
+  },
+  soc: {
+    indexTitle: "SoC référencés",
+    indexDescription: "Limites matérielles connues des SoC utilisés dans les TV box Android.",
+    limits: "Limites matérielles",
+    findings: "Ce que la communauté a observé",
+    boxes: "Box documentées avec ce SoC",
+    noBoxes: "Aucune box documentée pour l'instant.",
+    check: "Vérifier une box avec ce SoC",
+  },
+  model: {
+    indexTitle: "Modèles signalés",
+    indexDescription:
+      "Écarts observés entre les specs annoncées et le matériel, avec leurs sources.",
+    marketed: "Annoncé",
+    observed: "Observé",
+    ram: "RAM",
+    storage: "Stockage",
+    soc: "SoC",
+    proofs: "Comment cela a été observé",
+    noProof: "Aucune preuve technique précisée",
+    sources: "Sources",
+    disclaimer:
+      "Cas signalé à partir de sources publiques, présenté comme une observation et non comme une accusation. Une correction ou un retrait peut être demandé à tout moment.",
+    comments: "Commentaires",
+    showComments: "Afficher les commentaires (chargement de giscus, compte GitHub requis)",
+    commentsSoon: "Les commentaires seront disponibles une fois le dépôt GitHub publié.",
+  },
+  search: {
+    title: "Recherche",
+    description: "Rechercher un SoC ou un modèle de TV box dans la base.",
+    label: "Rechercher un SoC, un modèle, un constructeur",
+    none: "Aucun résultat.",
+    typeSoc: "SoC",
+    typeCase: "Modèle signalé",
+  },
+  footer: {
+    note: "Données sous licence CC BY 4.0, code sous licence MIT. Les noms de marques sont cités à titre d'identification uniquement.",
+    correction: "Demander une correction ou un retrait",
+  },
+} as const;
+
+export type Strings = typeof fr;

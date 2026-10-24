@@ -1,0 +1,80 @@
+---
+import "../styles/global.css";
+import { fr } from "../i18n/fr";
+import { config } from "../config";
+
+interface Props {
+  title: string;
+  description: string;
+  jsonLd?: object;
+}
+
+const { title, description, jsonLd } = Astro.props;
+const fullTitle = title === config.siteName ? title : `${title} · ${config.siteName}`;
+const canonical = new URL(Astro.url.pathname, config.siteUrl).toString();
+const path = Astro.url.pathname;
+
+const nav = [
+  { href: "/", label: fr.nav.checker },
+  { href: "/soc/", label: fr.nav.socs },
+  { href: "/modele/", label: fr.nav.models },
+  { href: "/recherche/", label: fr.nav.search },
+  { href: "/guide/verifier-les-vraies-specs/", label: fr.nav.guide },
+  { href: "/contribuer/", label: fr.nav.contribute },
+  { href: "/a-propos/", label: fr.nav.about },
+];
+const isCurrent = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+---
+
+<!doctype html>
+<html lang={fr.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary" />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  </head>
+  <body>
+    <a class="skip" href="#contenu">
+      {fr.skip}
+    </a>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="/">
+          {config.siteName}
+        </a>
+        <nav aria-label="Navigation principale">
+          <ul>
+            {nav.map((n) => (
+              <li>
+                <a href={n.href} aria-current={isCurrent(n.href) ? "page" : undefined}>
+                  {n.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="contenu" class="wrap">
+      <slot />
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <p>{fr.footer.note}</p>
+        <p>
+          <a href="/a-propos/#correction">{fr.footer.correction}</a> · Un projet NM Labs
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

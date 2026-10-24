@@ -1,0 +1,25 @@
+name: Corriger une donnée ou ajouter un SoC
+description: Une limite matérielle erronée, un SoC manquant, une source plus solide.
+title: "Correction : "
+labels: ["donnée"]
+body:
+  - type: input
+    id: target
+    attributes:
+      label: SoC ou modèle concerné
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Ce qu'il faut changer
+      description: Valeur actuelle, valeur proposée.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source
+      description: Adresse exacte, titre, révision du document pour une datasheet. Une valeur « vérifiée » exige une datasheet ou une fiche constructeur.
+    validations:
+      required: true
