@@ -12,9 +12,9 @@ export const config = {
   giscus: {
     // Dépôt dédié aux commentaires (Discussions), distinct du dépôt de code.
     repo: "Nicolasmar91/tvbox-check-commentaires",
-    repoId: "" as string,
+    repoId: "R_kgDOVXCMJg",
     category: "Commentaires",
-    categoryId: "" as string,
+    categoryId: "DIC_kwDOVXCMJs4DJmHE",
   },
   contactEmail: "nicolasmar91@gmail.com",
 };
