@@ -7,6 +7,23 @@ export interface ValidationResult {
   db?: Database;
 }
 
+/** Domaine enregistrable approximatif : les deux derniers labels (trois pour co.uk, com.au…). */
+export function registrableDomain(url: string): string {
+  let host: string;
+  try {
+    host = new URL(url).hostname.toLowerCase();
+  } catch {
+    return url;
+  }
+  const labels = host.split(".");
+  if (labels.length <= 2) return host;
+  const second = labels[labels.length - 2]!;
+  const tld = labels[labels.length - 1]!;
+  const compound =
+    tld.length === 2 && ["co", "com", "org", "net", "gov", "ac", "edu"].includes(second);
+  return labels.slice(compound ? -3 : -2).join(".");
+}
+
 function duplicates(ids: string[]): string[] {
   return ids.filter((id, i) => ids.indexOf(id) !== i);
 }
@@ -41,9 +58,20 @@ export function validateDatabase(raw: unknown): ValidationResult {
       if (!sourceIds.has(id)) errors.push(`${where} : source inconnue « ${id} »`);
   };
 
+  const domainOf = new Map(db.sources.map((s) => [s.id, registrableDomain(s.url)]));
   for (const soc of db.socs) {
     for (const f of ["ram_max_gb", "ram_types", "ethernet_max_mbps", "video_max_decode"] as const) {
-      checkSources(`socs/${soc.id}/${f}`, soc[f]?.sources ?? []);
+      const field = soc[f];
+      checkSources(`socs/${soc.id}/${f}`, field?.sources ?? []);
+      // « Recoupée » : les sources doivent venir d'au moins deux domaines différents.
+      if (field?.basis === "corroborated") {
+        const domains = new Set(field.sources.map((id) => domainOf.get(id)).filter(Boolean));
+        if (domains.size < 2) {
+          errors.push(
+            `socs/${soc.id}/${f} : « corroborated » exige des sources de deux domaines différents`,
+          );
+        }
+      }
     }
   }
   for (const soc of db.socs) {

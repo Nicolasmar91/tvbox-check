@@ -9,12 +9,12 @@ Chaque PR est relue avec cette grille, que tout le monde peut consulter. Le main
 ## 2. Données (`data/`)
 
 - [ ] Chaque valeur ajoutée a des `sources` qui existent dans `data/sources.json`.
-- [ ] **`verified`** : la `basis` est `datasheet` ou `vendor`, et le document a été **lu** (l'adresse mène bien à la datasheet, la valeur y figure, la révision est indiquée).
+- [ ] **`verified`** : la `basis` est `datasheet` ou `vendor` (document **lu** : l'adresse mène bien à la datasheet, la valeur y figure, la révision est indiquée), ou `corroborated` (au moins deux sources de domaines différents, chacune lue, qui disent bien la même valeur et ne se recopient pas).
 - [ ] **`community`** : forum ou article réel, résumé fidèle, jamais présenté comme une certitude.
 - [ ] **`hypothesis`** : valeur attendue, sans source, aucun verdict. Mettre `null` si on ne sait pas.
 - [ ] **Cas `confirmed`** : au moins une preuve forte (`chip-photo`, `uart-log`, `f3-test`) et une source.
 - [ ] Les contradictions entre sources sont signalées dans `community_findings`, pas masquées.
-- [ ] Une valeur ne passe pas `verified` parce qu'« on la connaît » : sans document lu, elle reste non vérifiée.
+- [ ] Une valeur ne passe pas `verified` parce qu'« on la connaît » : sans document lu ni deux sources indépendantes concordantes, elle reste non vérifiée.
 
 ## 3. Texte et éthique
 

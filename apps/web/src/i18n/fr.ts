@@ -89,6 +89,7 @@ export const fr = {
   basis: {
     datasheet: "Datasheet constructeur",
     vendor: "Fiche constructeur",
+    corroborated: "Recoupée par plusieurs sources indépendantes",
     community: "Retours de la communauté",
     hypothesis: "Hypothèse non sourcée",
   } satisfies Record<Basis, string>,
@@ -138,6 +139,9 @@ export const fr = {
       "Catalogue des modèles de TV box Android et des SoC réellement utilisés selon les révisions, avec sources.",
     variants: "Révisions connues",
     reported: "Signalé sous ce nom (non officiel)",
+    evidenceOfficial: "Source constructeur",
+    evidenceCorroborated: "Recoupé (au moins 2 sources indépendantes)",
+    evidenceSingle: "Une seule source",
     year: "Année",
     ramConfigs: "RAM (Go)",
     storageConfigs: "Stockage (Go)",

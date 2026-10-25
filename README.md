@@ -10,19 +10,19 @@ Un projet [NM Labs](https://nm-labs.fr). Site en français, code MIT, données C
 
 Vous saisissez ce que le vendeur annonce (modèle, SoC, RAM, Ethernet, vidéo). Le site répond :
 
-| Verdict        | Signification                                                                                       |
-| -------------- | --------------------------------------------------------------------------------------------------- |
-| **Impossible** | L'annonce dépasse une limite du SoC **lue dans une datasheet constructeur**.                        |
-| **Suspect**    | L'annonce dépasse une limite issue de retours communautaires, ou le modèle est un cas déjà signalé. |
-| **Inconnu**    | Les données connues ne permettent pas de conclure.                                                  |
-| **Plausible**  | Aucune impossibilité détectée. **Cela ne prouve jamais qu'une box est authentique.**                |
+| Verdict        | Signification                                                                                                                     |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Impossible** | L'annonce dépasse une limite du SoC **vérifiée** : datasheet constructeur, ou au moins deux sources indépendantes qui concordent. |
+| **Suspect**    | L'annonce dépasse une limite issue de retours communautaires, ou le modèle est un cas déjà signalé.                               |
+| **Inconnu**    | Les données connues ne permettent pas de conclure.                                                                                |
+| **Plausible**  | Aucune impossibilité détectée. **Cela ne prouve jamais qu'une box est authentique.**                                              |
 
 Chaque valeur affichée indique sa **source** et sa **base** : datasheet, fiche constructeur, retours de la communauté, ou hypothèse non sourcée (aucun verdict).
 
 ## Pourquoi c'est fiable
 
 - **Pas de donnée sans source.** Sans source, la valeur est `null`, jamais inventée.
-- **Seule une datasheet lue donne `impossible`.** Les forums plafonnent à `suspect`.
+- **`impossible` exige une preuve solide** : une datasheet ou fiche constructeur lue, ou au moins deux sources indépendantes (domaines différents) qui disent la même chose. Une seule source communautaire plafonne à `suspect`.
 - **Aucune accusation.** Les cas sont des observations sourcées, résumées avec nos mots, sans nommer de vendeur.
 - **Site 100 % statique**, sans cookie ni traceur. Le moteur de règles tourne dans votre navigateur.
 

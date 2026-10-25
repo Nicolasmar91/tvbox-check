@@ -5,7 +5,7 @@ La base (`data/`) est ouverte. Une contribution passe par une **issue** (modèle
 ## Règles sur les données
 
 - Chaque valeur technique a une `basis` (`datasheet`, `vendor`, `community`, `hypothesis`), un `status` et des `sources`.
-- `verified` : uniquement `datasheet` ou `vendor`, document lu. Les retours de forum donnent `community` (verdict maximal « suspect »).
+- `verified` : `datasheet` ou `vendor` (document lu), ou `corroborated` (au moins deux sources **indépendantes**, de domaines différents, qui disent la même chose, chacune lue). Une seule source communautaire donne `community` (verdict maximal « suspect »).
 - `hypothesis` : valeur attendue non sourcée, aucun verdict. Ne rien inventer : sans source, mettre `null`.
 - Un cas `confirmed` exige une preuve forte (`chip-photo`, `uart-log`, `f3-test`) et une source.
 - Les listes sont triées par `id`. Les identifiants de sources existent dans `data/sources.json`.

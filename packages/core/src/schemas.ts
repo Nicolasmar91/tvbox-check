@@ -5,12 +5,23 @@ export type Status = z.infer<typeof StatusSchema>;
 
 /**
  * Nature de la preuve derrière une valeur :
- * - `datasheet` / `vendor` : document constructeur lu (seuls à pouvoir donner `verified`) ;
- * - `community` : constats de forums/articles (`unverified`, verdict maximal `suspect`) ;
+ * - `datasheet` / `vendor` : document constructeur lu (`verified`) ;
+ * - `corroborated` : au moins deux sources indépendantes (domaines différents) qui disent la
+ *   même chose (`verified`) ;
+ * - `community` : une seule source communautaire (`unverified`, verdict maximal `suspect`) ;
  * - `hypothesis` : valeur attendue non sourcée (aucun verdict, `unknown`).
  */
-export const BasisSchema = z.enum(["datasheet", "vendor", "community", "hypothesis"]);
+export const BasisSchema = z.enum([
+  "datasheet",
+  "vendor",
+  "corroborated",
+  "community",
+  "hypothesis",
+]);
 export type Basis = z.infer<typeof BasisSchema>;
+
+/** Bases qui permettent le statut `verified` (donc un verdict `impossible`). */
+export const VERIFIED_BASES: readonly Basis[] = ["datasheet", "vendor", "corroborated"];
 
 /** Valeur technique accompagnée de sa provenance. `null` = inconnu (jamais inventé). */
 function sourced<T extends z.ZodType>(value: T) {
@@ -21,14 +32,23 @@ function sourced<T extends z.ZodType>(value: T) {
       basis: BasisSchema,
       sources: z.array(z.string()),
     })
-    .refine((v) => v.status !== "verified" || v.basis === "datasheet" || v.basis === "vendor", {
-      message: "une valeur `verified` exige une base `datasheet` ou `vendor`",
+    .refine((v) => v.status !== "verified" || VERIFIED_BASES.includes(v.basis), {
+      message: "une valeur `verified` exige la base `datasheet`, `vendor` ou `corroborated`",
     })
+    .refine((v) => v.basis !== "corroborated" || v.status === "verified", {
+      message: "une valeur `corroborated` est nécessairement `verified`",
+    })
+    .refine((v) => v.basis !== "corroborated" || new Set(v.sources).size >= 2, {
+      message: "une valeur `corroborated` exige au moins deux sources",
+    })
+    .refine(
+      (v) => (v.basis !== "community" && v.basis !== "hypothesis") || v.status === "unverified",
+      {
+        message: "une valeur `community` ou `hypothesis` ne peut pas être `verified`",
+      },
+    )
     .refine((v) => v.basis === "hypothesis" || v.sources.length > 0, {
       message: "une valeur non `hypothesis` exige au moins une source",
-    })
-    .refine((v) => v.basis !== "hypothesis" || v.status === "unverified", {
-      message: "une `hypothesis` ne peut pas être `verified`",
     })
     .nullable();
 }

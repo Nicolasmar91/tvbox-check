@@ -1,5 +1,5 @@
-import { validateDatabase } from "@tvbox-check/core";
-import type { Case, Database, Soc, Source } from "@tvbox-check/core";
+import { registrableDomain, validateDatabase } from "@tvbox-check/core";
+import type { Case, Database, ModelVariant, Soc, Source } from "@tvbox-check/core";
 import socs from "../../../../data/socs.json";
 import cases from "../../../../data/cases.json";
 import models from "../../../../data/models.json";
@@ -27,3 +27,12 @@ export const socName = (id: string | null): string => {
 
 export const casesForSoc = (soc: Soc): Case[] =>
   db.cases.filter((c) => c.marketed.soc === soc.id || c.observed.soc === soc.id);
+
+/** Niveau de confirmation d'une révision de modèle, déduit de ses sources. */
+export type VariantEvidence = "official" | "corroborated" | "single";
+export const variantEvidence = (variant: ModelVariant): VariantEvidence => {
+  const list = getSources(variant.sources);
+  if (list.some((s) => s.type === "datasheet" || s.type === "vendor")) return "official";
+  const domains = new Set(list.map((s) => registrableDomain(s.url)));
+  return domains.size >= 2 ? "corroborated" : "single";
+};
