@@ -16,6 +16,9 @@ export const config = {
     category: "Commentaires",
     categoryId: "DIC_kwDOVXCMJs4DJmHE",
   },
+  // Cloudflare Web Analytics (sans cookie). Jeton public : visible dans le HTML de toute façon.
+  // Chargé uniquement dans le site construit, jamais en développement.
+  cloudflareBeaconToken: "4e69c375367749b6970f04269099700b",
   contactEmail: "nicolasmar91@gmail.com",
 };
 

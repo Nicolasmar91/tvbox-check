@@ -76,5 +76,13 @@ const isCurrent = (href: string) => (href === "/" ? path === "/" : path.startsWi
         </p>
       </div>
     </footer>
+    {import.meta.env.PROD && config.cloudflareBeaconToken && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: config.cloudflareBeaconToken })}
+      />
+    )}
   </body>
 </html>
