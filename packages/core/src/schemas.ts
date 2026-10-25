@@ -111,9 +111,32 @@ export const CaseSchema = z
   );
 export type Case = z.infer<typeof CaseSchema>;
 
+/** Une révision d'un modèle : le SoC (et les configurations) réellement vendus sous ce nom. */
+export const ModelVariantSchema = z.object({
+  soc: z.string().min(1),
+  ram_gb: z.array(z.number().positive()).nullable(),
+  storage_gb: z.array(z.number().positive()).nullable(),
+  year: z.number().int().min(2010).max(2035).nullable(),
+  note_fr: z.string().nullable(),
+  sources: z.array(z.string()).min(1),
+});
+export type ModelVariant = z.infer<typeof ModelVariantSchema>;
+
+/** Catalogue de modèles : ce qu'on trouve normalement sous un nom commercial donné. */
+export const ModelSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  aliases: z.array(z.string()),
+  brand: z.string().nullable(),
+  variants: z.array(ModelVariantSchema).min(1),
+  notes_fr: z.string().nullable(),
+});
+export type Model = z.infer<typeof ModelSchema>;
+
 export const DatabaseSchema = z.object({
   socs: z.array(SocSchema),
   cases: z.array(CaseSchema),
+  models: z.array(ModelSchema),
   sources: z.array(SourceSchema),
 });
 export type Database = z.infer<typeof DatabaseSchema>;

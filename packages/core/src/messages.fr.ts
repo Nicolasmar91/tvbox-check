@@ -5,6 +5,12 @@ export const messagesFr = {
     `Le SoC « ${soc} » n'est pas dans la base. Vous pouvez contribuer en l'ajoutant.`,
   dataMissing: (field: string, soc: string) =>
     `La donnée « ${field} » n'est pas connue pour le SoC ${soc}.`,
+  modelSocKnown: (model: string, soc: string) =>
+    `Le SoC ${soc} fait partie de ceux répertoriés pour « ${model} » : plausible.`,
+  modelSocUnusual: (model: string, soc: string, known: string) =>
+    `Le SoC ${soc} n'est pas répertorié pour « ${model} » (connus : ${known}). Cela peut être une révision récente ou un écart : à vérifier sur les puces.`,
+  modelSpecsUnlisted: (model: string, ram: number, known: string) =>
+    `${ram} Go de RAM ne figurent pas parmi les configurations répertoriées pour « ${model} » avec ce SoC (${known} Go). Le catalogue peut être incomplet.`,
   hypothesis: (field: string, soc: string) =>
     `La valeur attendue pour « ${field} » (SoC ${soc}) n'est pas encore sourcée : pas de verdict.`,
   ramPlausible: (claimed: number, max: number) =>

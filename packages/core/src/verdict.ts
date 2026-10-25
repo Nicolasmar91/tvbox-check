@@ -11,7 +11,8 @@ export function worstVerdict(verdicts: readonly Verdict[]): Verdict {
   return worst;
 }
 
-export type Criterion = "soc" | "ram" | "ethernet" | "video" | "knownCase";
+export type Criterion =
+  "soc" | "ram" | "ethernet" | "video" | "knownCase" | "modelSoc" | "modelSpecs";
 
 export interface CriterionResult {
   criterion: Criterion;

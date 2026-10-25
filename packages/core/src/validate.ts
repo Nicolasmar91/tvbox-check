@@ -27,6 +27,7 @@ export function validateDatabase(raw: unknown): ValidationResult {
     ["sources", db.sources],
     ["socs", db.socs],
     ["cases", db.cases],
+    ["models", db.models],
   ] as const) {
     const ids = list.map((x) => x.id);
     for (const d of new Set(duplicates(ids))) errors.push(`${name} : id dupliqué « ${d} »`);
@@ -49,6 +50,14 @@ export function validateDatabase(raw: unknown): ValidationResult {
     soc.community_findings.forEach((f, i) =>
       checkSources(`socs/${soc.id}/community_findings/${i}`, f.sources),
     );
+  }
+  for (const model of db.models) {
+    model.variants.forEach((v, i) => {
+      checkSources(`models/${model.id}/variants/${i}`, v.sources);
+      if (!socIds.has(v.soc)) {
+        errors.push(`models/${model.id}/variants/${i} : SoC inconnu « ${v.soc} »`);
+      }
+    });
   }
   for (const c of db.cases) {
     checkSources(`cases/${c.id}`, c.sources);

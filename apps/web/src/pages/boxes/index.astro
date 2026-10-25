@@ -1,0 +1,37 @@
+---
+import Base from "../../layouts/Base.astro";
+import { db, socName } from "../../lib/db";
+import { fr } from "../../i18n/fr";
+
+const sorted = [...db.models].sort((a, b) => a.name.localeCompare(b.name, "fr"));
+---
+
+<Base title={fr.boxes.indexTitle} description={fr.boxes.indexDescription}>
+  <h1>{fr.boxes.indexTitle}</h1>
+  <p class="lead">{fr.boxes.indexDescription}</p>
+  <p class="notice">{fr.boxes.revisionNote}</p>
+  {sorted.length === 0 ? (
+    <p class="muted">{fr.boxes.none}</p>
+  ) : (
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Modèle</th>
+            <th scope="col">SoC répertoriés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sorted.map((m) => (
+            <tr>
+              <th scope="row">
+                <a href={`/boxes/${m.id}/`}>{m.name}</a>
+              </th>
+              <td>{[...new Set(m.variants.map((v) => socName(v.soc)))].join(", ")}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+</Base>

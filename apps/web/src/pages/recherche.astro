@@ -12,6 +12,12 @@ const entries: SearchEntry[] = [
     title: `${s.vendor} ${s.name}`,
     text: [s.id, ...s.aliases, s.arch ?? ""].join(" "),
   })),
+  ...db.models.map((m) => ({
+    type: "box" as const,
+    href: `/boxes/${m.id}/`,
+    title: m.name,
+    text: [m.id, ...m.aliases, m.brand ?? ""].join(" "),
+  })),
   ...db.cases.map((c) => ({
     type: "case" as const,
     href: `/modele/${c.id}/`,

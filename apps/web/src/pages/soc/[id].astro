@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import SourceList from "../../components/SourceList.astro";
 import { db, casesForSoc } from "../../lib/db";
+import { modelsForSoc } from "@tvbox-check/core/rules";
 import { fr } from "../../i18n/fr";
 import type { Soc } from "@tvbox-check/core";
 
@@ -15,6 +16,7 @@ interface Props {
 const { soc } = Astro.props;
 const title = `${soc.vendor} ${soc.name} : limites matérielles`;
 const cases = casesForSoc(soc);
+const boxes = modelsForSoc(db, soc.id);
 
 const rows = [
   {
@@ -101,6 +103,19 @@ const description = `Limites matérielles du SoC ${soc.vendor} ${soc.name} (RAM 
           <li class="card">
             <span class="tag">{fr.topic[f.topic]}</span> {f.summary_fr}
             <SourceList ids={f.sources} />
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  {boxes.length > 0 && (
+    <>
+      <h2>{fr.boxes.socBoxes}</h2>
+      <ul>
+        {boxes.map((b) => (
+          <li>
+            <a href={`/boxes/${b.id}/`}>{b.name}</a>
           </li>
         ))}
       </ul>

@@ -1,6 +1,13 @@
 import { useEffect, useMemo, useState } from "preact/hooks";
 import type { CheckInput, CriterionResult, Database, Verdict } from "@tvbox-check/core";
-import { evaluate, findSoc } from "@tvbox-check/core/rules";
+import {
+  evaluate,
+  findModel,
+  findSoc,
+  modelsForSoc,
+  normalizeName,
+  socsForModel,
+} from "@tvbox-check/core/rules";
 import { fr } from "../i18n/fr";
 
 interface Props {
@@ -82,8 +89,7 @@ export default function Checker({ db, repo }: Props) {
     setState(readUrl());
   }, []);
 
-  const update = (key: keyof FormState) => (e: Event) => {
-    const value = (e.currentTarget as HTMLInputElement | HTMLSelectElement).value;
+  const setField = (key: keyof FormState, value: string) => {
     setState((prev) => {
       const next = { ...prev, [key]: value };
       const qs = toQuery(next);
@@ -93,12 +99,45 @@ export default function Checker({ db, repo }: Props) {
     setCopied(false);
   };
 
+  const update = (key: keyof FormState) => (e: Event) =>
+    setField(key, (e.currentTarget as HTMLInputElement | HTMLSelectElement).value);
+
   const input = useMemo(() => toInput(state), [state]);
   const hasInput = Boolean(input.soc || input.modelName);
   const result = useMemo(() => (hasInput ? evaluate(input, db) : null), [input, db, hasInput]);
   const sourceMap = useMemo(() => new Map(db.sources.map((s) => [s.id, s])), [db]);
   const matchedSoc = input.soc ? findSoc(db, input.soc) : undefined;
   const socNotFound = Boolean(input.soc) && !matchedSoc;
+
+  // Suggestions : le modèle saisi restreint (sans l'interdire) les SoC proposés, et inversement.
+  const matchedModel = input.modelName ? findModel(db, input.modelName) : undefined;
+  const knownSocs = useMemo(
+    () => (matchedModel ? socsForModel(db, matchedModel) : []),
+    [db, matchedModel],
+  );
+  const reportedSocIds = useMemo(() => {
+    const q = normalizeName(state.model);
+    if (!q) return new Set<string>();
+    return new Set(
+      db.cases
+        .filter((c) => normalizeName(c.marketed_name) === q)
+        .flatMap((c) => [c.marketed.soc, c.observed.soc])
+        .filter((id): id is string => Boolean(id)),
+    );
+  }, [db, state.model]);
+  const orderedSocs = useMemo(() => {
+    const knownIds = new Set(knownSocs.map((x) => x.id));
+    const rank = (id: string) => (knownIds.has(id) ? 0 : reportedSocIds.has(id) ? 1 : 2);
+    return db.socs
+      .map((x, i) => ({ soc: x, i, r: rank(x.id) }))
+      .sort((p, q) => p.r - q.r || p.i - q.i);
+  }, [db, knownSocs, reportedSocIds]);
+  const modelChips = useMemo(
+    () => (matchedSoc && !matchedModel ? modelsForSoc(db, matchedSoc.id).slice(0, 8) : []),
+    [db, matchedSoc, matchedModel],
+  );
+  const modelNotInCatalog =
+    Boolean(input.modelName) && !matchedModel && db.models.length > 0 && reportedSocIds.size === 0;
 
   const reportUrl = repo
     ? `https://github.com/${repo}/issues/new?${new URLSearchParams({
@@ -155,10 +194,51 @@ export default function Checker({ db, repo }: Props) {
             autocomplete="off"
           />
           <datalist id="dl-socs">
-            {db.socs.map((s) => (
-              <option key={s.id} value={s.name} label={`${s.vendor} ${s.name}`} />
+            {orderedSocs.map(({ soc: x, r }) => (
+              <option
+                key={x.id}
+                value={x.name}
+                label={`${x.vendor} ${x.name}${
+                  r === 0
+                    ? ` (${fr.form.groupKnown})`
+                    : r === 1
+                      ? ` (${fr.form.groupReported})`
+                      : ""
+                }`}
+              />
             ))}
           </datalist>
+          {knownSocs.length > 0 && (
+            <span class="hint">
+              {fr.form.socSuggestKnown}{" "}
+              {knownSocs.map((x) => (
+                <button
+                  key={x.id}
+                  type="button"
+                  class="chip"
+                  onClick={() => setField("soc", x.name)}
+                >
+                  {x.vendor} {x.name}
+                </button>
+              ))}
+            </span>
+          )}
+          {modelChips.length > 0 && (
+            <span class="hint">
+              {fr.form.socSuggestModel}{" "}
+              {modelChips.map((x) => (
+                <button
+                  key={x.id}
+                  type="button"
+                  class="chip"
+                  onClick={() => setField("model", x.name)}
+                >
+                  {x.name}
+                </button>
+              ))}
+            </span>
+          )}
+          {modelNotInCatalog && <span class="hint">{fr.form.modelNotInCatalog}</span>}
           <span class="hint">{fr.form.socUnknown} : laissez vide.</span>
         </div>
         <div class="field">

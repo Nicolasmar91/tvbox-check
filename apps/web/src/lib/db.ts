@@ -2,9 +2,10 @@ import { validateDatabase } from "@tvbox-check/core";
 import type { Case, Database, Soc, Source } from "@tvbox-check/core";
 import socs from "../../../../data/socs.json";
 import cases from "../../../../data/cases.json";
+import models from "../../../../data/models.json";
 import sources from "../../../../data/sources.json";
 
-const result = validateDatabase({ socs, cases, sources });
+const result = validateDatabase({ socs, cases, models, sources });
 if (!result.ok || !result.db) {
   throw new Error(`Base de données invalide :\n${result.errors.join("\n")}`);
 }

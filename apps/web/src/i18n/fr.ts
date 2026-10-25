@@ -6,6 +6,7 @@ export const fr = {
   nav: {
     checker: "Vérificateur",
     socs: "SoC",
+    boxes: "Box référencées",
     models: "Modèles signalés",
     search: "Recherche",
     guide: "Guide",
@@ -34,6 +35,12 @@ export const fr = {
     unspecified: "Non précisé",
     ethernetOptions: { "100M": "100 Mbit/s", "1G": "Gigabit", none: "Aucun" },
     reset: "Effacer",
+    socSuggestKnown: "SoC répertoriés pour ce modèle :",
+    socSuggestModel: "Modèles répertoriés avec ce SoC :",
+    groupKnown: "connu pour ce modèle",
+    groupReported: "déjà signalé sous ce nom",
+    modelNotInCatalog:
+      "Modèle absent du catalogue : tous les SoC sont proposés. Vous pouvez le faire ajouter.",
   },
   result: {
     title: "Résultat",
@@ -72,6 +79,8 @@ export const fr = {
     ethernet: "Ethernet",
     video: "Vidéo",
     knownCase: "Cas signalé",
+    modelSoc: "SoC du modèle",
+    modelSpecs: "Configurations du modèle",
   },
   status: {
     verified: "Vérifié",
@@ -123,6 +132,20 @@ export const fr = {
     noBoxes: "Aucune box documentée pour l'instant.",
     check: "Vérifier une box avec ce SoC",
   },
+  boxes: {
+    indexTitle: "Box référencées",
+    indexDescription:
+      "Catalogue des modèles de TV box Android et des SoC réellement utilisés selon les révisions, avec sources.",
+    variants: "Révisions connues",
+    year: "Année",
+    ramConfigs: "RAM (Go)",
+    storageConfigs: "Stockage (Go)",
+    revisionNote:
+      "Un même nom de modèle peut changer de SoC d'une révision à l'autre : vérifiez la révision exacte de votre box.",
+    check: "Vérifier ce modèle",
+    none: "Aucun modèle référencé pour l'instant.",
+    socBoxes: "Box référencées avec ce SoC",
+  },
   model: {
     indexTitle: "Modèles signalés",
     indexDescription:
@@ -146,6 +169,7 @@ export const fr = {
     description: "Rechercher un SoC ou un modèle de TV box dans la base.",
     label: "Rechercher un SoC, un modèle, un constructeur",
     none: "Aucun résultat.",
+    typeBox: "Box référencée",
     typeSoc: "SoC",
     typeCase: "Modèle signalé",
   },

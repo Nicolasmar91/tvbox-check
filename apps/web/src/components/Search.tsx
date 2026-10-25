@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "preact/hooks";
 import { fr } from "../i18n/fr";
 
 export interface SearchEntry {
-  type: "soc" | "case";
+  type: "soc" | "case" | "box";
   href: string;
   title: string;
   text: string;
@@ -51,7 +51,13 @@ export default function Search({ entries }: { entries: SearchEntry[] }) {
         <ul class="plain">
           {results.map((r) => (
             <li key={r.href} class="card">
-              <span class="tag">{r.type === "soc" ? fr.search.typeSoc : fr.search.typeCase}</span>{" "}
+              <span class="tag">
+                {r.type === "soc"
+                  ? fr.search.typeSoc
+                  : r.type === "box"
+                    ? fr.search.typeBox
+                    : fr.search.typeCase}
+              </span>{" "}
               <a href={r.href}>{r.title}</a>
             </li>
           ))}

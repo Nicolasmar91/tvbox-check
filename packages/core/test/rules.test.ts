@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { evaluate, normalizeName } from "../src/rules.ts";
+import { evaluate, findModel, modelsForSoc, normalizeName, socsForModel } from "../src/rules.ts";
 import type { Database } from "../src/schemas.ts";
 
 function sourced<T>(
@@ -53,6 +53,7 @@ function makeDb(status: "verified" | "unverified"): Database {
         notes_fr: null,
       },
     ],
+    models: [],
     cases: [
       {
         id: "tx3-mini-4-32",
@@ -215,5 +216,72 @@ describe("Cas limites", () => {
     expect(r.overall).toBe("impossible");
     const r2 = evaluate({ soc: "amlogic-s905w", ramGb: 2, modelName: "tx3 mini" }, verifiedDb);
     expect(r2.overall).toBe("suspect");
+  });
+});
+
+describe("Catalogue de modèles", () => {
+  const db = makeDb("unverified");
+  db.models = [
+    {
+      id: "box-a",
+      name: "Box A",
+      aliases: ["BoxA 2"],
+      brand: null,
+      variants: [
+        {
+          soc: "amlogic-s905w",
+          ram_gb: [1, 2],
+          storage_gb: null,
+          year: 2018,
+          note_fr: null,
+          sources: ["src-a"],
+        },
+      ],
+      notes_fr: null,
+    },
+  ];
+
+  it("trouve un modèle par nom ou alias normalisé", () => {
+    expect(findModel(db, "  box-a ")?.id).toBe("box-a");
+    expect(findModel(db, "BOXA2")?.id).toBe("box-a");
+    expect(findModel(db, "Box B")).toBeUndefined();
+  });
+
+  it("liste les SoC d'un modèle et les modèles d'un SoC", () => {
+    expect(socsForModel(db, db.models[0]!).map((s) => s.id)).toEqual(["amlogic-s905w"]);
+    expect(modelsForSoc(db, "amlogic-s905w").map((x) => x.id)).toEqual(["box-a"]);
+    expect(modelsForSoc(db, "empty-soc")).toEqual([]);
+  });
+
+  it("SoC répertorié pour le modèle : plausible", () => {
+    const r = evaluate({ modelName: "Box A", soc: "S905W" }, db);
+    expect(r.criteria.find((c) => c.criterion === "modelSoc")).toMatchObject({
+      verdict: "plausible",
+      sources: ["src-a"],
+    });
+  });
+
+  it("SoC hors catalogue : suspect, jamais impossible", () => {
+    const verified = makeDb("verified");
+    verified.models = db.models;
+    const r = evaluate({ modelName: "Box A", soc: "empty-soc" }, verified);
+    expect(r.criteria.find((c) => c.criterion === "modelSoc")).toMatchObject({
+      verdict: "suspect",
+    });
+    expect(r.overall).toBe("suspect");
+  });
+
+  it("RAM au-delà des configurations répertoriées : inconnu, pas accusé", () => {
+    const r = evaluate({ modelName: "Box A", soc: "S905W", ramGb: 2 }, db);
+    expect(r.criteria.some((c) => c.criterion === "modelSpecs")).toBe(false);
+    const r2 = evaluate({ modelName: "Box A", soc: "amlogic-s905w", ramGb: 4 }, db);
+    expect(r2.criteria.find((c) => c.criterion === "modelSpecs")).toMatchObject({
+      verdict: "unknown",
+    });
+  });
+
+  it("sans modèle connu, aucun critère de catalogue", () => {
+    const r = evaluate({ modelName: "Autre", soc: "S905W", ramGb: 1 }, db);
+    expect(r.criteria.some((c) => c.criterion.startsWith("model"))).toBe(false);
   });
 });

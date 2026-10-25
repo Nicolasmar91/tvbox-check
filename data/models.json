@@ -1,0 +1,19 @@
+[
+  {
+    "id": "tanix-tx3-mini",
+    "name": "TX3 Mini",
+    "aliases": ["Tanix TX3 Mini"],
+    "brand": "Tanix",
+    "variants": [
+      {
+        "soc": "amlogic-s905w",
+        "ram_gb": null,
+        "storage_gb": null,
+        "year": 2017,
+        "note_fr": "Présenté à sa sortie comme une box à base d'Amlogic S905W.",
+        "sources": ["src-cnx-tx3mini"]
+      }
+    ],
+    "notes_fr": null
+  }
+]

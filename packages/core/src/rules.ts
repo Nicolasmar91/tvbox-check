@@ -1,5 +1,5 @@
 import { messagesFr as m } from "./messages.fr.ts";
-import type { Basis, Database, Soc, Status, VideoLevel } from "./schemas.ts";
+import type { Basis, Database, Model, Soc, Status, VideoLevel } from "./schemas.ts";
 import { worstVerdict } from "./verdict.ts";
 import type { CheckInput, CheckResult, Criterion, CriterionResult, Verdict } from "./verdict.ts";
 
@@ -21,6 +21,26 @@ export function findSoc(db: Database, query: string): Soc | undefined {
   );
 }
 
+/** Modèle du catalogue correspondant à un nom (insensible à la casse, aux espaces et à la ponctuation). */
+export function findModel(db: Database, query: string): Model | undefined {
+  const q = normalizeName(query);
+  if (!q) return undefined;
+  return db.models.find(
+    (m) => normalizeName(m.name) === q || m.aliases.some((a) => normalizeName(a) === q),
+  );
+}
+
+/** SoC répertoriés pour un modèle, sans doublon, dans l'ordre du catalogue. */
+export function socsForModel(db: Database, model: Model): Soc[] {
+  const ids = [...new Set(model.variants.map((v) => v.soc))];
+  return ids.flatMap((id) => db.socs.filter((s) => s.id === id));
+}
+
+/** Modèles du catalogue dont au moins une révision utilise ce SoC. */
+export function modelsForSoc(db: Database, socId: string): Model[] {
+  return db.models.filter((m) => m.variants.some((v) => v.soc === socId));
+}
+
 /** `impossible` seulement sur donnée vérifiée ; sinon `suspect`. */
 function breach(status: Status): Verdict {
   return status === "verified" ? "impossible" : "suspect";
@@ -30,6 +50,7 @@ export function evaluate(input: CheckInput, db: Database): CheckResult {
   const criteria: CriterionResult[] = [];
   const socQuery = input.soc?.trim();
   const modelQuery = input.modelName?.trim();
+  const model = modelQuery ? findModel(db, modelQuery) : undefined;
 
   if (modelQuery) {
     const q = normalizeName(modelQuery);
@@ -55,6 +76,10 @@ export function evaluate(input: CheckInput, db: Database): CheckResult {
         sources: [],
       });
     } else {
+      if (model) {
+        checkModelSoc(db, model, soc, criteria);
+        checkModelSpecs(input, model, soc, criteria);
+      }
       checkRam(input, soc, criteria);
       checkEthernet(input, soc, criteria);
       checkVideo(input, soc, criteria);
@@ -180,4 +205,50 @@ function checkVideo(input: CheckInput, soc: Soc, out: CriterionResult[]): void {
       },
     }),
   );
+}
+
+const socLabel = (s: Soc) => `${s.vendor} ${s.name}`;
+
+/**
+ * Le SoC saisi est-il l'un de ceux répertoriés pour ce modèle ? Un écart reste `suspect` au
+ * maximum : un fabricant change parfois de puce sans changer de nom.
+ */
+function checkModelSoc(db: Database, model: Model, soc: Soc, out: CriterionResult[]): void {
+  const known = socsForModel(db, model);
+  const sources = [...new Set(model.variants.flatMap((v) => v.sources))];
+  if (known.some((s) => s.id === soc.id)) {
+    const own = model.variants.filter((v) => v.soc === soc.id).flatMap((v) => v.sources);
+    out.push({
+      criterion: "modelSoc",
+      verdict: "plausible",
+      message: m.modelSocKnown(model.name, socLabel(soc)),
+      sources: [...new Set(own)],
+    });
+    return;
+  }
+  out.push({
+    criterion: "modelSoc",
+    verdict: "suspect",
+    message: m.modelSocUnusual(model.name, socLabel(soc), known.map(socLabel).join(", ")),
+    claimed: socLabel(soc),
+    limit: known.map(socLabel).join(", "),
+    sources,
+  });
+}
+
+/** RAM annoncée supérieure aux configurations répertoriées pour ce modèle avec ce SoC. */
+function checkModelSpecs(input: CheckInput, model: Model, soc: Soc, out: CriterionResult[]): void {
+  const claimed = input.ramGb;
+  if (claimed === undefined) return;
+  const variants = model.variants.filter((v) => v.soc === soc.id && v.ram_gb !== null);
+  const sizes = [...new Set(variants.flatMap((v) => v.ram_gb ?? []))].sort((a, b) => a - b);
+  if (sizes.length === 0 || claimed <= sizes[sizes.length - 1]!) return;
+  out.push({
+    criterion: "modelSpecs",
+    verdict: "unknown",
+    message: m.modelSpecsUnlisted(model.name, claimed, sizes.join(", ")),
+    claimed,
+    limit: sizes.join(", "),
+    sources: [...new Set(variants.flatMap((v) => v.sources))],
+  });
 }
