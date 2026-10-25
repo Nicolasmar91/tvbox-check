@@ -45,13 +45,13 @@ ssh-keyscan -t ed25519 HOTE
 
 Dans `Settings → Secrets and variables → Actions` du dépôt `tvbox-check` :
 
-| Type     | Nom               | Valeur                                              |
-| -------- | ----------------- | --------------------------------------------------- |
-| Secret   | `VPS_HOST`        | nom d'hôte ou IP du VPS                             |
-| Secret   | `VPS_USER`        | `debian`                                            |
-| Secret   | `VPS_SSH_KEY`     | contenu **complet** du fichier `tvbox-check-deploy` |
-| Secret   | `VPS_KNOWN_HOSTS` | la ligne obtenue avec `ssh-keyscan`                 |
-| Variable | `DEPLOY_ENABLED`  | `true` (onglet **Variables**, à activer en dernier) |
+| Type     | Nom               | Valeur                                                                  |
+| -------- | ----------------- | ----------------------------------------------------------------------- |
+| Secret   | `VPS_HOST`        | nom d'hôte ou IP du VPS                                                 |
+| Secret   | `VPS_USER`        | `debian`                                                                |
+| Secret   | `VPS_SSH_KEY_B64` | clé privée en base64, une seule ligne : `base64 -w0 tvbox-check-deploy` |
+| Secret   | `VPS_KNOWN_HOSTS` | la ligne obtenue avec `ssh-keyscan`                                     |
+| Variable | `DEPLOY_ENABLED`  | `true` (onglet **Variables**, à activer en dernier)                     |
 
 Tant que `DEPLOY_ENABLED` n'est pas `true`, la CI tourne mais ne déploie pas. Après avoir enregistré la clé, supprime le fichier privé de ton PC.
 
@@ -75,6 +75,6 @@ Les commandes PowerShell du guide ont ces équivalents dans un shell Linux :
 ```bash
 ssh-keygen -t ed25519 -f ~/tvbox-check-deploy -C tvbox-check-deploy   # génère la paire de clés
 cat ~/tvbox-check-deploy.pub                                           # clé publique à ajouter sur le VPS
-cat ~/tvbox-check-deploy                                               # clé privée à coller dans VPS_SSH_KEY
+base64 -w0 ~/tvbox-check-deploy; echo                                  # clé privée en une ligne, à coller dans VPS_SSH_KEY_B64
 rm ~/tvbox-check-deploy ~/tvbox-check-deploy.pub                       # à faire une fois le secret enregistré
 ```

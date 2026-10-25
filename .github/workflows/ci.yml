@@ -41,16 +41,17 @@ jobs:
 
       - name: Configurer SSH
         env:
-          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_SSH_KEY_B64: ${{ secrets.VPS_SSH_KEY_B64 }}
           VPS_KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
         run: |
           install -m 700 -d ~/.ssh
-          # Retire les retours chariot (CRLF) que le presse-papiers Windows ajoute parfois.
-          printf '%s\n' "$VPS_SSH_KEY" | tr -d '\r' > ~/.ssh/deploy_key
+          # La clé privée est stockée en base64 sur une seule ligne : insensible aux
+          # retours à la ligne (CRLF) ou aux espaces ajoutés par un copier-coller.
+          printf '%s' "$VPS_SSH_KEY_B64" | tr -d ' \r\n' | base64 -d > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           printf '%s\n' "$VPS_KNOWN_HOSTS" | tr -d '\r' > ~/.ssh/known_hosts
           if ! ssh-keygen -y -f ~/.ssh/deploy_key > /dev/null 2>&1; then
-            echo "::error::VPS_SSH_KEY est illisible (clé privée tronquée ou mal copiée). Régénérer la clé et recoller le secret."
+            echo "::error::VPS_SSH_KEY_B64 est illisible (secret absent, tronqué ou mal copié). Régénérer la clé et recoller le secret."
             exit 1
           fi
 
