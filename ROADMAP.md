@@ -21,6 +21,8 @@ Choisissez une idée, ouvrez une issue pour dire que vous la prenez, puis propos
 - **[code]** Mesurer Lighthouse mobile (cible ≥ 95) et corriger ce qui bloque.
 - **[code]** Tests de parcours (Playwright) : saisie, verdict, URL partageable.
 - **[code]** Vérification de types des pages `.astro` (l'outil `astro check` ne fonctionne pas encore avec Astro 7).
+- **[code]** Diagnostic DTB et bootloader : détecter le matériel mal ou pas exploité (RAM, Ethernet, CPU) à partir d'un rapport et d'un `.dtb`, traités dans le navigateur. Cahier des charges : [docs/issues/diagnostic-dtb-bootloader.md](docs/issues/diagnostic-dtb-bootloader.md).
+- **[données]** Alimenter la future base des DTB connus (`data/dtbs.json`) : carte, fichier, DTB recommandé, sources.
 - **[code]** Scanner en ligne de commande (niveau 2) qui produit un `Report` (schéma déjà défini dans `packages/core`).
 - **[code]** Import d'un rapport AIDA64 ou Termux (niveau 3).
 - **[code]** Compteurs de votes « moi aussi » par modèle (Worker Cloudflare), en gardant le site statique par défaut.
