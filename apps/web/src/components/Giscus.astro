@@ -6,7 +6,7 @@ interface Props {
   term: string;
 }
 const { term } = Astro.props;
-const enabled = Boolean(config.repo && config.giscus.repoId && config.giscus.categoryId);
+const enabled = Boolean(config.giscus.repo && config.giscus.repoId && config.giscus.categoryId);
 ---
 
 <section aria-labelledby="comments-title">
@@ -18,7 +18,7 @@ const enabled = Boolean(config.repo && config.giscus.repoId && config.giscus.cat
         class="btn secondary"
         id="load-comments"
         data-term={term}
-        data-repo={config.repo}
+        data-repo={config.giscus.repo}
         data-repo-id={config.giscus.repoId}
         data-category={config.giscus.category}
         data-category-id={config.giscus.categoryId}

@@ -1,14 +1,17 @@
 /**
  * Réglages du site. À renseigner une fois le dépôt GitHub créé :
- * - `repo` : « propriétaire/nom » du dépôt public ;
- * - `giscus` : identifiants fournis par https://giscus.app (Discussions activées sur le dépôt).
- * Tant que `repo` est vide, les liens GitHub et les commentaires sont masqués.
+ * - `repo` : « propriétaire/nom » du dépôt de code (liens de signalement) ;
+ * - `giscus` : dépôt de commentaires + identifiants fournis par https://giscus.app
+ *   (dépôt public, Discussions activées, application giscus installée).
+ * Tant que `repoId` et `categoryId` sont vides, les commentaires restent masqués.
  */
 export const config = {
   siteName: "tvbox-check",
   siteUrl: "https://tvbox-check.nm-labs.fr",
-  repo: "" as string,
+  repo: "Nicolasmar91/tvbox-check",
   giscus: {
+    // Dépôt dédié aux commentaires (Discussions), distinct du dépôt de code.
+    repo: "Nicolasmar91/tvbox-check-commentaire",
     repoId: "" as string,
     category: "Commentaires",
     categoryId: "" as string,
