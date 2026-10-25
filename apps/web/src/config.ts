@@ -11,7 +11,7 @@ export const config = {
   repo: "Nicolasmar91/tvbox-check",
   giscus: {
     // Dépôt dédié aux commentaires (Discussions), distinct du dépôt de code.
-    repo: "Nicolasmar91/tvbox-check-commentaire",
+    repo: "Nicolasmar91/tvbox-check-commentaires",
     repoId: "" as string,
     category: "Commentaires",
     categoryId: "" as string,
