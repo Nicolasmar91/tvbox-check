@@ -114,6 +114,11 @@ export type Case = z.infer<typeof CaseSchema>;
 /** Une révision d'un modèle : le SoC (et les configurations) réellement vendus sous ce nom. */
 export const ModelVariantSchema = z.object({
   soc: z.string().min(1),
+  /**
+   * `official` : révision vendue ainsi par le fabricant ou documentée par la presse.
+   * `reported` : puce observée sous ce nom (clone, remarquage) : jamais « attendue ».
+   */
+  kind: z.enum(["official", "reported"]),
   ram_gb: z.array(z.number().positive()).nullable(),
   storage_gb: z.array(z.number().positive()).nullable(),
   year: z.number().int().min(2010).max(2035).nullable(),

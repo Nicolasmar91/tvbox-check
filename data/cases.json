@@ -20,6 +20,106 @@
     "added": "2026-10-24"
   },
   {
+    "id": "mxq-pro-4k-5g-h3",
+    "marketed_name": "MXQ Pro 4K 5G",
+    "marketed": {
+      "soc": null,
+      "ram_gb": null,
+      "storage_gb": null
+    },
+    "observed": {
+      "soc": "allwinner-h3",
+      "ram_gb": 2,
+      "storage_gb": 16,
+      "confidence": "reported"
+    },
+    "how_observed": ["armbian-boot"],
+    "type": "wrong-soc",
+    "summary_fr": "Un témoignage unique décrit une box de ce nom dont la carte fonctionnerait avec une image Armbian prévue pour un H3 alors que le modèle d'origine utiliserait un SoC Amlogic ; l'auteur parle d'un probable clone. Aucun log ni photo de puce.",
+    "sources": ["src-armbian-forum-mxq-pro-4k-5g-a-base-de-h3"],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "mxq-pro-4k-s905x-rk3229",
+    "marketed_name": "MXQ Pro 4K",
+    "marketed": {
+      "soc": "amlogic-s905x",
+      "ram_gb": null,
+      "storage_gb": null
+    },
+    "observed": {
+      "soc": "rockchip-rk3229",
+      "ram_gb": null,
+      "storage_gb": null,
+      "confidence": "reported"
+    },
+    "how_observed": ["armbian-boot"],
+    "type": "wrong-soc",
+    "summary_fr": "Un fil Armbian sur les boxes RK322x traite une « MXQ Pro 4K » annoncée avec un S905X comme une carte RK3229. Mention brève, sans photo de puce ni log détaillé ; le nom MXQ Pro est repris par plusieurs fabricants.",
+    "sources": ["src-armbian-rk322x"],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "mxq-pro-s905-rockchip-reported",
+    "marketed_name": "MXQ Pro",
+    "marketed": {
+      "soc": "amlogic-s905",
+      "ram_gb": null,
+      "storage_gb": null
+    },
+    "observed": {
+      "soc": "rockchip-rk3229",
+      "ram_gb": null,
+      "storage_gb": null,
+      "confidence": "reported"
+    },
+    "how_observed": [],
+    "type": "wrong-soc",
+    "summary_fr": "Des participants d'un fil LibreELEC rapportent des box de type MXQ Pro vendues avec un S905 ou un S905X mais basées sur une puce Rockchip (un RK3229 probable). La puce réelle n'apparaît parfois que dans le texte de l'annonce. Aucune box précise n'est documentée.",
+    "sources": ["src-libreelec-boxes-annoncees-s905-mais-a-base"],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "q-plus-tvbox-4gb-1gb",
+    "marketed_name": "Q plus TV box",
+    "marketed": {
+      "soc": null,
+      "ram_gb": 4,
+      "storage_gb": 64
+    },
+    "observed": {
+      "soc": null,
+      "ram_gb": 1,
+      "storage_gb": null,
+      "confidence": "probable"
+    },
+    "how_observed": ["uart-log"],
+    "type": "inflated-specs",
+    "summary_fr": "Étiquette annonçant 4 Go de RAM et 64 Go ; un fil Armbian rapporte un log série indiquant 1024 Mo de DRAM détectée (DDR3). Log lu uniquement via le compte rendu du fil, SoC exact incertain (famille sun50iw9).",
+    "sources": ["src-armbian-forum-x96q-h313-cartes-diverses-pa"],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "q96-stick-h313-8gb",
+    "marketed_name": "Q96 (stick)",
+    "marketed": {
+      "soc": "allwinner-h313",
+      "ram_gb": 8,
+      "storage_gb": 128
+    },
+    "observed": {
+      "soc": null,
+      "ram_gb": null,
+      "storage_gb": null,
+      "confidence": "reported"
+    },
+    "how_observed": [],
+    "type": "impossible-claim",
+    "summary_fr": "Une version annoncée à 8 Go de RAM alors que la fiche liste 2 ou 4 Go ; l'article juge l'annonce de 8 Go irréaliste pour ce SoC.",
+    "sources": ["src-androidpctv-stick-q96-h313-et-annonce-de-8"],
+    "added": "2026-10-25"
+  },
+  {
     "id": "q96-x3-h313",
     "marketed_name": "Q96 X3",
     "marketed": {
@@ -60,6 +160,66 @@
     "added": "2026-10-24"
   },
   {
+    "id": "tx3-mini-s905l2b-variant",
+    "marketed_name": "TX3 Mini",
+    "marketed": {
+      "soc": "amlogic-s905w",
+      "ram_gb": 2,
+      "storage_gb": 16
+    },
+    "observed": {
+      "soc": "amlogic-s905l2",
+      "ram_gb": 2,
+      "storage_gb": 16,
+      "confidence": "reported"
+    },
+    "how_observed": ["armbian-boot"],
+    "type": "relabeled",
+    "summary_fr": "Une box vendue sous le nom TX3 mini, attendue avec un S905W, s'est révélée être un S905L2-B, qui ne démarre qu'avec un DTB s905l2. La RAM et le stockage correspondent à l'annonce (environ 1,94 Go et 14 Go). Le même fil évoque des cartes 1/8 étiquetées 2/16.",
+    "sources": ["src-armbian-forum-tx3-mini-identifiee-s905l2-b"],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "x7-s905l2-s905l-reported",
+    "marketed_name": "X7",
+    "marketed": {
+      "soc": "amlogic-s905l2",
+      "ram_gb": 4,
+      "storage_gb": 32
+    },
+    "observed": {
+      "soc": "amlogic-s905l",
+      "ram_gb": 1,
+      "storage_gb": 4,
+      "confidence": "reported"
+    },
+    "how_observed": [],
+    "type": "wrong-soc",
+    "summary_fr": "Des acheteurs d'offres autour de 20 dollars annonçant un S905L2 en 2/4 Go disent avoir reçu un S905L ; un commentaire fait état de 1 Go de RAM et 4 Go de stockage pour une offre 4/32. Un autre commentaire estime que le S905L2 n'existe pas. Témoignages sans preuve matérielle.",
+    "sources": ["src-cnx-boxes-dites-s905l2-vendues-vers-20-dol"],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "x88-pro-x3-rk3318-relabeled",
+    "marketed_name": "X88 Pro X3",
+    "marketed": {
+      "soc": "amlogic-s905x3",
+      "ram_gb": null,
+      "storage_gb": null
+    },
+    "observed": {
+      "soc": "rockchip-rk3318",
+      "ram_gb": null,
+      "storage_gb": null,
+      "confidence": "reported"
+    },
+    "how_observed": ["chip-photo"],
+    "type": "relabeled",
+    "summary_fr": "Un utilisateur rapporte une X88 Pro X3 dont la puce porte un marquage S905X3 peu net, avec RK3318 en dessous ; la peinture serait partie avec le dissipateur, d'où un soupçon de remarquage. Indices indirects (photos, performances très faibles), pas de log de démarrage : cas non confirmé.",
+    "sources": ["src-forum-khadas-amlogic-contre-rockchip-x88-p"],
+    "added": "2026-10-25"
+  },
+  {
     "id": "x88-pro-x3-s905x3-4gb",
     "marketed_name": "X88 Pro X3",
     "marketed": {
@@ -78,6 +238,46 @@
     "summary_fr": "Annoncée 4 Go ; des utilisateurs CoreELEC rapportent que le bootloader n'en détecte que 2 Go et que seul le DTB 2 Go démarre. Un autre fil conteste en comptant 8 puces mémoire : à lire au cas par cas.",
     "sources": ["src-coreelec-x88prox3-dtb", "src-coreelec-x88prox3-fake4gb"],
     "added": "2026-10-24"
+  },
+  {
+    "id": "x96-mini-plus-s905w4-s905w",
+    "marketed_name": "X96 mini+",
+    "marketed": {
+      "soc": "amlogic-s905w4",
+      "ram_gb": 2,
+      "storage_gb": 16
+    },
+    "observed": {
+      "soc": "amlogic-s905w",
+      "ram_gb": 2,
+      "storage_gb": 16,
+      "confidence": "reported"
+    },
+    "how_observed": [],
+    "type": "relabeled",
+    "summary_fr": "Annoncée avec un S905W4 ; le testeur relève des informations système identiques à celles d'un S905W et en déduit une puce renommée. Hypothèse du testeur, sans preuve matérielle.",
+    "sources": ["src-androidpctv-x96-mini-et-le-s905w4-annonce"],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "x96-mini-s905w-2-16-rk3229",
+    "marketed_name": "X96 mini",
+    "marketed": {
+      "soc": "amlogic-s905w",
+      "ram_gb": 2,
+      "storage_gb": 16
+    },
+    "observed": {
+      "soc": "rockchip-rk3229",
+      "ram_gb": 1,
+      "storage_gb": 8,
+      "confidence": "probable"
+    },
+    "how_observed": ["armbian-boot", "linux-proc"],
+    "type": "wrong-soc",
+    "summary_fr": "Annoncée S905W en 2/16 ; les images Armbian S905W ne démarrent pas, un outil pour RK322x si, avec 1 Go et 8 Go. Un second témoin relève un CPU Cortex-A7 sous Android. Un auteur dit que le marquage de la puce a été modifié, mais personne n'a pu vérifier la puce (radiateur collé).",
+    "sources": ["src-armbian-forum-x96-mini-annoncee-s905w-rk32"],
+    "added": "2026-10-25"
   },
   {
     "id": "x96-mini-s905w-4-32",

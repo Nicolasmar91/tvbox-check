@@ -137,6 +137,7 @@ export const fr = {
     indexDescription:
       "Catalogue des modèles de TV box Android et des SoC réellement utilisés selon les révisions, avec sources.",
     variants: "Révisions connues",
+    reported: "Signalé sous ce nom (non officiel)",
     year: "Année",
     ramConfigs: "RAM (Go)",
     storageConfigs: "Stockage (Go)",

@@ -5,11 +5,15 @@ import type { CheckInput, CheckResult, Criterion, CriterionResult, Verdict } fro
 
 const VIDEO_ORDER: readonly VideoLevel[] = ["1080p", "4K", "6K", "8K"];
 
-/** Minuscules, sans accents, uniquement lettres et chiffres. */
+/**
+ * Minuscules, sans accents, uniquement lettres et chiffres. Le « + » est conservé sous la
+ * forme « plus » : « X96 mini+ » et « X96 mini » sont deux modèles distincts.
+ */
 export function normalizeName(name: string): string {
   return name
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
+    .replace(/\+/g, " plus ")
     .toLowerCase()
     .replace(/[^a-z0-9]/g, "");
 }
@@ -30,9 +34,13 @@ export function findModel(db: Database, query: string): Model | undefined {
   );
 }
 
-/** SoC répertoriés pour un modèle, sans doublon, dans l'ordre du catalogue. */
-export function socsForModel(db: Database, model: Model): Soc[] {
-  const ids = [...new Set(model.variants.map((v) => v.soc))];
+/** SoC répertoriés pour un modèle (révisions officielles par défaut), sans doublon. */
+export function socsForModel(
+  db: Database,
+  model: Model,
+  kind: "official" | "reported" = "official",
+): Soc[] {
+  const ids = [...new Set(model.variants.filter((v) => v.kind === kind).map((v) => v.soc))];
   return ids.flatMap((id) => db.socs.filter((s) => s.id === id));
 }
 
@@ -54,14 +62,15 @@ export function evaluate(input: CheckInput, db: Database): CheckResult {
 
   if (modelQuery) {
     const q = normalizeName(modelQuery);
-    const found = q ? db.cases.find((c) => normalizeName(c.marketed_name) === q) : undefined;
-    if (found) {
+    // Tous les cas portant ce nom : plusieurs écarts peuvent être signalés pour un même modèle.
+    const found = q ? db.cases.filter((c) => normalizeName(c.marketed_name) === q) : [];
+    for (const c of found) {
       criteria.push({
         criterion: "knownCase",
         verdict: "suspect",
-        message: m.knownCase(found.marketed_name, found.summary_fr),
-        sources: found.sources,
-        case: found,
+        message: m.knownCase(c.marketed_name, c.summary_fr),
+        sources: c.sources,
+        case: c,
       });
     }
   }
@@ -211,12 +220,17 @@ const socLabel = (s: Soc) => `${s.vendor} ${s.name}`;
 
 /**
  * Le SoC saisi est-il l'un de ceux répertoriés pour ce modèle ? Un écart reste `suspect` au
- * maximum : un fabricant change parfois de puce sans changer de nom.
+ * maximum : un fabricant change parfois de puce sans changer de nom. Une puce seulement
+ * « signalée » sous ce nom n'est jamais présentée comme attendue.
  */
 function checkModelSoc(db: Database, model: Model, soc: Soc, out: CriterionResult[]): void {
-  const known = socsForModel(db, model);
-  const sources = [...new Set(model.variants.flatMap((v) => v.sources))];
-  if (known.some((s) => s.id === soc.id)) {
+  const official = socsForModel(db, model, "official");
+  if (official.length === 0) return; // aucune référence officielle : rien à comparer
+  const sourcesOf = (kind: "official" | "reported") =>
+    model.variants.filter((v) => v.kind === kind).flatMap((v) => v.sources);
+  const known = official.map(socLabel).join(", ");
+
+  if (official.some((s) => s.id === soc.id)) {
     const own = model.variants.filter((v) => v.soc === soc.id).flatMap((v) => v.sources);
     out.push({
       criterion: "modelSoc",
@@ -226,13 +240,16 @@ function checkModelSoc(db: Database, model: Model, soc: Soc, out: CriterionResul
     });
     return;
   }
+  const reported = socsForModel(db, model, "reported").some((s) => s.id === soc.id);
   out.push({
     criterion: "modelSoc",
     verdict: "suspect",
-    message: m.modelSocUnusual(model.name, socLabel(soc), known.map(socLabel).join(", ")),
+    message: reported
+      ? m.modelSocReported(model.name, socLabel(soc))
+      : m.modelSocUnusual(model.name, socLabel(soc), known),
     claimed: socLabel(soc),
-    limit: known.map(socLabel).join(", "),
-    sources,
+    limit: known,
+    sources: [...new Set([...sourcesOf("official"), ...(reported ? sourcesOf("reported") : [])])],
   });
 }
 
@@ -240,7 +257,9 @@ function checkModelSoc(db: Database, model: Model, soc: Soc, out: CriterionResul
 function checkModelSpecs(input: CheckInput, model: Model, soc: Soc, out: CriterionResult[]): void {
   const claimed = input.ramGb;
   if (claimed === undefined) return;
-  const variants = model.variants.filter((v) => v.soc === soc.id && v.ram_gb !== null);
+  const variants = model.variants.filter(
+    (v) => v.kind === "official" && v.soc === soc.id && v.ram_gb !== null,
+  );
   const sizes = [...new Set(variants.flatMap((v) => v.ram_gb ?? []))].sort((a, b) => a - b);
   if (sizes.length === 0 || claimed <= sizes[sizes.length - 1]!) return;
   out.push({

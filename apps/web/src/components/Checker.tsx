@@ -118,13 +118,17 @@ export default function Checker({ db, repo }: Props) {
   const reportedSocIds = useMemo(() => {
     const q = normalizeName(state.model);
     if (!q) return new Set<string>();
-    return new Set(
+    const ids = new Set<string>(
       db.cases
         .filter((c) => normalizeName(c.marketed_name) === q)
         .flatMap((c) => [c.marketed.soc, c.observed.soc])
         .filter((id): id is string => Boolean(id)),
     );
-  }, [db, state.model]);
+    if (matchedModel) {
+      for (const s of socsForModel(db, matchedModel, "reported")) ids.add(s.id);
+    }
+    return ids;
+  }, [db, state.model, matchedModel]);
   const orderedSocs = useMemo(() => {
     const knownIds = new Set(knownSocs.map((x) => x.id));
     const rank = (id: string) => (knownIds.has(id) ? 0 : reportedSocIds.has(id) ? 1 : 2);

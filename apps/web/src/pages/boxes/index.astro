@@ -27,7 +27,13 @@ const sorted = [...db.models].sort((a, b) => a.name.localeCompare(b.name, "fr"))
               <th scope="row">
                 <a href={`/boxes/${m.id}/`}>{m.name}</a>
               </th>
-              <td>{[...new Set(m.variants.map((v) => socName(v.soc)))].join(", ")}</td>
+              <td>
+                {[
+                  ...new Set(
+                    m.variants.filter((v) => v.kind === "official").map((v) => socName(v.soc)),
+                  ),
+                ].join(", ")}
+              </td>
             </tr>
           ))}
         </tbody>

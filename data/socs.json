@@ -1,11 +1,46 @@
 [
   {
+    "id": "allwinner-a133",
+    "vendor": "Allwinner",
+    "name": "A133",
+    "aliases": ["A133"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": {
+      "value": 4,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-processeur-tablette-allwinner-a133"]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR3", "LPDDR4"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-processeur-tablette-allwinner-a133"]
+    },
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-processeur-tablette-allwinner-a133"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Processeur pour tablettes (GPU PowerVR GE8300, Android 10) ; décodage H.265/H.264 en 4K à 30 i/s et VP9 seulement en 720p. Aucune TV box A133 trouvée.",
+        "sources": ["src-cnx-processeur-tablette-allwinner-a133"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
     "id": "allwinner-h3",
     "vendor": "Allwinner",
     "name": "H3",
     "aliases": ["H3"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A7",
     "ram_max_gb": {
       "value": 2,
       "status": "unverified",
@@ -38,11 +73,16 @@
     "vendor": "Allwinner",
     "name": "H313",
     "aliases": ["H313"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A53",
     "ram_max_gb": null,
     "ram_types": null,
-    "ethernet_max_mbps": null,
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-x96q-avec-allwinner-h313"]
+    },
     "video_max_decode": null,
     "community_findings": [
       {
@@ -59,12 +99,32 @@
     "notes_fr": "Limite de RAM à rechercher (aucune source trouvée)."
   },
   {
+    "id": "allwinner-h5",
+    "vendor": "Allwinner",
+    "name": "H5",
+    "aliases": ["H5"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Présenté comme conçu pour les box OTT 4K ; la MX Pro 4K est décrite comme la première box à base de H5, avec un GPU Mali-450.",
+        "sources": ["src-cnx-mx-pro-4k-avec-allwinner-h5"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
     "id": "allwinner-h6",
     "vendor": "Allwinner",
     "name": "H6",
     "aliases": ["H6", "H6 V200"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A53",
     "ram_max_gb": {
       "value": 3,
       "status": "unverified",
@@ -117,7 +177,12 @@
       "basis": "community",
       "sources": ["src-linux-sunxi-h616"]
     },
-    "ethernet_max_mbps": null,
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-processeur-allwinner-h616-tanix-tx6s-e"]
+    },
     "video_max_decode": {
       "value": "4K",
       "status": "unverified",
@@ -132,6 +197,441 @@
       }
     ],
     "notes_fr": null
+  },
+  {
+    "id": "allwinner-h618",
+    "vendor": "Allwinner",
+    "name": "H618",
+    "aliases": ["H618"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "6K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-allwinner-h618-t95z-plus-et-t95-max"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Article CNX : le H618 ressemble au H616 mais peut faire tourner Android 12 ; la différence relevée est un cache L2 de 1 Mo ; ni USB 3.0 ni PCIe.",
+        "sources": ["src-cnx-allwinner-h618-t95z-plus-et-t95-max"]
+      },
+      {
+        "topic": "ethernet",
+        "summary_fr": "Selon les boxes, le port est Gigabit (T95Z Plus) ou 10/100 (T95 Max, H96 Max H618) : c'est un choix de carte, pas une limite prouvée du SoC.",
+        "sources": [
+          "src-cnx-allwinner-h618-t95z-plus-et-t95-max",
+          "src-androidpctv-t95-max-avec-h618",
+          "src-androidpctv-h96max-h618"
+        ]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "Les boxes citées sont vendues en 2 ou 4 Go de DDR3 ; une détection de 4 Gio sous U-Boot a été rapportée sur une Transpeed 8K618-T. Aucune limite constructeur lue.",
+        "sources": ["src-androidpctv-t95-max-avec-h618", "src-armbian-forum-transpeed-8k618-t-h618"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "allwinner-h700",
+    "vendor": "Allwinner",
+    "name": "H700",
+    "aliases": ["H700"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-projecteur-transpeed-p10-allwinner-h70"]
+    },
+    "video_max_decode": {
+      "value": "6K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-projecteur-transpeed-p10-allwinner-h70"]
+    },
+    "community_findings": [
+      {
+        "topic": "ethernet",
+        "summary_fr": "Un MAC Gigabit et un 10/100 mais aucun PHY intégré : il faut un transcepteur externe.",
+        "sources": ["src-cnx-projecteur-transpeed-p10-allwinner-h70"]
+      }
+    ],
+    "notes_fr": "Dérivé du H616/H618 ; les exemples trouvés sont un projecteur et des consoles portables, pas des TV box."
+  },
+  {
+    "id": "amlogic-a311d",
+    "vendor": "Amlogic",
+    "name": "A311D",
+    "aliases": ["A311D"],
+    "cores": 6,
+    "arch": "Cortex-A73 + Cortex-A53",
+    "ram_max_gb": {
+      "value": 4,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-presentation-de-l-amlogic-a31"]
+    },
+    "ram_types": {
+      "value": ["LPDDR4", "LPDDR4X"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-presentation-de-l-amlogic-a31"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-presentation-de-l-amlogic-a31"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-khadas-vim3-a311d"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "Le tableau comparatif de CNX donne jusqu'à 4 Go sur 32 bits à 1608 MHz pour l'A311D, contre 16 Go pour l'A311D2 ; l'article de lancement de la VIM3 ne précise pas la limite du SoC.",
+        "sources": [
+          "src-cnx-software-presentation-de-l-amlogic-a31",
+          "src-cnx-software-khadas-vim3-a311d"
+        ]
+      },
+      {
+        "topic": "ethernet",
+        "summary_fr": "MAC gigabit avec PHY intégré en 10/100 selon CNX : le gigabit dépend de la carte.",
+        "sources": ["src-cnx-software-presentation-de-l-amlogic-a31"]
+      }
+    ],
+    "notes_fr": "Une datasheet partagée par un tiers existe mais n'a pas été retenue (copie marquée confidentielle)."
+  },
+  {
+    "id": "amlogic-a311d2",
+    "vendor": "Amlogic",
+    "name": "A311D2",
+    "aliases": ["A311D2"],
+    "cores": 8,
+    "arch": "Cortex-A73 + Cortex-A53",
+    "ram_max_gb": {
+      "value": 16,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-presentation-de-l-amlogic-a31"]
+    },
+    "ram_types": {
+      "value": ["LPDDR4", "LPDDR4X"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-presentation-de-l-amlogic-a31"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-presentation-de-l-amlogic-a31"]
+    },
+    "video_max_decode": {
+      "value": "8K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-presentation-de-l-amlogic-a31"]
+    },
+    "community_findings": [
+      {
+        "topic": "video",
+        "summary_fr": "CNX cite l'AV1 en 8Kp24 et 4Kp60 comme codec principal, mais laisse vide la ligne « décodage » de son tableau comparatif : valeur « 8K » à prendre avec réserve (8Kp24 seulement).",
+        "sources": ["src-cnx-software-presentation-de-l-amlogic-a31"]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "Le Beelink GT-King II embarque 8 Go de LPDDR4X, bien en deçà des 16 Go évoqués pour le SoC.",
+        "sources": [
+          "src-androidpctv-beelink-gt-king-ii-a311d2",
+          "src-cnx-software-presentation-de-l-amlogic-a31"
+        ]
+      }
+    ],
+    "notes_fr": "Spécifications relayées par un article, reposant sur un manuel de référence préliminaire."
+  },
+  {
+    "id": "amlogic-s802",
+    "vendor": "Amlogic",
+    "name": "S802",
+    "aliases": ["S802", "S802-H"],
+    "cores": 4,
+    "arch": "Cortex-A9",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-minix-neo-x8-et-x8s-s802"]
+    },
+    "community_findings": [
+      {
+        "topic": "video",
+        "summary_fr": "Décodage et sortie 4K jusqu'à 30 images/s annoncés pour les NEO X8 et X8s ; la variante -H ajoute les licences Dolby et DTS.",
+        "sources": ["src-cnx-software-minix-neo-x8-et-x8s-s802"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "amlogic-s812",
+    "vendor": "Amlogic",
+    "name": "S812",
+    "aliases": ["S812"],
+    "cores": 4,
+    "arch": "Cortex-A9",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": [
+        "src-cnx-software-minix-neo-x8-h-plus-s812",
+        "src-cnx-software-test-du-sunchip-cx-s806-s812"
+      ]
+    },
+    "community_findings": [
+      {
+        "topic": "video",
+        "summary_fr": "Décodage H.265 jusqu'en 4K annoncé ; le test du CX-S806 estime que la sortie reste probablement à 30 images/s en 4K.",
+        "sources": [
+          "src-cnx-software-minix-neo-x8-h-plus-s812",
+          "src-cnx-software-test-du-sunchip-cx-s806-s812"
+        ]
+      },
+      {
+        "topic": "ethernet",
+        "summary_fr": "La Minix NEO X8-H Plus annonce du gigabit alors que le CX-S806, au même SoC, est en 10/100 : l'Ethernet dépend de la carte.",
+        "sources": [
+          "src-cnx-software-minix-neo-x8-h-plus-s812",
+          "src-cnx-software-test-du-sunchip-cx-s806-s812"
+        ]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "amlogic-s905",
+    "vendor": "Amlogic",
+    "name": "S905",
+    "aliases": ["S905"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "community_findings": [
+      {
+        "topic": "ethernet",
+        "summary_fr": "Les boxes a S905 relevees (MXQ Pro, Nexbox A95X, T95N Mini) annoncent toutes un Ethernet 10/100 ; un commentaire évoque une version gigabit sans precision.",
+        "sources": [
+          "src-cnx-mxq-pro-s905-en-promotion",
+          "src-cnx-nexbox-a95x-s905-en-vente",
+          "src-androidtvbox-t95n-mini-m8spro-s905"
+        ]
+      },
+      {
+        "topic": "identity",
+        "summary_fr": "Des utilisateurs de LibreELEC rapportent des boxes vendues S905/S905X (type MXQ Pro) qui contiennent en realite une puce Rockchip : le nom de la box ne prouve pas le SoC.",
+        "sources": ["src-libreelec-boxes-annoncees-s905-mais-a-base"]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "Les boxes a S905 relevees sont surtout en 1 Go (8 Go de stockage) et quelques-unes en 2 Go ; aucune limite constructeur n'a été trouvée.",
+        "sources": [
+          "src-cnx-mxq-pro-s905-en-promotion",
+          "src-cnx-nexbox-a95x-s905-en-vente",
+          "src-androidtvbox-t95n-mini-m8spro-s905"
+        ]
+      }
+    ],
+    "notes_fr": "Aucune datasheet S905 consultee (un PDF d'etablissement public n'a pas pu être lu automatiquement) : limites de RAM inconnues."
+  },
+  {
+    "id": "amlogic-s905d",
+    "vendor": "Amlogic",
+    "name": "S905D",
+    "aliases": ["S905D"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": {
+      "value": 2,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-feuille-de-route-amlogic-2016-s905d"]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR4", "LPDDR2", "LPDDR3"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-feuille-de-route-amlogic-2016-s905d"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-feuille-de-route-amlogic-2016-s905d"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-feuille-de-route-amlogic-2016-s905d"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "La feuille de route 2016 relayee par CNX donne jusqu'a 2 Go ; les boxes relevees sont a 1 Go (M8S Plus DVB) et 2 Go DDR4 (KI Pro).",
+        "sources": [
+          "src-cnx-feuille-de-route-amlogic-2016-s905d",
+          "src-cnx-mecool-m8s-plus-dvb-s905d",
+          "src-cnx-mecool-ki-pro-s905d"
+        ]
+      },
+      {
+        "topic": "ethernet",
+        "summary_fr": "Le MAC gigabit (RGMII) figure dans la feuille de route ; la KI Pro annonce bien du gigabit, la M8S Plus DVB seulement du 10/100 (choix de carte).",
+        "sources": [
+          "src-cnx-feuille-de-route-amlogic-2016-s905d",
+          "src-cnx-mecool-ki-pro-s905d",
+          "src-cnx-mecool-m8s-plus-dvb-s905d"
+        ]
+      }
+    ],
+    "notes_fr": "Valeurs d'après une feuille de route (pas la datasheet finale)."
+  },
+  {
+    "id": "amlogic-s905d3",
+    "vendor": "Amlogic",
+    "name": "S905D3",
+    "aliases": ["S905D3", "S905D3G"],
+    "cores": 4,
+    "arch": "Cortex-A55",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-khadas-vim3l-s905d3"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "La Khadas VIM3L (2 Go, 16 Go) utilise un S905D3 à Cortex-A55 ; l'article d'origine disait A53 et le constructeur a corrigé en commentaire.",
+        "sources": ["src-cnx-software-khadas-vim3l-s905d3"]
+      },
+      {
+        "topic": "video",
+        "summary_fr": "Décodeur H.265 4K à 75 images/s en 10 bits, puis flux multiples jusqu'à 4Kx2K à 60 images/s.",
+        "sources": ["src-cnx-software-khadas-vim3l-s905d3"]
+      }
+    ],
+    "notes_fr": "Aucune box commerciale non-Google sourcée pour ce SoC ; seule la carte Khadas VIM3L a été lue."
+  },
+  {
+    "id": "amlogic-s905l",
+    "vendor": "Amlogic",
+    "name": "S905L",
+    "aliases": ["S905L"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": {
+      "value": 2,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905l-sans-vp9-ni-entrees-tuner"]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR2", "LPDDR3"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905l-sans-vp9-ni-entrees-tuner"]
+    },
+    "ethernet_max_mbps": {
+      "value": 100,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905l-sans-vp9-ni-entrees-tuner"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905l-sans-vp9-ni-entrees-tuner"]
+    },
+    "community_findings": [
+      {
+        "topic": "video",
+        "summary_fr": "Variante allegee du S905X : pas de decodage VP9, pas d'interface camera ni d'entrees tuner, MAC gigabit retire.",
+        "sources": ["src-cnx-s905l-sans-vp9-ni-entrees-tuner"]
+      },
+      {
+        "topic": "identity",
+        "summary_fr": "Des acheteurs de boxes annoncées S905L2 disent recevoir un S905L.",
+        "sources": ["src-cnx-boxes-dites-s905l2-vendues-vers-20-dol"]
+      }
+    ],
+    "notes_fr": "Article CNX base sur un document Amlogic de juin 2016, pas une datasheet lue directement."
+  },
+  {
+    "id": "amlogic-s905l2",
+    "vendor": "Amlogic",
+    "name": "S905L2",
+    "aliases": ["S905L2", "S905L2-B"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": {
+      "value": 4,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-boxes-dites-s905l2-vendues-vers-20-dol"]
+    },
+    "ram_types": null,
+    "ethernet_max_mbps": {
+      "value": 100,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-boxes-dites-s905l2-vendues-vers-20-dol"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-boxes-dites-s905l2-vendues-vers-20-dol"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "L'article CNX suppose le S905L2 proche du S905L ; il signale ensuite que les acheteurs recoivent des S905L, et un commentateur doute même de l'existence de la puce (il aurait trouve un S905W).",
+        "sources": ["src-cnx-boxes-dites-s905l2-vendues-vers-20-dol"]
+      },
+      {
+        "topic": "identity",
+        "summary_fr": "Un fil Armbian décrit une TX3 mini reconnue S905L2-B, qui ne démarre qu'avec un DTB s905l2 et pas avec ceux du S905W.",
+        "sources": ["src-armbian-forum-tx3-mini-identifiee-s905l2-b"]
+      }
+    ],
+    "notes_fr": "Existence et caracteristiques mal documentees : valeurs a confirmer."
   },
   {
     "id": "amlogic-s905w",
@@ -182,6 +682,79 @@
       }
     ],
     "notes_fr": "Aucune datasheet publique trouvée pour le S905W : valeurs d'après les retours communautaires."
+  },
+  {
+    "id": "amlogic-s905w2",
+    "vendor": "Amlogic",
+    "name": "S905W2",
+    "aliases": ["S905W2"],
+    "cores": 4,
+    "arch": "Cortex-A35",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": {
+      "value": 100,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-androidpctv-comparatif-s905w2", "src-androidpctv-vontar-x2-s905w2"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-androidpctv-comparatif-s905w2", "src-androidtvbox-s96-mate-s905w2"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Les tests (AndroidPCTV) parlent de 4 cœurs Cortex-A35 ; une fiche de S96 Mate parle de Cortex-A53 : sources divergentes, A35 retenu car majoritaire.",
+        "sources": [
+          "src-androidpctv-comparatif-s905w2",
+          "src-androidpctv-vontar-x2-s905w2",
+          "src-androidtvbox-s96-mate-s905w2"
+        ]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "Aucune limite de RAM publiee trouvée ; les boxes vont de 1 a 4 Go de DDR3.",
+        "sources": [
+          "src-androidpctv-tanix-tx3-mini-s905w2",
+          "src-androidtvbox-s96-mate-s905w2",
+          "src-androidpctv-vontar-x2-s905w2"
+        ]
+      },
+      {
+        "topic": "video",
+        "summary_fr": "Decodage AV1 jusqu'a 4K a 60 i/s ; le test AndroidPCTV mentionne un 8K seulement annonce, d'ou la valeur 4K retenue.",
+        "sources": ["src-androidpctv-comparatif-s905w2", "src-androidtvbox-s96-mate-s905w2"]
+      },
+      {
+        "topic": "other",
+        "summary_fr": "Les boxes a S905W2 ne portent pas les certificats pour le streaming payant en haute qualite, selon AndroidPCTV.",
+        "sources": ["src-androidpctv-tanix-tx3-mini-s905w2"]
+      }
+    ],
+    "notes_fr": "Puce apparue vers 2021 ; remplace le S905W dans certaines révisions de boxes du même nom (TX3 mini)."
+  },
+  {
+    "id": "amlogic-s905w4",
+    "vendor": "Amlogic",
+    "name": "S905W4",
+    "aliases": ["S905W4"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Le test de l'X96 mini+ soupconne que le S905W4 annonce est en pratique un S905W renommé (infos système identiques).",
+        "sources": ["src-androidpctv-x96-mini-et-le-s905w4-annonce"]
+      }
+    ],
+    "notes_fr": "Identite douteuse : aucune caracteristique propre retenue."
   },
   {
     "id": "amlogic-s905x",
@@ -243,7 +816,12 @@
       "sources": ["src-cnx-s905x2-vs-s905x3"]
     },
     "ethernet_max_mbps": null,
-    "video_max_decode": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905x2-vs-s905x3"]
+    },
     "community_findings": [
       {
         "topic": "ethernet",
@@ -266,8 +844,18 @@
       "basis": "community",
       "sources": ["src-cnx-s905x2-vs-s905x3"]
     },
-    "ram_types": null,
-    "ethernet_max_mbps": null,
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR3", "LPDDR4"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905x3-specs"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905x3-specs"]
+    },
     "video_max_decode": {
       "value": "4K",
       "status": "unverified",
@@ -284,6 +872,166 @@
     "notes_fr": "Datasheet publique non retenue comme source (copie tierce marquée confidentielle) : valeurs d'après les retours communautaires. À confirmer avec un document constructeur librement diffusé."
   },
   {
+    "id": "amlogic-s905x4",
+    "vendor": "Amlogic",
+    "name": "S905X4",
+    "aliases": ["S905X4", "S905X4-K"],
+    "cores": 4,
+    "arch": "Cortex-A55",
+    "ram_max_gb": {
+      "value": 4,
+      "status": "unverified",
+      "basis": "community",
+      "sources": [
+        "src-cnx-software-comparaison-s905x3-et-s905x4",
+        "src-cnx-software-sdmc-dv8919-s905x4"
+      ]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR3", "LPDDR4"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905x3-specs", "src-cnx-software-comparaison-s905x3-et-s905x4"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905x3-specs", "src-cnx-software-comparaison-s905x3-et-s905x4"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-comparaison-s905x3-et-s905x4"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "CNX présente le S905X4 comme proche du S905X3 (même GPU, mêmes mémoires, même Ethernet, 12 nm) avec en plus le décodage AV1 en 4K et une fréquence un peu plus haute.",
+        "sources": ["src-cnx-software-comparaison-s905x3-et-s905x4"]
+      },
+      {
+        "topic": "ethernet",
+        "summary_fr": "Le MAC gigabit demande un PHY externe (l'intégré est en 10/100) : un test d'X96 X4 relève du 10/100 alors que d'autres boxes S905X4 annoncent du gigabit. Le SoC ne tranche pas.",
+        "sources": [
+          "src-cnx-s905x3-specs",
+          "src-androidpctv-test-du-x96-x4-s905x4",
+          "src-androidpctv-hk1-rbox-s905x4"
+        ]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "La fiche du SDMC DV8919 propose 1, 2 ou 4 Go ; les valeurs mémoire du S905X4 sont reprises de celles du S905X3 par CNX, sans document constructeur lu.",
+        "sources": [
+          "src-cnx-software-comparaison-s905x3-et-s905x4",
+          "src-cnx-software-sdmc-dv8919-s905x4"
+        ]
+      }
+    ],
+    "notes_fr": "Aucune datasheet constructeur accessible : tout est issu d'articles."
+  },
+  {
+    "id": "amlogic-s905x5",
+    "vendor": "Amlogic",
+    "name": "S905X5",
+    "aliases": ["S905X5"],
+    "cores": 4,
+    "arch": "Cortex-A510",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-ugoos-am9-s905x5"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "D'après CNX, le S905X5 est un SoC Armv9 à quatre Cortex-A510 avec GPU Mali-G310, décodant H.266 et AV1 jusqu'en 4Kp60 10 bits ; à ne pas confondre avec le S905X5M, basé sur des Cortex-A55.",
+        "sources": ["src-cnx-software-ugoos-am9-s905x5", "src-cnx-software-ugoos-x5m-pro-s905x5m"]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "La seule box vue (Ugoos AM9) embarque 4 Go de LPDDR4x ; cela décrit la carte, pas la limite du SoC.",
+        "sources": ["src-cnx-software-ugoos-am9-s905x5"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "amlogic-s905x5m",
+    "vendor": "Amlogic",
+    "name": "S905X5M",
+    "aliases": ["S905X5M"],
+    "cores": 4,
+    "arch": "Cortex-A55",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-ugoos-x5m-pro-s905x5m"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Variante armée de Cortex-A55 à 2,5 GHz, GPU G310-V2, décodage 4Kp60 10 bits (AV1, H.265, VP9, AVS2) selon CNX pour l'Ugoos X5M Pro.",
+        "sources": ["src-cnx-software-ugoos-x5m-pro-s905x5m"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "amlogic-s905y2",
+    "vendor": "Amlogic",
+    "name": "S905Y2",
+    "aliases": ["S905Y2"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-a95x-plus-s905y2"]
+    },
+    "community_findings": [
+      {
+        "topic": "ethernet",
+        "summary_fr": "La A95X Plus (S905Y2) n'a pas de port Ethernet ; l'auteur pense que la puce elle-même n'en a pas, ce qui reste une hypothese.",
+        "sources": ["src-cnx-a95x-plus-s905y2"]
+      }
+    ],
+    "notes_fr": "Une seule box documentee (4 Go LPDDR4)."
+  },
+  {
+    "id": "amlogic-s905y4",
+    "vendor": "Amlogic",
+    "name": "S905Y4",
+    "aliases": ["S905Y4"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Utilisé dans la box onn 4K de 2023 (2 Go de RAM, 8 Go de stockage) ; ajoute le décodage AV1 par rapport à la version 2021 à S905Y2.",
+        "sources": ["src-android-tv-guide-onn-4k-2023-s905y4"]
+      }
+    ],
+    "notes_fr": "Peu d'informations accessibles ; aucune limite matérielle trouvée."
+  },
+  {
     "id": "amlogic-s912",
     "vendor": "Amlogic",
     "name": "S912",
@@ -297,7 +1045,17 @@
       "sources": ["src-cnx-s905m-s912-roadmap"]
     },
     "ram_types": null,
-    "ethernet_max_mbps": null,
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": [
+        "src-cnx-s912-specs",
+        "src-cnx-h96-pro-plus-s912-3-go",
+        "src-cnx-t95z-plus-s912",
+        "src-cnx-mecool-bb2-pro-s912-3-go-ddr4"
+      ]
+    },
     "video_max_decode": {
       "value": "4K",
       "status": "unverified",
@@ -319,21 +1077,387 @@
     "notes_fr": "Aucune datasheet trouvée."
   },
   {
+    "id": "amlogic-s922x",
+    "vendor": "Amlogic",
+    "name": "S922X",
+    "aliases": ["S922X", "S922X-H", "S922X-J", "S922XJ"],
+    "cores": 6,
+    "arch": "Cortex-A73 + Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": {
+      "value": ["DDR4", "LPDDR4"],
+      "status": "unverified",
+      "basis": "community",
+      "sources": [
+        "src-cnx-software-test-du-beelink-gt-king-s922x",
+        "src-cnx-software-odroid-n2-s922x"
+      ]
+    },
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-odroid-n2-s922x"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Hexa-cœur big.LITTLE (4 Cortex-A73 et 2 Cortex-A53) en 12 nm ; les suffixes -H et -J désignent des variantes à fréquence plus haute avec licences Dolby/DTS ou Dolby Vision.",
+        "sources": [
+          "src-cnx-software-test-du-beelink-gt-king-s922x",
+          "src-cnx-software-beelink-gt-king-pro-s922x-h",
+          "src-cnx-software-ugoos-am6-plus-s922x-j",
+          "src-cnx-software-minix-neo-u22-xj-s922x-j"
+        ]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "Les boxes et cartes lues montent à 4 Go (4 Go pour les Beelink, ODROID-N2 en 2 ou 4 Go DDR4) ; c'est une configuration de carte, pas une limite documentée du SoC.",
+        "sources": [
+          "src-cnx-software-test-du-beelink-gt-king-s922x",
+          "src-cnx-software-odroid-n2-s922x",
+          "src-hardkernel-fiche-produit-odroid-n2-4-go"
+        ]
+      },
+      {
+        "topic": "ethernet",
+        "summary_fr": "Toutes les cartes lues sont gigabit, mais la fréquence des cœurs et les révisions diffèrent selon les fiches (1,8 à 2,4 GHz pour les A73).",
+        "sources": [
+          "src-cnx-software-test-du-beelink-gt-king-s922x",
+          "src-cnx-software-odroid-n2-s922x",
+          "src-hardkernel-fiche-produit-odroid-n2-4-go"
+        ]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "amlogic-s928x",
+    "vendor": "Amlogic",
+    "name": "S928X-J",
+    "aliases": ["S928X-J", "S928X"],
+    "cores": 5,
+    "arch": "Cortex-A76 + Cortex-A55",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "8K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-software-ugoos-am8-s928x-j"]
+    },
+    "community_findings": [
+      {
+        "topic": "video",
+        "summary_fr": "Pour l'Ugoos AM8, CNX relève 1 Cortex-A76 et 4 Cortex-A55, un GPU Mali-G57 MC2 et un décodage 8Kp60 (H.265, AV1, VP9, AVS3) ; la box testée a 4 Go de LPDDR4 et du gigabit.",
+        "sources": ["src-cnx-software-ugoos-am8-s928x-j"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "hisilicon-hi3798mv200",
+    "vendor": "HiSilicon",
+    "name": "Hi3798M V200",
+    "aliases": ["Hi3798M V200", "Hi3798MV200"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-himedia-q30-hi3798m-v200"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-himedia-q30-hi3798m-v200"]
+    },
+    "community_findings": [
+      {
+        "topic": "ethernet",
+        "summary_fr": "Un seul MAC Gigabit sur le SoC, mais la HiMedia Q30 reste en 10/100.",
+        "sources": ["src-cnx-himedia-q30-hi3798m-v200"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "mediatek-mt8581",
+    "vendor": "MediaTek",
+    "name": "MT8581",
+    "aliases": ["MT8581"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-mediatek-mt8581"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-mediatek-mt8581"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Annoncé au CES 2016 pour lecteurs Blu-ray UHD ; aucune TV box citée.",
+        "sources": ["src-cnx-mediatek-mt8581"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "mediatek-mt8695",
+    "vendor": "MediaTek",
+    "name": "MT8695",
+    "aliases": ["MT8695"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-androidpctv-mt8695-compare-aux-autres-soc"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Gravé en 12 nm, GPU PowerVR GE8300 ; l'article indique qu'Amazon en a l'exclusivité (Fire TV Stick 4K, 1,5 Go de RAM).",
+        "sources": ["src-androidpctv-mt8695-compare-aux-autres-soc"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "nvidia-tegra-x1",
+    "vendor": "Nvidia",
+    "name": "Tegra X1",
+    "aliases": ["Tegra X1"],
+    "cores": 8,
+    "arch": "Cortex-A57 + Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-shield-android-tv-2015-tegra-x1"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Huit cœurs (4 A57 et 4 A53) et GPU Maxwell de 256 cœurs ; la Shield 2015 a 3 Go de RAM.",
+        "sources": ["src-cnx-shield-android-tv-2015-tegra-x1"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "nvidia-tegra-x1-plus",
+    "vendor": "Nvidia",
+    "name": "Tegra X1+",
+    "aliases": ["Tegra X1+", "Tegra X1 Plus"],
+    "cores": null,
+    "arch": null,
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Révision 2019 de la Shield TV : mêmes 256 cœurs GPU ; 2 Go de RAM (modèle de base) ou 3 Go (Pro).",
+        "sources": ["src-cnx-shield-tv-2019-tegra-x1", "src-nvidia-fiche-shield-tv"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "realtek-rtd1295",
+    "vendor": "Realtek",
+    "name": "RTD1295",
+    "aliases": ["RTD1295"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-zidoo-x9s-realtek-rtd1295"]
+    },
+    "community_findings": [
+      {
+        "topic": "video",
+        "summary_fr": "CNX donne HEVC 4K60, VP9 4K60 et H.264 4K24 mais écrit aussi que les trois décodeurs fonctionnent en 4K60 : les deux affirmations divergent.",
+        "sources": ["src-cnx-zidoo-x9s-realtek-rtd1295"]
+      },
+      {
+        "topic": "ethernet",
+        "summary_fr": "Les boxes Zidoo X9S et Dune HD Pro 4K sont Gigabit.",
+        "sources": ["src-cnx-zidoo-x9s-realtek-rtd1295", "src-cnx-gamme-dune-hd-2017"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "realtek-rtd1296",
+    "vendor": "Realtek",
+    "name": "RTD1296",
+    "aliases": ["RTD1296", "RTD1296DD"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": null,
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Les Zidoo Z9S et Z10 (RTD1296DD) sont présentées comme des évolutions des X9S/X10 (RTD1295).",
+        "sources": ["src-cnx-zidoo-z9s-et-z10-rtd1296"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "realtek-rtd1395",
+    "vendor": "Realtek",
+    "name": "RTD1395",
+    "aliases": ["RTD1395"],
+    "cores": 4,
+    "arch": "Cortex-A53",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-dune-hd-realbox-4k-rtd1395"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Présenté comme une alternative moins chère aux RTD1295/RTD1296 avec les mêmes capacités de lecture 4K ; GPU Mali-470.",
+        "sources": ["src-cnx-dune-hd-realbox-4k-rtd1395"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "realtek-rtd1619dr",
+    "vendor": "Realtek",
+    "name": "RTD1619DR",
+    "aliases": ["RTD1619DR", "RTD1619"],
+    "cores": 6,
+    "arch": "Cortex-A55",
+    "ram_max_gb": null,
+    "ram_types": null,
+    "ethernet_max_mbps": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-zidoo-z9x-et-z10-pro-rtd1619dr"]
+    },
+    "community_findings": [
+      {
+        "topic": "video",
+        "summary_fr": "Zidoo annonce HEVC et VP9 jusqu'en 4K60 et H.264 jusqu'en 4K24.",
+        "sources": ["src-cnx-zidoo-z9x-et-z10-pro-rtd1619dr"]
+      }
+    ],
+    "notes_fr": null
+  },
+  {
+    "id": "rockchip-rk3128",
+    "vendor": "Rockchip",
+    "name": "RK3128",
+    "aliases": ["RK3128"],
+    "cores": 4,
+    "arch": "Cortex-A7",
+    "ram_max_gb": {
+      "value": 2,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3128-datasheet-v1-2-copie-heber"]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "LPDDR2"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3128-datasheet-v1-2-copie-heber"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3128-datasheet-v1-2-copie-heber"]
+    },
+    "video_max_decode": {
+      "value": "1080p",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3128-datasheet-v1-2-copie-heber"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "Les box RK3128 documentées sont vendues avec 512 Mo ou 1 Go de RAM alors que la datasheet prévoit jusqu'à 2 Go d'espace d'adressage.",
+        "sources": ["src-cnx-software-ruach-a20s-rk3128", "src-cnx-software-emish-x700-rk3128"]
+      }
+    ],
+    "notes_fr": "Datasheet v1.2 : MAC gigabit via RGMII, mais aucun PHY gigabit intégré n'est mentionné ; décodage H.265 limité à 1080p60."
+  },
+  {
     "id": "rockchip-rk3228a",
     "vendor": "Rockchip",
     "name": "RK3228A",
     "aliases": ["RK3228A"],
-    "cores": null,
-    "arch": null,
+    "cores": 4,
+    "arch": "Cortex-A7",
     "ram_max_gb": {
       "value": 2,
-      "status": "unverified",
-      "basis": "hypothesis",
-      "sources": []
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3228a-datasheet-v1-1-copie-hebe"]
     },
-    "ram_types": null,
-    "ethernet_max_mbps": null,
-    "video_max_decode": null,
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "LPDDR2", "LPDDR3"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3228a-datasheet-v1-1-copie-hebe"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3228a-datasheet-v1-1-copie-hebe"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3228a-datasheet-v1-1-copie-hebe"]
+    },
     "community_findings": [
       {
         "topic": "ram",
@@ -341,7 +1465,47 @@
         "sources": ["src-armbian-rk322x"]
       }
     ],
-    "notes_fr": "Limite de RAM (2 Go attendus) non sourcée."
+    "notes_fr": "Datasheet Rockchip RK3228A v1.1 lue : MAC gigabit (RGMII) ; le PHY intégré est 10/100 seulement, donc une box sans PHY externe reste à 100 Mbit/s."
+  },
+  {
+    "id": "rockchip-rk3228b",
+    "vendor": "Rockchip",
+    "name": "RK3228B",
+    "aliases": ["RK3228B"],
+    "cores": 4,
+    "arch": "Cortex-A7",
+    "ram_max_gb": {
+      "value": 2,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3228b-datasheet-v1-3-copie-hebe"]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "LPDDR2", "LPDDR3"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3228b-datasheet-v1-3-copie-hebe"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3228b-datasheet-v1-3-copie-hebe"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3228b-datasheet-v1-3-copie-hebe"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "Présenté fin 2016 comme la puce IPTV/OTT d'entrée de gamme à quatre Cortex-A7, 4K, avec PHY Fast Ethernet intégré.",
+        "sources": ["src-cnx-software-presentation-des-rk3228h-et-r"]
+      }
+    ],
+    "notes_fr": "Datasheet v1.3 : MAC gigabit (RGMII) mais PHY intégré 10/100 ; décodage HEVC 10 bits jusqu'à 2160p60."
   },
   {
     "id": "rockchip-rk3229",
@@ -352,27 +1516,27 @@
     "arch": "Cortex-A7",
     "ram_max_gb": {
       "value": 2,
-      "status": "unverified",
-      "basis": "hypothesis",
-      "sources": []
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3229-datasheet-v1-3-copie-heber"]
     },
     "ram_types": {
-      "value": ["DDR3"],
-      "status": "unverified",
-      "basis": "community",
-      "sources": ["src-cnx-rk3229"]
+      "value": ["DDR3", "DDR3L", "LPDDR2", "LPDDR3"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3229-datasheet-v1-3-copie-heber"]
     },
     "ethernet_max_mbps": {
-      "value": 100,
-      "status": "unverified",
-      "basis": "community",
-      "sources": ["src-cnx-rk3229"]
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3229-datasheet-v1-3-copie-heber"]
     },
     "video_max_decode": {
       "value": "4K",
-      "status": "unverified",
-      "basis": "community",
-      "sources": ["src-cnx-rk3229"]
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3229-datasheet-v1-3-copie-heber"]
     },
     "community_findings": [
       {
@@ -381,7 +1545,50 @@
         "sources": ["src-cnx-rk3229"]
       }
     ],
-    "notes_fr": "Limite de RAM (2 Go attendus) non sourcée."
+    "notes_fr": "Datasheet Rockchip RK3229 v1.3 lue : MAC gigabit (RGMII) avec PHY intégré 10/100. Les articles de lancement et de nombreuses box parlent de 100 Mbit/s : c'est le cas quand la carte n'ajoute pas de PHY gigabit."
+  },
+  {
+    "id": "rockchip-rk3288",
+    "vendor": "Rockchip",
+    "name": "RK3288",
+    "aliases": ["RK3288"],
+    "cores": 4,
+    "arch": "Cortex-A17",
+    "ram_max_gb": {
+      "value": 4,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3288-datasheet-v2-7-copie-heber"]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "LPDDR2", "LPDDR3"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3288-datasheet-v2-7-copie-heber"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3288-datasheet-v2-7-copie-heber"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3288-datasheet-v2-7-copie-heber"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "Des box RK3288 existent en 1, 2 et 4 Go (Orion R28 Telos), ce qui reste compatible avec les 4 Go d'espace d'adressage de la datasheet.",
+        "sources": [
+          "src-cnx-software-tronsmart-orion-r28-rk3288-tr",
+          "src-cnx-software-ugoos-ut3-rk3288"
+        ]
+      }
+    ],
+    "notes_fr": "Datasheet v2.7 : double canal mémoire, 4 Go d'espace d'adressage au total ; décodeur HEVC 4K60."
   },
   {
     "id": "rockchip-rk3318",
@@ -392,13 +1599,23 @@
     "arch": "Cortex-A53",
     "ram_max_gb": {
       "value": 4,
-      "status": "unverified",
-      "basis": "community",
-      "sources": ["src-armbian-rk3328-vs-rk3318", "src-cnx-x88pro-rk3318"]
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3318-datasheet-v1-0-copie-heber"]
     },
-    "ram_types": null,
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "LPDDR3", "DDR4"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3318-datasheet-v1-0-copie-heber"]
+    },
     "ethernet_max_mbps": null,
-    "video_max_decode": null,
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3318-datasheet-v1-0-copie-heber"]
+    },
     "community_findings": [
       {
         "topic": "identity",
@@ -406,7 +1623,7 @@
         "sources": ["src-armbian-rk3328-vs-rk3318", "src-cnx-x88pro-rk3318"]
       }
     ],
-    "notes_fr": "Aucune datasheet propre au RK3318 ; la valeur suit celle du RK3328."
+    "notes_fr": "Datasheet Rockchip RK3318 v1.0 lue (hébergée par rockchip.fr) : mêmes mémoires et décodage que le RK3328. Le débit Ethernet n'y est pas détaillé : laissé inconnu."
   },
   {
     "id": "rockchip-rk3328",
@@ -441,5 +1658,170 @@
     },
     "community_findings": [],
     "notes_fr": "Datasheet Rockchip v1.2 : GMAC 10/100/1000 (RGMII) ; PHY intégré 10/100 seulement."
+  },
+  {
+    "id": "rockchip-rk3399",
+    "vendor": "Rockchip",
+    "name": "RK3399",
+    "aliases": ["RK3399"],
+    "cores": 6,
+    "arch": "Cortex-A72/A53",
+    "ram_max_gb": {
+      "value": 4,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3399-datasheet-v1-8-copie-heber"]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "LPDDR3", "LPDDR4"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3399-datasheet-v1-8-copie-heber"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3399-datasheet-v1-8-copie-heber"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3399-datasheet-v1-8-copie-heber"]
+    },
+    "community_findings": [
+      {
+        "topic": "ram",
+        "summary_fr": "Les box RK3399 documentées (Yundoo Y8, R-TV BOX K99) vont jusqu'à 4 Go de DDR3, cohérent avec la datasheet.",
+        "sources": ["src-cnx-software-yundoo-y8-rk3399", "src-cnx-software-r-tv-box-k99-rk3399"]
+      }
+    ],
+    "notes_fr": "Datasheet v1.8 : 4 Go d'espace d'adressage au total (2 canaux) ; décodage H.265/VP9 jusqu'à 4Kx2K@60."
+  },
+  {
+    "id": "rockchip-rk3566",
+    "vendor": "Rockchip",
+    "name": "RK3566",
+    "aliases": ["RK3566"],
+    "cores": 4,
+    "arch": "Cortex-A55",
+    "ram_max_gb": {
+      "value": 8,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3566-datasheet-v1-1-copie-heber"]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR3", "LPDDR4", "LPDDR4X"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3566-datasheet-v1-1-copie-heber"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3566-datasheet-v1-1-copie-heber"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3566-datasheet-v1-1-copie-heber"]
+    },
+    "community_findings": [
+      {
+        "topic": "video",
+        "summary_fr": "Une box H96 Max RK3566 porte un logo « 8K » alors que la puce et la box ne décodent pas le 8K (écart observé entre marketing et capacité).",
+        "sources": ["src-cnx-software-h96-max-rk3566-sous-android-1"]
+      },
+      {
+        "topic": "ram",
+        "summary_fr": "Un fil Armbian sur HK1 RBOX R2 / Vontar KK Max compte des puces pour 8 Go alors que le bootloader n'en détecte que 4 Go ; explication non tranchée.",
+        "sources": ["src-armbian-forum-vontar-kk-max-hk1-rbox-r2-et"]
+      }
+    ],
+    "notes_fr": "Datasheet v1.1 : 8 Go d'espace d'adressage ; décodage H.265 jusqu'à 4096x2304@60."
+  },
+  {
+    "id": "rockchip-rk3568",
+    "vendor": "Rockchip",
+    "name": "RK3568",
+    "aliases": ["RK3568"],
+    "cores": 4,
+    "arch": "Cortex-A55",
+    "ram_max_gb": {
+      "value": 8,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3568-datasheet-v1-3-copie-heber"]
+    },
+    "ram_types": {
+      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR3", "LPDDR4", "LPDDR4X"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3568-datasheet-v1-3-copie-heber"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3568-datasheet-v1-3-copie-heber"]
+    },
+    "video_max_decode": {
+      "value": "4K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3568-datasheet-v1-3-copie-heber"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "CNX note que l'Ugoos UT8 Pro est l'une des premières box à base de RK3568.",
+        "sources": ["src-cnx-software-ugoos-ut8-et-ut8-pro-rk3568"]
+      }
+    ],
+    "notes_fr": "Datasheet v1.3 : 8 Go d'espace d'adressage ; une ligne de l'interface mémoire cite en plus la LPDDR2, absente de la liste d'aperçu : non retenue."
+  },
+  {
+    "id": "rockchip-rk3588",
+    "vendor": "Rockchip",
+    "name": "RK3588",
+    "aliases": ["RK3588"],
+    "cores": 8,
+    "arch": "Cortex-A76/A55",
+    "ram_max_gb": {
+      "value": 32,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3588-datasheet-v1-9-copie-heber"]
+    },
+    "ram_types": {
+      "value": ["LPDDR4", "LPDDR4X", "LPDDR5", "LPDDR5X"],
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3588-datasheet-v1-9-copie-heber"]
+    },
+    "ethernet_max_mbps": {
+      "value": 1000,
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3588-datasheet-v1-9-copie-heber"]
+    },
+    "video_max_decode": {
+      "value": "8K",
+      "status": "verified",
+      "basis": "datasheet",
+      "sources": ["src-rockchip-rk3588-datasheet-v1-9-copie-heber"]
+    },
+    "community_findings": [
+      {
+        "topic": "identity",
+        "summary_fr": "L'Orange Pi 5 utilise la variante RK3588S, dont la datasheet n'a pas pu être lue ici : les valeurs ci-dessus sont celles du RK3588.",
+        "sources": ["src-cnx-software-orange-pi-5-rk3588s"]
+      }
+    ],
+    "notes_fr": "Datasheet v1.9 : 32 Go d'espace d'adressage ; décodage H.265/VP9 8K60, AV1 4K60 ; contrôleurs MAC gigabit (la ROCK 5B ajoute un 2,5 G externe)."
   }
 ]

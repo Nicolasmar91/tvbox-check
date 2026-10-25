@@ -7,6 +7,8 @@ export const messagesFr = {
     `La donnée « ${field} » n'est pas connue pour le SoC ${soc}.`,
   modelSocKnown: (model: string, soc: string) =>
     `Le SoC ${soc} fait partie de ceux répertoriés pour « ${model} » : plausible.`,
+  modelSocReported: (model: string, soc: string) =>
+    `Le SoC ${soc} a déjà été signalé sous le nom « ${model} » en remplacement de la puce annoncée : à vérifier sur les puces.`,
   modelSocUnusual: (model: string, soc: string, known: string) =>
     `Le SoC ${soc} n'est pas répertorié pour « ${model} » (connus : ${known}). Cela peut être une révision récente ou un écart : à vérifier sur les puces.`,
   modelSpecsUnlisted: (model: string, ram: number, known: string) =>

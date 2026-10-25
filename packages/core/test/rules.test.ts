@@ -178,6 +178,16 @@ describe("Cas connu", () => {
     expect(r.criteria[0]?.sources).toEqual(["src-a"]);
   });
 
+  it("renvoie tous les cas portant le même nom", () => {
+    const db = makeDb("unverified");
+    db.cases.push({ ...db.cases[0]!, id: "tx3-mini-autre", summary_fr: "Autre écart signalé." });
+    const r = evaluate({ modelName: "TX3 Mini" }, db);
+    expect(r.criteria.filter((c) => c.criterion === "knownCase").map((c) => c.case?.id)).toEqual([
+      "tx3-mini-4-32",
+      "tx3-mini-autre",
+    ]);
+  });
+
   it("normalise casse, espaces et ponctuation", () => {
     expect(normalizeName("  tX3-  MINI ")).toBe("tx3mini");
     expect(evaluate({ modelName: "  tx3   mini " }, unverifiedDb).overall).toBe("suspect");
@@ -230,6 +240,7 @@ describe("Catalogue de modèles", () => {
       variants: [
         {
           soc: "amlogic-s905w",
+          kind: "official",
           ram_gb: [1, 2],
           storage_gb: null,
           year: 2018,
@@ -245,6 +256,12 @@ describe("Catalogue de modèles", () => {
     expect(findModel(db, "  box-a ")?.id).toBe("box-a");
     expect(findModel(db, "BOXA2")?.id).toBe("box-a");
     expect(findModel(db, "Box B")).toBeUndefined();
+  });
+
+  it("distingue un modèle de sa version « + »", () => {
+    expect(normalizeName("X96 mini+")).toBe("x96miniplus");
+    expect(normalizeName("X96 Max Plus")).toBe(normalizeName("X96 Max+"));
+    expect(normalizeName("X96 mini+")).not.toBe(normalizeName("X96 mini"));
   });
 
   it("liste les SoC d'un modèle et les modèles d'un SoC", () => {
@@ -269,6 +286,34 @@ describe("Catalogue de modèles", () => {
       verdict: "suspect",
     });
     expect(r.overall).toBe("suspect");
+  });
+
+  it("une puce seulement signalée n'est pas attendue : suspect avec le motif", () => {
+    const rep = makeDb("unverified");
+    rep.models = [
+      {
+        ...db.models[0]!,
+        variants: [
+          ...db.models[0]!.variants,
+          { ...db.models[0]!.variants[0]!, soc: "empty-soc", kind: "reported", ram_gb: null },
+        ],
+      },
+    ];
+    const r = evaluate({ modelName: "Box A", soc: "empty-soc" }, rep);
+    const c = r.criteria.find((x) => x.criterion === "modelSoc");
+    expect(c?.verdict).toBe("suspect");
+    expect(c?.message).toContain("déjà été signalé");
+    expect(socsForModel(rep, rep.models[0]!).map((s) => s.id)).toEqual(["amlogic-s905w"]);
+    expect(socsForModel(rep, rep.models[0]!, "reported").map((s) => s.id)).toEqual(["empty-soc"]);
+  });
+
+  it("sans révision officielle, aucune comparaison de SoC", () => {
+    const only = makeDb("unverified");
+    only.models = [
+      { ...db.models[0]!, variants: [{ ...db.models[0]!.variants[0]!, kind: "reported" }] },
+    ];
+    const r = evaluate({ modelName: "Box A", soc: "amlogic-s905w" }, only);
+    expect(r.criteria.some((c) => c.criterion === "modelSoc")).toBe(false);
   });
 
   it("RAM au-delà des configurations répertoriées : inconnu, pas accusé", () => {
