@@ -46,7 +46,16 @@ HTML
 fi
 
 # ---------- Bloc Caddy (ajouté, jamais écrasé) ----------
-mkdir -p /var/log/caddy
+# Le fichier de log doit appartenir à `caddy` : `caddy validate` lancé en root le
+# crée sinon avec root comme propriétaire, et le service (utilisateur caddy) ne
+# peut plus l'ouvrir au rechargement ("permission denied"). Même piège que Rexact.
+LOG_FILE="/var/log/caddy/tvbox-check-access.log"
+fix_log_owner() {
+  mkdir -p /var/log/caddy
+  touch "$LOG_FILE"
+  chown caddy:caddy "$LOG_FILE"
+}
+fix_log_owner
 if grep -q "tvbox-check-access.log" "$CADDYFILE" 2>/dev/null; then
   echo "==> Bloc Caddy tvbox-check déjà présent, rien à ajouter."
 else
@@ -63,8 +72,16 @@ else
   fi
 fi
 
-echo "==> Rechargement de Caddy..."
-systemctl reload caddy
+# Remis aux bonnes permissions juste avant le reload, quoi qu'ait fait `validate`.
+fix_log_owner
+
+echo "==> Rechargement de Caddy (reload : aucune coupure pour les autres sites)..."
+if ! RELOAD_OUTPUT=$(systemctl reload caddy 2>&1); then
+  echo "!! Le rechargement de Caddy a échoué. Les sites déjà en ligne continuent de tourner" >&2
+  echo "!! avec l'ancienne configuration. Détail : journalctl -xeu caddy.service" >&2
+  echo "$RELOAD_OUTPUT" >&2
+  exit 1
+fi
 
 echo ""
 echo "==> Terminé. Prochaines étapes :"
