@@ -67,3 +67,14 @@ cd /var/www/tvbox-check
 ls releases                       # releases conservées (les 3 dernières)
 ln -sfn releases/<ancien-sha> current
 ```
+
+## Annexe : équivalents Linux / MobaXterm
+
+Les commandes PowerShell du guide ont ces équivalents dans un shell Linux :
+
+```bash
+ssh-keygen -t ed25519 -f ~/tvbox-check-deploy -C tvbox-check-deploy   # génère la paire de clés
+cat ~/tvbox-check-deploy.pub                                           # clé publique à ajouter sur le VPS
+cat ~/tvbox-check-deploy                                               # clé privée à coller dans VPS_SSH_KEY
+rm ~/tvbox-check-deploy ~/tvbox-check-deploy.pub                       # à faire une fois le secret enregistré
+```
