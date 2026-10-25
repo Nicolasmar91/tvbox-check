@@ -1,0 +1,50 @@
+# Bloc Caddy pour tvbox-check — À AJOUTER au Caddyfile partagé du VPS
+# (/etc/caddy/Caddyfile), JAMAIS à l'écraser : ce fichier sert aussi
+# ticket-recette.fr et Rexact. setup-vps.sh l'ajoute automatiquement (append,
+# avec vérification qu'il n'y est pas déjà), en validant la config avant de
+# recharger Caddy.
+#
+# disable_tlsalpn_challenge : même contournement que Rexact et ticket-recette
+# — la négociation ALPN "acme-tls/1" échoue sur ce VPS OVH (protection
+# anti-DDoS réseau). On force http-01 uniquement.
+#
+# Site 100 % statique : Caddy sert le dossier `current`, un lien symbolique
+# que le déploiement bascule atomiquement vers la dernière release.
+__DOMAIN__ {
+	tls {
+		issuer acme {
+			disable_tlsalpn_challenge
+		}
+	}
+	log {
+		output file /var/log/caddy/tvbox-check-access.log {
+			roll_size 10mb
+			roll_keep 5
+		}
+	}
+
+	root * /var/www/tvbox-check/current
+	encode zstd gzip
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		X-Frame-Options DENY
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+	}
+
+	# Fichiers hachés par Astro : cache long.
+	@assets path /_astro/*
+	header @assets Cache-Control "public, max-age=31536000, immutable"
+
+	# Pages : toujours revalidées, pour voir un déploiement tout de suite.
+	@pages not path /_astro/*
+	header @pages Cache-Control "public, max-age=0, must-revalidate"
+
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+
+	file_server
+}

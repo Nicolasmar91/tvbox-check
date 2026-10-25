@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tvbox-check.nm-labs.fr/sitemap-index.xml
+Sitemap: https://tvbox-check.nm-labs.dev/sitemap-index.xml

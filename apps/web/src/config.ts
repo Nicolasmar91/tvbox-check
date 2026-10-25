@@ -7,7 +7,7 @@
  */
 export const config = {
   siteName: "tvbox-check",
-  siteUrl: "https://tvbox-check.nm-labs.fr",
+  siteUrl: "https://tvbox-check.nm-labs.dev",
   repo: "Nicolasmar91/tvbox-check",
   giscus: {
     // Dépôt dédié aux commentaires (Discussions), distinct du dépôt de code.
