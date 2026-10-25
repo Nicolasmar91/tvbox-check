@@ -262,27 +262,17 @@
     "arch": "Cortex-A55",
     "ram_max_gb": {
       "value": 4,
-      "status": "verified",
-      "basis": "datasheet",
-      "sources": ["src-amlogic-s905x3-datasheet"]
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905x2-vs-s905x3"]
     },
-    "ram_types": {
-      "value": ["DDR3", "DDR3L", "DDR4", "LPDDR3", "LPDDR4"],
-      "status": "verified",
-      "basis": "datasheet",
-      "sources": ["src-amlogic-s905x3-datasheet"]
-    },
-    "ethernet_max_mbps": {
-      "value": 1000,
-      "status": "verified",
-      "basis": "datasheet",
-      "sources": ["src-amlogic-s905x3-datasheet"]
-    },
+    "ram_types": null,
+    "ethernet_max_mbps": null,
     "video_max_decode": {
-      "value": "8K",
-      "status": "verified",
-      "basis": "datasheet",
-      "sources": ["src-amlogic-s905x3-datasheet"]
+      "value": "4K",
+      "status": "unverified",
+      "basis": "community",
+      "sources": ["src-cnx-s905x3-specs"]
     },
     "community_findings": [
       {
@@ -291,7 +281,7 @@
         "sources": ["src-coreelec-x88prox3-fake4gb", "src-coreelec-x88prox3-dtb"]
       }
     ],
-    "notes_fr": "Datasheet Amlogic rév. 02 (copie Hardkernel marquée confidentielle, consultée via un tiers). Ethernet : MAC gigabit RGMII + PHY intégré 10/100 (gigabit selon la carte). Décodage 8K limité à 24 images/s."
+    "notes_fr": "Datasheet publique non retenue comme source (copie tierce marquée confidentielle) : valeurs d'après les retours communautaires. À confirmer avec un document constructeur librement diffusé."
   },
   {
     "id": "amlogic-s912",
