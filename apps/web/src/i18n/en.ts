@@ -12,6 +12,7 @@ export const en: Strings = {
     guide: "Guide",
     contribute: "Contribute",
     about: "About",
+    mcp: "MCP connector",
   },
   skip: "Skip to content",
   home: {

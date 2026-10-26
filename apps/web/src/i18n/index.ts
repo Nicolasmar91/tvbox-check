@@ -27,6 +27,7 @@ const segments = {
     guide: "guide/verifier-les-vraies-specs",
     contribute: "contribuer",
     about: "a-propos",
+    mcp: "connecteur-mcp",
   },
   en: {
     soc: "soc",
@@ -36,6 +37,7 @@ const segments = {
     guide: "guide/verify-real-specs",
     contribute: "contribute",
     about: "about",
+    mcp: "mcp",
   },
 } as const;
 

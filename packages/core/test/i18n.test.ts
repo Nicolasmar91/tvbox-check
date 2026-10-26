@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { messagesEn } from "../src/messages.en.ts";
 import { messagesFr } from "../src/messages.fr.ts";
+import { labels } from "../src/labels.ts";
 import { localized } from "../src/localized.ts";
+import { searchDatabase } from "../src/search.ts";
 import { evaluate } from "../src/rules.ts";
 import type { Database } from "../src/schemas.ts";
 
@@ -77,5 +79,32 @@ describe("localized", () => {
     expect(localized(item, "summary", "fr")).toBe("Bonjour");
     expect(localized({ summary_fr: "Seul" }, "summary", "en")).toBe("Seul");
     expect(localized({}, "summary", "en")).toBeNull();
+  });
+});
+
+describe("libellés partagés", () => {
+  it("le français et l'anglais ont la même structure", () => {
+    const keys = (o: object): string[] =>
+      Object.entries(o).flatMap(([k, v]) =>
+        typeof v === "object" && v !== null ? keys(v).map((x) => `${k}.${x}`) : [k],
+      );
+    expect(keys(labels.en).sort()).toEqual(keys(labels.fr).sort());
+  });
+});
+
+describe("recherche", () => {
+  it("trouve par nom, alias, accent et ponctuation", () => {
+    const hits = searchDatabase(db, "s905-w", "fr");
+    expect(hits.map((h) => `${h.type}:${h.id}`)).toContain("soc:amlogic-s905w");
+    expect(searchDatabase(db, "AMLOGIC s905w", "en")).toHaveLength(1);
+  });
+
+  it("renvoie une liste vide pour une requête vide ou sans résultat", () => {
+    expect(searchDatabase(db, "   ", "en")).toEqual([]);
+    expect(searchDatabase(db, "zzzz-inconnu", "en")).toEqual([]);
+  });
+
+  it("respecte la limite", () => {
+    expect(searchDatabase(db, "a", "en", 1).length).toBeLessThanOrEqual(1);
   });
 });

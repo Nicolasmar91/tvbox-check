@@ -1,0 +1,29 @@
+---
+import Base from "../layouts/Base.astro";
+import McpFr from "../components/content/McpFr.astro";
+import McpEn from "../components/content/McpEn.astro";
+import type { Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const meta = {
+  fr: {
+    title: "Connecteur MCP",
+    description:
+      "Interrogez la base tvbox-check depuis un assistant (Claude Desktop, Claude Code) : vérification des specs, limites des SoC, révisions des modèles, en lecture seule.",
+  },
+  en: {
+    title: "MCP connector",
+    description:
+      "Query the tvbox-check database from an assistant (Claude Desktop, Claude Code): spec checks, SoC limits, model revisions, read-only.",
+  },
+}[lang];
+---
+
+<Base title={meta.title} description={meta.description} lang={lang}>
+  <h1>{meta.title}</h1>
+  {lang === "fr" ? <McpFr /> : <McpEn />}
+</Base>

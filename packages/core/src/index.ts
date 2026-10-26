@@ -6,3 +6,5 @@ export { messagesFr } from "./messages.fr.ts";
 export { messagesEn } from "./messages.en.ts";
 export * from "./messages.ts";
 export { localized } from "./localized.ts";
+export * from "./labels.ts";
+export * from "./search.ts";

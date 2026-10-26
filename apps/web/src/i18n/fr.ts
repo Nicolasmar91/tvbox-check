@@ -15,6 +15,7 @@ export const fr = {
     guide: "Guide",
     contribute: "Contribuer",
     about: "À propos",
+    mcp: "Connecteur MCP",
   },
   skip: "Aller au contenu",
   home: {

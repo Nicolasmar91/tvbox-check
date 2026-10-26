@@ -22,6 +22,8 @@ jobs:
       - run: pnpm test
       - run: pnpm build
       - run: pnpm i18n
+      - run: pnpm build:mcp
+      - run: pnpm smoke:mcp
 
   deploy:
     needs: check

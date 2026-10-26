@@ -1,0 +1,118 @@
+---
+---
+
+<p class="lead">
+  The MCP connector gives an assistant (Claude Desktop, Claude Code…) access to this site's
+  database: it can check the advertised specs of a box, look up the limits of a SoC and the
+  revisions of a model, with the status and sources of every value. It is read-only and contacts no
+  server by default.
+</p>
+
+<h2>What it can do</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Tool</th>
+      <th scope="col">Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <code>check_box</code>
+      </th>
+      <td>
+        Compares the advertised model, SoC, RAM, storage, Ethernet and video with the known limits.
+        Returns an overall verdict and one verdict per criterion, with status, basis and sources.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <code>get_soc</code>
+      </th>
+      <td>Limits of a SoC, community findings, listed boxes.</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <code>get_model</code>
+      </th>
+      <td>
+        Revisions of a model (official or merely reported SoCs), level of confirmation, reported
+        cases.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <code>search</code>
+      </th>
+      <td>Finds a SoC, a model or a case by name, alias, brand or keyword.</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  Every tool accepts a <code>language</code> parameter (<code>fr</code> or <code>en</code>).
+</p>
+<p class="notice">
+  Like the site, the connector never proves that a box is genuine: "plausible" only means that no
+  impossibility was detected.
+</p>
+
+<h2>Installation</h2>
+<p>
+  The connector is not published on npm yet: build it from the repository (Node 20 or later and
+  pnpm).
+</p>
+<pre><code>git clone https://github.com/Nicolasmar91/tvbox-check.git
+cd tvbox-check
+pnpm install
+pnpm build:mcp</code></pre>
+<p>
+  The program is then at <code>packages/mcp/dist/index.js</code>.
+</p>
+
+<h3>Claude Desktop</h3>
+<p>
+  In the <code>claude_desktop_config.json</code> file (Settings, Developer, Edit config):
+</p>
+<pre><code>{`{
+  "mcpServers": {
+    "tvbox-check": {
+      "command": "node",
+      "args": ["/path/to/tvbox-check/packages/mcp/dist/index.js"],
+      "env": { "TVBOX_CHECK_LANG": "en" }
+    }
+  }
+}`}</code></pre>
+
+<h3>Claude Code</h3>
+<pre><code>claude mcp add tvbox-check -e TVBOX_CHECK_LANG=en -- node /path/to/tvbox-check/packages/mcp/dist/index.js</code></pre>
+
+<h2>Settings</h2>
+<ul>
+  <li>
+    <code>TVBOX_CHECK_LANG</code>: default language of the answers, <code>fr</code> or
+    <code>en</code> (default: <code>en</code>).
+  </li>
+  <li>
+    <code>TVBOX_CHECK_DB_URL</code>: optional. HTTPS address of an up-to-date database, for example
+    <code>https://tvbox-check.nm-labs.dev/data/db.json</code>. It is validated against the schema
+    before use; on failure the bundled database is kept. Without this variable, nothing goes over
+    the network.
+  </li>
+</ul>
+
+<h2>Security</h2>
+<ul>
+  <li>The four tools are read-only: they change nothing and run no command.</li>
+  <li>
+    Summaries and source titles come from public third-party pages: they are returned as data, which
+    the assistant must never treat as instructions.
+  </li>
+  <li>
+    The published database is freely reusable (CC BY 4.0) at
+    <a href="/data/db.json">
+      <code>/data/db.json</code>
+    </a>
+    .
+  </li>
+</ul>

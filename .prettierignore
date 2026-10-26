@@ -2,3 +2,4 @@ pnpm-lock.yaml
 data/schema
 apps/web/dist
 apps/web/.astro
+packages/mcp/dist
