@@ -1,21 +1,49 @@
 {
-  "name": "@tvbox-check/mcp",
+  "name": "tvbox-check-mcp",
   "version": "0.1.0",
-  "description": "Serveur MCP en lecture seule : vérifie les specs d'une TV box Android (tvbox-check).",
-  "private": true,
+  "description": "Read-only MCP server to check the specs of Android TV boxes (RAM, SoC, Ethernet, video) against sourced hardware limits and reported cases. Fr/En.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "android-tv-box",
+    "tv-box",
+    "hardware",
+    "fake-specs",
+    "armbian",
+    "claude"
+  ],
+  "license": "MIT",
+  "author": "NM Labs",
+  "homepage": "https://tvbox-check.nm-labs.dev/en/mcp/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolasmar91/tvbox-check.git",
+    "directory": "packages/mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/Nicolasmar91/tvbox-check/issues"
+  },
   "type": "module",
   "bin": {
     "tvbox-check-mcp": "./dist/index.js"
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "DATA_LICENSE.md"
   ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "prepublishOnly": "pnpm build && pnpm smoke"
   },
-  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
     "zod": "^4.6.7"

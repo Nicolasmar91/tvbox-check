@@ -13,8 +13,8 @@
     "check": "pnpm lint && pnpm format && pnpm typecheck && pnpm validate && pnpm test && pnpm build && pnpm i18n && pnpm build:mcp && pnpm smoke:mcp",
     "build": "pnpm --filter @tvbox-check/web build",
     "i18n": "tsx scripts/check-i18n.ts",
-    "build:mcp": "pnpm --filter @tvbox-check/mcp build",
-    "smoke:mcp": "pnpm --filter @tvbox-check/mcp smoke"
+    "build:mcp": "pnpm --filter tvbox-check-mcp build",
+    "smoke:mcp": "pnpm --filter tvbox-check-mcp smoke"
   },
   "devDependencies": {
     "@tvbox-check/core": "workspace:^",
