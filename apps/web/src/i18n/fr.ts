@@ -1,6 +1,9 @@
 import type { Basis, Status, Verdict } from "@tvbox-check/core";
 
-/** Tous les textes de l'interface sont ici pour faciliter l'ajout d'une langue. */
+/**
+ * Tous les textes de l'interface. Toute nouvelle clé doit aussi être ajoutée dans `en.ts` :
+ * le type `Strings` fait échouer la vérification de types s'il en manque une.
+ */
 export const fr = {
   lang: "fr",
   nav: {
@@ -27,7 +30,7 @@ export const fr = {
     model: "Nom du modèle",
     modelHint: "Exemple : TX3 Mini",
     soc: "SoC annoncé",
-    socUnknown: "Je ne sais pas",
+    socHint: "Je ne sais pas : laissez vide.",
     ram: "RAM annoncée (Go)",
     storage: "Stockage annoncé (Go)",
     ethernet: "Ethernet annoncé",
@@ -59,6 +62,7 @@ export const fr = {
     basisLabel: "Base",
     viewSoc: "Voir la fiche du SoC",
     viewCase: "Voir le cas documenté",
+    claimedLimit: "annoncé : {claimed} · limite : {limit}",
   },
   verdicts: {
     impossible: { label: "Impossible", icon: "✖" },
@@ -132,6 +136,9 @@ export const fr = {
     boxes: "Box documentées avec ce SoC",
     noBoxes: "Aucune box documentée pour l'instant.",
     check: "Vérifier une box avec ce SoC",
+    pageTitle: "{name} : limites matérielles",
+    pageDescription:
+      "Limites matérielles du SoC {name} (RAM maximale, Ethernet, vidéo), avec statut et sources, et box documentées.",
   },
   boxes: {
     indexTitle: "Box référencées",
@@ -150,6 +157,8 @@ export const fr = {
     check: "Vérifier ce modèle",
     none: "Aucun modèle référencé pour l'instant.",
     socBoxes: "Box référencées avec ce SoC",
+    pageTitle: "{name} : SoC et configurations connus",
+    pageDescription: "SoC répertoriés pour la TV box {name} ({socs}), configurations et sources.",
   },
   model: {
     indexTitle: "Modèles signalés",
@@ -168,6 +177,9 @@ export const fr = {
     comments: "Commentaires",
     showComments: "Afficher les commentaires (chargement de giscus, compte GitHub requis)",
     commentsSoon: "Les commentaires seront disponibles une fois le dépôt GitHub publié.",
+    giscusLang: "fr",
+    pageTitle: "{name} : specs annoncées et observées",
+    pageDescription: "Cas signalé pour {name} : {summary}",
   },
   search: {
     title: "Recherche",
@@ -178,10 +190,42 @@ export const fr = {
     typeSoc: "SoC",
     typeCase: "Modèle signalé",
   },
+  ui: {
+    navAria: "Navigation principale",
+    characteristic: "Caractéristique",
+    value: "Valeur",
+    status: "Statut",
+    sources: "Sources",
+    modelColumn: "Modèle",
+    socsListed: "SoC répertoriés",
+    addedOn: "Ajouté le {date}.",
+    cores: "cœurs",
+    announcedAndObserved: "Annoncé et observé",
+    requestCorrection: "Demander une correction ou un retrait",
+    relatedCase: "Cas signalé : {name}",
+    notFoundTitle: "Page introuvable",
+    notFoundText: "Cette page n'existe pas ou a été déplacée.",
+    backToChecker: "Retour au vérificateur",
+    searchSocOrModel: "Rechercher un SoC ou un modèle",
+    sourceMeta: "{type}, consultée le {date}",
+    otherLanguageName: "English",
+    otherLanguageHint: "Read this page in English",
+    guideToc: "Sommaire du guide",
+  },
+  sourceType: {
+    datasheet: "datasheet",
+    vendor: "fiche constructeur",
+    forum: "forum",
+    article: "article",
+    "own-observation": "observation personnelle",
+  },
   footer: {
+    credit: "Un projet NM Labs",
     note: "Données sous licence CC BY 4.0, code sous licence MIT. Les noms de marques sont cités à titre d'identification uniquement.",
     correction: "Demander une correction ou un retrait",
   },
 } as const;
 
-export type Strings = typeof fr;
+/** Même structure que `fr`, mais avec des chaînes quelconques (les littéraux de `fr` sont élargis). */
+type Widen<T> = T extends string ? string : { [K in keyof T]: Widen<T[K]> };
+export type Strings = Widen<typeof fr>;

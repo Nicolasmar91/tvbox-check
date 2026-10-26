@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import AboutFr from "../components/content/AboutFr.astro";
+import AboutEn from "../components/content/AboutEn.astro";
+import { config } from "../config";
+import type { Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const meta = {
+  fr: {
+    title: "À propos",
+    description:
+      "Méthode, statut des données, licences et contact pour demander une correction ou un retrait.",
+  },
+  en: {
+    title: "About",
+    description:
+      "Method, status of the data, licences and contact to request a correction or removal.",
+  },
+}[lang];
+
+const props = { siteName: config.siteName, contactEmail: config.contactEmail };
+---
+
+<Base title={meta.title} description={meta.description} lang={lang}>
+  <h1>{meta.title}</h1>
+  {lang === "fr" ? <AboutFr {...props} /> : <AboutEn {...props} />}
+</Base>

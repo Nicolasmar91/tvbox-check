@@ -1,0 +1,40 @@
+---
+import Base from "../layouts/Base.astro";
+import Search from "../components/Search";
+import type { SearchEntry } from "../components/Search";
+import { db, tx } from "../lib/db";
+import { routePath, useT } from "../i18n";
+import type { Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+
+const entries: SearchEntry[] = [
+  ...db.socs.map((s) => ({
+    type: "soc" as const,
+    href: routePath(lang, "soc", s.id),
+    title: `${s.vendor} ${s.name}`,
+    text: [s.id, ...s.aliases, s.arch ?? ""].join(" "),
+  })),
+  ...db.models.map((m) => ({
+    type: "box" as const,
+    href: routePath(lang, "boxes", m.id),
+    title: m.name,
+    text: [m.id, ...m.aliases, m.brand ?? ""].join(" "),
+  })),
+  ...db.cases.map((c) => ({
+    type: "case" as const,
+    href: routePath(lang, "cases", c.id),
+    title: c.marketed_name,
+    text: [c.id, tx(lang, c, "summary")].join(" "),
+  })),
+];
+---
+
+<Base title={t.search.title} description={t.search.description} lang={lang}>
+  <h1>{t.search.title}</h1>
+  <Search client:load entries={entries} lang={lang} />
+</Base>

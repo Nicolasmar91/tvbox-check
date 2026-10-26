@@ -1,7 +1,12 @@
-import { messagesFr as m } from "./messages.fr.ts";
+import { localized } from "./localized.ts";
+import { messagesEn } from "./messages.en.ts";
+import { messagesFr } from "./messages.fr.ts";
+import type { Locale, Messages } from "./messages.ts";
 import type { Basis, Database, Model, Soc, Status, VideoLevel } from "./schemas.ts";
 import { worstVerdict } from "./verdict.ts";
 import type { CheckInput, CheckResult, Criterion, CriterionResult, Verdict } from "./verdict.ts";
+
+const MESSAGES: Record<Locale, Messages> = { fr: messagesFr, en: messagesEn };
 
 const VIDEO_ORDER: readonly VideoLevel[] = ["1080p", "4K", "6K", "8K"];
 
@@ -54,7 +59,8 @@ function breach(status: Status): Verdict {
   return status === "verified" ? "impossible" : "suspect";
 }
 
-export function evaluate(input: CheckInput, db: Database): CheckResult {
+export function evaluate(input: CheckInput, db: Database, locale: Locale = "fr"): CheckResult {
+  const m = MESSAGES[locale];
   const criteria: CriterionResult[] = [];
   const socQuery = input.soc?.trim();
   const modelQuery = input.modelName?.trim();
@@ -68,7 +74,7 @@ export function evaluate(input: CheckInput, db: Database): CheckResult {
       criteria.push({
         criterion: "knownCase",
         verdict: "suspect",
-        message: m.knownCase(c.marketed_name, c.summary_fr),
+        message: m.knownCase(c.marketed_name, localized(c, "summary", locale) ?? c.summary_fr),
         sources: c.sources,
         case: c,
       });
@@ -86,12 +92,12 @@ export function evaluate(input: CheckInput, db: Database): CheckResult {
       });
     } else {
       if (model) {
-        checkModelSoc(db, model, soc, criteria);
-        checkModelSpecs(input, model, soc, criteria);
+        checkModelSoc(m, db, model, soc, criteria);
+        checkModelSpecs(m, input, model, soc, criteria);
       }
-      checkRam(input, soc, criteria);
-      checkEthernet(input, soc, criteria);
-      checkVideo(input, soc, criteria);
+      checkRam(m, input, soc, criteria);
+      checkEthernet(m, input, soc, criteria);
+      checkVideo(m, input, soc, criteria);
     }
   }
 
@@ -125,7 +131,11 @@ interface Comparison<T> {
  * - limite dépassée : `impossible` si vérifiée (datasheet/fiche constructeur), sinon `suspect` ;
  * - sinon : `plausible`.
  */
-function compare<T extends string | number>(soc: Soc, c: Comparison<T>): CriterionResult {
+function compare<T extends string | number>(
+  m: Messages,
+  soc: Soc,
+  c: Comparison<T>,
+): CriterionResult {
   const { limit } = c;
   if (!limit) {
     return {
@@ -156,14 +166,14 @@ function compare<T extends string | number>(soc: Soc, c: Comparison<T>): Criteri
   };
 }
 
-function checkRam(input: CheckInput, soc: Soc, out: CriterionResult[]): void {
+function checkRam(m: Messages, input: CheckInput, soc: Soc, out: CriterionResult[]): void {
   const claimed = input.ramGb;
   if (claimed === undefined) return;
   const max = soc.ram_max_gb?.value ?? 0;
   out.push(
-    compare(soc, {
+    compare(m, soc, {
       criterion: "ram",
-      field: "RAM maximale",
+      field: m.fieldRam,
       claimed,
       limit: soc.ram_max_gb,
       exceeds: (limit) => claimed > limit,
@@ -176,14 +186,14 @@ function checkRam(input: CheckInput, soc: Soc, out: CriterionResult[]): void {
   );
 }
 
-function checkEthernet(input: CheckInput, soc: Soc, out: CriterionResult[]): void {
+function checkEthernet(m: Messages, input: CheckInput, soc: Soc, out: CriterionResult[]): void {
   const claimed = input.ethernet;
   if (claimed === undefined) return;
   const max = soc.ethernet_max_mbps?.value ?? 0;
   out.push(
-    compare(soc, {
+    compare(m, soc, {
       criterion: "ethernet",
-      field: "débit Ethernet maximal",
+      field: m.fieldEthernet,
       claimed,
       limit: soc.ethernet_max_mbps,
       exceeds: (limit) => claimed === "1G" && limit <= 100,
@@ -196,14 +206,14 @@ function checkEthernet(input: CheckInput, soc: Soc, out: CriterionResult[]): voi
   );
 }
 
-function checkVideo(input: CheckInput, soc: Soc, out: CriterionResult[]): void {
+function checkVideo(m: Messages, input: CheckInput, soc: Soc, out: CriterionResult[]): void {
   const claimed = input.videoMax;
   if (claimed === undefined) return;
   const max = soc.video_max_decode?.value ?? "";
   out.push(
-    compare(soc, {
+    compare(m, soc, {
       criterion: "video",
-      field: "décodage vidéo maximal",
+      field: m.fieldVideo,
       claimed,
       limit: soc.video_max_decode,
       exceeds: (limit) => VIDEO_ORDER.indexOf(claimed) > VIDEO_ORDER.indexOf(limit),
@@ -223,7 +233,13 @@ const socLabel = (s: Soc) => `${s.vendor} ${s.name}`;
  * maximum : un fabricant change parfois de puce sans changer de nom. Une puce seulement
  * « signalée » sous ce nom n'est jamais présentée comme attendue.
  */
-function checkModelSoc(db: Database, model: Model, soc: Soc, out: CriterionResult[]): void {
+function checkModelSoc(
+  m: Messages,
+  db: Database,
+  model: Model,
+  soc: Soc,
+  out: CriterionResult[],
+): void {
   const official = socsForModel(db, model, "official");
   if (official.length === 0) return; // aucune référence officielle : rien à comparer
   const sourcesOf = (kind: "official" | "reported") =>
@@ -254,7 +270,13 @@ function checkModelSoc(db: Database, model: Model, soc: Soc, out: CriterionResul
 }
 
 /** RAM annoncée supérieure aux configurations répertoriées pour ce modèle avec ce SoC. */
-function checkModelSpecs(input: CheckInput, model: Model, soc: Soc, out: CriterionResult[]): void {
+function checkModelSpecs(
+  m: Messages,
+  input: CheckInput,
+  model: Model,
+  soc: Soc,
+  out: CriterionResult[],
+): void {
   const claimed = input.ramGb;
   if (claimed === undefined) return;
   const variants = model.variants.filter(

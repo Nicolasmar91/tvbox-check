@@ -1,69 +1,92 @@
 ---
 import "../styles/global.css";
-import { fr } from "../i18n/fr";
 import { config } from "../config";
+import { alternatePath, htmlLocale, routePath, useT } from "../i18n";
+import type { Lang } from "../i18n";
 
 interface Props {
   title: string;
   description: string;
+  lang: Lang;
   jsonLd?: object;
 }
 
-const { title, description, jsonLd } = Astro.props;
+const { title, description, lang, jsonLd } = Astro.props;
+const t = useT(lang);
+const other: Lang = lang === "fr" ? "en" : "fr";
 const fullTitle = title === config.siteName ? title : `${title} · ${config.siteName}`;
-const canonical = new URL(Astro.url.pathname, config.siteUrl).toString();
 const path = Astro.url.pathname;
+const abs = (p: string) => new URL(p, config.siteUrl).toString();
+const canonical = abs(path);
+const alternates = { [lang]: abs(path), [other]: abs(alternatePath(path, other)) } as Record<
+  Lang,
+  string
+>;
 
 const nav = [
-  { href: "/", label: fr.nav.checker },
-  { href: "/soc/", label: fr.nav.socs },
-  { href: "/boxes/", label: fr.nav.boxes },
-  { href: "/modele/", label: fr.nav.models },
-  { href: "/recherche/", label: fr.nav.search },
-  { href: "/guide/verifier-les-vraies-specs/", label: fr.nav.guide },
-  { href: "/contribuer/", label: fr.nav.contribute },
-  { href: "/a-propos/", label: fr.nav.about },
+  { href: routePath(lang, "home"), label: t.nav.checker, home: true },
+  { href: routePath(lang, "soc"), label: t.nav.socs },
+  { href: routePath(lang, "boxes"), label: t.nav.boxes },
+  { href: routePath(lang, "cases"), label: t.nav.models },
+  { href: routePath(lang, "search"), label: t.nav.search },
+  { href: routePath(lang, "guide"), label: t.nav.guide },
+  { href: routePath(lang, "contribute"), label: t.nav.contribute },
+  { href: routePath(lang, "about"), label: t.nav.about },
 ];
-const isCurrent = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+const isCurrent = (n: { href: string; home?: boolean }) =>
+  n.home ? path === n.href : path.startsWith(n.href);
 ---
 
 <!doctype html>
-<html lang={fr.lang}>
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="fr" href={alternates.fr} />
+    <link rel="alternate" hreflang="en" href={alternates.en} />
+    <link rel="alternate" hreflang="x-default" href={alternates.fr} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale" content={htmlLocale[lang]} />
+    <meta property="og:locale:alternate" content={htmlLocale[other]} />
     <meta name="twitter:card" content="summary" />
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
   </head>
   <body>
     <a class="skip" href="#contenu">
-      {fr.skip}
+      {t.skip}
     </a>
     <header class="site">
       <div class="wrap">
-        <a class="brand" href="/">
+        <a class="brand" href={routePath(lang, "home")}>
           {config.siteName}
         </a>
-        <nav aria-label="Navigation principale">
+        <nav aria-label={t.ui.navAria}>
           <ul>
             {nav.map((n) => (
               <li>
-                <a href={n.href} aria-current={isCurrent(n.href) ? "page" : undefined}>
+                <a href={n.href} aria-current={isCurrent(n) ? "page" : undefined}>
                   {n.label}
                 </a>
               </li>
             ))}
           </ul>
         </nav>
+        <a
+          class="lang-switch"
+          href={alternatePath(path, other)}
+          hreflang={other}
+          lang={other}
+          title={t.ui.otherLanguageHint}
+        >
+          {t.ui.otherLanguageName}
+        </a>
       </div>
     </header>
     <main id="contenu" class="wrap">
@@ -71,9 +94,10 @@ const isCurrent = (href: string) => (href === "/" ? path === "/" : path.startsWi
     </main>
     <footer class="site">
       <div class="wrap">
-        <p>{fr.footer.note}</p>
+        <p>{t.footer.note}</p>
         <p>
-          <a href="/a-propos/#correction">{fr.footer.correction}</a> · Un projet NM Labs
+          <a href={`${routePath(lang, "about")}#correction`}>{t.footer.correction}</a> ·{" "}
+          {t.footer.credit}
         </p>
       </div>
     </footer>

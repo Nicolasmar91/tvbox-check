@@ -1,0 +1,90 @@
+---
+import Base from "../layouts/Base.astro";
+import SourceList from "../components/SourceList.astro";
+import { db, socName, tx, variantEvidence } from "../lib/db";
+import { fmt, routePath, useT } from "../i18n";
+import type { Lang } from "../i18n";
+import { normalizeName } from "@tvbox-check/core/rules";
+import type { Model } from "@tvbox-check/core";
+
+interface Props {
+  lang: Lang;
+  model: Model;
+}
+const { lang, model } = Astro.props;
+const t = useT(lang);
+const list = (v: number[] | null) => (v && v.length > 0 ? v.join(", ") : t.fields.unknownValue);
+const socs = [...new Set(model.variants.map((v) => socName(v.soc)))];
+const title = fmt(t.boxes.pageTitle, { name: model.name });
+const description = fmt(t.boxes.pageDescription, { name: model.name, socs: socs.join(", ") });
+const relatedCases = db.cases.filter(
+  (c) => normalizeName(c.marketed_name) === normalizeName(model.name),
+);
+const notes = tx(lang, model, "notes");
+const evidenceLabel = {
+  official: t.boxes.evidenceOfficial,
+  corroborated: t.boxes.evidenceCorroborated,
+  single: t.boxes.evidenceSingle,
+};
+---
+
+<Base title={title} description={description} lang={lang}>
+  <p>
+    <a href={routePath(lang, "boxes")}>← {t.boxes.indexTitle}</a>
+  </p>
+  <h1>{model.name}</h1>
+  {model.brand && <p class="lead">{model.brand}</p>}
+  <p class="notice">{t.boxes.revisionNote}</p>
+
+  <h2>{t.boxes.variants}</h2>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">SoC</th>
+          <th scope="col">{t.boxes.year}</th>
+          <th scope="col">{t.boxes.ramConfigs}</th>
+          <th scope="col">{t.boxes.storageConfigs}</th>
+          <th scope="col">{t.ui.sources}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {model.variants.map((v) => (
+          <tr>
+            <th scope="row">
+              <a href={routePath(lang, "soc", v.soc)}>{socName(v.soc)}</a>
+              {v.kind === "reported" && <span class="tag">{t.boxes.reported}</span>}
+              <span class={`tag ${variantEvidence(v) === "single" ? "" : "verified"}`}>
+                {evidenceLabel[variantEvidence(v)]}
+              </span>
+              {tx(lang, v, "note") && <div class="hint">{tx(lang, v, "note")}</div>}
+            </th>
+            <td>{v.year ?? t.fields.unknownValue}</td>
+            <td>{list(v.ram_gb)}</td>
+            <td>{list(v.storage_gb)}</td>
+            <td>
+              <SourceList ids={v.sources} lang={lang} />
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  {notes && <p>{notes}</p>}
+
+  {relatedCases.length > 0 && (
+    <p>
+      {relatedCases.map((c) => (
+        <a href={routePath(lang, "cases", c.id)}>
+          {fmt(t.ui.relatedCase, { name: c.marketed_name })}
+        </a>
+      ))}
+    </p>
+  )}
+
+  <p class="actions">
+    <a class="btn" href={`${routePath(lang, "home")}?modele=${encodeURIComponent(model.name)}`}>
+      {t.boxes.check}
+    </a>
+  </p>
+</Base>

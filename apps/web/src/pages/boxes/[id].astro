@@ -1,80 +1,12 @@
 ---
-import Base from "../../layouts/Base.astro";
-import SourceList from "../../components/SourceList.astro";
-import { db, socName, variantEvidence } from "../../lib/db";
-import { fr } from "../../i18n/fr";
-import type { Model } from "@tvbox-check/core";
+import View from "../../views/BoxPage.astro";
+import { db } from "../../lib/db";
 
 export function getStaticPaths() {
-  return db.models.map((model) => ({ params: { id: model.id }, props: { model } }));
+  return db.models.map((item) => ({ params: { id: item.id }, props: { item } }));
 }
 
-interface Props {
-  model: Model;
-}
-const { model } = Astro.props;
-const list = (v: number[] | null) => (v && v.length > 0 ? v.join(", ") : fr.fields.unknownValue);
-const socs = [...new Set(model.variants.map((v) => socName(v.soc)))];
-const title = `${model.name} : SoC et configurations connus`;
-const description = `SoC répertoriés pour la TV box ${model.name} (${socs.join(", ")}), configurations et sources.`;
-const relatedCases = db.cases.filter(
-  (c) =>
-    c.marketed_name.toLowerCase().replace(/[^a-z0-9]/g, "") ===
-    model.name.toLowerCase().replace(/[^a-z0-9]/g, ""),
-);
+const { item } = Astro.props;
 ---
 
-<Base title={title} description={description}>
-  <p>
-    <a href="/boxes/">← {fr.boxes.indexTitle}</a>
-  </p>
-  <h1>{model.name}</h1>
-  {model.brand && <p class="lead">{model.brand}</p>}
-  <p class="notice">{fr.boxes.revisionNote}</p>
-
-  <h2>{fr.boxes.variants}</h2>
-  <div class="table-scroll">
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">SoC</th>
-          <th scope="col">{fr.boxes.year}</th>
-          <th scope="col">{fr.boxes.ramConfigs}</th>
-          <th scope="col">{fr.boxes.storageConfigs}</th>
-          <th scope="col">Sources</th>
-        </tr>
-      </thead>
-      <tbody>
-        {model.variants.map((v) => (
-          <tr>
-            <th scope="row">
-              <a href={`/soc/${v.soc}/`}>{socName(v.soc)}</a>
-              {v.note_fr && <div class="hint">{v.note_fr}</div>}
-            </th>
-            <td>{v.year ?? fr.fields.unknownValue}</td>
-            <td>{list(v.ram_gb)}</td>
-            <td>{list(v.storage_gb)}</td>
-            <td>
-              <SourceList ids={v.sources} />
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-  {model.notes_fr && <p>{model.notes_fr}</p>}
-
-  {relatedCases.length > 0 && (
-    <p>
-      {relatedCases.map((c) => (
-        <a href={`/modele/${c.id}/`}>Cas signalé : {c.marketed_name}</a>
-      ))}
-    </p>
-  )}
-
-  <p class="actions">
-    <a class="btn" href={`/?modele=${encodeURIComponent(model.name)}`}>
-      {fr.boxes.check}
-    </a>
-  </p>
-</Base>
+<View lang="fr" model={item} />

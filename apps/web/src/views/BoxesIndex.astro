@@ -1,0 +1,49 @@
+---
+import Base from "../layouts/Base.astro";
+import { db, socName } from "../lib/db";
+import { routePath, useT } from "../i18n";
+import type { Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const sorted = [...db.models].sort((a, b) => a.name.localeCompare(b.name, lang));
+---
+
+<Base title={t.boxes.indexTitle} description={t.boxes.indexDescription} lang={lang}>
+  <h1>{t.boxes.indexTitle}</h1>
+  <p class="lead">{t.boxes.indexDescription}</p>
+  <p class="notice">{t.boxes.revisionNote}</p>
+  {sorted.length === 0 ? (
+    <p class="muted">{t.boxes.none}</p>
+  ) : (
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">{t.ui.modelColumn}</th>
+            <th scope="col">{t.ui.socsListed}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sorted.map((m) => (
+            <tr>
+              <th scope="row">
+                <a href={routePath(lang, "boxes", m.id)}>{m.name}</a>
+              </th>
+              <td>
+                {[
+                  ...new Set(
+                    m.variants.filter((v) => v.kind === "official").map((v) => socName(v.soc)),
+                  ),
+                ].join(", ")}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+</Base>

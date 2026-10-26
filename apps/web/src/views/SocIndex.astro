@@ -1,0 +1,52 @@
+---
+import Base from "../layouts/Base.astro";
+import { db } from "../lib/db";
+import { routePath, useT } from "../i18n";
+import type { Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<Base title={t.soc.indexTitle} description={t.soc.indexDescription} lang={lang}>
+  <h1>{t.soc.indexTitle}</h1>
+  <p class="lead">{t.soc.indexDescription}</p>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">SoC</th>
+          <th scope="col">{t.fields.ramMax}</th>
+          <th scope="col">{t.fields.ethernetMax}</th>
+          <th scope="col">{t.fields.videoMax}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {db.socs.map((s) => (
+          <tr>
+            <th scope="row">
+              <a href={routePath(lang, "soc", s.id)}>
+                {s.vendor} {s.name}
+              </a>
+            </th>
+            <td>
+              {s.ram_max_gb ? `${s.ram_max_gb.value} ${t.fields.gb}` : t.fields.unknownValue}
+              {s.ram_max_gb && (
+                <span class={`tag ${s.ram_max_gb.status}`}>{t.basis[s.ram_max_gb.basis]}</span>
+              )}
+            </td>
+            <td>
+              {s.ethernet_max_mbps
+                ? `${s.ethernet_max_mbps.value} ${t.fields.mbps}`
+                : t.fields.unknownValue}
+            </td>
+            <td>{s.video_max_decode ? s.video_max_decode.value : t.fields.unknownValue}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</Base>

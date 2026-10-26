@@ -1,0 +1,12 @@
+---
+import View from "../../../views/SocPage.astro";
+import { db } from "../../../lib/db";
+
+export function getStaticPaths() {
+  return db.socs.map((item) => ({ params: { id: item.id }, props: { item } }));
+}
+
+const { item } = Astro.props;
+---
+
+<View lang="en" soc={item} />

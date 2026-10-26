@@ -1,10 +1,14 @@
 ---
-import { getSources } from "../lib/db";
+import { getSources, sourceTitle } from "../lib/db";
+import { fmt, useT } from "../i18n";
+import type { Lang } from "../i18n";
 
 interface Props {
   ids: readonly string[];
+  lang: Lang;
 }
-const { ids } = Astro.props;
+const { ids, lang } = Astro.props;
+const t = useT(lang);
 const list = getSources(ids);
 ---
 
@@ -13,10 +17,10 @@ const list = getSources(ids);
     {list.map((s) => (
       <li>
         <a href={s.url} rel="noopener noreferrer" target="_blank">
-          {s.title}
+          {sourceTitle(lang, s)}
         </a>{" "}
         <span class="hint">
-          ({s.type}, consultée le {s.accessed})
+          ({fmt(t.ui.sourceMeta, { type: t.sourceType[s.type], date: s.accessed })})
         </span>
       </li>
     ))}

@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+import { db, socName } from "../lib/db";
+import { routePath, useT } from "../i18n";
+import type { Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<Base title={t.model.indexTitle} description={t.model.indexDescription} lang={lang}>
+  <h1>{t.model.indexTitle}</h1>
+  <p class="lead">{t.model.indexDescription}</p>
+  <p class="notice">{t.model.disclaimer}</p>
+  <ul class="plain">
+    {db.cases.map((c) => (
+      <li class="card">
+        <a href={routePath(lang, "cases", c.id)}>
+          <strong>{c.marketed_name}</strong>
+        </a>
+        <br />
+        <span class="tag">{t.caseType[c.type]}</span>
+        <span class="tag">{t.confidence[c.observed.confidence]}</span>
+        <span class="tag">{socName(c.marketed.soc)}</span>
+      </li>
+    ))}
+  </ul>
+</Base>

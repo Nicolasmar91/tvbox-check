@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "preact/hooks";
-import { fr } from "../i18n/fr";
+import { useT } from "../i18n";
+import type { Lang } from "../i18n";
 
 export interface SearchEntry {
   type: "soc" | "case" | "box";
@@ -10,7 +11,8 @@ export interface SearchEntry {
 
 const norm = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
-export default function Search({ entries }: { entries: SearchEntry[] }) {
+export default function Search({ entries, lang }: { entries: SearchEntry[]; lang: Lang }) {
+  const t = useT(lang);
   const [q, setQ] = useState("");
 
   useEffect(() => {
@@ -29,7 +31,7 @@ export default function Search({ entries }: { entries: SearchEntry[] }) {
   return (
     <div>
       <div class="field">
-        <label for="q">{fr.search.label}</label>
+        <label for="q">{t.search.label}</label>
         <input
           id="q"
           type="search"
@@ -47,16 +49,16 @@ export default function Search({ entries }: { entries: SearchEntry[] }) {
         />
       </div>
       <div aria-live="polite">
-        {q.trim() !== "" && results.length === 0 && <p class="muted">{fr.search.none}</p>}
+        {q.trim() !== "" && results.length === 0 && <p class="muted">{t.search.none}</p>}
         <ul class="plain">
           {results.map((r) => (
             <li key={r.href} class="card">
               <span class="tag">
                 {r.type === "soc"
-                  ? fr.search.typeSoc
+                  ? t.search.typeSoc
                   : r.type === "box"
-                    ? fr.search.typeBox
-                    : fr.search.typeCase}
+                    ? t.search.typeBox
+                    : t.search.typeCase}
               </span>{" "}
               <a href={r.href}>{r.title}</a>
             </li>

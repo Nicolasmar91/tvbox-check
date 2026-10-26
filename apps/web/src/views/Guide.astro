@@ -1,0 +1,68 @@
+---
+import Base from "../layouts/Base.astro";
+import GuideFr from "../components/content/GuideFr.astro";
+import GuideEn from "../components/content/GuideEn.astro";
+import type { Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const content = {
+  fr: {
+    title: "Comment vérifier les vraies specs d'une TV box Android",
+    description:
+      "Guide pratique pour savoir si la RAM et le stockage d'une TV box sont réels : lire les puces, démarrer sous Linux, utiliser l'UART et tester la mémoire de stockage.",
+    faq: [
+      {
+        q: "Pourquoi Android affiche-t-il parfois de fausses specs ?",
+        a: "Sur certaines box, le firmware est modifié pour déclarer plus de RAM ou de stockage que le matériel n'en contient. Les applications qui lisent ces informations depuis Android ne font que relayer ce que le système leur déclare.",
+      },
+      {
+        q: "Quelle est la méthode la plus fiable ?",
+        a: "Lire les références imprimées sur les puces mémoire de la carte, puis confirmer en démarrant un système Linux indépendant d'Android. Un test d'écriture complet du stockage lève les derniers doutes.",
+      },
+      {
+        q: "Un verdict « plausible » prouve-t-il qu'une box est authentique ?",
+        a: "Non. Il signifie seulement qu'aucune impossibilité n'a été détectée avec les données connues du SoC.",
+      },
+    ],
+  },
+  en: {
+    title: "How to check the real specs of an Android TV box",
+    description:
+      "A practical guide to find out whether the RAM and storage of a TV box are real: read the chips, boot Linux, use the UART and test the storage memory.",
+    faq: [
+      {
+        q: "Why does Android sometimes display false specs?",
+        a: "On some boxes the firmware is modified to declare more RAM or storage than the hardware contains. Apps that read this information from Android only relay what the system tells them.",
+      },
+      {
+        q: "What is the most reliable method?",
+        a: "Read the references printed on the memory chips of the board, then confirm by booting a Linux system independent of Android. A full write test of the storage removes the last doubts.",
+      },
+      {
+        q: 'Does a "plausible" verdict prove that a box is genuine?',
+        a: "No. It only means that no impossibility was detected with the known data about the SoC.",
+      },
+    ],
+  },
+}[lang];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  inLanguage: lang,
+  mainEntity: content.faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+---
+
+<Base title={content.title} description={content.description} lang={lang} jsonLd={jsonLd}>
+  <h1>{content.title}</h1>
+  {lang === "fr" ? <GuideFr faq={content.faq} /> : <GuideEn faq={content.faq} />}
+</Base>

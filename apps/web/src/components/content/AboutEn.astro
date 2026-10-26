@@ -1,0 +1,68 @@
+---
+interface Props {
+  siteName: string;
+  contactEmail: string;
+}
+const { siteName, contactEmail } = Astro.props;
+---
+
+<p class="lead">
+  {siteName} is an NM Labs project. It helps spot Android TV box specs that are inconsistent with
+  the hardware.
+</p>
+
+<h2>What the site does (and does not do)</h2>
+<p>
+  The site compares the advertised specs with the known hardware limits of the SoC and with cases
+  already reported. It detects <strong>impossibilities</strong> and <strong>known cases</strong>. It
+  never proves that a box is genuine: a "plausible" verdict only means that no impossibility was
+  detected.
+</p>
+
+<h2>Method and status of the data</h2>
+<ul>
+  <li>Every technical value has a source and a status, "verified" or "unverified".</li>
+  <li>
+    <strong>Verified</strong>: a manufacturer datasheet or product page was read, or at least two
+    independent sources (sites on different domains) give the same value. Only this data can produce
+    an "impossible" verdict.
+  </li>
+  <li>
+    <strong>Single source</strong>: a single forum or article. The verdict stays at "suspect" at
+    most.
+  </li>
+  <li>
+    <strong>Unsourced hypothesis</strong>: no conclusion is drawn from it.
+  </li>
+</ul>
+
+<h2>Reported cases</h2>
+<p>
+  Cases are sourced observations summarised in our own words, never accusations. We do not name
+  individual sellers. Brand and model names are used for identification only.
+</p>
+
+<h2 id="correction">Request a correction or removal</h2>
+<p>
+  If some information concerns you and seems inaccurate, write to
+  <a href={`mailto:${contactEmail}`}>{contactEmail}</a>. We reply quickly and correct or remove
+  whatever needs to be.
+</p>
+
+<h2>Licences</h2>
+<ul>
+  <li>Code: MIT licence.</li>
+  <li>
+    Data (<code>data/</code> folder): CC BY 4.0 licence, with the attribution "tvbox-check / NM
+    Labs".
+  </li>
+</ul>
+
+<h2>Privacy</h2>
+<p>
+  The site uses no cookie and shows no consent banner. It measures its traffic with Cloudflare Web
+  Analytics: aggregated audience measurement, with no cookie and no persistent identifier, and not
+  used for any advertising. The data you enter in the checker stays in your browser and is never
+  sent. Comments, when displayed, only load on request and go through GitHub (giscus), which applies
+  its own rules.
+</p>

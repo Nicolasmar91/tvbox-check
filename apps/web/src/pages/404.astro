@@ -1,16 +1,31 @@
 ---
 import Base from "../layouts/Base.astro";
+import { routePath, useT } from "../i18n";
+
+const fr = useT("fr");
+const en = useT("en");
 ---
 
-<Base title="Page introuvable" description="Cette page n'existe pas ou a été déplacée.">
-  <h1>Page introuvable</h1>
-  <p class="lead">Cette page n'existe pas ou a été déplacée.</p>
+<Base title={fr.ui.notFoundTitle} description={fr.ui.notFoundText} lang="fr">
+  <h1>{fr.ui.notFoundTitle}</h1>
+  <p class="lead">{fr.ui.notFoundText}</p>
   <p class="actions">
-    <a class="btn" href="/">
-      Retour au vérificateur
+    <a class="btn" href={routePath("fr", "home")}>
+      {fr.ui.backToChecker}
     </a>
-    <a class="btn secondary" href="/recherche/">
-      Rechercher un SoC ou un modèle
+    <a class="btn secondary" href={routePath("fr", "search")}>
+      {fr.ui.searchSocOrModel}
+    </a>
+  </p>
+  <hr />
+  <h2 lang="en">{en.ui.notFoundTitle}</h2>
+  <p lang="en">{en.ui.notFoundText}</p>
+  <p class="actions" lang="en">
+    <a class="btn secondary" href={routePath("en", "home")}>
+      {en.ui.backToChecker}
+    </a>
+    <a class="btn secondary" href={routePath("en", "search")}>
+      {en.ui.searchSocOrModel}
     </a>
   </p>
 </Base>

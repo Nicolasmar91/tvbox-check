@@ -1,25 +1,5 @@
 ---
-import Base from "../layouts/Base.astro";
-import Checker from "../components/Checker";
-import { db } from "../lib/db";
-import { fr } from "../i18n/fr";
-import { config } from "../config";
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  name: config.siteName,
-  applicationCategory: "UtilitiesApplication",
-  inLanguage: "fr",
-  url: config.siteUrl,
-  description: fr.home.description,
-  offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
-};
+import View from "../views/Home.astro";
 ---
 
-<Base title={config.siteName} description={fr.home.description} jsonLd={jsonLd}>
-  <h1>{fr.home.title}</h1>
-  <p class="lead">{fr.home.intro}</p>
-  <p class="notice">{fr.home.caveat}</p>
-  <Checker client:load db={db} repo={config.repo} />
-</Base>
+<View lang="fr" />

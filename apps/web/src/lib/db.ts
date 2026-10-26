@@ -1,4 +1,5 @@
-import { registrableDomain, validateDatabase } from "@tvbox-check/core";
+import { localized, registrableDomain, validateDatabase } from "@tvbox-check/core";
+import type { Locale } from "@tvbox-check/core";
 import type { Case, Database, ModelVariant, Soc, Source } from "@tvbox-check/core";
 import socs from "../../../../data/socs.json";
 import cases from "../../../../data/cases.json";
@@ -36,3 +37,11 @@ export const variantEvidence = (variant: ModelVariant): VariantEvidence => {
   const domains = new Set(list.map((s) => registrableDomain(s.url)));
   return domains.size >= 2 ? "corroborated" : "single";
 };
+
+/** Texte d'une donnée dans la langue demandée (`summary_fr` / `summary_en`…), repli français. */
+export const tx = (lang: Locale, obj: object, key: string): string =>
+  localized(obj, key, lang) ?? "";
+
+/** Titre d'une source : `title_en` en anglais s'il existe, sinon le titre d'origine. */
+export const sourceTitle = (lang: Locale, s: Source): string =>
+  (lang === "en" && (s as Source & { title_en?: string | null }).title_en) || s.title;

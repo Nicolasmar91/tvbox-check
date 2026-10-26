@@ -1,0 +1,86 @@
+---
+interface Props {
+  newCase: string | null;
+  fix: string | null;
+  repoUrl: string | null;
+  contactEmail: string;
+}
+const { newCase, fix, repoUrl, contactEmail } = Astro.props;
+---
+
+<p class="lead">
+  The database is open and lives on GitHub. Every value has a source and a status, and that is what
+  makes it useful.
+</p>
+
+<div class="actions">
+  {newCase && (
+    <a class="btn" href={newCase} rel="noopener noreferrer">
+      Report a case
+    </a>
+  )}
+  {fix && (
+    <a class="btn secondary" href={fix} rel="noopener noreferrer">
+      Correct a value
+    </a>
+  )}
+  {repoUrl && (
+    <a class="btn secondary" href={repoUrl} rel="noopener noreferrer">
+      GitHub repository
+    </a>
+  )}
+</div>
+{!repoUrl && (
+  <p class="notice">
+    The GitHub repository is not public yet. In the meantime, write to{" "}
+    <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+  </p>
+)}
+
+<h2>What we accept</h2>
+<ul>
+  <li>
+    A <strong>case</strong>: a model whose advertised specs differ from the observed hardware.
+  </li>
+  <li>
+    A missing <strong>SoC</strong>, or the correction of one of its hardware limits.
+  </li>
+  <li>
+    A stronger <strong>source</strong> (datasheet, manufacturer page) for a value.
+  </li>
+</ul>
+
+<h2>Review rules</h2>
+<ul>
+  <li>
+    A case becomes <strong>"confirmed"</strong> only with strong evidence: photos of the chips, a
+    UART log or a storage test, plus a source.
+  </li>
+  <li>
+    A value becomes <strong>"verified"</strong> with a datasheet or a manufacturer page, or with at
+    least two independent sources (different domains) saying the same thing. A single forum source
+    caps at "suspect".
+  </li>
+  <li>No copy-pasting from forums: summarise in your own words and add the link.</li>
+  <li>
+    Neutral wording: "reported case", "observed gap". No accusation against a seller or a brand.
+  </li>
+</ul>
+
+<h2>Preparing your report</h2>
+<h3>Photos of the chips</h3>
+<p>
+  Photograph each RAM and storage chip head-on, without glare, with the marking legible, plus an
+  overall view of the board. State the exact model name and where it was bought (without naming an
+  individual seller).
+</p>
+<h3>Commands under Linux</h3>
+<pre><code>free -m
+lsblk
+cat /proc/cpuinfo | head -20
+dmesg | grep -i -E "memory|mmc|dram"</code></pre>
+<h3>Citing a source</h3>
+<p>
+  Give the exact address of the page, its title and the date you accessed it. For a datasheet, state
+  the revision of the document.
+</p>

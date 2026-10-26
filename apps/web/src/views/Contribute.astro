@@ -1,0 +1,37 @@
+---
+import Base from "../layouts/Base.astro";
+import ContributeFr from "../components/content/ContributeFr.astro";
+import ContributeEn from "../components/content/ContributeEn.astro";
+import { config, issueUrl } from "../config";
+import type { Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const meta = {
+  fr: {
+    title: "Contribuer",
+    description:
+      "Ajouter un cas, un SoC ou corriger une donnée : comment contribuer à la base ouverte tvbox-check.",
+  },
+  en: {
+    title: "Contribute",
+    description:
+      "Add a case, a SoC or correct a value: how to contribute to the open tvbox-check database.",
+  },
+}[lang];
+
+const props = {
+  newCase: issueUrl("nouveau-cas.yml"),
+  fix: issueUrl("correction-donnee.yml"),
+  repoUrl: config.repo ? `https://github.com/${config.repo}` : null,
+  contactEmail: config.contactEmail,
+};
+---
+
+<Base title={meta.title} description={meta.description} lang={lang}>
+  <h1>{meta.title}</h1>
+  {lang === "fr" ? <ContributeFr {...props} /> : <ContributeEn {...props} />}
+</Base>

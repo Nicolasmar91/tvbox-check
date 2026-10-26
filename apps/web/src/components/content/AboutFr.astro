@@ -1,0 +1,70 @@
+---
+interface Props {
+  siteName: string;
+  contactEmail: string;
+}
+const { siteName, contactEmail } = Astro.props;
+---
+
+<p class="lead">
+  {siteName} est un projet NM Labs. Il aide à repérer les specs de TV box Android incohérentes avec
+  le matériel.
+</p>
+
+<h2>Ce que fait le site (et ce qu'il ne fait pas)</h2>
+<p>
+  Le site compare les specs annoncées aux limites matérielles connues du SoC et aux cas déjà
+  signalés. Il détecte des <strong>impossibilités</strong> et des <strong>cas connus</strong>. Il ne
+  prouve jamais qu'une box est authentique : un verdict « plausible » signifie seulement qu'aucune
+  impossibilité n'a été détectée.
+</p>
+
+<h2>Méthode et statut des données</h2>
+<ul>
+  <li>Chaque valeur technique a une source et un statut, « vérifié » ou « non vérifié ».</li>
+  <li>
+    <strong>Vérifié</strong> : une datasheet ou une fiche constructeur a été lue, ou au moins deux
+    sources indépendantes (sites de domaines différents) donnent la même valeur. Seules ces données
+    peuvent produire un verdict « impossible ».
+  </li>
+  <li>
+    <strong>Source unique</strong> : un seul forum ou article. Le verdict reste au maximum « suspect
+    ».
+  </li>
+  <li>
+    <strong>Hypothèse non sourcée</strong> : aucune conclusion n'en est tirée.
+  </li>
+</ul>
+
+<h2>Cas signalés</h2>
+<p>
+  Les cas sont des observations sourcées et résumées avec nos propres mots, jamais des accusations.
+  Nous ne nommons pas de vendeur individuel. Les noms de marques et de modèles sont utilisés à titre
+  d'identification uniquement.
+</p>
+
+<h2 id="correction">Demander une correction ou un retrait</h2>
+<p>
+  Si une information vous concerne et vous semble inexacte, écrivez à{" "}
+  <a href={`mailto:${contactEmail}`}>{contactEmail}</a>. Nous répondons rapidement et corrigeons ou
+  retirons ce qui doit l'être.
+</p>
+
+<h2>Licences</h2>
+<ul>
+  <li>Code : licence MIT.</li>
+  <li>
+    Données (dossier <code>data/</code>) : licence CC BY 4.0, avec attribution « tvbox-check / NM
+    Labs ».
+  </li>
+</ul>
+
+<h2>Vie privée</h2>
+<p>
+  Le site n'utilise aucun cookie et n'affiche aucun bandeau de consentement. Il mesure sa
+  fréquentation avec Cloudflare Web Analytics : mesure d'audience agrégée, sans cookie ni
+  identifiant persistant, qui ne sert à aucune publicité. Les données que vous saisissez dans le
+  vérificateur restent dans votre navigateur et ne sont jamais envoyées. Les commentaires,
+  lorsqu'ils sont affichés, ne se chargent qu'à votre demande et passent par GitHub (giscus), qui
+  applique ses propres règles.
+</p>

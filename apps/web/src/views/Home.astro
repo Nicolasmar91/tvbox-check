@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import Checker from "../components/Checker";
+import { db } from "../lib/db";
+import { useT } from "../i18n";
+import type { Lang } from "../i18n";
+import { config } from "../config";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: config.siteName,
+  applicationCategory: "UtilitiesApplication",
+  inLanguage: lang,
+  url: config.siteUrl,
+  description: t.home.description,
+  offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+};
+---
+
+<Base title={config.siteName} description={t.home.description} lang={lang} jsonLd={jsonLd}>
+  <h1>{t.home.title}</h1>
+  <p class="lead">{t.home.intro}</p>
+  <p class="notice">{t.home.caveat}</p>
+  <Checker client:load db={db} repo={config.repo} lang={lang} />
+</Base>

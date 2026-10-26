@@ -1,0 +1,141 @@
+---
+import Base from "../layouts/Base.astro";
+import SourceList from "../components/SourceList.astro";
+import { db, casesForSoc, tx } from "../lib/db";
+import { modelsForSoc } from "@tvbox-check/core/rules";
+import { fmt, routePath, useT } from "../i18n";
+import type { Lang } from "../i18n";
+import type { Soc } from "@tvbox-check/core";
+
+interface Props {
+  lang: Lang;
+  soc: Soc;
+}
+const { lang, soc } = Astro.props;
+const t = useT(lang);
+const name = `${soc.vendor} ${soc.name}`;
+const title = fmt(t.soc.pageTitle, { name });
+const description = fmt(t.soc.pageDescription, { name });
+const cases = casesForSoc(soc);
+const boxes = modelsForSoc(db, soc.id);
+const notes = tx(lang, soc, "notes");
+
+const rows = [
+  {
+    label: t.fields.ramMax,
+    data: soc.ram_max_gb,
+    show: (v: number) => `${v} ${t.fields.gb}`,
+  },
+  {
+    label: t.fields.ramTypes,
+    data: soc.ram_types,
+    show: (v: string[]) => v.join(", "),
+  },
+  {
+    label: t.fields.ethernetMax,
+    data: soc.ethernet_max_mbps,
+    show: (v: number) => `${v} ${t.fields.mbps}`,
+  },
+  {
+    label: t.fields.videoMax,
+    data: soc.video_max_decode,
+    show: (v: string) => v,
+  },
+];
+---
+
+<Base title={title} description={description} lang={lang}>
+  <p>
+    <a href={routePath(lang, "soc")}>← {t.soc.indexTitle}</a>
+  </p>
+  <h1>{name}</h1>
+  {(soc.cores || soc.arch) && (
+    <p class="lead">
+      {soc.cores ? `${soc.cores} ${t.ui.cores}` : ""}
+      {soc.cores && soc.arch ? " · " : ""}
+      {soc.arch ?? ""}
+    </p>
+  )}
+
+  <h2>{t.soc.limits}</h2>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{t.ui.characteristic}</th>
+          <th scope="col">{t.ui.value}</th>
+          <th scope="col">{t.ui.status}</th>
+          <th scope="col">{t.ui.sources}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <th scope="row">{r.label}</th>
+            <td>
+              {r.data ? (r.show as (v: unknown) => string)(r.data.value) : t.fields.unknownValue}
+            </td>
+            <td>
+              {r.data ? (
+                <>
+                  <span class={`tag ${r.data.status}`}>{t.status[r.data.status]}</span>
+                  <span class="tag">{t.basis[r.data.basis]}</span>
+                </>
+              ) : (
+                "—"
+              )}
+            </td>
+            <td>{r.data ? <SourceList ids={r.data.sources} lang={lang} /> : "—"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  {notes && <p class="notice">{notes}</p>}
+
+  {soc.community_findings.length > 0 && (
+    <>
+      <h2>{t.soc.findings}</h2>
+      <ul class="plain">
+        {soc.community_findings.map((f) => (
+          <li class="card">
+            <span class="tag">{t.topic[f.topic]}</span> {tx(lang, f, "summary")}
+            <SourceList ids={f.sources} lang={lang} />
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  {boxes.length > 0 && (
+    <>
+      <h2>{t.boxes.socBoxes}</h2>
+      <ul>
+        {boxes.map((b) => (
+          <li>
+            <a href={routePath(lang, "boxes", b.id)}>{b.name}</a>
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <h2>{t.soc.boxes}</h2>
+  {cases.length === 0 ? (
+    <p class="muted">{t.soc.noBoxes}</p>
+  ) : (
+    <ul>
+      {cases.map((c) => (
+        <li>
+          <a href={routePath(lang, "cases", c.id)}>{c.marketed_name}</a>
+        </li>
+      ))}
+    </ul>
+  )}
+
+  <p class="actions">
+    <a class="btn" href={`${routePath(lang, "home")}?soc=${encodeURIComponent(soc.name)}`}>
+      {t.soc.check}
+    </a>
+  </p>
+</Base>

@@ -1,0 +1,12 @@
+---
+import View from "../../../views/CasePage.astro";
+import { db } from "../../../lib/db";
+
+export function getStaticPaths() {
+  return db.cases.map((item) => ({ params: { id: item.id }, props: { item } }));
+}
+
+const { item } = Astro.props;
+---
+
+<View lang="en" c={item} />

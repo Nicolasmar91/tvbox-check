@@ -1,0 +1,12 @@
+---
+import View from "../../../views/BoxPage.astro";
+import { db } from "../../../lib/db";
+
+export function getStaticPaths() {
+  return db.models.map((item) => ({ params: { id: item.id }, props: { item } }));
+}
+
+const { item } = Astro.props;
+---
+
+<View lang="en" model={item} />

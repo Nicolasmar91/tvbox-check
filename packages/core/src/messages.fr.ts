@@ -1,5 +1,7 @@
-/** Chaînes françaises du moteur, centralisées pour faciliter la traduction. */
-export const messagesFr = {
+import type { Messages } from "./messages.ts";
+
+/** Messages français du moteur. */
+export const messagesFr: Messages = {
   noCriteria: "Aucun critère renseigné : impossible de se prononcer.",
   socUnknown: (soc: string) =>
     `Le SoC « ${soc} » n'est pas dans la base. Vous pouvez contribuer en l'ajoutant.`,
@@ -33,4 +35,7 @@ export const messagesFr = {
   videoSuspect: (claimed: string, max: string) =>
     `Vidéo ${claimed} annoncée alors que le SoC décoderait au mieux ${max} : suspect (donnée non vérifiée).`,
   knownCase: (name: string, summary: string) => `Cas signalé pour « ${name} » : ${summary}`,
-} as const;
+  fieldRam: "RAM maximale",
+  fieldEthernet: "débit Ethernet maximal",
+  fieldVideo: "décodage vidéo maximal",
+};

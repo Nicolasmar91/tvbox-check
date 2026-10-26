@@ -8,11 +8,14 @@ import {
   normalizeName,
   socsForModel,
 } from "@tvbox-check/core/rules";
-import { fr } from "../i18n/fr";
+import { fmt, routePath, useT } from "../i18n";
+import type { Lang } from "../i18n";
+import type { Strings } from "../i18n/fr";
 
 interface Props {
   db: Database;
   repo: string;
+  lang: Lang;
 }
 
 interface FormState {
@@ -71,8 +74,8 @@ function toInput(s: FormState): CheckInput {
   return input;
 }
 
-function VerdictPill({ verdict }: { verdict: Verdict }) {
-  const v = fr.verdicts[verdict];
+function VerdictPill({ verdict, t }: { verdict: Verdict; t: Strings }) {
+  const v = t.verdicts[verdict];
   return (
     <span class={`pill v-${verdict}`}>
       <span aria-hidden="true">{v.icon} </span>
@@ -81,7 +84,11 @@ function VerdictPill({ verdict }: { verdict: Verdict }) {
   );
 }
 
-export default function Checker({ db, repo }: Props) {
+export default function Checker({ db, repo, lang }: Props) {
+  const t = useT(lang);
+  const colon = lang === "fr" ? " : " : ": ";
+  const sourceTitle = (s: { title: string }) =>
+    (lang === "en" && (s as { title_en?: string | null }).title_en) || s.title;
   const [state, setState] = useState<FormState>(EMPTY);
   const [copied, setCopied] = useState(false);
 
@@ -104,7 +111,10 @@ export default function Checker({ db, repo }: Props) {
 
   const input = useMemo(() => toInput(state), [state]);
   const hasInput = Boolean(input.soc || input.modelName);
-  const result = useMemo(() => (hasInput ? evaluate(input, db) : null), [input, db, hasInput]);
+  const result = useMemo(
+    () => (hasInput ? evaluate(input, db, lang) : null),
+    [input, db, hasInput, lang],
+  );
   const sourceMap = useMemo(() => new Map(db.sources.map((s) => [s.id, s])), [db]);
   const matchedSoc = input.soc ? findSoc(db, input.soc) : undefined;
   const socNotFound = Boolean(input.soc) && !matchedSoc;
@@ -171,9 +181,9 @@ export default function Checker({ db, repo }: Props) {
 
   return (
     <div>
-      <form class="checker" onSubmit={(e) => e.preventDefault()} aria-label={fr.home.title}>
+      <form class="checker" onSubmit={(e) => e.preventDefault()} aria-label={t.home.title}>
         <div class="field">
-          <label for="f-model">{fr.form.model}</label>
+          <label for="f-model">{t.form.model}</label>
           <input
             id="f-model"
             list="dl-models"
@@ -186,10 +196,10 @@ export default function Checker({ db, repo }: Props) {
               <option key={c.id} value={c.marketed_name} />
             ))}
           </datalist>
-          <span class="hint">{fr.form.modelHint}</span>
+          <span class="hint">{t.form.modelHint}</span>
         </div>
         <div class="field">
-          <label for="f-soc">{fr.form.soc}</label>
+          <label for="f-soc">{t.form.soc}</label>
           <input
             id="f-soc"
             list="dl-socs"
@@ -203,18 +213,14 @@ export default function Checker({ db, repo }: Props) {
                 key={x.id}
                 value={x.name}
                 label={`${x.vendor} ${x.name}${
-                  r === 0
-                    ? ` (${fr.form.groupKnown})`
-                    : r === 1
-                      ? ` (${fr.form.groupReported})`
-                      : ""
+                  r === 0 ? ` (${t.form.groupKnown})` : r === 1 ? ` (${t.form.groupReported})` : ""
                 }`}
               />
             ))}
           </datalist>
           {knownSocs.length > 0 && (
             <span class="hint">
-              {fr.form.socSuggestKnown}{" "}
+              {t.form.socSuggestKnown}{" "}
               {knownSocs.map((x) => (
                 <button
                   key={x.id}
@@ -229,7 +235,7 @@ export default function Checker({ db, repo }: Props) {
           )}
           {modelChips.length > 0 && (
             <span class="hint">
-              {fr.form.socSuggestModel}{" "}
+              {t.form.socSuggestModel}{" "}
               {modelChips.map((x) => (
                 <button
                   key={x.id}
@@ -242,11 +248,11 @@ export default function Checker({ db, repo }: Props) {
               ))}
             </span>
           )}
-          {modelNotInCatalog && <span class="hint">{fr.form.modelNotInCatalog}</span>}
-          <span class="hint">{fr.form.socUnknown} : laissez vide.</span>
+          {modelNotInCatalog && <span class="hint">{t.form.modelNotInCatalog}</span>}
+          <span class="hint">{t.form.socHint}</span>
         </div>
         <div class="field">
-          <label for="f-ram">{fr.form.ram}</label>
+          <label for="f-ram">{t.form.ram}</label>
           <input
             id="f-ram"
             type="number"
@@ -258,7 +264,7 @@ export default function Checker({ db, repo }: Props) {
           />
         </div>
         <div class="field">
-          <label for="f-storage">{fr.form.storage}</label>
+          <label for="f-storage">{t.form.storage}</label>
           <input
             id="f-storage"
             type="number"
@@ -270,18 +276,18 @@ export default function Checker({ db, repo }: Props) {
           />
         </div>
         <div class="field">
-          <label for="f-eth">{fr.form.ethernet}</label>
+          <label for="f-eth">{t.form.ethernet}</label>
           <select id="f-eth" value={state.ethernet} onChange={update("ethernet")}>
-            <option value="">{fr.form.unspecified}</option>
-            <option value="100M">{fr.form.ethernetOptions["100M"]}</option>
-            <option value="1G">{fr.form.ethernetOptions["1G"]}</option>
-            <option value="none">{fr.form.ethernetOptions.none}</option>
+            <option value="">{t.form.unspecified}</option>
+            <option value="100M">{t.form.ethernetOptions["100M"]}</option>
+            <option value="1G">{t.form.ethernetOptions["1G"]}</option>
+            <option value="none">{t.form.ethernetOptions.none}</option>
           </select>
         </div>
         <div class="field">
-          <label for="f-video">{fr.form.video}</label>
+          <label for="f-video">{t.form.video}</label>
           <select id="f-video" value={state.video} onChange={update("video")}>
-            <option value="">{fr.form.unspecified}</option>
+            <option value="">{t.form.unspecified}</option>
             <option value="1080p">1080p</option>
             <option value="4K">4K</option>
             <option value="6K">6K</option>
@@ -301,76 +307,82 @@ export default function Checker({ db, repo }: Props) {
               setCopied(false);
             }}
           >
-            {fr.form.reset}
+            {t.form.reset}
           </button>
         )}
       </div>
 
       <section aria-labelledby="result-title" aria-live="polite">
         <h2 id="result-title" class="muted" style="font-size:1rem;margin-top:0.5rem">
-          {fr.result.title}
+          {t.result.title}
         </h2>
-        {!result && <p class="muted">{fr.result.empty}</p>}
+        {!result && <p class="muted">{t.result.empty}</p>}
         {result && (
           <div>
             <div class={`verdict v-${result.overall}`} role="status">
               <span class="icon" aria-hidden="true">
-                {fr.verdicts[result.overall].icon}
+                {t.verdicts[result.overall].icon}
               </span>
               <div>
                 <h3 style="margin:0 0 0.25rem;font-size:1.35rem">
-                  {fr.verdicts[result.overall].label}
+                  {t.verdicts[result.overall].label}
                 </h3>
-                <p>{fr.verdictSummary[result.overall]}</p>
+                <p>{t.verdictSummary[result.overall]}</p>
                 {result.overall === "plausible" && (
                   <p style="margin-top:0.4rem">
-                    <strong>{fr.result.plausibleCaveat}</strong>{" "}
-                    <a href="/guide/verifier-les-vraies-specs/">{fr.result.plausibleLink}</a>.
+                    <strong>{t.result.plausibleCaveat}</strong>{" "}
+                    <a href={routePath(lang, "guide")}>{t.result.plausibleLink}</a>.
                   </p>
                 )}
               </div>
             </div>
 
             {result.criteria.length === 0 && !socNotFound && (
-              <p class="muted">{fr.result.noCriteria}</p>
+              <p class="muted">{t.result.noCriteria}</p>
             )}
 
             <ul class="criteria">
               {result.criteria.map((c: CriterionResult, i) => (
                 <li key={`${c.criterion}-${i}`}>
                   <p style="margin:0 0 0.3rem">
-                    <VerdictPill verdict={c.verdict} />
-                    <strong>{fr.criteria[c.criterion]}</strong>
+                    <VerdictPill verdict={c.verdict} t={t} />
+                    <strong>{t.criteria[c.criterion]}</strong>
                   </p>
                   <p style="margin:0 0 0.4rem">{c.message}</p>
                   <p style="margin:0 0 0.4rem">
-                    {c.status && <span class={`tag ${c.status}`}>{fr.status[c.status]}</span>}
+                    {c.status && <span class={`tag ${c.status}`}>{t.status[c.status]}</span>}
                     {c.basis && (
                       <span class="tag">
-                        {fr.result.basisLabel} : {fr.basis[c.basis]}
+                        {t.result.basisLabel}
+                        {colon}
+                        {t.basis[c.basis]}
                       </span>
                     )}
                     {c.claimed !== undefined && c.limit !== undefined && (
                       <span class="tag">
-                        annoncé : {String(c.claimed)} · limite : {String(c.limit)}
+                        {fmt(t.result.claimedLimit, {
+                          claimed: String(c.claimed),
+                          limit: String(c.limit),
+                        })}
                       </span>
                     )}
                   </p>
                   {c.case && (
                     <p style="margin:0 0 0.4rem">
-                      <a href={`/modele/${c.case.id}/`}>{fr.result.viewCase}</a>
+                      <a href={routePath(lang, "cases", c.case.id)}>{t.result.viewCase}</a>
                     </p>
                   )}
                   {c.sources.length > 0 && (
                     <p class="hint" style="margin:0">
-                      {fr.result.sources} :{" "}
+                      {t.result.sources}
+                      {colon}
                       {c.sources.map((id, j) => {
                         const s = sourceMap.get(id);
                         return s ? (
                           <span key={id}>
                             {j > 0 && " · "}
                             <a href={s.url} rel="noopener noreferrer" target="_blank">
-                              {s.title}
+                              {sourceTitle(s)}
                             </a>
                           </span>
                         ) : null;
@@ -383,18 +395,18 @@ export default function Checker({ db, repo }: Props) {
 
             {matchedSoc && (
               <p>
-                <a href={`/soc/${matchedSoc.id}/`}>{fr.result.viewSoc}</a>
+                <a href={routePath(lang, "soc", matchedSoc.id)}>{t.result.viewSoc}</a>
               </p>
             )}
             {socNotFound && (
               <p class="notice">
-                {fr.result.unknownSoc}{" "}
+                {t.result.unknownSoc}{" "}
                 {addSocUrl ? (
                   <a href={addSocUrl} rel="noopener noreferrer" target="_blank">
-                    {fr.result.addSoc}
+                    {t.result.addSoc}
                   </a>
                 ) : (
-                  <a href="/contribuer/">{fr.result.addSoc}</a>
+                  <a href={routePath(lang, "contribute")}>{t.result.addSoc}</a>
                 )}
               </p>
             )}
@@ -402,16 +414,16 @@ export default function Checker({ db, repo }: Props) {
             <div class="actions">
               {hasQuery && (
                 <button type="button" class="btn secondary" onClick={copyLink}>
-                  {copied ? fr.result.copied : fr.result.copy}
+                  {copied ? t.result.copied : t.result.copy}
                 </button>
               )}
               {reportUrl ? (
                 <a class="btn secondary" href={reportUrl} rel="noopener noreferrer" target="_blank">
-                  {fr.result.report}
+                  {t.result.report}
                 </a>
               ) : (
-                <a class="btn secondary" href="/contribuer/">
-                  {fr.result.report}
+                <a class="btn secondary" href={routePath(lang, "contribute")}>
+                  {t.result.report}
                 </a>
               )}
             </div>

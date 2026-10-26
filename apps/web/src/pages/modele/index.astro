@@ -1,24 +1,5 @@
 ---
-import Base from "../../layouts/Base.astro";
-import { db, socName } from "../../lib/db";
-import { fr } from "../../i18n/fr";
+import View from "../../views/CasesIndex.astro";
 ---
 
-<Base title={fr.model.indexTitle} description={fr.model.indexDescription}>
-  <h1>{fr.model.indexTitle}</h1>
-  <p class="lead">{fr.model.indexDescription}</p>
-  <p class="notice">{fr.model.disclaimer}</p>
-  <ul class="plain">
-    {db.cases.map((c) => (
-      <li class="card">
-        <a href={`/modele/${c.id}/`}>
-          <strong>{c.marketed_name}</strong>
-        </a>
-        <br />
-        <span class="tag">{fr.caseType[c.type]}</span>
-        <span class="tag">{fr.confidence[c.observed.confidence]}</span>
-        <span class="tag">{socName(c.marketed.soc)}</span>
-      </li>
-    ))}
-  </ul>
-</Base>
+<View lang="fr" />
