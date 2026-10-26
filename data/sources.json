@@ -4,2701 +4,3087 @@
     "url": "https://electronics.alibaba.com/question/allwinner-h618-explained-specs,-use-cases-real-world-performance",
     "title": "Alibaba : explicatif sur l'Allwinner H618 (source secondaire)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Alibaba: explainer on the Allwinner H618 (secondary source)"
   },
   {
     "id": "src-allwinner-datasheet-a133-v1-1-copie-heberg",
     "url": "https://server7.whycan.com/files/202202/A133_documents/A133_Datasheet_V1.1.pdf",
     "title": "Allwinner, datasheet A133 v1.1 (copie hébergée par un forum tiers)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Allwinner, A133 datasheet v1.1 (copy hosted by a third-party forum)"
   },
   {
     "id": "src-allwinner-datasheet-h5-rev-1-0-copie-heber",
     "url": "https://download.repka-pi.ru/docs/Allwinner_H5_Manual_v1.0.pdf",
     "title": "Allwinner, datasheet H5 rév. 1.0 (copie hébergée par repka-pi)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Allwinner, H5 datasheet rev. 1.0 (copy hosted by repka-pi)"
   },
   {
     "id": "src-allwinner-fiche-produit-brief-h313",
     "url": "https://www.allwinnertech.com/uploads/pdf/2020040917181739.pdf",
     "title": "Allwinner, fiche produit (brief) H313",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Allwinner, H313 product brief"
   },
   {
     "id": "src-allwinner-fiche-produit-brief-h616",
     "url": "https://www.allwinnertech.com/uploads/pdf/20200409170709ca.pdf",
     "title": "Allwinner, fiche produit (brief) H616",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Allwinner, H616 product brief"
   },
   {
     "id": "src-allwinner-h6-datasheet",
     "url": "https://files.pine64.org/doc/datasheet/pine-h64/Allwinner_H6%20V200_Datasheet_V1.1.pdf",
     "title": "Allwinner, H6 V200 Datasheet v1.1 (hébergée par Pine64)",
     "type": "datasheet",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Allwinner, H6 V200 Datasheet v1.1 (hosted by Pine64)"
   },
   {
     "id": "src-amlogic-datasheet-s905-rev-1-1-4-copie-heb",
     "url": "https://cgi.cse.unsw.edu.au/~cs9242/24/project/s905.pdf",
     "title": "Amlogic, datasheet S905 rév. 1.1.4 (copie hébergée par une université)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Amlogic, S905 datasheet rev. 1.1.4 (copy hosted by a university)"
   },
   {
     "id": "src-amlogic-datasheet-s912-rev-0-1-version-pub",
     "url": "https://dl.khadas.com/products/vim2/datasheet/s912-datasheet.pdf",
     "title": "Amlogic, datasheet S912 rév. 0.1 (version publique diffusée par Khadas)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Amlogic, S912 datasheet rev. 0.1 (public version distributed by Khadas)"
   },
   {
     "id": "src-amlogic-s905x-datasheet",
     "url": "https://www.scs.stanford.edu/~zyedidia/docs/amlogic/s905x.pdf",
     "title": "Amlogic, S905X Datasheet rév. 0.2 (copie hébergée par un tiers)",
     "type": "datasheet",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Amlogic, S905X Datasheet rev. 0.2 (copy hosted by a third party)"
   },
   {
     "id": "src-android-tv-guide-homatics-box-r-4k-plus",
     "url": "https://androidtv-guide.com/?p=10054",
     "title": "Android TV Guide, Homatics Box R 4K Plus",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Android TV Guide, Homatics Box R 4K Plus"
   },
   {
     "id": "src-android-tv-guide-mecool-km1-s905x3",
     "url": "https://www.androidtv-guide.com/streaming-gaming/mecool-km1/",
     "title": "Android TV Guide, Mecool KM1 (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Android TV Guide, Mecool KM1 (S905X3)"
   },
   {
     "id": "src-android-tv-guide-onn-4k-2023-s905y4",
     "url": "https://androidtv-guide.com/streaming-gaming/onn-walmart-google-tv-2023",
     "title": "Android TV Guide, onn 4K 2023 (S905Y4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Android TV Guide, onn 4K 2023 (S905Y4)"
   },
   {
     "id": "src-android-tv-guide-xiaomi-mi-box-2016",
     "url": "https://androidtv-guide.com/?p=2522",
     "title": "Android TV Guide, Xiaomi Mi Box (2016)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Android TV Guide, Xiaomi Mi Box (2016)"
   },
   {
     "id": "src-android-tv-guide-xiaomi-mi-box-s",
     "url": "https://www.androidtv-guide.com/streaming-gaming/xiaomi-mi-box-s/",
     "title": "Android TV Guide, Xiaomi Mi Box S",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Android TV Guide, Xiaomi Mi Box S"
   },
   {
     "id": "src-androidpctv-a95x-plus-s905y2",
     "url": "https://androidpctv.com/?p=9438",
     "title": "AndroidPCTV, A95X Plus (S905Y2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, A95X Plus (S905Y2)"
   },
   {
     "id": "src-androidpctv-alfawise-s95-s905w",
     "url": "https://androidpctv.com/?p=4676",
     "title": "AndroidPCTV, Alfawise S95 (S905W)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Alfawise S95 (S905W)"
   },
   {
     "id": "src-androidpctv-beelink-gs-king-x-s922x-h",
     "url": "https://androidpctv.com/beelink-gs-king-x-android-tvbox/",
     "title": "AndroidPCTV, Beelink GS-King X (S922X-H)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Beelink GS-King X (S922X-H)"
   },
   {
     "id": "src-androidpctv-beelink-gt-king-ii-a311d2",
     "url": "https://androidpctv.com/?p=33114",
     "title": "AndroidPCTV, Beelink GT-King II (A311D2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Beelink GT-King II (A311D2)"
   },
   {
     "id": "src-androidpctv-comparatif-s905w2",
     "url": "https://androidpctv.com/comparative-amlogic-s905w2/",
     "title": "AndroidPCTV, comparatif S905W2",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, S905W2 comparison"
   },
   {
     "id": "src-androidpctv-comparatif-s905x2-et-s905y2",
     "url": "https://androidpctv.com/comparative-amlogic-s905x2-s905y2/",
     "title": "AndroidPCTV, comparatif S905X2 et S905Y2",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, S905X2 and S905Y2 comparison"
   },
   {
     "id": "src-androidpctv-h313-et-x96q",
     "url": "https://androidpctv.com/?p=21045",
     "title": "AndroidPCTV : H313 et X96Q",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: H313 and X96Q"
   },
   {
     "id": "src-androidpctv-h96-max-h616",
     "url": "https://androidpctv.com/?p=23671",
     "title": "AndroidPCTV : H96 Max H616",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: H96 Max H616"
   },
   {
     "id": "src-androidpctv-h96-max-x3-s905x3",
     "url": "https://androidpctv.com/?p=35407",
     "title": "AndroidPCTV, H96 Max X3 (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, H96 Max X3 (S905X3)"
   },
   {
     "id": "src-androidpctv-h96max-h618",
     "url": "https://androidpctv.com/?p=39012",
     "title": "AndroidPCTV : H96Max H618",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: H96Max H618"
   },
   {
     "id": "src-androidpctv-hk1-mini-plus-rk3318",
     "url": "https://androidpctv.com/hk1-mini-plus-opinion-precio/",
     "title": "AndroidPCTV, HK1 Mini Plus (RK3318)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, HK1 Mini Plus (RK3318)"
   },
   {
     "id": "src-androidpctv-hk1-rbox-r2-rk3566",
     "url": "https://androidpctv.com/?p=28059",
     "title": "AndroidPCTV, HK1 RBOX R2 (RK3566)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, HK1 RBOX R2 (RK3566)"
   },
   {
     "id": "src-androidpctv-hk1-rbox-rk3318-android-10",
     "url": "https://androidpctv.com/android-10-rk3318-hk1-rbox/",
     "title": "AndroidPCTV, HK1 RBOX (RK3318, Android 10)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, HK1 RBOX (RK3318, Android 10)"
   },
   {
     "id": "src-androidpctv-hk1-rbox-s905x4",
     "url": "https://androidpctv.com/hk1-rbox/",
     "title": "AndroidPCTV, HK1 RBOX (S905X4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, HK1 RBOX (S905X4)"
   },
   {
     "id": "src-androidpctv-hk1-super-rk3318",
     "url": "https://androidpctv.com/hk1-super-review/",
     "title": "AndroidPCTV, HK1 Super (RK3318)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, HK1 Super (RK3318)"
   },
   {
     "id": "src-androidpctv-m8s-pro-4k-rk3229",
     "url": "https://androidpctv.com/new-firmware-tv-box-m8s-pro-4k-with-rk3229-soc-07-20-2017/",
     "title": "AndroidPCTV, M8S Pro 4K (RK3229)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, M8S Pro 4K (RK3229)"
   },
   {
     "id": "src-androidpctv-m9s-w2-s905w",
     "url": "https://androidpctv.com/?p=11473",
     "title": "AndroidPCTV, M9S W2 (S905W)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, M9S W2 (S905W)"
   },
   {
     "id": "src-androidpctv-magicsee-n5-s905x",
     "url": "https://androidpctv.com/magicsee-n5-soc-s905x-and-2gb-of-ram-for-less-than-32/",
     "title": "AndroidPCTV, Magicsee N5 (S905X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Magicsee N5 (S905X)"
   },
   {
     "id": "src-androidpctv-mecool-ki-pro",
     "url": "https://androidpctv.com/?p=4755",
     "title": "AndroidPCTV, Mecool KI Pro",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Mecool KI Pro"
   },
   {
     "id": "src-androidpctv-mecool-km9-pro-classic-et-delu",
     "url": "https://androidpctv.com/mecool-km9-pro-deluxe-classic-android-tv-10/",
     "title": "AndroidPCTV, Mecool KM9 Pro Classic et Deluxe",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Mecool KM9 Pro Classic and Deluxe"
   },
   {
     "id": "src-androidpctv-mecool-km9-pro-honor",
     "url": "https://androidpctv.com/?p=17827",
     "title": "AndroidPCTV, Mecool KM9 Pro Honor",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Mecool KM9 Pro Honor"
   },
   {
     "id": "src-androidpctv-mecool-km9-pro-s905x2",
     "url": "https://androidpctv.com/?p=13815",
     "title": "AndroidPCTV, Mecool KM9 Pro (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Mecool KM9 Pro (S905X2)"
   },
   {
     "id": "src-androidpctv-mecool-m8s-plus-dvb-s905d",
     "url": "https://androidpctv.com/mecool-m8s-plus-dvb-a-low-cost-tv-box-with-dvb-t2-tuner/",
     "title": "AndroidPCTV, Mecool M8S Plus DVB (S905D)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Mecool M8S Plus DVB (S905D)"
   },
   {
     "id": "src-androidpctv-mt8695-compare-aux-autres-soc",
     "url": "https://androidpctv.com/?p=11055",
     "title": "AndroidPCTV : MT8695 comparé aux autres SoC",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: MT8695 compared with other SoCs"
   },
   {
     "id": "src-androidpctv-mx-10-pro-rk3328-4-go",
     "url": "https://androidpctv.com/?p=7097",
     "title": "AndroidPCTV, MX 10 PRO (RK3328, 4 Go)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, MX 10 PRO (RK3328, 4 GB)"
   },
   {
     "id": "src-androidpctv-nouvelle-version-de-la-tx3-min",
     "url": "https://androidpctv.com/?p=29247",
     "title": "AndroidPCTV, nouvelle version de la TX3 mini en S905W2",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, new version of the TX3 mini with S905W2"
   },
   {
     "id": "src-androidpctv-presentation-de-l-amlogic-s905",
     "url": "https://androidpctv.com/?p=23979",
     "title": "AndroidPCTV, présentation de l'Amlogic S905L2",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, introduction of the Amlogic S905L2"
   },
   {
     "id": "src-androidpctv-presentation-de-l-ugoos-am9-s9",
     "url": "https://androidpctv.com/ugoos-am9/",
     "title": "AndroidPCTV, présentation de l'Ugoos AM9 (S905X5)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, introduction of the Ugoos AM9 (S905X5)"
   },
   {
     "id": "src-androidpctv-presentation-de-la-khadas-vim3",
     "url": "https://androidpctv.com/?p=15229",
     "title": "AndroidPCTV, présentation de la Khadas VIM3 (A311D)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, introduction of the Khadas VIM3 (A311D)"
   },
   {
     "id": "src-androidpctv-q96-hero-rk3318-ethernet-gigab",
     "url": "https://androidpctv.com/?p=16964",
     "title": "AndroidPCTV : Q96 Hero (RK3318, Ethernet Gigabit)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: Q96 Hero (RK3318, Gigabit Ethernet)"
   },
   {
     "id": "src-androidpctv-q96-mini-s905w",
     "url": "https://androidpctv.com/?p=13203",
     "title": "AndroidPCTV : Q96 Mini (S905W)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: Q96 Mini (S905W)"
   },
   {
     "id": "src-androidpctv-q96x3",
     "url": "https://androidpctv.com/?p=35824",
-    "title": "AndroidPCTV, annonces Q96 X3 (H313)",
+    "title": "AndroidPCTV, annoncés Q96 X3 (H313)",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "AndroidPCTV, Q96 X3 (H313) announcements"
   },
   {
     "id": "src-androidpctv-s922x-sur-l-odroid-n2",
     "url": "https://androidpctv.com/?p=12457",
     "title": "AndroidPCTV, S922X sur l'ODROID-N2",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, S922X on the ODROID-N2"
   },
   {
     "id": "src-androidpctv-s96-mate-s905w2",
     "url": "https://androidpctv.com/?p=29686",
     "title": "AndroidPCTV, S96 Mate (S905W2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, S96 Mate (S905W2)"
   },
   {
     "id": "src-androidpctv-stick-q96-h313-et-annonce-de-8",
     "url": "https://androidpctv.com/?p=34423",
     "title": "AndroidPCTV : stick Q96 (H313) et annonce de 8 Go",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: Q96 stick (H313) and the 8 GB claim"
   },
   {
     "id": "src-androidpctv-t9-rk3328-android-8-1",
     "url": "https://androidpctv.com/?p=7974",
     "title": "AndroidPCTV, T9 (RK3328, Android 8.1)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, T9 (RK3328, Android 8.1)"
   },
   {
     "id": "src-androidpctv-t95-avec-allwinner-h616",
     "url": "https://androidpctv.com/?p=18713",
     "title": "AndroidPCTV : T95 avec Allwinner H616",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: T95 with Allwinner H616"
   },
   {
     "id": "src-androidpctv-t95-max-avec-h618",
     "url": "https://androidpctv.com/?p=33244",
     "title": "AndroidPCTV : T95 MAX avec H618",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: T95 MAX with H618"
   },
   {
     "id": "src-androidpctv-t95h-avec-h616",
     "url": "https://androidpctv.com/?p=23655",
     "title": "AndroidPCTV : T95H avec H616",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: T95H with H616"
   },
   {
     "id": "src-androidpctv-tanix-tx2-r2-rk3229",
     "url": "https://androidpctv.com/?p=3789",
     "title": "AndroidPCTV, Tanix TX2 R2 (RK3229)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Tanix TX2 R2 (RK3229)"
   },
   {
     "id": "src-androidpctv-tanix-tx3-mini-s905w2",
     "url": "https://androidpctv.com/tanix-tx3-mini-plus/",
     "title": "AndroidPCTV, Tanix TX3 Mini+ (S905W2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Tanix TX3 Mini+ (S905W2)"
   },
   {
     "id": "src-androidpctv-tanix-tx3-s905x3",
     "url": "https://androidpctv.com/?p=17356",
     "title": "AndroidPCTV, Tanix TX3 (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Tanix TX3 (S905X3)"
   },
   {
     "id": "src-androidpctv-tanix-tx9s-s912",
     "url": "https://androidpctv.com/?p=17757",
     "title": "AndroidPCTV, Tanix TX9S (S912)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Tanix TX9S (S912)"
   },
   {
     "id": "src-androidpctv-tanix-w2-s905w2",
     "url": "https://androidpctv.com/?p=32327",
     "title": "AndroidPCTV, Tanix W2 (S905W2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Tanix W2 (S905W2)"
   },
   {
     "id": "src-androidpctv-test-d-une-box-s905x5m",
     "url": "https://androidpctv.com/?p=48517",
     "title": "AndroidPCTV, test d'une box S905X5M",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of an S905X5M box"
   },
   {
     "id": "src-androidpctv-test-de-la-beelink-gt-king-s92",
     "url": "https://androidpctv.com/?p=14337",
     "title": "AndroidPCTV, test de la Beelink GT-King (S922X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the Beelink GT-King (S922X)"
   },
   {
     "id": "src-androidpctv-test-de-la-h96-pro-s912",
     "url": "https://androidpctv.com/?p=919",
     "title": "AndroidPCTV, test de la H96 Pro+ (S912)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the H96 Pro+ (S912)"
   },
   {
     "id": "src-androidpctv-test-de-la-mecool-kiii-pro",
     "url": "https://androidpctv.com/?p=1017",
     "title": "AndroidPCTV, test de la Mecool KIII Pro",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the Mecool KIII Pro"
   },
   {
     "id": "src-androidpctv-test-de-la-mecool-km2-s905x2-b",
     "url": "https://androidpctv.com/review-mecool-km2-opinion/",
     "title": "AndroidPCTV, test de la Mecool KM2 (S905X2-B)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the Mecool KM2 (S905X2-B)"
   },
   {
     "id": "src-androidpctv-test-de-la-onn-google-tv-4k-20",
     "url": "https://androidpctv.com/onn-google-tv-4k-streaming-box-2023-review/",
     "title": "AndroidPCTV, test de la onn Google TV 4K 2023 (S905Y4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the onn Google TV 4K 2023 (S905Y4)"
   },
   {
     "id": "src-androidpctv-test-de-la-x96-mini-s905w",
     "url": "https://androidpctv.com/?p=3619",
     "title": "AndroidPCTV, test de la X96 mini (S905W)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the X96 mini (S905W)"
   },
   {
     "id": "src-androidpctv-test-du-h96-max-rk3318",
     "url": "https://androidpctv.com/?p=15508",
     "title": "AndroidPCTV, test du H96 Max (RK3318)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the H96 Max (RK3318)"
   },
   {
     "id": "src-androidpctv-test-du-h96-max-x2-s905x2",
     "url": "https://androidpctv.com/?p=11527",
     "title": "AndroidPCTV : test du H96 Max X2 (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: review of the H96 Max X2 (S905X2)"
   },
   {
     "id": "src-androidpctv-test-du-x96-x4-s905x4",
     "url": "https://androidpctv.com/?p=28867",
     "title": "AndroidPCTV, test du X96 X4 (S905X4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the X96 X4 (S905X4)"
   },
   {
     "id": "src-androidpctv-test-du-x96q-h313",
     "url": "https://androidpctv.com/?p=23592",
     "title": "AndroidPCTV : test du X96Q (H313)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: review of the X96Q (H313)"
   },
   {
     "id": "src-androidpctv-test-mecool-m8s-pro",
     "url": "https://androidpctv.com/?p=368",
     "title": "AndroidPCTV, test Mecool M8S Pro+",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the Mecool M8S Pro+"
   },
   {
     "id": "src-androidpctv-test-tanix-tx3-max-s905w",
     "url": "https://androidpctv.com/?p=4400",
     "title": "AndroidPCTV, test Tanix TX3 Max (S905W)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, review of the Tanix TX3 Max (S905W)"
   },
   {
     "id": "src-androidpctv-transpeed-av1-s905w2",
     "url": "https://androidpctv.com/?p=30879",
     "title": "AndroidPCTV, Transpeed AV1 (S905W2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Transpeed AV1 (S905W2)"
   },
   {
     "id": "src-androidpctv-transpeed-x3-air-s905x3",
     "url": "https://androidpctv.com/?p=19227",
     "title": "AndroidPCTV, Transpeed X3 Air (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Transpeed X3 Air (S905X3)"
   },
   {
     "id": "src-androidpctv-transpeed-x88-pro-10-rk3318",
     "url": "https://androidpctv.com/?p=24948",
     "title": "AndroidPCTV, Transpeed X88 Pro 10 (RK3318)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Transpeed X88 Pro 10 (RK3318)"
   },
   {
     "id": "src-androidpctv-vontar-v1-s905w",
     "url": "https://androidpctv.com/?p=7185",
     "title": "AndroidPCTV, Vontar V1 (S905W)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Vontar V1 (S905W)"
   },
   {
     "id": "src-androidpctv-vontar-x2-s905w2",
     "url": "https://androidpctv.com/?p=33153",
     "title": "AndroidPCTV, Vontar X2 (S905W2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Vontar X2 (S905W2)"
   },
   {
     "id": "src-androidpctv-vontar-x3-s905x3",
     "url": "https://androidpctv.com/?p=18440",
     "title": "AndroidPCTV, Vontar X3 (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, Vontar X3 (S905X3)"
   },
   {
     "id": "src-androidpctv-x96-max-avec-h616",
     "url": "https://androidpctv.com/?p=24430",
     "title": "AndroidPCTV : X96 Max avec H616",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: X96 Max with H616"
   },
   {
     "id": "src-androidpctv-x96-mini-5g-s905w4",
     "url": "https://androidpctv.com/x96-mini-5g-box/",
     "title": "AndroidPCTV, X96 mini 5G (S905W4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, X96 mini 5G (S905W4)"
   },
   {
     "id": "src-androidpctv-x96-mini-et-le-s905w4-annonce",
     "url": "https://androidpctv.com/?p=26089",
-    "title": "AndroidPCTV, X96 Mini+ et le S905W4 annonce",
+    "title": "AndroidPCTV, X96 Mini+ et le S905W4 annoncé",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV, X96 Mini+ and the advertised S905W4"
   },
   {
     "id": "src-androidpctv-x96q-max-h616",
     "url": "https://androidpctv.com/?p=22340",
     "title": "AndroidPCTV : X96Q MAX (H616)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPCTV: X96Q MAX (H616)"
   },
   {
     "id": "src-androidpimp-test-de-la-cx-s806-s812",
     "url": "https://www.androidpimp.com/tv-boxes/cxs806-amlogic-s812-tv-box-review",
     "title": "AndroidPimp, test de la CX-S806 (S812)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidPimp, review of the CX-S806 (S812)"
   },
   {
     "id": "src-androidtvbox-beelink-gt1-s912",
     "url": "https://androidtvbox.eu/beelink-gt1-android-tv-box-powered-amlogic-s912-chip-officially/",
     "title": "AndroidTVBOX, Beelink GT1 (S912)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBOX, Beelink GT1 (S912)"
   },
   {
     "id": "src-androidtvbox-beelink-mxiii-s905x",
     "url": "https://androidtvbox.eu/beelink-mxiii-android-tv-box-powered-amlogic-s905x-now-available-presale-42-89-promo/",
     "title": "AndroidTVBOX, Beelink MXIII (S905X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBOX, Beelink MXIII (S905X)"
   },
   {
     "id": "src-androidtvbox-box-x7-annoncee-s905l2",
     "url": "https://androidtvbox.eu/x7-tv-box-powered-by-low-cost-amlogic-s905l2/",
     "title": "AndroidTVBox, box X7 annoncée S905L2",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, X7 box advertised as S905L2"
   },
   {
     "id": "src-androidtvbox-firmware-de-la-x96-max-s905x2",
     "url": "https://androidtvbox.eu/new-x96-max-firmware-with-4gb-ram-s905x2-soc-20190625/",
     "title": "AndroidTVBox, firmware de la X96 Max (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, X96 Max firmware (S905X2)"
   },
   {
     "id": "src-androidtvbox-firmware-h96-mini-v8-rk3228a",
     "url": "https://androidtvbox.eu/firmware-h96-mini-v8-for-tv-box-with-rk3228a-soc-20210608/",
     "title": "AndroidTVBox, firmware H96 Mini V8 (RK3228A)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, H96 Mini V8 firmware (RK3228A)"
   },
   {
     "id": "src-androidtvbox-magicsee-n5-plus-s905x3",
     "url": "https://androidtvbox.eu/magicsee-n5-plus-tv-box-powered-by-amlogic-s905x3/",
     "title": "AndroidTVBox, Magicsee N5 Plus (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, Magicsee N5 Plus (S905X3)"
   },
   {
     "id": "src-androidtvbox-mecool-km1-en-3-variantes-s90",
     "url": "https://androidtvbox.eu/mecool-km1-s905x3-google-certified-android-tv-box-in-3-variants/",
     "title": "AndroidTVBox, Mecool KM1 en 3 variantes (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, Mecool KM1 in 3 variants (S905X3)"
   },
   {
     "id": "src-androidtvbox-mxq-pro-s905",
     "url": "https://androidtvbox.eu/mxq-pro-tv-box-with-android-5-1-and-support-4k-resolution-powered-by-amlogic-s905/",
     "title": "AndroidTVBox, MXQ Pro (S905)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, MXQ Pro (S905)"
   },
   {
     "id": "src-androidtvbox-s96-mate-s905w2",
     "url": "https://androidtvbox.eu/s96-mate-is-another-android-11-tv-box-based-on-the-s905w2-soc-av1/",
     "title": "AndroidTVBOX, S96 Mate (S905W2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBOX, S96 Mate (S905W2)"
   },
   {
     "id": "src-androidtvbox-sunvell-t95p-s905x",
     "url": "https://androidtvbox.eu/sunvell-t95p-tv-box-plug-powered-amlogic-s905x/",
     "title": "AndroidTVBox, Sunvell T95P (S905X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, Sunvell T95P (S905X)"
   },
   {
     "id": "src-androidtvbox-t95n-mini-m8spro-s905",
     "url": "https://androidtvbox.eu/t95n-mini-m8spro-android-tv-box-powered-amlogic-s905-now-available-37-99-promo/",
     "title": "AndroidTVBOX, T95N Mini M8Spro (S905)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBOX, T95N Mini M8Spro (S905)"
   },
   {
     "id": "src-androidtvbox-tanix-tx3-mini-s905w-en-preco",
     "url": "https://androidtvbox.eu/tanix-tx3-mini-tv-box-amlogic-s905w-presale-now-31-99-promo/",
     "title": "AndroidTVBox, Tanix TX3 Mini (S905W) en précommande",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, Tanix TX3 Mini (S905W) on pre-order"
   },
   {
     "id": "src-androidtvbox-tanix-tx5-max-et-tx5-pro-s905",
     "url": "https://androidtvbox.eu/tanix-tx5-pro-tx5-max-firmware-tv-box-with-s905x2-soc-20190603/",
     "title": "AndroidTVBOX, Tanix TX5 Max et TX5 Pro (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBOX, Tanix TX5 Max and TX5 Pro (S905X2)"
   },
   {
     "id": "src-androidtvbox-test-de-la-beelink-gt-king-pr",
     "url": "https://androidtvbox.eu/beelink-gt-king-pro-review-powerful-s922x-h-tv-box/",
     "title": "AndroidTVBox, test de la Beelink GT-King Pro (S922X-H)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, review of the Beelink GT-King Pro (S922X-H)"
   },
   {
     "id": "src-androidtvbox-test-de-la-beelink-gt-king-s9",
     "url": "https://androidtvbox.eu/beelink-gt-king-review-powerful-tv-box-powered-by-new-s922x-soc/",
     "title": "AndroidTVBox, test de la Beelink GT-King (S922X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, review of the Beelink GT-King (S922X)"
   },
   {
     "id": "src-androidtvbox-test-de-la-mecool-km3-s905x2",
     "url": "https://androidtvbox.eu/mecool-km3-review-4k-android-tv-box-with-voice-remote-review/",
     "title": "AndroidTVBox, test de la Mecool KM3 (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, review of the Mecool KM3 (S905X2)"
   },
   {
     "id": "src-androidtvbox-test-de-la-mecool-m8s-pro-w",
     "url": "https://androidtvbox.eu/mecool-m8s-pro-w-review-android-tv-box-powered-by-amlogic-s905w/",
     "title": "AndroidTVBox, test de la Mecool M8S Pro W",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, review of the Mecool M8S Pro W"
   },
   {
     "id": "src-androidtvbox-test-du-minix-neo-u22-xj-s922",
     "url": "https://androidtvbox.eu/minix-neo-u22-xj-review-powerful-android-tv-box/",
     "title": "AndroidTVBox, test du Minix NEO U22-XJ (S922X-J)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, review of the Minix NEO U22-XJ (S922X-J)"
   },
   {
     "id": "src-androidtvbox-x96-mini-annoncee-s905w4",
     "url": "https://androidtvbox.eu/x96-mini-plus-is-a-new-android-tv-box-powered-by-amlogic-s905w4-soc/",
     "title": "AndroidTVBox, X96 mini+ annoncée S905W4",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "AndroidTVBox, X96 mini+ advertised as S905W4"
   },
   {
     "id": "src-annonce-des-zidoo-z9x-et-z10-pro-androidpc",
     "url": "https://androidpctv.com/?p=23351",
     "title": "Annonce des Zidoo Z9X et Z10 Pro (AndroidPCTV)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Announcement of the Zidoo Z9X and Z10 Pro (AndroidPCTV)"
   },
   {
     "id": "src-annonce-ugoos-ut3-rk3288",
     "url": "https://ugoos.com/ugoos-ut3-plus-rk3288-release",
     "title": "Annonce Ugoos UT3+ (RK3288)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Ugoos UT3+ announcement (RK3288)"
   },
   {
     "id": "src-armbian-choice-of-tv-box",
     "url": "https://forum.armbian.com/topic/14912-choice-of-tv-box",
     "title": "Armbian forum, choix d'une TV box",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Armbian forum, choice of a TV box"
   },
   {
     "id": "src-armbian-forum-armbian-pour-boxes-rk3318-rk",
     "url": "https://forum.armbian.com/topic/26978-csc-armbian-for-rk3318rk3328-tv-box-boards/page/11/",
     "title": "Armbian forum, Armbian pour boxes RK3318/RK3328 (page 11)",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum, Armbian for RK3318/RK3328 boxes (page 11)"
   },
   {
     "id": "src-armbian-forum-h96-max-rk3318-et-frequences",
     "url": "https://forum.armbian.com/topic/16247-h96-max-or-h96-max-dvfs-cpufreq-inactive/",
     "title": "Armbian forum, H96 Max (RK3318) et fréquences CPU",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum, H96 Max (RK3318) and CPU frequencies"
   },
   {
     "id": "src-armbian-forum-mx9-pro-5g-8k",
     "url": "https://forum.armbian.com/topic/61366-which-rom-of-armbian-works-on-the-mx9-pro-only-8k/",
     "title": "Armbian forum : MX9 Pro 5G 8K",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum: MX9 Pro 5G 8K"
   },
   {
     "id": "src-armbian-forum-mxq-pro-4k-5g-a-base-de-h3",
     "url": "https://forum.armbian.com/topic/15429-mxq-pro-4k-5g-allwinner-h3-running-armbian-originally-for-beelink-x2/",
     "title": "Armbian forum : MXQ Pro 4K 5G à base de H3",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum: H3-based MXQ Pro 4K 5G"
   },
   {
     "id": "src-armbian-forum-prosb3000-h313",
     "url": "https://forum.armbian.com/topic/29503-prosb3000-allwinner-h313-2gb-ram-16gb-internal-storage-sun50iw9p1/",
     "title": "Armbian forum : PROSB3000 (H313)",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum: PROSB3000 (H313)"
   },
   {
     "id": "src-armbian-forum-transpeed-8k618-t-h618",
     "url": "https://forum.armbian.com/topic/29794-how-to-install-armbian-in-h618/",
     "title": "Armbian forum : Transpeed 8K618-T (H618)",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum: Transpeed 8K618-T (H618)"
   },
   {
     "id": "src-armbian-forum-tx3-mini-identifiee-s905l2-b",
     "url": "https://forum.armbian.com/topic/33722-tx3-mini-s905l2-b-firmware-request",
     "title": "Armbian forum, TX3 mini identifiée S905L2-B",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum, TX3 mini identified as S905L2-B"
   },
   {
     "id": "src-armbian-forum-vontar-kk-max-hk1-rbox-r2-et",
     "url": "https://forum.armbian.com/topic/37835-vontar-kk-max-hk1-rbox-r2-r3-rk3566-4gb32gbor-64gb/",
     "title": "Armbian forum, Vontar KK Max / HK1 RBOX R2 et R3 (RK3566)",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum, Vontar KK Max / HK1 RBOX R2 and R3 (RK3566)"
   },
   {
     "id": "src-armbian-forum-x96-mini-annoncee-s905w-rk32",
     "url": "https://forum.armbian.com/topic/35411-fake-x96-mini-s905w-rk3229",
     "title": "Armbian forum, X96 mini annoncée S905W, RK3229 constaté",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum, X96 mini advertised as S905W, RK3229 observed"
   },
   {
     "id": "src-armbian-forum-x96q-h313-cartes-diverses-pa",
     "url": "https://forum.armbian.com/topic/33256-x96q-h313/page/6/",
     "title": "Armbian forum : X96Q H313, cartes diverses (page 6)",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum: X96Q H313, various boards (page 6)"
   },
   {
     "id": "src-armbian-hk1max",
     "url": "https://forum.armbian.com/topic/26564-hk1-max-rk3318-464-reporting-differentwrong-ramrom-size/",
     "title": "Armbian forum, HK1 Max RK3318 4/64 : RAM/ROM différentes",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Armbian forum, HK1 Max RK3318 4/64: different RAM/ROM"
   },
   {
     "id": "src-armbian-rk322x",
     "url": "https://forum.armbian.com/topic/34923-csc-armbian-for-rk322x-tv-box-boards/",
     "title": "Armbian forum, Armbian pour les boxes RK322x",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Armbian forum, Armbian for RK322x boxes"
   },
   {
     "id": "src-armbian-rk3328-vs-rk3318",
     "url": "https://forum.armbian.com/topic/11639-rk3328-vs-rk3318-which-one-should-i-choose/",
     "title": "Armbian forum, RK3328 vs RK3318",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Armbian forum, RK3328 vs RK3318"
   },
   {
     "id": "src-armbian-s905w-1gb-of-2gb",
     "url": "https://forum.armbian.com/topic/29446-armbian-shows-~1gb-out-of-2gb/",
     "title": "Armbian forum, Armbian n'affiche que ~1 Go sur 2 Go",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Armbian forum, Armbian only shows ~1 GB out of 2 GB"
   },
   {
     "id": "src-armbian-s905x-2gb",
     "url": "https://forum.armbian.com/topic/13851-curious-problem-2gb-ram-s905x",
     "title": "Armbian forum, problème curieux sur une S905X 2 Go",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Armbian forum, curious problem on a 2 GB S905X"
   },
   {
     "id": "src-armbian-tx10pro-h313",
     "url": "https://forum.armbian.com/topic/60883-installing-armbian-on-the-tx10-pro-allwinner-h313/",
     "title": "Armbian forum, Armbian sur TX10 Pro (H313)",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Armbian forum, Armbian on TX10 Pro (H313)"
   },
   {
     "id": "src-armbian-tx3mini",
     "url": "https://forum.armbian.com/topic/26966-armbian-on-android-tv-box-tx3-mini-4gb-32gb-only-recognized-1gb-ram-and-6gb-rom/",
     "title": "Armbian forum, Tx3 mini 4GB/32GB reconnu 1GB/6GB",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Armbian forum, Tx3 mini 4GB/32GB recognised as 1GB/6GB"
   },
   {
     "id": "src-armbian-x96q-h313",
     "url": "https://forum.armbian.com/topic/28292-fake-chinese-x96q-the-18-gb-with-the-h313/",
     "title": "Armbian forum, X96Q avec H313 aux specs douteuses",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Armbian forum, X96Q with H313 and doubtful specs"
   },
   {
     "id": "src-baidu-baike-notice-allwinner-h700",
     "url": "https://baike.baidu.com/en/item/Allwinner%20H700/4386338",
     "title": "Baidu Baike : notice Allwinner H700",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Baidu Baike: Allwinner H700 entry"
   },
   {
     "id": "src-cnx-a95x-plus-s905y2",
     "url": "https://www.cnx-software.com/2018/10/06/a95x-plus-amlogic-s905y2-tv-box/",
     "title": "CNX, A95X Plus (S905Y2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, A95X Plus (S905Y2)"
   },
   {
     "id": "src-cnx-allwinner-h618-t95z-plus-et-t95-max",
     "url": "https://www.cnx-software.com/2022/07/30/allwinner-h618-processor-powers-android-12-tv-boxes/",
     "title": "CNX : Allwinner H618, T95Z Plus et T95 Max",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Allwinner H618, T95Z Plus and T95 Max"
   },
   {
     "id": "src-cnx-annonce-de-l-allwinner-h3-2014",
     "url": "https://www.cnx-software.com/2014/12/08/allwinner-h3-4k-ott-tv-box/",
     "title": "CNX : annonce de l'Allwinner H3 (2014)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Allwinner H3 announcement (2014)"
   },
   {
     "id": "src-cnx-annonce-du-processeur-allwinner-h6-201",
     "url": "https://www.cnx-software.com/2017/04/01/allwinner-h6-processor-for-4k-hdr-set-top-boxes-supports-usb-3-0-pcie-and-smart-card-interfaces/",
     "title": "CNX : annonce du processeur Allwinner H6 (2017)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Allwinner H6 processor announcement (2017)"
   },
   {
     "id": "src-cnx-beelink-gs1-h6",
     "url": "https://www.cnx-software.com/2017/10/20/beelink-gs1-allwinner-h6-tv-box-sells-for-60/",
     "title": "CNX : Beelink GS1 (H6)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Beelink GS1 (H6)"
   },
   {
     "id": "src-cnx-beelink-gt1-mini-s905x2",
     "url": "https://www.cnx-software.com/2018/10/19/beelink-gt1-mini-s905x2-tv-box-voice-air-mouse/",
     "title": "CNX, Beelink GT1 Mini (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Beelink GT1 Mini (S905X2)"
   },
   {
     "id": "src-cnx-beelink-x2-h3",
     "url": "https://www.cnx-software.com/2015/10/26/beelink-x2-4k-tv-box-powered-by-allwinner-h3-is-now-selling-for-32/",
     "title": "CNX : Beelink X2 (H3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Beelink X2 (H3)"
   },
   {
     "id": "src-cnx-boxes-dites-s905l2-vendues-vers-20-dol",
     "url": "https://www.cnx-software.com/2020/09/15/low-cost-amlogic-s905l2-tv-boxes-show-up-on-aliexpress-for-20/",
     "title": "CNX, boxes dites S905L2 vendues vers 20 dollars",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, boxes said to be S905L2 sold for about 20 dollars"
   },
   {
     "id": "src-cnx-dune-hd-realbox-4k-rtd1395",
     "url": "https://www.cnx-software.com/2020/06/13/dune-hd-realbox-4k-tv-box-runs-android-and-linux-on-realtek-rtd1395-soc/",
     "title": "CNX : Dune HD RealBox 4K (RTD1395)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Dune HD RealBox 4K (RTD1395)"
   },
   {
     "id": "src-cnx-eachlink-h6-mini-h6",
     "url": "https://www.cnx-software.com/2018/10/25/eachlink-h6-mini-allwinner-h6-tv-box/",
     "title": "CNX : EACHLINK H6 Mini (H6)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: EACHLINK H6 Mini (H6)"
   },
   {
     "id": "src-cnx-feuille-de-route-amlogic-2016-s905d",
     "url": "https://www.cnx-software.com/2016/03/10/amlogic-2016-roadmap-reveals-upcoming-s905d-processor-android-6-0-for-amlogic-s905-and-s912-socs/",
     "title": "CNX, feuille de route Amlogic 2016 (S905D)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Amlogic 2016 roadmap (S905D)"
   },
   {
     "id": "src-cnx-gamme-dune-hd-2017",
     "url": "https://www.cnx-software.com/2017/12/29/dune-hd-unveils-5-entry-level-to-premium-4k-hdr-linux-android-media-players-set-top-boxes/",
     "title": "CNX : gamme Dune HD 2017",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Dune HD 2017 range"
   },
   {
     "id": "src-cnx-h96-max-x2-s905x2",
     "url": "https://www.cnx-software.com/2018/11/01/x96-max-x2-amlogic-s905x-tv-box-4gb-ram-32gb-storage-promotion/",
     "title": "CNX, H96 Max X2 (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, H96 Max X2 (S905X2)"
   },
   {
     "id": "src-cnx-h96-pro-plus-s912-3-go",
     "url": "https://www.cnx-software.com/2017/09/07/h96-pro-plus-amlogic-s912-tv-box-with-3gb-ram-32gb-storage-sold-for-48-49-promo/",
     "title": "CNX, H96 Pro Plus (S912, 3 Go)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, H96 Pro Plus (S912, 3 GB)"
   },
   {
     "id": "src-cnx-himedia-q30-hi3798m-v200",
     "url": "https://www.cnx-software.com/2017/05/19/himedia-q30-tv-box-is-powered-by-hisilicon-hi3798m-v200-processor/",
     "title": "CNX : HiMedia Q30 (Hi3798M V200)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: HiMedia Q30 (Hi3798M V200)"
   },
   {
     "id": "src-cnx-magicsee-n5-plus-s905x3",
     "url": "https://www.cnx-software.com/2019/11/21/magicsee-n5-plus-amlogic-s905x3-tv-box-comes-with-a-2-5-sata-hdd-ssd-bay/",
     "title": "CNX, Magicsee N5 Plus (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Magicsee N5 Plus (S905X3)"
   },
   {
     "id": "src-cnx-mecool-bb2-pro-s912-3-go-ddr4",
     "url": "https://www.cnx-software.com/2016/12/16/review-of-mecool-bb2-pro-tv-box-with-ddr4-memory-part-1-specs-unboxing-and-teardown/",
     "title": "CNX, Mecool BB2 Pro (S912, 3 Go DDR4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Mecool BB2 Pro (S912, 3 GB DDR4)"
   },
   {
     "id": "src-cnx-mecool-ki-pro-s905d",
     "url": "https://www.cnx-software.com/2017/05/08/mecool-ki-pro-hybrid-android-tv-box-with-dvb-t2-dvb-s2-tuner-sells-for-80/",
     "title": "CNX, Mecool KI Pro (S905D)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Mecool KI Pro (S905D)"
   },
   {
     "id": "src-cnx-mecool-m8s-plus-dvb-s905d",
     "url": "https://www.cnx-software.com/2018/07/06/mecool-m8s-plus-dvb-android-tv-box-dvb-t2-tuner/",
     "title": "CNX, Mecool M8S Plus DVB (S905D)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Mecool M8S Plus DVB (S905D)"
   },
   {
     "id": "src-cnx-mecool-m8s-pro-w-s905w",
     "url": "https://www.cnx-software.com/2018/01/19/38-mecool-m8s-pro-w-with-voice-control-tv-box-runs-android-tv-7-1-os/",
     "title": "CNX, Mecool M8S Pro W (S905W)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Mecool M8S Pro W (S905W)"
   },
   {
     "id": "src-cnx-mediatek-mt8581",
     "url": "https://www.cnx-software.com/2016/01/06/mediatek-mt8581-media-processor-supports-4k-uhd-blu-rays-10-bit-h-265-vp9-and-hdr-imaging/",
     "title": "CNX : MediaTek MT8581",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: MediaTek MT8581"
   },
   {
     "id": "src-cnx-mx-pro-4k-avec-allwinner-h5",
     "url": "https://www.cnx-software.com/2018/02/05/mx-pro-4k-is-an-android-7-0-tv-box-powered-by-allwinner-h5-processor/",
     "title": "CNX : MX Pro 4K avec Allwinner H5",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: MX Pro 4K with Allwinner H5"
   },
   {
     "id": "src-cnx-mxq-pro-s905-en-promotion",
     "url": "https://www.cnx-software.com/?p=33268",
     "title": "CNX, MXQ Pro (S905) en promotion",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, MXQ Pro (S905) on promotion"
   },
   {
     "id": "src-cnx-nexbox-a95x-pro-s905w",
     "url": "https://www.cnx-software.com/2018/04/18/38-nexbox-a95x-pro-runs-android-tv-support-netflix-hd/",
     "title": "CNX, Nexbox A95X Pro (S905W)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Nexbox A95X Pro (S905W)"
   },
   {
     "id": "src-cnx-nexbox-a95x-s905-en-vente",
     "url": "https://www.cnx-software.com/2016/06/01/nexbox-a95x-android-tv-box-powered-by-amlogic-s905-processor-sells-for-27/",
     "title": "CNX, Nexbox A95X (S905) en vente",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Nexbox A95X (S905) on sale"
   },
   {
     "id": "src-cnx-nexbox-a95x-s905x-demontage",
     "url": "https://www.cnx-software.com/2016/07/22/nexbox-a95x-s905x-android-tv-box-review-part-1-unboxing-and-teardown",
-    "title": "CNX, Nexbox A95X (S905X), demontage",
+    "title": "CNX, Nexbox A95X (S905X), démontage",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Nexbox A95X (S905X), teardown"
   },
   {
     "id": "src-cnx-premieres-boxes-allwinner-h3",
     "url": "https://www.cnx-software.com/2015/01/13/allwinner-h3-android-tv-boxes-are-now-selling/",
     "title": "CNX : premières boxes Allwinner H3",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: first Allwinner H3 boxes"
   },
   {
     "id": "src-cnx-processeur-allwinner-h616-tanix-tx6s-e",
     "url": "https://www.cnx-software.com/2020/02/27/allwinner-h616-tv-box-processor-comes-with-mali-g31-gpu-supports-android-10/",
     "title": "CNX : processeur Allwinner H616, Tanix TX6S et T95",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Allwinner H616 processor, Tanix TX6S and T95"
   },
   {
     "id": "src-cnx-processeur-tablette-allwinner-a133",
     "url": "https://www.cnx-software.com/2020/10/31/allwinner-a133-tablet-processor-pairs-with-xr829-or-aw859a-wifi-bluetooth-chip",
     "title": "CNX : processeur tablette Allwinner A133",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Allwinner A133 tablet processor"
   },
   {
     "id": "src-cnx-projecteur-transpeed-p10-allwinner-h70",
     "url": "https://www.cnx-software.com/2022/08/02/transpeed-p10-android-10-full-hd-projector-features-allwinner-h700-soc/",
     "title": "CNX : projecteur Transpeed P10 (Allwinner H700)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Transpeed P10 projector (Allwinner H700)"
   },
   {
     "id": "src-cnx-rk3229",
     "url": "https://www.cnx-software.com/2016/01/12/rockchip-rk3229-and-rk3399-32-bit-and-64-bit-processors-support-4k-10-bit-h-265-and-hdmi-2-0/",
     "title": "CNX Software, présentation du RK3229",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "CNX Software, introduction of the RK3229"
   },
   {
     "id": "src-cnx-s905l-sans-vp9-ni-entrees-tuner",
     "url": "https://cnx-software.com/2016/09/20/amlogic-s905l-processor-drops-vp9-codec-ts-inputs-for-tuners-and-the-camera-interface",
-    "title": "CNX, S905L : sans VP9 ni entrees tuner",
+    "title": "CNX, S905L : sans VP9 ni entrées tuner",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, S905L: no VP9 and no tuner inputs"
   },
   {
     "id": "src-cnx-s905m-s912-roadmap",
     "url": "https://www.cnx-software.com/2015/12/17/amlogic-s905m-and-s912-processors-to-support-4k-vp9-hdmi-2-0a-built-in-dac-and-more/",
     "title": "CNX Software, S905X et S912 : 4K VP9, HDMI 2.0a",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "CNX Software, S905X and S912: 4K VP9, HDMI 2.0a"
   },
   {
     "id": "src-cnx-s905x2-vs-s905x3",
     "url": "https://cnx-software.com/?p=68038",
     "title": "CNX Software, S905X2 vs S905X3",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "CNX Software, S905X2 vs S905X3"
   },
   {
     "id": "src-cnx-s905x3-specs",
     "url": "https://www.cnx-software.com/2019/04/12/amlogic-s905x3-specifications-block-diagram/",
     "title": "CNX Software, spécifications du S905X3",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "CNX Software, S905X3 specifications"
   },
   {
     "id": "src-cnx-s912-specs",
     "url": "https://www.cnx-software.com/2016/04/06/amlogic-s912-processor-specifications/",
     "title": "CNX Software, spécifications du S912",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "CNX Software, S912 specifications"
   },
   {
     "id": "src-cnx-shield-android-tv-2015-tegra-x1",
     "url": "https://www.cnx-software.com/2015/03/04/nvidia-unveils-199-shield-android-tv-game-console-powered-by-nvidia-tegra-x1-processor/",
     "title": "CNX : Shield Android TV 2015 (Tegra X1)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Shield Android TV 2015 (Tegra X1)"
   },
   {
     "id": "src-cnx-shield-tv-2019-tegra-x1",
     "url": "https://www.cnx-software.com/2019/10/29/nvidia-launches-upgraded-shield-tv-with-tegra-x1-plus-processor/",
     "title": "CNX : Shield TV 2019 (Tegra X1+)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Shield TV 2019 (Tegra X1+)"
   },
   {
     "id": "src-cnx-software-a95x-r1-rk3229",
     "url": "https://www.cnx-software.com/2017/10/27/a95x-r1-4k-android-tv-box-sells-for-20-promo/",
     "title": "CNX Software, A95X R1 (RK3229)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, A95X R1 (RK3229)"
   },
   {
     "id": "src-cnx-software-a95x-r2-rk3328-demontage",
     "url": "https://cnx-software.com/2017/06/05/a95x-r2-rockchip-rk3328-tv-box-review-part-1-specifications-unboxing-teardown",
     "title": "CNX Software, A95X R2 (RK3328), démontage",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, A95X R2 (RK3328), teardown"
   },
   {
     "id": "src-cnx-software-annonce-d-une-box-s905x2-4k60",
     "url": "https://www.cnx-software.com/?p=60596",
     "title": "CNX Software, annonce d'une box S905X2 (4K60, variantes Ethernet)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, announcement of an S905X2 box (4K60, Ethernet variants)"
   },
   {
     "id": "src-cnx-software-asus-tinker-board-rk3288",
     "url": "https://www.cnx-software.com/2017/01/05/asus-tinker-board-is-a-raspberry-pi-3-alternative-based-on-rockchip-rk3288-processor/",
     "title": "CNX Software, ASUS Tinker Board (RK3288)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, ASUS Tinker Board (RK3288)"
   },
   {
     "id": "src-cnx-software-beelink-gs-king-x-s922x-h",
     "url": "https://www.cnx-software.com/?p=77279",
     "title": "CNX Software, Beelink GS-King X (S922X-H)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Beelink GS-King X (S922X-H)"
   },
   {
     "id": "src-cnx-software-beelink-gt-king-pro-s922x-h",
     "url": "https://www.cnx-software.com/2019/09/24/beelink-gt-king-pro-tv-box-amlogic-s922x-h-processor-dolby-dts-licenses/",
     "title": "CNX Software, Beelink GT-King Pro (S922X-H)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Beelink GT-King Pro (S922X-H)"
   },
   {
     "id": "src-cnx-software-beelink-gt1-k-s922x",
     "url": "https://www.cnx-software.com/2019/03/27/beelink-gt1-k-amlogic-s922x-tv-box-android-9-0/",
     "title": "CNX Software, Beelink GT1-K (S922X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Beelink GT1-K (S922X)"
   },
   {
     "id": "src-cnx-software-boitier-s905w4-x96-mini",
     "url": "https://www.cnx-software.com/2021/10/06/amlogic-s905w4-tv-box-ships-with-amlogic-w1-wifi-5-module/",
     "title": "CNX Software, boîtier S905W4 (X96 mini+)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, S905W4 box (X96 mini+)"
   },
   {
     "id": "src-cnx-software-carte-rock64-rk3328",
     "url": "https://www.cnx-software.com/2017/06/08/rock64-is-a-rockchip-rk3328-development-board-with-up-to-4gb-ram-4k-hdr-gigabit-ethernet-and-usb-3-0/",
     "title": "CNX Software, carte ROCK64 (RK3328)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, ROCK64 board (RK3328)"
   },
   {
     "id": "src-cnx-software-comparaison-s905x3-et-s905x4",
     "url": "https://www.cnx-software.com/2020/12/28/amlogic-s905x3-vs-s905x4-features-comparisons/",
     "title": "CNX Software, comparaison S905X3 et S905X4",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, S905X3 and S905X4 comparison"
   },
   {
     "id": "src-cnx-software-comparatif-des-soc-amlogic-am",
     "url": "https://www.cnx-software.com/2014/04/25/amlogic-stb-socs-comparison-aml8726-mx-s802-s805-and-s812/",
     "title": "CNX Software, comparatif des SoC Amlogic AML8726-MX, S802, S805 et S812",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, comparison of the Amlogic SoCs AML8726-MX, S802, S805 and S812"
   },
   {
     "id": "src-cnx-software-comparatif-s905x5m-et-s905x4",
     "url": "https://www.cnx-software.com/2024/07/01/amlogic-s905x5m-vs-s905x4-features-and-benchmarks-comparison/",
     "title": "CNX Software, comparatif S905X5M et S905X4",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, S905X5M and S905X4 comparison"
   },
   {
     "id": "src-cnx-software-emish-x700-rk3128",
     "url": "https://cnx-software.com/2018/03/26/rockchip-rk3128-based-emish-x700-smart-tv-box-is-selling-for-16-99-promo/",
     "title": "CNX Software, EMISH X700 (RK3128)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, EMISH X700 (RK3128)"
   },
   {
     "id": "src-cnx-software-h96-max-rk3566-sous-android-1",
     "url": "https://www.cnx-software.com/2021/03/04/rockchip-rk3566-tv-box-h96-max-android-11/",
     "title": "CNX Software, H96 Max (RK3566) sous Android 11",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, H96 Max (RK3566) under Android 11"
   },
   {
     "id": "src-cnx-software-h96-max-x2-s905x2",
     "url": "https://cnx-software.com/2018/11/01/h96-max-x2-amlogic-s905x-tv-box-4gb-ram-32gb-storage-promotion/",
     "title": "CNX Software, H96 Max X2 (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, H96 Max X2 (S905X2)"
   },
   {
     "id": "src-cnx-software-khadas-vim3-a311d",
     "url": "https://cnx-software.com/2019/06/25/khadas-vim3-amlogic-a311d-sbc",
     "title": "CNX Software, Khadas VIM3 (A311D)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Khadas VIM3 (A311D)"
   },
   {
     "id": "src-cnx-software-khadas-vim3l-s905d3",
     "url": "https://www.cnx-software.com/2019/08/21/khadas-vim3l-amlogic-s905d3-sbc-targets-htpc-enthusiasts/",
     "title": "CNX Software, Khadas VIM3L (S905D3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Khadas VIM3L (S905D3)"
   },
   {
     "id": "src-cnx-software-khadas-vim4-a311d2",
     "url": "https://cnx-software.com/?p=114852",
     "title": "CNX Software, Khadas VIM4 (A311D2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Khadas VIM4 (A311D2)"
   },
   {
     "id": "src-cnx-software-mecool-km2-s905x2-b",
     "url": "https://www.cnx-software.com/?p=86112",
     "title": "CNX Software, Mecool KM2 (S905X2-B)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Mecool KM2 (S905X2-B)"
   },
   {
     "id": "src-cnx-software-mecool-km3-s905x2",
     "url": "https://www.cnx-software.com/2019/04/04/mecool-km3-android-tv-9-0-certified-tv-box/",
     "title": "CNX Software, Mecool KM3 (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Mecool KM3 (S905X2)"
   },
   {
     "id": "src-cnx-software-mecool-km6-classic-et-deluxe",
     "url": "https://cnx-software.com/2020/09/30/mecool-km6-amlogic-s905x4-android-tv-box-plays-4k-av1-videos-supports-wifi-6/",
     "title": "CNX Software, Mecool KM6 Classic et Deluxe (S905X4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Mecool KM6 Classic and Deluxe (S905X4)"
   },
   {
     "id": "src-cnx-software-minix-neo-u22-xj-s922x-j",
     "url": "https://www.cnx-software.com/?p=75070",
     "title": "CNX Software, Minix NEO U22-XJ (S922X-J)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Minix NEO U22-XJ (S922X-J)"
   },
   {
     "id": "src-cnx-software-minix-neo-x8-et-x8s-s802",
     "url": "https://www.cnx-software.com/2014/04/13/minix-unveils-neo-x8-and-x8s-android-tv-boxes-powered-by-amlogic-s802-s802-h-socs/",
     "title": "CNX Software, Minix NEO X8 et X8s (S802)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Minix NEO X8 and X8s (S802)"
   },
   {
     "id": "src-cnx-software-minix-neo-x8-h-plus-s812",
     "url": "https://cnx-software.com/?p=20091",
     "title": "CNX Software, Minix NEO X8-H Plus (S812)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Minix NEO X8-H Plus (S812)"
   },
   {
     "id": "src-cnx-software-mx10-rk3328-android-8-1",
     "url": "https://www.cnx-software.com/2018/04/09/mx10-may-be-the-first-tv-box-to-run-android-8-1-oreo/",
     "title": "CNX Software, MX10 (RK3328, Android 8.1)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, MX10 (RK3328, Android 8.1)"
   },
   {
     "id": "src-cnx-software-mx4-rk3229",
     "url": "https://www.cnx-software.com/2016/06/11/mx4-tv-box-based-on-rockchip-rk3229-processor-is-selling-for-25-promo/",
     "title": "CNX Software, MX4 (RK3229)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, MX4 (RK3229)"
   },
   {
     "id": "src-cnx-software-mxq-4k-rk3229",
     "url": "https://www.cnx-software.com/2016/01/15/mxq-4k-rk3229-android-tv-box-sells-for-29-99-shipped/",
     "title": "CNX Software, MXQ-4K (RK3229)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, MXQ-4K (RK3229)"
   },
   {
     "id": "src-cnx-software-mxr-pro-rk3328-4-go",
     "url": "https://cnx-software.com/?p=47592",
     "title": "CNX Software, MXR PRO (RK3328, 4 Go)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, MXR PRO (RK3328, 4 GB)"
   },
   {
     "id": "src-cnx-software-odroid-n2-s922x",
     "url": "https://www.cnx-software.com/2019/02/13/odroid-n2-amlogic-s922x-sbc/",
     "title": "CNX Software, ODROID-N2 (S922X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, ODROID-N2 (S922X)"
   },
   {
     "id": "src-cnx-software-orange-pi-5-rk3588s",
     "url": "https://www.cnx-software.com/2022/11/11/orange-pi-5-most-affordable-rockchip-rk3588s-sbc/",
     "title": "CNX Software, Orange Pi 5 (RK3588S)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Orange Pi 5 (RK3588S)"
   },
   {
     "id": "src-cnx-software-premiere-annonce-de-l-a311d-2",
     "url": "https://www.cnx-software.com/2018/08/03/amlogic-a311d-cortex-a73-a53-processor-mali-g52-gpu/",
     "title": "CNX Software, première annonce de l'A311D (2018)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, first A311D announcement (2018)"
   },
   {
     "id": "src-cnx-software-presentation-de-l-amlogic-a31",
     "url": "https://cnx-software.com/?p=92460",
     "title": "CNX Software, présentation de l'Amlogic A311D2",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, introduction of the Amlogic A311D2"
   },
   {
     "id": "src-cnx-software-presentation-des-rk3228h-et-r",
     "url": "https://www.cnx-software.com/2016/12/09/rockchip-introduces-rk3228h-and-rk3228b-processors-for-iptvott-tv-boxes/",
     "title": "CNX Software, présentation des RK3228H et RK3228B",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, introduction of the RK3228H and RK3228B"
   },
   {
     "id": "src-cnx-software-q96-rk3229",
     "url": "https://www.cnx-software.com/2019/07/15/cheap-rk3229-q96-smart-tv-box/",
     "title": "CNX Software, Q96 (RK3229)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Q96 (RK3229)"
   },
   {
     "id": "src-cnx-software-r-box-rk3229-2-go",
     "url": "https://www.cnx-software.com/2016/06/04/35-r-box-rockchip-rk3229-4k-android-5-1-tv-box-comes-with-2gb-ram/",
     "title": "CNX Software, R-Box (RK3229, 2 Go)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, R-Box (RK3229, 2 GB)"
   },
   {
     "id": "src-cnx-software-r-tv-box-k99-rk3399",
     "url": "https://cnx-software.com/?p=42093",
     "title": "CNX Software, R-TV BOX K99 (RK3399)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, R-TV BOX K99 (RK3399)"
   },
   {
     "id": "src-cnx-software-rock-5-model-b-rk3588",
     "url": "https://www.cnx-software.com/2022/01/09/rock5-model-b-rk3588-single-board-computer/",
     "title": "CNX Software, ROCK 5 Model B (RK3588)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, ROCK 5 Model B (RK3588)"
   },
   {
     "id": "src-cnx-software-rock-pi-4-rk3399",
     "url": "https://www.cnx-software.com/2018/11/08/rock-pi-4-raspberry-pi-rk3399-board/",
     "title": "CNX Software, Rock Pi 4 (RK3399)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Rock Pi 4 (RK3399)"
   },
   {
     "id": "src-cnx-software-ruach-a20s-rk3128",
     "url": "https://cnx-software.com/2015/06/16/ruach-a20s-is-a-35-android-tv-box-powered-by-rockchip-rk3128-soc/",
     "title": "CNX Software, Ruach A20s (RK3128)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Ruach A20s (RK3128)"
   },
   {
     "id": "src-cnx-software-sdmc-dv8919-s905x4",
     "url": "https://www.cnx-software.com/2019/12/22/sdmc-dv8919-amlogic-s905x4-android-tv-10-tv-box-supports-av1-decoding/",
     "title": "CNX Software, SDMC DV8919 (S905X4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, SDMC DV8919 (S905X4)"
   },
   {
     "id": "src-cnx-software-specifications-du-s928x-manue",
     "url": "https://www.cnx-software.com/2023/02/28/amlogic-s928x-specifications-a-penta-core-arm-cortex-a76-a55-soc-with-mali-g57-gpu-3-2-tops-npu/",
     "title": "CNX Software, spécifications du S928X (manuel de référence rapide)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, S928X specifications (quick reference manual)"
   },
   {
     "id": "src-cnx-software-tanix-tx6-h6",
     "url": "https://www.cnx-software.com/2018/11/13/tanix-tx6-allwinner-h6-tv-box-4g-ram-dual-band-wifi/",
     "title": "CNX Software, Tanix TX6 (H6)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Tanix TX6 (H6)"
   },
   {
     "id": "src-cnx-software-test-du-beelink-gt-king-s922x",
     "url": "https://cnx-software.com/2019/08/26/beelink-gt-king-review-amlogic-s922x-tv-box-review",
     "title": "CNX Software, test du Beelink GT-King (S922X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, review of the Beelink GT-King (S922X)"
   },
   {
     "id": "src-cnx-software-test-du-sunchip-cx-s806-s812",
     "url": "https://www.cnx-software.com/2015/01/04/cx-s806-review-amlogic-s812-tv-box/",
     "title": "CNX Software, test du Sunchip CX-S806 (S812)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, review of the Sunchip CX-S806 (S812)"
   },
   {
     "id": "src-cnx-software-tronsmart-orion-r28-rk3288-tr",
     "url": "https://www.cnx-software.com/2014/08/29/tronsmart-orion-r28-beta-tv-boxes-with-rockchip-rk3288-soc-feature-up-to-4gb-ram-32gb-emmc-come-with-android-sdk/",
     "title": "CNX Software, Tronsmart Orion R28 (RK3288), trois modèles",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Tronsmart Orion R28 (RK3288), three models"
   },
   {
     "id": "src-cnx-software-ugoos-am6-plus-s922x-j",
     "url": "https://cnx-software.com/2020/02/06/ugoos-am6-plus-tv-box-supports-dolby-vision-via-amlogic-s922x-j-processor/",
     "title": "CNX Software, Ugoos AM6 Plus (S922X-J)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Ugoos AM6 Plus (S922X-J)"
   },
   {
     "id": "src-cnx-software-ugoos-am6b-plus-2021",
     "url": "https://www.cnx-software.com/2021/06/29/wifi-6-tv-box-ugoos-am6b-plus-2021/",
     "title": "CNX Software, Ugoos AM6B Plus 2021",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Ugoos AM6B Plus 2021"
   },
   {
     "id": "src-cnx-software-ugoos-am7-s905x4",
     "url": "https://www.cnx-software.com/2021/08/26/ugoos-am7-android-11-tv-box-with-amlogic-s905x4-wifi-6/",
     "title": "CNX Software, Ugoos AM7 (S905X4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Ugoos AM7 (S905X4)"
   },
   {
     "id": "src-cnx-software-ugoos-am8-s928x-j",
     "url": "https://www.cnx-software.com/2023/08/13/ugoos-am8-plus-a-true-8k-tv-box-powered-by-amlogic-s928x-j-processor/",
     "title": "CNX Software, Ugoos AM8 (S928X-J)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Ugoos AM8 (S928X-J)"
   },
   {
     "id": "src-cnx-software-ugoos-am9-s905x5",
     "url": "https://www.cnx-software.com/?p=156181",
     "title": "CNX Software, Ugoos AM9 (S905X5)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Ugoos AM9 (S905X5)"
   },
   {
     "id": "src-cnx-software-ugoos-ut3-rk3288",
     "url": "https://cnx-software.com/2015/10/23/ugoos-ut3-plus-rockchip-rk3288-tv-box-support-hdmi-input-with-pip-and-dvr-functions",
     "title": "CNX Software, Ugoos UT3+ (RK3288)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Ugoos UT3+ (RK3288)"
   },
   {
     "id": "src-cnx-software-ugoos-ut8-et-ut8-pro-rk3568",
     "url": "https://www.cnx-software.com/2021/12/27/ugoos-ut8-pro-an-rk3568-tv-box-with-8gb-ram-64gb-storage/",
     "title": "CNX Software, Ugoos UT8 et UT8 Pro (RK3568)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Ugoos UT8 and UT8 Pro (RK3568)"
   },
   {
     "id": "src-cnx-software-ugoos-x5m-pro-s905x5m",
     "url": "https://www.cnx-software.com/?p=154138",
     "title": "CNX Software, Ugoos X5M Pro (S905X5M)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Ugoos X5M Pro (S905X5M)"
   },
   {
     "id": "src-cnx-software-yundoo-y8-rk3399",
     "url": "https://www.cnx-software.com/?p=41383",
     "title": "CNX Software, Yundoo Y8 (RK3399)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX Software, Yundoo Y8 (RK3399)"
   },
   {
     "id": "src-cnx-sunvell-t95p-s905x",
     "url": "https://cnx-software.com/?p=39389",
     "title": "CNX, Sunvell T95P (S905X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Sunvell T95P (S905X)"
   },
   {
     "id": "src-cnx-t95z-plus-s912",
     "url": "https://www.cnx-software.com/2016/09/02/t95z-plus-is-an-hexagonal-amlogic-s912-tv-box-with-a-front-lcd-display/",
     "title": "CNX, T95Z Plus (S912)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, T95Z Plus (S912)"
   },
   {
     "id": "src-cnx-tanix-tx5-pro-s905x-demontage",
     "url": "https://www.cnx-software.com/2016/08/08/tanix-tx5-pro-tv-box-review-part-1-unboxing-teardown-and-hands-on/",
-    "title": "CNX, Tanix TX5 Pro (S905X), demontage",
+    "title": "CNX, Tanix TX5 Pro (S905X), démontage",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Tanix TX5 Pro (S905X), teardown"
   },
   {
     "id": "src-cnx-tanix-tx6-allwinner-h6",
     "url": "https://www.cnx-software.com/?p=63911",
     "title": "CNX, Tanix TX6 (Allwinner H6)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Tanix TX6 (Allwinner H6)"
   },
   {
     "id": "src-cnx-test-mecool-kiii-pro-s912",
     "url": "https://www.cnx-software.com/2017/03/22/mecool-kiii-pro-hybrid-stb-review-part-2-android-firmware-tv-center-and-dvb-t2-dvb-s2-app/",
     "title": "CNX, test Mecool KIII Pro (S912)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, review of the Mecool KIII Pro (S912)"
   },
   {
     "id": "src-cnx-tx3mini",
     "url": "https://www.cnx-software.com/2017/08/14/tanix-tx3-mini-tv-box-is-powered-by-amlogic-s905w-soc/",
     "title": "CNX Software, Tanix TX3 Mini (S905W)",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "CNX Software, Tanix TX3 Mini (S905W)"
   },
   {
     "id": "src-cnx-vorke-z1-s912-3-go-ddr4",
     "url": "https://cnx-software.com/2016/11/18/vorke-z1-amlogic-s912-android-tv-box-comes-with-3gb-ddr4-memory/",
     "title": "CNX, Vorke Z1 (S912, 3 Go DDR4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Vorke Z1 (S912, 3 GB DDR4)"
   },
   {
     "id": "src-cnx-wechip-r69-h3",
     "url": "https://www.cnx-software.com/2019/02/09/wechip-r69-cheap-allwinner-h3-tv-box/",
     "title": "CNX : Wechip R69 (H3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Wechip R69 (H3)"
   },
   {
     "id": "src-cnx-x88pro-rk3318",
     "url": "https://www.cnx-software.com/2019/05/09/wechip-x88-pro-rk3318-tv-box/",
     "title": "CNX Software, Wechip X88 Pro (RK3318)",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "CNX Software, Wechip X88 Pro (RK3318)"
   },
   {
     "id": "src-cnx-x96-air-s905x3",
     "url": "https://www.cnx-software.com/2019/10/01/x96-air-amlogic-s905x3-android-9-0-tv-box/",
     "title": "CNX, X96 Air (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, X96 Air (S905X3)"
   },
   {
     "id": "src-cnx-x96-max-s905x2",
     "url": "https://www.cnx-software.com/2018/09/25/x96-max-amlogic-s905x2-tv-box/",
     "title": "CNX, X96 Max (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, X96 Max (S905X2)"
   },
   {
     "id": "src-cnx-x96-mini-s905w-en-vente",
     "url": "https://www.cnx-software.com/?p=48558",
     "title": "CNX, X96 mini (S905W) en vente",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, X96 mini (S905W) on sale"
   },
   {
     "id": "src-cnx-x96q-avec-allwinner-h313",
     "url": "https://www.cnx-software.com/2020/04/13/x96q-android-10-tv-box-shows-up-with-allwinner-h313-quad-core-cortex-a53-processor/",
     "title": "CNX : X96Q avec Allwinner H313",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: X96Q with Allwinner H313"
   },
   {
     "id": "src-cnx-xiaomi-mi-box-2016-s905x-h",
     "url": "https://www.cnx-software.com/2016/05/19/xiaomi-mi-box-comes-to-the-us-with-android-tv-6-0-running-on-amlogic-s905x-processor/",
     "title": "CNX, Xiaomi Mi Box 2016 (S905X-H)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Xiaomi Mi Box 2016 (S905X-H)"
   },
   {
     "id": "src-cnx-xiaomi-mi-box-s-s905x",
     "url": "https://www.cnx-software.com/2018/10/10/xiaomi-mi-box-s-4k-ultra-hd-android-tv-set-top-box/",
     "title": "CNX, Xiaomi Mi Box S (S905X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX, Xiaomi Mi Box S (S905X)"
   },
   {
     "id": "src-cnx-zeropi-h3-avec-gigabit-via-phy-realtek",
     "url": "https://www.cnx-software.com/2019/09/05/zeropi-allwinner-h3-sbc-gigabit-ethernet-spi-flash/",
     "title": "CNX : ZeroPi (H3) avec Gigabit via PHY Realtek externe",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: ZeroPi (H3) with Gigabit via an external Realtek PHY"
   },
   {
     "id": "src-cnx-zidoo-x9s-realtek-rtd1295",
     "url": "https://www.cnx-software.com/2016/04/10/zidoo-x9s-android-6-0-tv-box-features-realtek-rtd1295-processor-with-sata-3-0-hdmi-2-0a-output-and-input/",
     "title": "CNX : Zidoo X9S (Realtek RTD1295)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Zidoo X9S (Realtek RTD1295)"
   },
   {
     "id": "src-cnx-zidoo-z9s-et-z10-rtd1296",
     "url": "https://www.cnx-software.com/2018/09/14/zidoo-z9s-z10-rtd1296-android-openwrt-media-boxes/",
     "title": "CNX : Zidoo Z9S et Z10 (RTD1296)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Zidoo Z9S and Z10 (RTD1296)"
   },
   {
     "id": "src-cnx-zidoo-z9x-et-z10-pro-rtd1619dr",
     "url": "https://www.cnx-software.com/2020/08/13/zidoo-z10-pro-z9x-realtek-rtd1619dr-4k-android-media-players-launched-for-229-and-up/",
     "title": "CNX : Zidoo Z9X et Z10 Pro (RTD1619DR)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CNX: Zidoo Z9X and Z10 Pro (RTD1619DR)"
   },
   {
     "id": "src-commit-noyau-linux-ajout-de-la-carte-beeli",
     "url": "https://android.googlesource.com/platform/external/linux-kselftest/+/79702ded8c2f",
     "title": "Commit noyau Linux, ajout de la carte Beelink A1 (RK3328)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Linux kernel commit, adding the Beelink A1 board (RK3328)"
   },
   {
     "id": "src-communique-mediatek-presentant-le-mt8695",
     "url": "https://www.mediatek.com/press-room/mediatek-evolves-its-home-entertainment-platform-to-support-artificial-intelligence-driven-smart-home-devices",
     "title": "Communiqué MediaTek présentant le MT8695",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "MediaTek press release introducing the MT8695"
   },
   {
     "id": "src-comparatif-rock-3-modeles-a-et-c-designspa",
     "url": "https://www.rs-online.com/designspark/radxa-rock-3-model-a-model-c-vs-raspberry-pi-3-model-b-a-comparative-engineers-review",
     "title": "Comparatif ROCK 3 modèles A et C (DesignSpark)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "ROCK 3 models A and C comparison (DesignSpark)"
   },
   {
     "id": "src-coreelec-h96-max-x3-100-mbit-ou-gigabit",
     "url": "https://discourse.coreelec.org/t/h96-max-x3-100mbit-vs-gbit/20509",
     "title": "CoreELEC, H96 Max X3 100 Mbit ou gigabit",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CoreELEC, H96 Max X3 100 Mbit or Gigabit"
   },
   {
     "id": "src-coreelec-tanix-tx3-max-et-son-device-tree",
     "url": "https://discourse.coreelec.org/t/tanix-tx3-max-device-tree/1902/13",
     "title": "CoreELEC, Tanix TX3 Max et son device tree",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CoreELEC, Tanix TX3 Max and its device tree"
   },
   {
     "id": "src-coreelec-x88prox3-dtb",
     "url": "https://discourse.coreelec.org/t/x88-pro-x3-choose-dtb-and-install-to-emmc/11089?page=2",
     "title": "CoreELEC, X88 Pro X3 : choisir le DTB",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "CoreELEC, X88 Pro X3: choosing the DTB"
   },
   {
     "id": "src-coreelec-x88prox3-fake4gb",
     "url": "https://discourse.coreelec.org/t/x88-pro-x3-with-fake-4gb-ram/15921",
     "title": "CoreELEC, X88 Pro X3 avec 4 Go de RAM douteux",
     "type": "forum",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "CoreELEC, X88 Pro X3 with doubtful 4 GB of RAM"
   },
   {
     "id": "src-coreelec-x96-max-plus-s905x3-et-ses-varian",
     "url": "https://discourse.coreelec.org/t/coreelec-in-amlogic-x96-max-plus-s905x3/10947",
     "title": "CoreELEC, X96 Max Plus (S905X3) et ses variantes",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CoreELEC, X96 Max Plus (S905X3) and its variants"
   },
   {
     "id": "src-coreelec-x96-mini-p281-et-p282",
     "url": "https://discourse.coreelec.org/t/x96-mini-p281-and-p282/11939/19",
     "title": "CoreELEC, X96 mini p281 et p282",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CoreELEC, X96 mini p281 and p282"
   },
   {
     "id": "src-documentation-radxa-rock-3a-rk3568",
     "url": "https://docs.radxa.com/en/rock3/rock3a",
     "title": "Documentation Radxa, ROCK 3A (RK3568)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Radxa documentation, ROCK 3A (RK3568)"
   },
   {
     "id": "src-documentation-radxa-rock-3c-rk3566",
     "url": "https://docs.radxa.com/en/rock3/rock3c",
     "title": "Documentation Radxa, ROCK 3C (RK3566)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Radxa documentation, ROCK 3C (RK3566)"
   },
   {
     "id": "src-documentation-radxa-rock-5b-rk3588",
     "url": "https://docs.radxa.com/en/rock5/rock5b/hardware-design/hardware-interface",
     "title": "Documentation Radxa : ROCK 5B (RK3588)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Radxa documentation: ROCK 5B (RK3588)"
   },
   {
     "id": "src-droix-fiche-de-la-h96-max-x2-s905x2",
     "url": "https://droix.net/product/h96-max-x2-android-8-oreo-powered-kodi-tv-box-4k-htpc/",
     "title": "DroiX, fiche de la H96 Max X2 (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "DroiX, H96 Max X2 sheet (S905X2)"
   },
   {
     "id": "src-droix-fiche-de-vente-de-la-t95z-plus-s912",
     "url": "https://droix.net/product/t95z-plus-android-powered-tv-box-2-16-3-32-kodi-tv-box/",
     "title": "DroiX, fiche de vente de la T95Z Plus (S912)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "DroiX, T95Z Plus sales sheet (S912)"
   },
   {
     "id": "src-edn-demontage-de-la-onn-4k-streaming-box-s",
     "url": "https://www.edn.com/walmarts-onn-4k-streaming-box-a-google-tv-upgrade-doesnt-clobber-its-cost/",
     "title": "EDN, démontage de la onn 4K Streaming Box (S905Y4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "EDN, teardown of the onn 4K Streaming Box (S905Y4)"
   },
   {
     "id": "src-emish-x700-a-base-de-rk3128-androidtvbox",
     "url": "https://androidtvbox.eu/emish-x700-android-tv-box-powered-by-soc-rockchip-3128/",
     "title": "EMISH X700 à base de RK3128 (AndroidTVBox)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "RK3128-based EMISH X700 (AndroidTVBox)"
   },
   {
     "id": "src-fiche-circuitpython-de-l-orange-pi-5-rk358",
     "url": "https://circuitpython.org/blinka/orange_pi_5/",
     "title": "Fiche CircuitPython de l'Orange Pi 5 (RK3588S)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CircuitPython page of the Orange Pi 5 (RK3588S)"
   },
   {
     "id": "src-fiche-du-yundoo-y8-tv-box-stop",
     "url": "https://tvboxstop.com/rockchip-rk3399-tv-boxes/yundoo-y8-android-tv-box-rockchip-rk3399-hexa-core-usb-3-1-type-c/",
     "title": "Fiche du Yundoo Y8 (TV Box Stop)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Yundoo Y8 sheet (TV Box Stop)"
   },
   {
     "id": "src-fiche-hackerboards-de-la-tinker-board",
     "url": "https://hackerboards.com/board/asus-tinker-board",
     "title": "Fiche HackerBoards de la Tinker Board",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "HackerBoards page of the Tinker Board"
   },
   {
     "id": "src-fiche-nvidia-shield-tv-pro-tegra-x1-3-go",
     "url": "https://www.nvidia.com/en-au/shield/shield-tv-pro/",
     "title": "Fiche Nvidia Shield TV Pro (Tegra X1+, 3 Go)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Nvidia Shield TV Pro sheet (Tegra X1+, 3 GB)"
   },
   {
     "id": "src-fiche-produit-mediatek-mt8581",
     "url": "https://www.mediatek.com/products/blu-ray-and-dvd/mt8581",
     "title": "Fiche produit MediaTek MT8581",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "MediaTek MT8581 product page"
   },
   {
     "id": "src-fiche-produit-realtek-rtd1295",
     "url": "https://www.realtek.com/Product/Index?id=2878&cate_id=194",
     "title": "Fiche produit Realtek RTD1295",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Realtek RTD1295 product page"
   },
   {
     "id": "src-fiche-produit-realtek-rtd1395",
     "url": "https://www.realtek.com/en/products/communications-network-ics/item/rtd1395",
     "title": "Fiche produit Realtek RTD1395",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Realtek RTD1395 product page"
   },
   {
     "id": "src-fiche-revendeur-de-la-m8s-pro-rk3229",
     "url": "https://www.geekbuying.com/item/M8S-PRO-Android-5-1-1-RK3229-4K-TV-BOX-373151.html",
     "title": "Fiche revendeur de la M8S PRO RK3229",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Reseller sheet for the M8S PRO RK3229"
   },
   {
     "id": "src-fiche-revendeur-droix-x96-max-s905x3",
     "url": "https://droix.net/product/x96-max-android-9-pie-smart-tv-box-kodi/",
     "title": "Fiche revendeur DroiX, X96 Max+ (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "DroiX reseller sheet, X96 Max+ (S905X3)"
   },
   {
     "id": "src-fiche-revendeur-du-mx4-rk3229",
     "url": "https://www.geekbuying.com/item/MX4-RK3229-Bluetooth-4K-Kodi-Preinstalled-TV-Box-Android-4-4-Dolby-DTS-1G-8G-H-264-H-265-10Bit-3D-Media-Player-363669.html",
     "title": "Fiche revendeur du MX4 RK3229",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Reseller sheet for the MX4 RK3229"
   },
   {
     "id": "src-fiche-technique-d-un-nas-a-base-de-rtd1296",
     "url": "https://global.download.synology.com/download/Document/Hardware/DataSheet/DiskStation/18-year/DS418/enu/Synology_DS418_Data_Sheet_enu.pdf",
     "title": "Fiche technique d'un NAS à base de RTD1296 (transcodage 4K)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Datasheet of an RTD1296-based NAS (4K transcoding)"
   },
   {
     "id": "src-fiche-technique-nvidia-shield-tv-tegra-x1",
     "url": "https://www.nvidia.com/en-gb/shield/specs/",
     "title": "Fiche technique Nvidia Shield TV (Tegra X1+)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Nvidia Shield TV datasheet (Tegra X1+)"
   },
   {
     "id": "src-fil-coreelec-x96-mini-avec-rk3229-au-lieu",
     "url": "https://discourse.coreelec.org/t/coreelec-does-not-boot-in-x96-mini/2568/26",
     "title": "Fil CoreELEC : X96 Mini avec RK3229 au lieu du S905W",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "CoreELEC thread: X96 Mini with RK3229 instead of S905W"
   },
   {
     "id": "src-forum-armbian-fil-sur-une-box-h3-limite-d",
     "url": "https://forum.armbian.com/topic/17751-mx9-4gb-allwinner-h3/",
     "title": "Forum Armbian : fil sur une box H3 (limite d'adressage 2 Go)",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Armbian forum: thread on an H3 box (2 GB addressing limit)"
   },
   {
     "id": "src-forum-khadas-amlogic-contre-rockchip-x88-p",
     "url": "https://forum.khadas.com/t/amlogic-vs-rockchip/5632/35",
     "title": "Forum Khadas, Amlogic contre Rockchip (X88 Pro X3)",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Khadas forum, Amlogic versus Rockchip (X88 Pro X3)"
   },
   {
     "id": "src-forum-libreelec-liste-de-boxes-s905-s905x",
     "url": "https://forum.libreelec.tv/thread/1982-list-of-s905-s905x-boxes-that-work-with-kszaq-s-build/?pageNo=5",
     "title": "Forum LibreELEC, liste de boxes S905/S905X (page 5)",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "LibreELEC forum, list of S905/S905X boxes (page 5)"
   },
   {
     "id": "src-friendlyelec-fiche-zeropi-h3-ethernet-10-1",
     "url": "https://wiki.friendlyelec.com/wiki/index.php/ZeroPi",
     "title": "FriendlyELEC, fiche ZeroPi (H3, Ethernet 10/100/1000)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "FriendlyELEC, ZeroPi sheet (H3, 10/100/1000 Ethernet)"
   },
   {
     "id": "src-gadget-ro-test-de-la-nexbox-a95x-pro-en-ro",
     "url": "https://gadget.ro/nexbox-a95x-pro-review/",
     "title": "Gadget.ro, test de la Nexbox A95X Pro (en roumain)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Gadget.ro, review of the Nexbox A95X Pro (in Romanian)"
   },
   {
     "id": "src-geekbuying-annonce-de-la-beelink-gt1-k-s92",
     "url": "https://www.geekbuying.com/geekgiz/2019/04/beelink-gt1-k-tv-box-armed-with-amlogic-s922x-android-9-0-os/",
     "title": "Geekbuying, annonce de la Beelink GT1-K (S922X)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Geekbuying, announcement of the Beelink GT1-K (S922X)"
   },
   {
     "id": "src-geekbuying-fiche-de-la-tanix-tx5-pro-s905x",
     "url": "https://www.geekbuying.com/item/Tanix-TX5-Pro-Amlogic-S905X2-Android-8-1-4GB-32GB-TV-Box-417174.html",
     "title": "Geekbuying, fiche de la Tanix TX5 Pro (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Geekbuying, Tanix TX5 Pro sheet (S905X2)"
   },
   {
     "id": "src-h96-max-a-base-de-rk3566-androidpctv",
     "url": "https://androidpctv.com/?p=26376",
     "title": "H96 Max à base de RK3566 (AndroidPCTV)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "RK3566-based H96 Max (AndroidPCTV)"
   },
   {
     "id": "src-hardkernel-fiche-produit-de-l-odroid-c5-s9",
     "url": "https://www.hardkernel.com/shop/odroid-c5/",
     "title": "Hardkernel, fiche produit de l'ODROID-C5 (S905X5M)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Hardkernel, ODROID-C5 product page (S905X5M)"
   },
   {
     "id": "src-hardkernel-fiche-produit-odroid-c4",
     "url": "https://www.hardkernel.com/shop/odroid-c4/",
     "title": "Hardkernel, fiche produit ODROID-C4",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Hardkernel, ODROID-C4 product page"
   },
   {
     "id": "src-hardkernel-fiche-produit-odroid-n2-4-go",
     "url": "https://www.hardkernel.com/shop/odroid-n2-with-4gbyte-ram-2/",
     "title": "Hardkernel, fiche produit ODROID-N2+ 4 Go",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Hardkernel, ODROID-N2+ 4 GB product page"
   },
   {
     "id": "src-hi3798m-v200-fiche-technique-abregee-hisil",
     "url": "https://dfsimg2.hqewimg.com/group1/M00/19/41/wKhk7l-qMACAMqhFAAFShyPKj7w956.pdf",
     "title": "Hi3798M V200 : fiche technique abrégée HiSilicon (copie d'un distributeur)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Hi3798M V200: HiSilicon short datasheet (distributor copy)"
   },
   {
     "id": "src-homatics-europe-fiche-de-la-box-r-plus-4k",
     "url": "https://homatics.eu/homatics-box-r-plus-4k-android-tv-multimedia-center/",
     "title": "Homatics Europe, fiche de la Box R Plus 4K (S905X4)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Homatics Europe, Box R Plus 4K sheet (S905X4)"
   },
   {
     "id": "src-home-theatre-life-test-de-la-beelink-gt1-m",
     "url": "https://hometheatrelife.com/beelink-gt1-mini-review/",
     "title": "Home Theatre Life, test de la Beelink GT1 Mini (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Home Theatre Life, review of the Beelink GT1 Mini (S905X2)"
   },
   {
     "id": "src-hwpure-fiche-allwinner-h618-source-seconda",
     "url": "https://hwpure.com/hardware/processors/allwinner-h618",
     "title": "HWPure : fiche Allwinner H618 (source secondaire)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "HWPure: Allwinner H618 page (secondary source)"
   },
   {
     "id": "src-khadas-fiche-produit-de-la-vim3l-s905d3",
     "url": "https://www.khadas.com/product-page/vim3l-bare-board",
     "title": "Khadas, fiche produit de la VIM3L (S905D3)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Khadas, VIM3L product page (S905D3)"
   },
   {
     "id": "src-khadas-page-produit-de-la-vim3-a311d",
     "url": "https://www.khadas.com/vim3",
     "title": "Khadas, page produit de la VIM3 (A311D)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Khadas, VIM3 product page (A311D)"
   },
   {
     "id": "src-lecteurs-a-base-de-rtd1619-cnx-software",
     "url": "https://www.cnx-software.com/2020/06/29/rtd1619-media-players-dune-hd-pro-4k-ii-zidoo-z9x-zidoo-x/",
     "title": "Lecteurs à base de RTD1619 (CNX Software)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "RTD1619-based players (CNX Software)"
   },
   {
     "id": "src-libreelec-boxes-annoncees-s905-mais-a-base",
     "url": "https://forum.libreelec.tv/thread/2156-8-0-2e-libreelec-8-0-for-s905-s905x/?pageNo=206",
     "title": "LibreELEC, boxes annoncées S905 mais à base Rockchip",
     "type": "forum",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "LibreELEC, boxes advertised as S905 but Rockchip-based"
   },
   {
     "id": "src-linux-sunxi-h3",
     "url": "https://linux-sunxi.org/H3",
     "title": "linux-sunxi, Allwinner H3",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "linux-sunxi, Allwinner H3"
   },
   {
     "id": "src-linux-sunxi-h313",
     "url": "https://linux-sunxi.org/H313",
     "title": "linux-sunxi, Allwinner H313",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "linux-sunxi, Allwinner H313"
   },
   {
     "id": "src-linux-sunxi-h616",
     "url": "https://linux-sunxi.org/H616",
     "title": "linux-sunxi, Allwinner H616",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "linux-sunxi, Allwinner H616"
   },
   {
     "id": "src-linuxgizmos-carte-vim4-et-a311d2",
     "url": "https://linuxgizmos.com/vim4-sbc-with-up-to-8gb-ram-rides-octa-core-amlogic-a311d2/",
     "title": "LinuxGizmos, carte VIM4 et A311D2",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "LinuxGizmos, VIM4 board and A311D2"
   },
   {
     "id": "src-linuxgizmos-odroid-c4-s905x3",
     "url": "https://linuxgizmos.com/odroid-c4-could-be-the-odroid-youre-looking-for/",
     "title": "LinuxGizmos, ODROID-C4 (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "LinuxGizmos, ODROID-C4 (S905X3)"
   },
   {
     "id": "src-linuxlookup-test-du-minix-neo-u9-h",
     "url": "https://www.linuxlookup.com/review/minix_neo_u9_h_media_hub_review",
     "title": "LinuxLookup, test du MINIX NEO U9-H",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "LinuxLookup, review of the MINIX NEO U9-H"
   },
   {
     "id": "src-linuxlookup-test-du-minix-neo-x8-h-plus",
     "url": "https://www.linuxlookup.com/review/minix_neo_x8_h_plus_media_hub_review",
     "title": "LinuxLookup, test du MINIX NEO X8-H Plus",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "LinuxLookup, review of the MINIX NEO X8-H Plus"
   },
   {
     "id": "src-liste-noyau-linux-device-tree-minix-neo-u9",
     "url": "https://lkml.iu.edu/hypermail/linux/kernel/2102.0/01209.html",
     "title": "Liste noyau Linux, device-tree Minix NEO U9-H",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Linux kernel mailing list, Minix NEO U9-H device tree"
   },
   {
     "id": "src-liste-noyau-linux-patch-devicetree-du-rk33",
     "url": "https://lkml.iu.edu/hypermail/linux/kernel/2004.2/02624.html",
     "title": "Liste noyau Linux : patch devicetree du RK3318 (dérivé du RK3328)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Linux kernel mailing list: RK3318 devicetree patch (derived from the RK3328)"
   },
   {
     "id": "src-livre-blanc-nvidia-tegra-x1-janvier-2015",
     "url": "https://images.nvidia.com/content/pdf/tegra/Tegra-X1-whitepaper-v1.0.pdf",
     "title": "Livre blanc Nvidia Tegra X1 (janvier 2015)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Nvidia Tegra X1 white paper (January 2015)"
   },
   {
     "id": "src-lupa-cz-boxes-mecool-m8s-pro-et-pro-en-tch",
     "url": "https://www.lupa.cz/clanky/android-boxy-mecool-m8s-pro-pro/",
     "title": "Lupa.cz, boxes Mecool M8S Pro et Pro+ (en tchèque)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Lupa.cz, Mecool M8S Pro and Pro+ boxes (in Czech)"
   },
   {
     "id": "src-micrologiciel-de-la-hk1-mini-plus-getdroid",
     "url": "https://www.getdroidtips.com/stock-firmware-hk1-mini-plus-tv-box/",
     "title": "Micrologiciel de la HK1 Mini Plus (GetDroidTips)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "HK1 Mini Plus firmware (GetDroidTips)"
   },
   {
     "id": "src-micrologiciel-du-h96-max-rk3318-androidtvb",
     "url": "https://androidtvbox.eu/new-h96-max-rk3318-firmware-tv-box-with-rk3318-soc-201907022/",
     "title": "Micrologiciel du H96 Max RK3318 (AndroidTVBox)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "H96 Max RK3318 firmware (AndroidTVBox)"
   },
   {
     "id": "src-micrologiciel-du-mx10-pro-getdroidtips",
     "url": "https://www.getdroidtips.com/stock-firmware-mx10-pro-tv-box/",
     "title": "Micrologiciel du MX10 Pro (GetDroidTips)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "MX10 Pro firmware (GetDroidTips)"
   },
   {
     "id": "src-micrologiciel-hk1-super-mini-plus-chinagad",
     "url": "https://chinagadgetsreviews.com/download-android-11-stock-firmware-for-hk1-super-tv-box.html",
     "title": "Micrologiciel HK1 Super / Mini Plus (ChinaGadgetsReviews)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "HK1 Super / Mini Plus firmware (ChinaGadgetsReviews)"
   },
   {
     "id": "src-noyau-linux-devicetree-d-une-x96q-compatib",
     "url": "https://raw.githubusercontent.com/torvalds/linux/master/arch/arm64/boot/dts/allwinner/sun50i-h313-x96q.dts",
     "title": "Noyau Linux : devicetree d'une X96Q (compatible sun50i-h616)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Linux kernel: devicetree of an X96Q (compatible sun50i-h616)"
   },
   {
     "id": "src-noyau-linux-devicetree-de-la-beelink-gs1-c",
     "url": "https://raw.githubusercontent.com/torvalds/linux/master/arch/arm64/boot/dts/allwinner/sun50i-h6-beelink-gs1.dts",
     "title": "Noyau Linux : devicetree de la Beelink GS1 (compatible sun50i-h6)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Linux kernel: devicetree of the Beelink GS1 (compatible sun50i-h6)"
   },
   {
     "id": "src-noyau-linux-devicetree-de-la-beelink-x2-co",
     "url": "https://raw.githubusercontent.com/torvalds/linux/master/arch/arm/boot/dts/allwinner/sun8i-h3-beelink-x2.dts",
     "title": "Noyau Linux : devicetree de la Beelink X2 (compatible sun8i-h3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Linux kernel: devicetree of the Beelink X2 (compatible sun8i-h3)"
   },
   {
     "id": "src-noyau-linux-devicetree-de-la-tanix-tx6-com",
     "url": "https://raw.githubusercontent.com/torvalds/linux/master/arch/arm64/boot/dts/allwinner/sun50i-h6-tanix-tx6.dts",
     "title": "Noyau Linux : devicetree de la Tanix TX6 (compatible sun50i-h6)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Linux kernel: devicetree of the Tanix TX6 (compatible sun50i-h6)"
   },
   {
     "id": "src-noyau-linux-devicetree-de-la-transpeed-8k6",
     "url": "https://raw.githubusercontent.com/torvalds/linux/master/arch/arm64/boot/dts/allwinner/sun50i-h618-transpeed-8k618-t.dts",
     "title": "Noyau Linux : devicetree de la Transpeed 8K618-T (compatible sun50i-h618)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Linux kernel: devicetree of the Transpeed 8K618-T (compatible sun50i-h618)"
   },
   {
     "id": "src-nvidia-fiche-shield-tv",
     "url": "https://www.nvidia.com/en-au/shield/shield-tv/",
     "title": "Nvidia : fiche Shield TV",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Nvidia: Shield TV page"
   },
   {
     "id": "src-page-developpeur-nvidia-tegra-x1",
     "url": "https://developer.nvidia.com/content/tegra-x1",
     "title": "Page développeur Nvidia Tegra X1",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Nvidia Tegra X1 developer page"
   },
   {
     "id": "src-page-produit-du-h96-mini-v8",
     "url": "https://www.h96tvbox.com/product/h96-mini-v8/",
     "title": "Page produit du H96 Mini V8",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "H96 Mini V8 product page"
   },
   {
     "id": "src-page-produit-ugoos-ut8-pro-rk3568",
     "url": "https://ugoos.com/ugoos-ut8-pro-64bit-tv-box-RK3568-android-11-with-bt-remote",
     "title": "Page produit Ugoos UT8 PRO (RK3568)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Ugoos UT8 PRO product page (RK3568)"
   },
   {
     "id": "src-pc-perspective-lancement-de-la-khadas-vim3",
     "url": "https://pcper.com/2019/07/khadas-launches-vim3-sbc-with-amlogic-a311d-soc/",
     "title": "PC Perspective, lancement de la Khadas VIM3 (A311D)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "PC Perspective, launch of the Khadas VIM3 (A311D)"
   },
   {
     "id": "src-pchouse-fiche-de-vente-de-la-tanix-tx3-max",
     "url": "https://www.pchouse.com.bd/tanix-tx3-max-tv-box",
     "title": "PCHouse, fiche de vente de la Tanix TX3 Max",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "PCHouse, Tanix TX3 Max sales sheet"
   },
   {
     "id": "src-pine64-fiche-de-la-carte-pine-h64-modele-b",
     "url": "https://pine64.org/devices/pine_h64_model_b/",
     "title": "Pine64, fiche de la carte Pine H64 modèle B (H6, jusqu'à 3 Go de LPDDR3)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Pine64, Pine H64 model B board sheet (H6, up to 3 GB of LPDDR3)"
   },
   {
     "id": "src-pine64-fiche-quartz64-model-a-rk3566",
     "url": "https://pine64.org/devices/quartz64_model_a/",
     "title": "Pine64, fiche Quartz64 Model A (RK3566)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Pine64, Quartz64 Model A sheet (RK3566)"
   },
   {
     "id": "src-pine64-fiche-rock64-rk3328",
     "url": "https://pine64.org/devices/rock64/",
     "title": "Pine64, fiche ROCK64 (RK3328)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Pine64, ROCK64 sheet (RK3328)"
   },
   {
     "id": "src-pine64-fiche-rockpro64-rk3399",
     "url": "https://pine64.org/devices/rockpro64/",
     "title": "Pine64, fiche ROCKPro64 (RK3399)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Pine64, ROCKPro64 sheet (RK3399)"
   },
   {
     "id": "src-pplware-presentation-du-beelink-gt1-en-por",
     "url": "https://pplware.sapo.pt/gadgets/beelink-gt1-nova-tv-box-vai-conquistar/",
     "title": "Pplware, présentation du Beelink GT1 (en portugais)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Pplware, introduction of the Beelink GT1 (in Portuguese)"
   },
   {
     "id": "src-presentation-de-la-quartz64-linuxgizmos",
     "url": "https://linuxgizmos.com/pine64-unveils-rk3566-powered-sbc-and-reveals-an-upcoming-risc-v-board/",
     "title": "Présentation de la Quartz64 (LinuxGizmos)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Introduction of the Quartz64 (LinuxGizmos)"
   },
   {
     "id": "src-presentation-de-la-rock-3a-cnx-software",
     "url": "https://www.cnx-software.com/2021/07/19/rock-3a-sbc-nvme-ssd-wifi-6-raspberry-pi-form-factor/",
     "title": "Présentation de la ROCK 3A (CNX Software)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Introduction of the ROCK 3A (CNX Software)"
   },
   {
     "id": "src-presentation-du-dune-hd-realbox-4k-telepol",
     "url": "https://www.telepolis.pl/tech/sprzet/dune-hd-realbox-4k-nowy-odtwarzacz-sieciowy-z-androidem-i-procesorem-realtek-1395",
     "title": "Présentation du Dune HD Realbox 4K (Telepolis)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Introduction of the Dune HD Realbox 4K (Telepolis)"
   },
   {
     "id": "src-presentation-du-hi3798m-v200-cnx-software",
     "url": "https://www.cnx-software.com/2016/09/12/hisilicon-hi3798m-v200-soc-to-deliver-cheaper-4k-tv-boxes-with-sata-gigabit-ethernet-andor-usb-3-0/",
     "title": "Présentation du Hi3798M V200 (CNX Software)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Introduction of the Hi3798M V200 (CNX Software)"
   },
   {
     "id": "src-profesional-review-vorke-z1-en-espagnol",
     "url": "https://www.profesionalreview.com/2016/12/06/vorke-z1-tv-box-3-gb-ram-70-euros/amp/",
     "title": "Profesional Review, Vorke Z1 (en espagnol)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Profesional Review, Vorke Z1 (in Spanish)"
   },
   {
     "id": "src-projet-linux-meson-materiel-amlogic-pris-e",
     "url": "https://linux-meson.com/hardware.html",
     "title": "Projet linux-meson, matériel Amlogic pris en charge",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "linux-meson project, supported Amlogic hardware"
   },
   {
     "id": "src-r-box-a-base-de-rk3229-androidtvbox",
     "url": "https://androidtvbox.eu/r-box-android-tv-box-powered-rockchip-rk3229/",
     "title": "R-BOX à base de RK3229 (AndroidTVBox)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "RK3229-based R-BOX (AndroidTVBox)"
   },
   {
     "id": "src-rockchip-rk3128-datasheet-v1-2-copie-heber",
     "url": "https://rockchip.fr/RK3128%20datasheet%20V1.2.pdf",
     "title": "Rockchip, RK3128 Datasheet v1.2 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3128 Datasheet v1.2 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-rockchip-rk3228a-datasheet-v1-1-copie-hebe",
     "url": "https://rockchip.fr/RK3228A%20datasheet%20V1.1.pdf",
     "title": "Rockchip, RK3228A Datasheet v1.1 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3228A Datasheet v1.1 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-rockchip-rk3228b-datasheet-v1-3-copie-hebe",
     "url": "https://rockchip.fr/RK3228B%20datasheet%20V1.3.pdf",
     "title": "Rockchip, RK3228B Datasheet v1.3 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3228B Datasheet v1.3 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-rockchip-rk3229-datasheet-v1-3-copie-heber",
     "url": "https://rockchip.fr/RK3229%20datasheet%20V1.3.pdf",
     "title": "Rockchip, RK3229 Datasheet v1.3 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3229 Datasheet v1.3 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-rockchip-rk3288-datasheet-v2-7-copie-heber",
     "url": "https://rockchip.fr/RK3288%20datasheet%20V2.7.pdf",
     "title": "Rockchip, RK3288 Datasheet v2.7 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3288 Datasheet v2.7 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-rockchip-rk3318-datasheet-v1-0-copie-heber",
     "url": "https://rockchip.fr/RK3318%20datasheet%20V1.0.pdf",
     "title": "Rockchip, RK3318 Datasheet v1.0 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3318 Datasheet v1.0 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-rockchip-rk3328-datasheet",
     "url": "https://rockchip.fr/RK3328%20datasheet%20V1.2.pdf",
     "title": "Rockchip, RK3328 Datasheet v1.2",
     "type": "datasheet",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Rockchip, RK3328 Datasheet v1.2"
   },
   {
     "id": "src-rockchip-rk3399-datasheet-v1-8-copie-heber",
     "url": "https://rockchip.fr/RK3399%20datasheet%20V1.8.pdf",
     "title": "Rockchip, RK3399 Datasheet v1.8 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3399 Datasheet v1.8 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-rockchip-rk3566-datasheet-v1-1-copie-heber",
     "url": "https://rockchip.fr/RK3566%20datasheet%20V1.1.pdf",
     "title": "Rockchip, RK3566 Datasheet v1.1 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3566 Datasheet v1.1 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-rockchip-rk3568-datasheet-v1-3-copie-heber",
     "url": "https://rockchip.fr/RK3568%20datasheet%20V1.3.pdf",
     "title": "Rockchip, RK3568 Datasheet v1.3 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3568 Datasheet v1.3 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-rockchip-rk3588-datasheet-v1-9-copie-heber",
     "url": "https://rockchip.fr/RK3588%20datasheet%20V1.9.pdf",
     "title": "Rockchip, RK3588 Datasheet v1.9 (copie hébergée par rockchip.fr)",
     "type": "datasheet",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Rockchip, RK3588 Datasheet v1.9 (copy hosted by rockchip.fr)"
   },
   {
     "id": "src-ruach-a20s-a-base-de-rk3128-androidtvbox",
     "url": "https://androidtvbox.eu/ruach-a20s-android-tv-box-powered-by-rockchip-rk3128/",
     "title": "Ruach A20s à base de RK3128 (AndroidTVBox)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "RK3128-based Ruach A20s (AndroidTVBox)"
   },
   {
     "id": "src-sdmc-comparatif-des-soc-amlogic-s905x2-et",
     "url": "https://en.sdmctech.com/news/industry-knowledge_1883.html",
     "title": "SDMC, comparatif des SoC Amlogic S905X2 et S905X3",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "SDMC, comparison of the Amlogic SoCs S905X2 and S905X3"
   },
   {
     "id": "src-sdmc-fiche-d-une-box-s905y4-4k",
     "url": "https://en.sdmctech.com/product/android-tv_258.html",
     "title": "SDMC, fiche d'une box S905Y4 4K",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "SDMC, S905Y4 4K box sheet"
   },
   {
     "id": "src-sdmc-fiche-des-caracteristiques-du-s905x2",
     "url": "https://en.sdmctech.com/news/product-news_1888.html",
     "title": "SDMC, fiche des caractéristiques du S905X2",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "SDMC, S905X2 characteristics sheet"
   },
   {
     "id": "src-smartworld-test-de-la-magicsee-n5-en-itali",
     "url": "https://www.smartworld.it/recensioni/magicsee-n5",
     "title": "SmartWorld, test de la Magicsee N5 (en italien)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "SmartWorld, review of the Magicsee N5 (in Italian)"
   },
   {
     "id": "src-tanix-fiche-de-la-tx3-s905x3",
     "url": "https://www.tanixtvbox.com/tx3-smart-amlogic-s905x3-customized-android-tv-box-set-top-box/",
     "title": "Tanix, fiche de la TX3 (S905X3)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Tanix, TX3 sheet (S905X3)"
   },
   {
     "id": "src-tanix-tx2-r2-a-base-de-rk3229-androidtvbox",
     "url": "https://androidtvbox.eu/tx2-r2-android-tv-box-powered-by-rockchip-rk3229-promo/",
     "title": "Tanix TX2 R2 à base de RK3229 (AndroidTVBox)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "RK3229-based Tanix TX2 R2 (AndroidTVBox)"
   },
   {
     "id": "src-techapple-presentation-de-l-allwinner-h700",
     "url": "https://global.techapple.com/2024/05/allwinner-h700-a-high-performance-quad-core-multimedia-platform-becomes-the-core-choice-for-gaming-consoles/",
     "title": "TechApple : présentation de l'Allwinner H700",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TechApple: introduction of the Allwinner H700"
   },
   {
     "id": "src-techxreviews-test-de-l-ugoos-am6b-plus-s92",
     "url": "https://techxreviews.com/ugoos-am6b-plus-tv-box-review/",
     "title": "TechXReviews, test de l'Ugoos AM6B Plus (S922X-J)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TechXReviews, review of the Ugoos AM6B Plus (S922X-J)"
   },
   {
     "id": "src-techxreviews-test-de-la-hk1-rbox-x4-s905x4",
     "url": "https://techxreviews.com/hk1-rbox-x4-review/",
     "title": "TechXReviews, test de la HK1 RBOX X4 (S905X4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TechXReviews, review of the HK1 RBOX X4 (S905X4)"
   },
   {
     "id": "src-techxreviews-test-de-la-mecool-km6-deluxe",
     "url": "https://techxreviews.com/mecool-km6-deluxe-tv-box-review/",
     "title": "TechXReviews, test de la Mecool KM6 Deluxe (S905X4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TechXReviews, review of the Mecool KM6 Deluxe (S905X4)"
   },
   {
     "id": "src-techxreviews-test-de-la-x88-pro-x3-s905x3",
     "url": "https://techxreviews.com/x88-pro-x3-tv-box-review/",
     "title": "TechXReviews, test de la X88 Pro X3 (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TechXReviews, review of the X88 Pro X3 (S905X3)"
   },
   {
     "id": "src-techxreviews-test-de-la-x96-max-s905x3",
     "url": "https://techxreviews.com/x96-max-plus-tv-box-review/",
     "title": "TechXReviews, test de la X96 Max+ (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TechXReviews, review of the X96 Max+ (S905X3)"
   },
   {
     "id": "src-techxreviews-test-de-la-x96-x4-s905x4",
     "url": "https://techxreviews.com/x96-x4-tv-box-review/",
     "title": "TechXReviews, test de la X96 X4 (S905X4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TechXReviews, review of the X96 X4 (S905X4)"
   },
   {
     "id": "src-test-d-un-mxq-4k-rk3229-eyalo",
     "url": "https://www.eyalo.com/2074/review-eny-mxq-4k/",
     "title": "Test d'un MXQ-4K RK3229 (Eyalo)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of an MXQ-4K RK3229 (Eyalo)"
   },
   {
     "id": "src-test-de-l-a95x-r1-igeekphone",
     "url": "https://www.igeekphone.com/alfawise-a95x-r1-cheapest-rk3229-quad-core-android6-0-tv-box-review-at-25/",
     "title": "Test de l'A95X R1 (iGeekphone)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the A95X R1 (iGeekphone)"
   },
   {
     "id": "src-test-de-l-a95x-r2-mediaplayers-gr",
     "url": "https://mediaplayers.gr/a95x-r2/",
     "title": "Test de l'A95X R2 (MediaPlayers.gr)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the A95X R2 (MediaPlayers.gr)"
   },
   {
     "id": "src-test-de-la-beelink-a1-androidpctv",
     "url": "https://androidpctv.com/?p=1356",
     "title": "Test de la Beelink A1 (AndroidPCTV)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the Beelink A1 (AndroidPCTV)"
   },
   {
     "id": "src-test-de-la-hk1-rbox-r1-techxreviews",
     "url": "https://techxreviews.com/hk1-rbox-r1-tv-box-review/",
     "title": "Test de la HK1 RBOX R1 (TechXReviews)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the HK1 RBOX R1 (TechXReviews)"
   },
   {
     "id": "src-test-de-la-hk1-rbox-r2-techxreviews",
     "url": "https://techxreviews.com/hk1-rbox-r2-tv-box-review/",
     "title": "Test de la HK1 RBOX R2 (TechXReviews)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the HK1 RBOX R2 (TechXReviews)"
   },
   {
     "id": "src-test-de-la-q96-igeekphone",
     "url": "https://www.igeekphone.com/q96-smart-tv-box-review-comes-with-1gb-ram-8gb-rom-and-android-9-0-for-just-19-99-at-gearbest-coupon/",
     "title": "Test de la Q96 (iGeekphone)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the Q96 (iGeekphone)"
   },
   {
     "id": "src-test-de-la-rockpro64-cnx-software",
     "url": "https://www.cnx-software.com/2018/08/27/rockpro64-rk3399-board-linux-review-ubuntu-18-04/",
     "title": "Test de la RockPro64 (CNX Software)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the RockPro64 (CNX Software)"
   },
   {
     "id": "src-test-de-la-shield-android-tv-2015-pc-persp",
     "url": "https://pcper.com/2015/05/the-nvidia-shield-with-android-tv-review-early-impressions/",
     "title": "Test de la Shield Android TV 2015 (PC Perspective)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the Shield Android TV 2015 (PC Perspective)"
   },
   {
     "id": "src-test-de-la-tronsmart-orion-r28-android-aut",
     "url": "https://www.androidauthority.com/tronsmart-orion-r28-review-527006/",
     "title": "Test de la Tronsmart Orion R28 (Android Authority)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the Tronsmart Orion R28 (Android Authority)"
   },
   {
     "id": "src-test-de-la-x88-pro-10-hyperhdr",
     "url": "https://www.hyperhdr.eu/2022/01/tv-box-mania-i-part-x88-pro-10.html",
     "title": "Test de la X88 PRO 10 (HyperHDR)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the X88 PRO 10 (HyperHDR)"
   },
   {
     "id": "src-test-de-la-zidoo-z9s-a-base-de-rtd1296dd-a",
     "url": "https://androidpctv.com/?p=9459",
     "title": "Test de la Zidoo Z9S à base de RTD1296DD (AndroidPCTV)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the RTD1296DD-based Zidoo Z9S (AndroidPCTV)"
   },
   {
     "id": "src-test-de-la-zidoo-z9x-a-base-de-rtd1619dr-a",
     "url": "https://androidpctv.com/?p=23259",
     "title": "Test de la Zidoo Z9X à base de RTD1619DR (AndroidPCTV)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the RTD1619DR-based Zidoo Z9X (AndroidPCTV)"
   },
   {
     "id": "src-test-du-dune-hd-pro-4k-mediaplayers-gr",
     "url": "https://mediaplayers.gr/dune-hd-pro-4k/",
     "title": "Test du Dune HD Pro 4K (MediaPlayers.gr)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the Dune HD Pro 4K (MediaPlayers.gr)"
   },
   {
     "id": "src-test-du-dune-hd-pro-4k-perfect-acoustic",
     "url": "https://perfectacoustic.co.uk/dune-hd-pro-4k/",
     "title": "Test du Dune HD Pro 4K (Perfect Acoustic)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the Dune HD Pro 4K (Perfect Acoustic)"
   },
   {
     "id": "src-test-du-hk1-max-techxreviews",
     "url": "https://techxreviews.com/hk1-max-smart-tv-box-review/",
     "title": "Test du HK1 Max (TechXReviews)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the HK1 Max (TechXReviews)"
   },
   {
     "id": "src-test-du-mx10-the-gadgeteer",
     "url": "https://the-gadgeteer.com/2019/04/25/mx10-android-tv-box-review/",
     "title": "Test du MX10 (The Gadgeteer)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the MX10 (The Gadgeteer)"
   },
   {
     "id": "src-test-du-mxr-pro-wirelesshack",
     "url": "https://www.wirelesshack.org/review-mxr-pro-4k-tv-box-rk3328-4gb-ram-android-7-1.html",
     "title": "Test du MXR PRO (WirelessHack)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the MXR PRO (WirelessHack)"
   },
   {
     "id": "src-test-du-r-tv-box-k99-hometheatrelife",
     "url": "https://hometheatrelife.com/r-tv-box-k99-review/",
     "title": "Test du R-TV BOX K99 (HomeTheatreLife)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the R-TV BOX K99 (HomeTheatreLife)"
   },
   {
     "id": "src-test-du-t9-rk3328-wirelesshack",
     "url": "https://www.wirelesshack.org/review-sunvell-t9-budget-android-8-1-tv-box-cpu-rk3328-ram-4gb.html",
     "title": "Test du T9 RK3328 (WirelessHack)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the T9 RK3328 (WirelessHack)"
   },
   {
     "id": "src-test-du-yundoo-y8-rk3399-androidtvbox",
     "url": "https://androidtvbox.eu/yundoo-y8-review-android-tv-box-powered-by-new-rockchip-rk3399/",
     "title": "Test du Yundoo Y8 RK3399 (AndroidTVBox)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Review of the Yundoo Y8 RK3399 (AndroidTVBox)"
   },
   {
     "id": "src-travis-x96mini",
     "url": "https://travis90x.altervista.org/x96mini-tvbox-with-armbian-klipper-fake-amlogic-s905w-real-rockchip-rk322x/",
     "title": "Blog, X96 mini avec Armbian : S905W annoncé, RK322x réel",
     "type": "article",
-    "accessed": "2026-10-24"
+    "accessed": "2026-10-24",
+    "title_en": "Blog, X96 mini with Armbian: advertised S905W, real RK322x"
   },
   {
     "id": "src-troypoint-mecool-km9-pro-honour-s905x2",
     "url": "https://troypoint.com/mecool-km9-pro-honour-android-tv-box/",
     "title": "TroyPoint, Mecool KM9 Pro Honour (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TroyPoint, Mecool KM9 Pro Honour (S905X2)"
   },
   {
     "id": "src-tv-box-stop-beelink-gt-king-ii-a311d2",
     "url": "https://tvboxstop.com/latest-android-tv-boxes/beelink-gt-king-ii-tv-box-its-a-beast-of-a-tv-box/",
     "title": "TV Box Stop, Beelink GT King II (A311D2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TV Box Stop, Beelink GT King II (A311D2)"
   },
   {
     "id": "src-tv-box-stop-mecool-km6-classic-s905x4",
     "url": "https://tvboxstop.com/2021-tv-boxes/new-2021-mecool-km6-classic-amlogic-s905x4-android-10-q-4k-tv-box/",
     "title": "TV Box Stop, Mecool KM6 Classic (S905X4)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TV Box Stop, Mecool KM6 Classic (S905X4)"
   },
   {
     "id": "src-tv-box-stop-test-de-la-h96-max-x2-s905x2",
     "url": "https://tvboxstop.com/h96-max-x2-amlogic-s905x2-ddr4-android-8-1-4k-tv-box-review-and-benchmarks/",
     "title": "TV Box Stop, test de la H96 Max X2 (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TV Box Stop, review of the H96 Max X2 (S905X2)"
   },
   {
     "id": "src-tv-box-stop-test-de-la-h96-max-x3-s905x3",
     "url": "https://tvboxstop.com/2020-tv-boxes/2020-h96-max-x3-amlogic-s905x3-android-9-8k-tv-box-review/",
     "title": "TV Box Stop, test de la H96 Max X3 (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TV Box Stop, review of the H96 Max X3 (S905X3)"
   },
   {
     "id": "src-tv-box-stop-test-de-la-mecool-km9-pro-s905",
     "url": "https://tvboxstop.com/2019-tv-boxes/mecool-km9-amlogic-s905x2-android-9-4k-uhd-tv-box-review/",
     "title": "TV Box Stop, test de la Mecool KM9 Pro (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TV Box Stop, review of the Mecool KM9 Pro (S905X2)"
   },
   {
     "id": "src-tv-box-stop-test-de-la-tanix-tx5-max-s905x",
     "url": "https://tvboxstop.com/tanix-tx5-max-amlogic-s905x2-alice-ux-android-8-1-4k-tv-box-review/",
     "title": "TV Box Stop, test de la Tanix TX5 Max (S905X2)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TV Box Stop, review of the Tanix TX5 Max (S905X2)"
   },
   {
     "id": "src-tv-box-stop-test-de-la-vontar-x3-s905x3",
     "url": "https://tvboxstop.com/2020-tv-boxes/vontar-x3-amlogic-s905x3-4k-tv-box-review/",
     "title": "TV Box Stop, test de la Vontar X3 (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TV Box Stop, review of the Vontar X3 (S905X3)"
   },
   {
     "id": "src-tv-box-stop-test-de-la-x96-air-s905x3",
     "url": "https://tvboxstop.com/ddr4-tv-box/newest-s905x3-cpu-x96-air-android-9-tv-box-review/",
     "title": "TV Box Stop, test de la X96 Air (S905X3)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "TV Box Stop, review of the X96 Air (S905X3)"
   },
   {
     "id": "src-ugoos-fiche-de-l-am6-plus-s922xj",
     "url": "https://ugoos.com/ugoos-am6-plus-android-9-4-32-gb",
     "title": "Ugoos, fiche de l'AM6 Plus (S922XJ)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Ugoos, AM6 Plus sheet (S922XJ)"
   },
   {
     "id": "src-ugoos-fiche-de-l-am7-s905x4",
     "url": "https://ugoos.com/ugoos-am7-s905x4-amlogic-4gb-32gb",
     "title": "Ugoos, fiche de l'AM7 (S905X4)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Ugoos, AM7 sheet (S905X4)"
   },
   {
     "id": "src-ugoos-fiche-de-l-am8-s928x-j",
     "url": "https://ugoos.co/product/ugoos-am8-8k-s928x-j-mini-pc-tv-box/",
     "title": "Ugoos, fiche de l'AM8 (S928X-J)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Ugoos, AM8 sheet (S928X-J)"
   },
   {
     "id": "src-ugoos-fiche-de-l-am9-s905x5",
     "url": "https://ugoos.com/ugoos-am9-64bit-amlogic-s905x5-android-tv-box",
     "title": "Ugoos, fiche de l'AM9 (S905X5)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Ugoos, AM9 sheet (S905X5)"
   },
   {
     "id": "src-ugoos-fiche-de-l-x5m-pro-s905x5m",
     "url": "https://ugoos.com/x5m-pro-tv-box-family-series-devices-amlogic-soc",
     "title": "Ugoos, fiche de l'X5M Pro (S905X5M)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Ugoos, X5M Pro sheet (S905X5M)"
   },
   {
     "id": "src-vontar-kk-max-a-base-de-rk3566-androidtvbo",
     "url": "https://androidtvbox.eu/vontar-kk-max-android-11-rk3566-soc-tv-box/",
     "title": "VONTAR KK MAX à base de RK3566 (AndroidTVBox)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "RK3566-based VONTAR KK MAX (AndroidTVBox)"
   },
   {
     "id": "src-wiki-radxa-rock-pi-4-rk3399",
     "url": "https://wiki.radxa.com/Rockpi4",
     "title": "Wiki Radxa : ROCK Pi 4 (RK3399)",
     "type": "vendor",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Radxa wiki: ROCK Pi 4 (RK3399)"
   },
   {
     "id": "src-wikipedia-anglais-article-amlogic",
     "url": "https://en.wikipedia.org/wiki/Amlogic",
     "title": "Wikipédia (anglais), article Amlogic",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Wikipedia (English), Amlogic article"
   },
   {
     "id": "src-wikipedia-en-allwinner-technology-tableaux",
     "url": "https://en.wikipedia.org/wiki/Allwinner_Technology",
     "title": "Wikipédia (EN), Allwinner Technology : tableaux des puces",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "Wikipedia (EN), Allwinner Technology: chip tables"
   },
   {
     "id": "src-xnano-x5-a-base-de-rtd1295-cnx-software",
     "url": "https://www.cnx-software.com/2017/07/12/xnano-x5-4k-tv-box-with-gigabit-ethernet-hdmi-input-usb-3-0-and-sata-goes-for-68-and-up/",
     "title": "Xnano X5 à base de RTD1295 (CNX Software)",
     "type": "article",
-    "accessed": "2026-10-25"
+    "accessed": "2026-10-25",
+    "title_en": "RTD1295-based Xnano X5 (CNX Software)"
   }
 ]

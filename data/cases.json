@@ -17,7 +17,8 @@
     "type": "inflated-specs",
     "summary_fr": "Annoncée 4/64 ; 1 Go de RAM et 16 Go de stockage rapportés sous Armbian, la RAM de 1 Go étant confirmée par un log de boot d'après un contributeur.",
     "sources": ["src-armbian-hk1max"],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "summary_en": "Advertised 4/64; 1 GB of RAM and 16 GB of storage reported under Armbian, the 1 GB of RAM being confirmed by a boot log according to a contributor."
   },
   {
     "id": "mxq-pro-4k-5g-h3",
@@ -37,7 +38,8 @@
     "type": "wrong-soc",
     "summary_fr": "Un témoignage unique décrit une box de ce nom dont la carte fonctionnerait avec une image Armbian prévue pour un H3 alors que le modèle d'origine utiliserait un SoC Amlogic ; l'auteur parle d'un probable clone. Aucun log ni photo de puce.",
     "sources": ["src-armbian-forum-mxq-pro-4k-5g-a-base-de-h3"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "A single testimony describes a box of this name whose board would work with an Armbian image intended for an H3 while the original model would use an Amlogic SoC; the author speaks of a probable clone. No log or chip photo."
   },
   {
     "id": "mxq-pro-4k-s905x-rk3229",
@@ -57,7 +59,8 @@
     "type": "wrong-soc",
     "summary_fr": "Un fil Armbian sur les boxes RK322x traite une « MXQ Pro 4K » annoncée avec un S905X comme une carte RK3229. Mention brève, sans photo de puce ni log détaillé ; le nom MXQ Pro est repris par plusieurs fabricants.",
     "sources": ["src-armbian-rk322x"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "An Armbian thread on RK322x boxes treats an \"MXQ Pro 4K\" advertised with an S905X as an RK3229 board. Brief mention, with no chip photo or detailed log; the MXQ Pro name is used by several manufacturers."
   },
   {
     "id": "mxq-pro-s905-rockchip-reported",
@@ -77,7 +80,8 @@
     "type": "wrong-soc",
     "summary_fr": "Des participants d'un fil LibreELEC rapportent des box de type MXQ Pro vendues avec un S905 ou un S905X mais basées sur une puce Rockchip (un RK3229 probable). La puce réelle n'apparaît parfois que dans le texte de l'annonce. Aucune box précise n'est documentée.",
     "sources": ["src-libreelec-boxes-annoncees-s905-mais-a-base"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "Participants in a LibreELEC thread report MXQ Pro-type boxes sold with an S905 or an S905X but based on a Rockchip chip (a probable RK3229). The real chip sometimes only appears in the text of the advertisement. No specific box is documented."
   },
   {
     "id": "q-plus-tvbox-4gb-1gb",
@@ -97,7 +101,8 @@
     "type": "inflated-specs",
     "summary_fr": "Étiquette annonçant 4 Go de RAM et 64 Go ; un fil Armbian rapporte un log série indiquant 1024 Mo de DRAM détectée (DDR3). Log lu uniquement via le compte rendu du fil, SoC exact incertain (famille sun50iw9).",
     "sources": ["src-armbian-forum-x96q-h313-cartes-diverses-pa"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "Label advertising 4 GB of RAM and 64 GB; an Armbian thread reports a serial log showing 1024 MB of DRAM detected (DDR3). Log read only through the thread's account, exact SoC uncertain (sun50iw9 family)."
   },
   {
     "id": "q96-stick-h313-8gb",
@@ -117,7 +122,8 @@
     "type": "impossible-claim",
     "summary_fr": "Une version annoncée à 8 Go de RAM alors que la fiche liste 2 ou 4 Go ; l'article juge l'annonce de 8 Go irréaliste pour ce SoC.",
     "sources": ["src-androidpctv-stick-q96-h313-et-annonce-de-8"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "A version advertised with 8 GB of RAM whereas the sheet lists 2 or 4 GB; the article judges the 8 GB claim unrealistic for this SoC."
   },
   {
     "id": "q96-x3-h313",
@@ -137,7 +143,8 @@
     "type": "impossible-claim",
     "summary_fr": "Annonces jusqu'à 8 Go de RAM et 128 Go de stockage sous Android 13, présentées comme impossibles pour ce SoC d'entrée de gamme.",
     "sources": ["src-androidpctv-q96x3"],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "summary_en": "Claims of up to 8 GB of RAM and 128 GB of storage under Android 13, presented as impossible for this entry-level SoC."
   },
   {
     "id": "tx3-mini-4-32",
@@ -157,7 +164,8 @@
     "type": "inflated-specs",
     "summary_fr": "Annoncée 4/32 ; environ 1 Go de RAM et 6 Go de stockage vus sous Armbian. Le consensus du fil évoque plutôt une 1/8.",
     "sources": ["src-armbian-tx3mini"],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "summary_en": "Advertised 4/32; about 1 GB of RAM and 6 GB of storage seen under Armbian. The thread's consensus rather suggests a 1/8."
   },
   {
     "id": "tx3-mini-s905l2b-variant",
@@ -177,7 +185,8 @@
     "type": "relabeled",
     "summary_fr": "Une box vendue sous le nom TX3 mini, attendue avec un S905W, s'est révélée être un S905L2-B, qui ne démarre qu'avec un DTB s905l2. La RAM et le stockage correspondent à l'annonce (environ 1,94 Go et 14 Go). Le même fil évoque des cartes 1/8 étiquetées 2/16.",
     "sources": ["src-armbian-forum-tx3-mini-identifiee-s905l2-b"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "A box sold under the name TX3 mini, expected with an S905W, turned out to be an S905L2-B, which only boots with an s905l2 DTB. The RAM and storage match the advertisement (about 1.94 GB and 14 GB). The same thread mentions 1/8 boards labelled 2/16."
   },
   {
     "id": "x7-s905l2-s905l-reported",
@@ -197,7 +206,8 @@
     "type": "wrong-soc",
     "summary_fr": "Des acheteurs d'offres autour de 20 dollars annonçant un S905L2 en 2/4 Go disent avoir reçu un S905L ; un commentaire fait état de 1 Go de RAM et 4 Go de stockage pour une offre 4/32. Un autre commentaire estime que le S905L2 n'existe pas. Témoignages sans preuve matérielle.",
     "sources": ["src-cnx-boxes-dites-s905l2-vendues-vers-20-dol"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "Buyers of offers around 20 dollars advertising an S905L2 in 2/4 GB say they received an S905L; one comment reports 1 GB of RAM and 4 GB of storage for a 4/32 offer. Another comment believes the S905L2 does not exist. Testimonies without hardware evidence."
   },
   {
     "id": "x88-pro-x3-rk3318-relabeled",
@@ -217,7 +227,8 @@
     "type": "relabeled",
     "summary_fr": "Un utilisateur rapporte une X88 Pro X3 dont la puce porte un marquage S905X3 peu net, avec RK3318 en dessous ; la peinture serait partie avec le dissipateur, d'où un soupçon de remarquage. Indices indirects (photos, performances très faibles), pas de log de démarrage : cas non confirmé.",
     "sources": ["src-forum-khadas-amlogic-contre-rockchip-x88-p"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "A user reports an X88 Pro X3 whose chip bears a blurry S905X3 marking, with RK3318 underneath; the paint allegedly came off with the heatsink, hence a suspicion of re-marking. Indirect clues (photos, very low performance), no boot log: case not confirmed."
   },
   {
     "id": "x88-pro-x3-s905x3-4gb",
@@ -237,7 +248,8 @@
     "type": "inflated-specs",
     "summary_fr": "Annoncée 4 Go ; des utilisateurs CoreELEC rapportent que le bootloader n'en détecte que 2 Go et que seul le DTB 2 Go démarre. Un autre fil conteste en comptant 8 puces mémoire : à lire au cas par cas.",
     "sources": ["src-coreelec-x88prox3-dtb", "src-coreelec-x88prox3-fake4gb"],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "summary_en": "Advertised 4 GB; CoreELEC users report that the bootloader only detects 2 GB and that only the 2 GB DTB boots. Another thread disputes this by counting 8 memory chips: to be read case by case."
   },
   {
     "id": "x96-mini-plus-s905w4-s905w",
@@ -257,7 +269,8 @@
     "type": "relabeled",
     "summary_fr": "Annoncée avec un S905W4 ; le testeur relève des informations système identiques à celles d'un S905W et en déduit une puce renommée. Hypothèse du testeur, sans preuve matérielle.",
     "sources": ["src-androidpctv-x96-mini-et-le-s905w4-annonce"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "Advertised with an S905W4; the tester notes system information identical to that of an S905W and deduces a renamed chip. Tester's hypothesis, with no hardware evidence."
   },
   {
     "id": "x96-mini-s905w-2-16-rk3229",
@@ -277,7 +290,8 @@
     "type": "wrong-soc",
     "summary_fr": "Annoncée S905W en 2/16 ; les images Armbian S905W ne démarrent pas, un outil pour RK322x si, avec 1 Go et 8 Go. Un second témoin relève un CPU Cortex-A7 sous Android. Un auteur dit que le marquage de la puce a été modifié, mais personne n'a pu vérifier la puce (radiateur collé).",
     "sources": ["src-armbian-forum-x96-mini-annoncee-s905w-rk32"],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "summary_en": "Advertised S905W in 2/16; the S905W Armbian images do not boot, a tool for RK322x does, with 1 GB and 8 GB. A second witness notes a Cortex-A7 CPU under Android. One author says the chip marking was altered, but nobody could check the chip (glued heatsink)."
   },
   {
     "id": "x96-mini-s905w-4-32",
@@ -297,6 +311,7 @@
     "type": "wrong-soc",
     "summary_fr": "Autocollant annonçant un S905W en 4/32 ; un témoignage unique fait état d'un RK3228A avec 1 Go de RAM et 8 Go de stockage sous Armbian.",
     "sources": ["src-travis-x96mini"],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "summary_en": "Sticker advertising an S905W in 4/32; a single testimony reports an RK3228A with 1 GB of RAM and 8 GB of storage under Armbian."
   }
 ]

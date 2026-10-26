@@ -13,7 +13,9 @@ Choisissez une idée, ouvrez une issue pour dire que vous la prenez, puis propos
 ## Contenu
 
 - **[contenu]** Relire le guide « vérifier les vraies specs » et signaler ce qui est faux ou flou.
-- **[contenu]** Traduire le site en anglais (les textes sont centralisés dans `apps/web/src/i18n/`).
+- **[contenu]** Ajouter une troisième langue (espagnol, allemand…) : dictionnaire dans `apps/web/src/i18n/`, messages du moteur dans `packages/core/src/`, champs `_xx` des données.
+- **[contenu]** Relire les traductions anglaises existantes (elles ont été rédigées d'après le français).
+- **[code]** Connecteur MCP en lecture seule (`check_box`, `get_soc`, `get_model`, `search`) réutilisant `packages/core`, avec les messages dans les deux langues.
 - **[contenu]** Ajouter au guide la lecture des puces mémoire courantes (Samsung, Micron, SK hynix) avec des exemples de références.
 
 ## Code

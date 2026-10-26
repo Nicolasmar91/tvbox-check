@@ -12,10 +12,12 @@
         "year": 2018,
         "note_fr": "Pas de port Ethernet, LPDDR4.",
         "sources": ["src-cnx-a95x-plus-s905y2", "src-androidpctv-a95x-plus-s905y2"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "No Ethernet port, LPDDR4."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "a95x-r1",
@@ -30,10 +32,12 @@
         "year": 2017,
         "note_fr": "Box d'entrée de gamme, Ethernet 100 Mbit/s, Android 6.",
         "sources": ["src-cnx-software-a95x-r1-rk3229", "src-test-de-l-a95x-r1-igeekphone"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Entry-level box, 100 Mbit/s Ethernet, Android 6."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "a95x-r2",
@@ -51,10 +55,12 @@
           "src-cnx-software-a95x-r2-rk3328-demontage",
           "src-test-de-l-a95x-r2-mediaplayers-gr"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Teardown: two DDR3 chips for 1 GB, 8 GB eMMC; the Ethernet circuit is of the Gigabit type but paired with 10/100 magnetics."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "alfawise-s95",
@@ -69,10 +75,12 @@
         "year": 2018,
         "note_fr": "Ethernet 10/100.",
         "sources": ["src-androidpctv-alfawise-s95-s905w"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "asus-tinker-board",
@@ -90,10 +98,12 @@
           "src-cnx-software-asus-tinker-board-rk3288",
           "src-fiche-hackerboards-de-la-tinker-board"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Reference board, Gigabit Ethernet."
       }
     ],
-    "notes_fr": "Le Tinker Board S ajoute 16 Go d'eMMC (non détaillé ici)."
+    "notes_fr": "Le Tinker Board S ajoute 16 Go d'eMMC (non détaillé ici).",
+    "notes_en": "The Tinker Board S adds 16 GB of eMMC (not detailed here)."
   },
   {
     "id": "beelink-a1",
@@ -111,10 +121,12 @@
           "src-commit-noyau-linux-ajout-de-la-carte-beeli",
           "src-test-de-la-beelink-a1-androidpctv"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Description taken from a kernel commit: 4 GB of LPDDR3, 16 GB eMMC (some units 32 GB), Gigabit PHY."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "beelink-gs-king-x",
@@ -132,10 +144,12 @@
           "src-cnx-software-beelink-gs-king-x-s922x-h",
           "src-androidpctv-beelink-gs-king-x-s922x-h"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S922X-H, two 3.5-inch SATA bays; preliminary specifications in the article."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "beelink-gs1",
@@ -150,10 +164,12 @@
         "year": 2017,
         "note_fr": "Ethernet Gigabit annoncé.",
         "sources": ["src-cnx-beelink-gs1-h6", "src-noyau-linux-devicetree-de-la-beelink-gs1-c"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Gigabit Ethernet advertised."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "beelink-gt-king",
@@ -171,10 +187,12 @@
           "src-cnx-software-test-du-beelink-gt-king-s922x",
           "src-androidtvbox-test-de-la-beelink-gt-king-s9"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "4 GB LPDDR4, 64 GB eMMC, Gigabit. Reader comments mention other versions (S922X clocked differently, A311D) but they are not evidence: not retained."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "beelink-gt-king-ii",
@@ -192,10 +210,12 @@
           "src-androidpctv-beelink-gt-king-ii-a311d2",
           "src-tv-box-stop-beelink-gt-king-ii-a311d2"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Octa-core A311D2, 8 GB LPDDR4X, 64 GB eMMC 5.1, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "beelink-gt-king-pro",
@@ -213,10 +233,12 @@
           "src-cnx-software-beelink-gt-king-pro-s922x-h",
           "src-androidtvbox-test-de-la-beelink-gt-king-pr"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S922X-H: Cortex-A73 up to 2.21 GHz and Dolby/DTS licences; 4 GB LPDDR4, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "beelink-gt1",
@@ -234,10 +256,12 @@
           "src-androidtvbox-beelink-gt1-s912",
           "src-pplware-presentation-du-beelink-gt1-en-por"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Gigabit, Android 6."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "beelink-gt1-k",
@@ -255,10 +279,12 @@
           "src-cnx-software-beelink-gt1-k-s922x",
           "src-geekbuying-annonce-de-la-beelink-gt1-k-s92"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Same SoC and same capabilities as the GT-King according to the announcement; notably sold under another brand."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "beelink-gt1-mini",
@@ -276,10 +302,12 @@
           "src-cnx-beelink-gt1-mini-s905x2",
           "src-home-theatre-life-test-de-la-beelink-gt1-m"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR4, Gigabit Ethernet."
       }
     ],
-    "notes_fr": "Modèle distinct du GT1 d'origine (S912)."
+    "notes_fr": "Modèle distinct du GT1 d'origine (S912).",
+    "notes_en": "Model distinct from the original GT1 (S912)."
   },
   {
     "id": "beelink-mxiii",
@@ -294,10 +322,12 @@
         "year": 2016,
         "note_fr": "Ethernet 10/100.",
         "sources": ["src-androidtvbox-beelink-mxiii-s905x"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "beelink-x2",
@@ -312,10 +342,12 @@
         "year": 2015,
         "note_fr": "Ethernet 10/100.",
         "sources": ["src-cnx-beelink-x2-h3", "src-noyau-linux-devicetree-de-la-beelink-x2-co"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "dune-hd-pro-4k",
@@ -334,10 +366,12 @@
           "src-test-du-dune-hd-pro-4k-mediaplayers-gr",
           "src-test-du-dune-hd-pro-4k-perfect-acoustic"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Gigabit Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "dune-hd-realbox-4k",
@@ -355,10 +389,12 @@
           "src-cnx-dune-hd-realbox-4k-rtd1395",
           "src-presentation-du-dune-hd-realbox-4k-telepol"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Gigabit Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "eachlink-h6-mini",
@@ -373,10 +409,12 @@
         "year": 2018,
         "note_fr": "DDR3 ; Ethernet 10/100 ; 3 Go de RAM annoncés.",
         "sources": ["src-cnx-eachlink-h6-mini-h6"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3; 10/100 Ethernet; 3 GB of RAM advertised."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "emish-x700",
@@ -394,10 +432,12 @@
           "src-cnx-software-emish-x700-rk3128",
           "src-emish-x700-a-base-de-rk3128-androidtvbox"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Very cheap 1080p box, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "h96-max",
@@ -416,7 +456,8 @@
           "src-armbian-forum-h96-max-rk3318-et-frequences",
           "src-micrologiciel-du-h96-max-rk3318-androidtvb"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Described as a lightened RK3328; 10/100 Ethernet; board marked RK3318_V1.2 in an Armbian thread (2 GB / 16 GB unit)."
       },
       {
         "soc": "rockchip-rk3566",
@@ -428,7 +469,8 @@
           "src-cnx-software-h96-max-rk3566-sous-android-1",
           "src-h96-max-a-base-de-rk3566-androidpctv"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Same model name, completely different SoC. The \"8K\" logo in the trade name does not correspond to 8K decoding according to CNX."
       },
       {
         "soc": "allwinner-h616",
@@ -437,7 +479,8 @@
         "year": 2020,
         "note_fr": "DDR3L, Ethernet 10/100, Android 10.",
         "sources": ["src-androidpctv-h96-max-h616"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3L, 10/100 Ethernet, Android 10."
       },
       {
         "soc": "allwinner-h618",
@@ -446,10 +489,12 @@
         "year": 2023,
         "note_fr": "DDR3, Ethernet 10/100, Wi-Fi 6, Android 12.",
         "sources": ["src-androidpctv-h96max-h618"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet, Wi-Fi 6, Android 12."
       }
     ],
-    "notes_fr": "Le nom H96 Max recouvre au moins deux SoC Rockchip différents selon l'année."
+    "notes_fr": "Le nom H96 Max recouvre au moins deux SoC Rockchip différents selon l'année.",
+    "notes_en": "The H96 Max name covers at least two different Rockchip SoCs depending on the year."
   },
   {
     "id": "h96-max-x2",
@@ -468,7 +513,8 @@
           "src-cnx-software-h96-max-x2-s905x2",
           "src-tv-box-stop-test-de-la-h96-max-x2-s905x2"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "LPDDR4; 10/100 Ethernet according to the article (a comment mentions a Gigabit version)."
       },
       {
         "soc": "amlogic-s905x2",
@@ -480,10 +526,12 @@
           "src-androidpctv-test-du-h96-max-x2-s905x2",
           "src-droix-fiche-de-la-h96-max-x2-s905x2"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR4, 10/100 Ethernet according to the test."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "h96-max-x3",
@@ -502,10 +550,12 @@
           "src-coreelec-h96-max-x3-100-mbit-ou-gigabit",
           "src-tv-box-stop-test-de-la-h96-max-x3-s905x3"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Two firmware versions depending on the LAN type. A CoreELEC thread reports a box sold as 100M whose port turned out close to Gigabit (about 934 Mbit/s), and another message notes the opposite (Gigabit advertised, 100M delivered): the real Ethernet varies from one batch to another. AndroidPCTV states DDR3."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "h96-mini-v8",
@@ -523,10 +573,12 @@
           "src-androidtvbox-firmware-h96-mini-v8-rk3228a",
           "src-page-produit-du-h96-mini-v8"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Android 10, 10/100 Ethernet; the memory is listed as DDR4 by the source site."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "h96-pro-plus",
@@ -541,10 +593,12 @@
         "year": 2017,
         "note_fr": "Gigabit ; type de RAM DDR3 pour l'un, DDR4 pour un autre testeur (divergence).",
         "sources": ["src-cnx-h96-pro-plus-s912-3-go", "src-androidpctv-test-de-la-h96-pro-s912"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Gigabit; RAM type DDR3 for one tester, DDR4 for another (discrepancy)."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "himedia-q30",
@@ -559,10 +613,12 @@
         "year": 2017,
         "note_fr": "DDR3 ; Ethernet 10/100 malgré un MAC Gigabit sur le SoC.",
         "sources": ["src-cnx-himedia-q30-hi3798m-v200"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3; 10/100 Ethernet despite a Gigabit MAC on the SoC."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "hk1-max",
@@ -577,10 +633,12 @@
         "year": null,
         "note_fr": "Annoncée jusqu'à 4/64 ; un fil Armbian rapporte 1 Go de RAM lu au démarrage sur un exemplaire annoncé 4/64, et un autre propriétaire de la même carte a mesuré 2 Go (8 puces comptées) : écart de capacité à vérifier au cas par cas. Un autre fil évoque aussi un nom de carte « YX_RK3328 », sans confirmation de puce.",
         "sources": ["src-armbian-hk1max", "src-armbian-forum-armbian-pour-boxes-rk3318-rk"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Advertised up to 4/64; an Armbian thread reports 1 GB of RAM read at boot on a unit advertised 4/64, and another owner of the same board measured 2 GB (8 chips counted): capacity gap to be checked case by case. Another thread also mentions a board name \"YX_RK3328\", with no chip confirmation."
       }
     ],
-    "notes_fr": "Une source indépendante décrit un HK1 Max avec un RK3328 (4 Go de DDR3) alors que les autres donnent un RK3318 : les deux puces sont proches et les revendeurs les confondent. Divergence signalée, sans correction."
+    "notes_fr": "Une source indépendante décrit un HK1 Max avec un RK3328 (4 Go de DDR3) alors que les autres donnent un RK3318 : les deux puces sont proches et les revendeurs les confondent. Divergence signalée, sans correction.",
+    "notes_en": "An independent source describes an HK1 Max with an RK3328 (4 GB of DDR3) whereas the others give an RK3318: the two chips are close and sellers often mix them up. Discrepancy flagged, no correction."
   },
   {
     "id": "hk1-mini-plus",
@@ -598,10 +656,12 @@
           "src-androidpctv-hk1-mini-plus-rk3318",
           "src-micrologiciel-de-la-hk1-mini-plus-getdroid"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Round case, Android 9, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "hk1-rbox",
@@ -619,10 +679,12 @@
           "src-androidpctv-hk1-rbox-rk3318-android-10",
           "src-test-de-la-hk1-rbox-r1-techxreviews"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "RK3318 version under Android 10, 10/100 Ethernet."
       }
     ],
-    "notes_fr": "Ne pas confondre avec le HK1 RBOX R2 (RK3566), qui est une autre génération."
+    "notes_fr": "Ne pas confondre avec le HK1 RBOX R2 (RK3566), qui est une autre génération.",
+    "notes_en": "Not to be confused with the HK1 RBOX R2 (RK3566), which is a different generation."
   },
   {
     "id": "hk1-rbox-r2",
@@ -641,10 +703,12 @@
           "src-armbian-forum-vontar-kk-max-hk1-rbox-r2-et",
           "src-test-de-la-hk1-rbox-r2-techxreviews"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Gigabit Ethernet. An Armbian thread notes 4 DDR4 memory chips for 4096 MB detected by the bootloader; the explanation (undetected rank or mislabelled chips) is not settled."
       }
     ],
-    "notes_fr": "Le HK1 RBOX R3 et la Vontar KK Max sont traités comme proches par le même fil Armbian (DTB commun)."
+    "notes_fr": "Le HK1 RBOX R3 et la Vontar KK Max sont traités comme proches par le même fil Armbian (DTB commun).",
+    "notes_en": "The HK1 RBOX R3 and the Vontar KK Max are treated as close by the same Armbian thread (common DTB)."
   },
   {
     "id": "hk1-rbox-x4",
@@ -662,10 +726,12 @@
           "src-androidpctv-hk1-rbox-s905x4",
           "src-techxreviews-test-de-la-hk1-rbox-x4-s905x4"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, Ethernet advertised as Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "hk1-super",
@@ -683,10 +749,12 @@
           "src-androidpctv-hk1-super-rk3318",
           "src-micrologiciel-hk1-super-mini-plus-chinagad"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Android 9, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "homatics-box-r-4k-plus",
@@ -704,10 +772,12 @@
           "src-android-tv-guide-homatics-box-r-4k-plus",
           "src-homatics-europe-fiche-de-la-box-r-plus-4k"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Android TV Guide database: S905X4, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "khadas-vim3",
@@ -725,10 +795,12 @@
           "src-cnx-software-khadas-vim3-a311d",
           "src-khadas-page-produit-de-la-vim3-a311d"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Basic 2 GB/16 GB and Pro 4 GB/32 GB versions, LPDDR4/4X, Gigabit. Single-board computer, not a closed box."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "khadas-vim3l",
@@ -746,10 +818,12 @@
           "src-cnx-software-khadas-vim3l-s905d3",
           "src-khadas-fiche-produit-de-la-vim3l-s905d3"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Four Cortex-A55 (core corrected by the manufacturer in a comment), 2 GB LPDDR4/4X, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "m8s-pro-4k",
@@ -767,10 +841,12 @@
           "src-androidpctv-m8s-pro-4k-rk3229",
           "src-fiche-revendeur-de-la-m8s-pro-rk3229"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Advertised with 2 GB of DDR3 and 8 GB of flash."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "m9s-w2",
@@ -785,10 +861,12 @@
         "year": 2019,
         "note_fr": "Ethernet 10/100.",
         "sources": ["src-androidpctv-m9s-w2-s905w"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "magicsee-n5",
@@ -806,10 +884,12 @@
           "src-androidpctv-magicsee-n5-s905x",
           "src-smartworld-test-de-la-magicsee-n5-en-itali"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3L, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "magicsee-n5-plus",
@@ -824,10 +904,12 @@
         "year": 2019,
         "note_fr": "Baie SATA 2,5 pouces ; Ethernet 10/100.",
         "sources": ["src-cnx-magicsee-n5-plus-s905x3", "src-androidtvbox-magicsee-n5-plus-s905x3"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "2.5-inch SATA bay; 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-bb2-pro",
@@ -842,10 +924,12 @@
         "year": 2016,
         "note_fr": "DDR4, Ethernet gigabit (RTL8211F).",
         "sources": ["src-cnx-mecool-bb2-pro-s912-3-go-ddr4"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR4, Gigabit Ethernet (RTL8211F)."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-ki-pro",
@@ -860,10 +944,12 @@
         "year": 2017,
         "note_fr": "Double tuner DVB-T2/S2, DDR4, Ethernet gigabit.",
         "sources": ["src-cnx-mecool-ki-pro-s905d", "src-androidpctv-mecool-ki-pro"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Dual DVB-T2/S2 tuner, DDR4, Gigabit Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-kiii-pro",
@@ -881,10 +967,12 @@
           "src-cnx-test-mecool-kiii-pro-s912",
           "src-androidpctv-test-de-la-mecool-kiii-pro"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "3 GB advertised; the test tool shows about 2.8 GB usable (normal with reserved memory)."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-km1",
@@ -902,10 +990,12 @@
           "src-androidtvbox-mecool-km1-en-3-variantes-s90",
           "src-android-tv-guide-mecool-km1-s905x3"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Three versions: Classic 2/16, Deluxe 4/32, Collective 4/64; Fast Ethernet (100M) across the range. Capacities deduced from price sheets."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-km2",
@@ -923,10 +1013,12 @@
           "src-cnx-software-mecool-km2-s905x2-b",
           "src-androidpctv-test-de-la-mecool-km2-s905x2-b"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S905X2-B (revision of the S905X2), DDR4 2 GB, 8 GB eMMC."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-km3",
@@ -944,10 +1036,12 @@
           "src-cnx-software-mecool-km3-s905x2",
           "src-androidtvbox-test-de-la-mecool-km3-s905x2"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR4 4 GB, 64 GB eMMC; the sheet says \"Gigabit Fast Ethernet\", which is contradictory, and a reader indicates 10/100."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-km6",
@@ -965,7 +1059,8 @@
           "src-cnx-software-mecool-km6-classic-et-deluxe",
           "src-tv-box-stop-mecool-km6-classic-s905x4"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Classic edition: 10/100 Ethernet, Wi-Fi 5, Bluetooth 4.2."
       },
       {
         "soc": "amlogic-s905x4",
@@ -977,10 +1072,12 @@
           "src-cnx-software-mecool-km6-classic-et-deluxe",
           "src-techxreviews-test-de-la-mecool-km6-deluxe"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Deluxe edition: Gigabit Ethernet, Wi-Fi 6, Bluetooth 5.0. Same SoC, different boards."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-km9-pro",
@@ -998,7 +1095,8 @@
           "src-androidpctv-mecool-km9-pro-s905x2",
           "src-tv-box-stop-test-de-la-mecool-km9-pro-s905"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "First series: DDR4 4 GB, 10/100 Ethernet."
       },
       {
         "soc": "amlogic-s905x2",
@@ -1010,7 +1108,8 @@
           "src-androidpctv-mecool-km9-pro-honor",
           "src-troypoint-mecool-km9-pro-honour-s905x2"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "\"Honor\" version: 4 GB of DDR3 instead of DDR4, same SoC. RAM type gap between revisions of the same name."
       },
       {
         "soc": "amlogic-s905x2",
@@ -1019,10 +1118,12 @@
         "year": 2020,
         "note_fr": "Classic (2 Go) et Deluxe (4 Go) sous Android TV 10 : DDR3, Ethernet 10/100, matériel présenté comme inchangé.",
         "sources": ["src-androidpctv-mecool-km9-pro-classic-et-delu"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Classic (2 GB) and Deluxe (4 GB) under Android TV 10: DDR3, 10/100 Ethernet, hardware presented as unchanged."
       }
     ],
-    "notes_fr": "La RAM passe de la DDR4 à la DDR3 selon la révision, bon exemple de révisions sous un même nom."
+    "notes_fr": "La RAM passe de la DDR4 à la DDR3 selon la révision, bon exemple de révisions sous un même nom.",
+    "notes_en": "The RAM goes from DDR4 to DDR3 depending on the revision, a good example of revisions under the same name."
   },
   {
     "id": "mecool-m8s-plus-dvb",
@@ -1040,10 +1141,12 @@
           "src-cnx-mecool-m8s-plus-dvb-s905d",
           "src-androidpctv-mecool-m8s-plus-dvb-s905d"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DVB-T2 tuner, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-m8s-pro-plus",
@@ -1061,10 +1164,12 @@
           "src-androidpctv-test-mecool-m8s-pro",
           "src-lupa-cz-boxes-mecool-m8s-pro-et-pro-en-tch"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "RAM type DDR3 or DDR4 depending on the passage of the article."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mecool-m8s-pro-w",
@@ -1077,15 +1182,17 @@
         "ram_gb": [2],
         "storage_gb": [16],
         "year": 2018,
-        "note_fr": "Telecommande vocale, Android TV 7.1.",
+        "note_fr": "Télécommande vocale, Android TV 7.1.",
         "sources": [
           "src-cnx-mecool-m8s-pro-w-s905w",
           "src-androidtvbox-test-de-la-mecool-m8s-pro-w"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Voice remote, Android TV 7.1."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "minix-neo-u22-xj",
@@ -1103,10 +1210,12 @@
           "src-cnx-software-minix-neo-u22-xj-s922x-j",
           "src-androidtvbox-test-du-minix-neo-u22-xj-s922"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S922XJ (Dolby Vision and Audio licences), DDR4, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "minix-neo-u9-h",
@@ -1124,10 +1233,12 @@
           "src-liste-noyau-linux-device-tree-minix-neo-u9",
           "src-linuxlookup-test-du-minix-neo-u9-h"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S912-H variant (Dolby/DTS licences); Gigabit Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "minix-neo-x8",
@@ -1142,10 +1253,12 @@
         "year": 2014,
         "note_fr": "X8 : S802 et 8 Go ; X8s : S802-H (Dolby/DTS) et 16 Go ; DDR3 2 Go et Ethernet 10/100 dans les deux cas.",
         "sources": ["src-cnx-software-minix-neo-x8-et-x8s-s802"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "X8: S802 and 8 GB; X8s: S802-H (Dolby/DTS) and 16 GB; DDR3 2 GB and 10/100 Ethernet in both cases."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "minix-neo-x8-h-plus",
@@ -1163,10 +1276,12 @@
           "src-cnx-software-minix-neo-x8-h-plus-s812",
           "src-linuxlookup-test-du-minix-neo-x8-h-plus"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Switch from the S802 to the S812: H.265 up to 4K and Gigabit Ethernet according to the article."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mx-pro-4k",
@@ -1181,10 +1296,12 @@
         "year": 2018,
         "note_fr": "DDR3 ; décrite comme la première box à base de H5 ; stockage possible de 4 à 32 Go.",
         "sources": ["src-cnx-mx-pro-4k-avec-allwinner-h5"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3; described as the first H5-based box; storage from 4 to 32 GB possible."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mx10",
@@ -1199,10 +1316,12 @@
         "year": 2018,
         "note_fr": "Annoncée avec 4 Go de DDR4 et Ethernet 10/100, Android 7.1 puis 8.1.",
         "sources": ["src-cnx-software-mx10-rk3328-android-8-1", "src-test-du-mx10-the-gadgeteer"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Advertised with 4 GB of DDR4 and 10/100 Ethernet, Android 7.1 then 8.1."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mx10-pro",
@@ -1221,10 +1340,12 @@
           "src-armbian-forum-armbian-pour-boxes-rk3318-rk",
           "src-micrologiciel-du-mx10-pro-getdroidtips"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Advertised as DDR3 by AndroidPCTV (against DDR4 for the MX10 according to CNX); the board read under Armbian carries the RK3328 mention, with no chip check."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mx4",
@@ -1239,10 +1360,12 @@
         "year": 2016,
         "note_fr": "Proche de la MXQ-4K selon CNX.",
         "sources": ["src-cnx-software-mx4-rk3229", "src-fiche-revendeur-du-mx4-rk3229"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Close to the MXQ-4K according to CNX."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mx9-pro",
@@ -1257,10 +1380,12 @@
         "year": 2020,
         "note_fr": "Un message de forum liste le SoC comme H313 ou H616 sans trancher ; environ 970 Mo vus par Android pour 1 Go annoncé.",
         "sources": ["src-armbian-forum-mx9-pro-5g-8k"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "A forum message lists the SoC as H313 or H616 without settling; about 970 MB seen by Android for 1 GB advertised."
       }
     ],
-    "notes_fr": "SoC incertain : à confirmer par lecture de la carte."
+    "notes_fr": "SoC incertain : à confirmer par lecture de la carte.",
+    "notes_en": "Uncertain SoC: to be confirmed by reading the board."
   },
   {
     "id": "mxq-4k",
@@ -1275,10 +1400,12 @@
         "year": 2016,
         "note_fr": "Ethernet 100 Mbit/s, Android 4.4 à l'origine.",
         "sources": ["src-cnx-software-mxq-4k-rk3229", "src-test-d-un-mxq-4k-rk3229-eyalo"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "100 Mbit/s Ethernet, Android 4.4 originally."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mxq-pro",
@@ -1293,7 +1420,8 @@
         "year": 2015,
         "note_fr": "Version d'origine, Ethernet 10/100 ; un commentaire évoque une version 2/16 gigabit.",
         "sources": ["src-cnx-mxq-pro-s905-en-promotion", "src-androidtvbox-mxq-pro-s905"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Original version, 10/100 Ethernet; a comment mentions a 2/16 Gigabit version."
       },
       {
         "soc": "rockchip-rk3229",
@@ -1302,10 +1430,12 @@
         "year": null,
         "note_fr": "Variante signalée par des utilisateurs : annoncée S905/S905X mais carte Rockchip (cas signalé, non vérifié).",
         "sources": ["src-libreelec-boxes-annoncees-s905-mais-a-base"],
-        "kind": "reported"
+        "kind": "reported",
+        "note_en": "Variant reported by users: advertised as S905/S905X but with a Rockchip board (reported case, unverified)."
       }
     ],
-    "notes_fr": "Le nom MXQ regroupe une famille de produits aux configurations variées."
+    "notes_fr": "Le nom MXQ regroupe une famille de produits aux configurations variées.",
+    "notes_en": "The MXQ name covers a family of products with varied configurations."
   },
   {
     "id": "mxq-pro-4k",
@@ -1320,10 +1450,12 @@
         "year": null,
         "note_fr": "Nom repris par plusieurs fabricants : un fil Armbian traite une MXQ Pro 4K annoncée S905X comme une carte RK3229.",
         "sources": ["src-armbian-rk322x"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Name used by several manufacturers: an Armbian thread treats an MXQ Pro 4K advertised as S905X as an RK3229 board."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "mxq-pro-4k-5g-h3",
@@ -1338,10 +1470,12 @@
         "year": null,
         "note_fr": "Variante décrite comme probable clone d'un modèle d'origine à base Amlogic ; témoignage unique.",
         "sources": ["src-armbian-forum-mxq-pro-4k-5g-a-base-de-h3"],
-        "kind": "reported"
+        "kind": "reported",
+        "note_en": "Variant described as a probable clone of an original Amlogic-based model; single testimony."
       }
     ],
-    "notes_fr": "Le modèle d'origine utiliserait un SoC Amlogic ; non documenté ici."
+    "notes_fr": "Le modèle d'origine utiliserait un SoC Amlogic ; non documenté ici.",
+    "notes_en": "The original model would use an Amlogic SoC; not documented here."
   },
   {
     "id": "mxr-pro",
@@ -1356,10 +1490,12 @@
         "year": 2017,
         "note_fr": "4 Go de DDR3 annoncés, Ethernet 10/100.",
         "sources": ["src-cnx-software-mxr-pro-rk3328-4-go", "src-test-du-mxr-pro-wirelesshack"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "4 GB of DDR3 advertised, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "nexbox-a95x",
@@ -1372,21 +1508,24 @@
         "ram_gb": [1],
         "storage_gb": [8],
         "year": 2016,
-        "note_fr": "Premiere serie en S905, Ethernet 10/100.",
+        "note_fr": "Première série en S905, Ethernet 10/100.",
         "sources": ["src-cnx-nexbox-a95x-s905-en-vente"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "First series with an S905, 10/100 Ethernet."
       },
       {
         "soc": "amlogic-s905x",
         "ram_gb": [2],
         "storage_gb": [16],
         "year": 2016,
-        "note_fr": "Serie S905X (carte datee juillet 2016).",
+        "note_fr": "Série S905X (carte datee juillet 2016).",
         "sources": ["src-cnx-nexbox-a95x-s905x-demontage"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S905X series (board dated July 2016)."
       }
     ],
-    "notes_fr": "L'auteur du test previent que le nom A95X regroupe plusieurs modèles (RAM, stockage, S905 ou S905X)."
+    "notes_fr": "L'auteur du test prévient que le nom A95X regroupe plusieurs modèles (RAM, stockage, S905 ou S905X).",
+    "notes_en": "The reviewer warns that the A95X name covers several models (RAM, storage, S905 or S905X)."
   },
   {
     "id": "nexbox-a95x-pro",
@@ -1399,24 +1538,27 @@
         "ram_gb": [2],
         "storage_gb": [16],
         "year": 2018,
-        "note_fr": "Version Android TV avec telecommande vocale.",
+        "note_fr": "Version Android TV avec télécommande vocale.",
         "sources": [
           "src-cnx-nexbox-a95x-pro-s905w",
           "src-gadget-ro-test-de-la-nexbox-a95x-pro-en-ro"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Android TV version with voice remote."
       },
       {
         "soc": "amlogic-s905x",
         "ram_gb": null,
         "storage_gb": null,
         "year": null,
-        "note_fr": "Une autre A95X Pro plus ancienne, en S905X sous Android 6.0, est mentionnee.",
+        "note_fr": "Une autre A95X Pro plus ancienne, en S905X sous Android 6.0, est mentionnée.",
         "sources": ["src-cnx-nexbox-a95x-pro-s905w"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Another, older A95X Pro, with an S905X under Android 6.0, is mentioned."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "nvidia-shield-tv",
@@ -1434,7 +1576,8 @@
           "src-cnx-shield-android-tv-2015-tegra-x1",
           "src-test-de-la-shield-android-tv-2015-pc-persp"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "2015 version; Gigabit."
       },
       {
         "soc": "nvidia-tegra-x1-plus",
@@ -1443,10 +1586,12 @@
         "year": 2019,
         "note_fr": "Révision 2019 (modèle de base) avec SoC mis à jour.",
         "sources": ["src-cnx-shield-tv-2019-tegra-x1", "src-nvidia-fiche-shield-tv"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "2019 revision (base model) with updated SoC."
       }
     ],
-    "notes_fr": "Même nom, SoC mis à jour entre 2015 et 2019."
+    "notes_fr": "Même nom, SoC mis à jour entre 2015 et 2019.",
+    "notes_en": "Same name, SoC updated between 2015 and 2019."
   },
   {
     "id": "nvidia-shield-tv-pro",
@@ -1464,10 +1609,12 @@
           "src-cnx-shield-tv-2019-tegra-x1",
           "src-fiche-nvidia-shield-tv-pro-tegra-x1-3-go"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Two USB 3.0 ports, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "odroid-c4",
@@ -1482,10 +1629,12 @@
         "year": null,
         "note_fr": "Fiche constructeur : DDR4 4 Go sur bus 32 bits, gigabit via PHY externe, Cortex-A55 à 2,016 GHz.",
         "sources": ["src-hardkernel-fiche-produit-odroid-c4", "src-linuxgizmos-odroid-c4-s905x3"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Manufacturer sheet: DDR4 4 GB on a 32-bit bus, Gigabit via external PHY, Cortex-A55 at 2.016 GHz."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "odroid-n2",
@@ -1500,7 +1649,8 @@
         "year": 2019,
         "note_fr": "Carte d'origine : DDR4 2 ou 4 Go, gigabit (plus de 900 Mbit/s mesurés par le constructeur d'après CNX).",
         "sources": ["src-cnx-software-odroid-n2-s922x", "src-androidpctv-s922x-sur-l-odroid-n2"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Original board: DDR4 2 or 4 GB, Gigabit (more than 900 Mbit/s measured by the manufacturer according to CNX)."
       },
       {
         "soc": "amlogic-s922x",
@@ -1509,10 +1659,12 @@
         "year": null,
         "note_fr": "Révision N2+ vendue avec 4 Go DDR4 ; la fiche constructeur décrit des fréquences CPU plus élevées que le N2.",
         "sources": ["src-hardkernel-fiche-produit-odroid-n2-4-go"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "N2+ revision sold with 4 GB DDR4; the manufacturer sheet describes higher CPU frequencies than the N2."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "onn-4k-streaming-box-2023",
@@ -1532,10 +1684,12 @@
           "src-sdmc-fiche-d-une-box-s905y4-4k",
           "src-androidpctv-test-de-la-onn-google-tv-4k-20"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Mass-market Google TV box, with AV1 decoding; the sheet does not mention Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "orange-pi-5",
@@ -1553,10 +1707,12 @@
           "src-cnx-software-orange-pi-5-rk3588s",
           "src-fiche-circuitpython-de-l-orange-pi-5-rk358"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Actually uses the RK3588S variant (S datasheet not read here); 16 and 32 GB announced later."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "pine64-quartz64-a",
@@ -1574,10 +1730,12 @@
           "src-pine64-fiche-quartz64-model-a-rk3566",
           "src-presentation-de-la-quartz64-linuxgizmos"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Reference board, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "pine64-rock64",
@@ -1592,10 +1750,12 @@
         "year": 2017,
         "note_fr": "Carte de référence, gigabit.",
         "sources": ["src-cnx-software-carte-rock64-rk3328", "src-pine64-fiche-rock64-rk3328"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Reference board, Gigabit."
       }
     ],
-    "notes_fr": "Les sources divergent sur la vitesse de la LPDDR3 (1600 ou 1866 MHz)."
+    "notes_fr": "Les sources divergent sur la vitesse de la LPDDR3 (1600 ou 1866 MHz).",
+    "notes_en": "Sources differ on the LPDDR3 speed (1600 or 1866 MHz)."
   },
   {
     "id": "pine64-rockpro64",
@@ -1610,10 +1770,12 @@
         "year": null,
         "note_fr": "La fiche constructeur indique jusqu'à 4 Go de LPDDR4.",
         "sources": ["src-pine64-fiche-rockpro64-rk3399", "src-test-de-la-rockpro64-cnx-software"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "The manufacturer sheet states up to 4 GB of LPDDR4."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "prosb3000",
@@ -1628,10 +1790,12 @@
         "year": null,
         "note_fr": "Carte type X96Q ; la puce mémoire/eMMC varie d'une carte à l'autre selon les messages.",
         "sources": ["src-armbian-forum-prosb3000-h313"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "X96Q-type board; the memory/eMMC chip varies from one board to another according to the messages."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "q96-mini",
@@ -1646,10 +1810,12 @@
         "year": 2019,
         "note_fr": "DDR3, Ethernet 10/100.",
         "sources": ["src-androidpctv-q96-mini-s905w"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "q96-rk3229",
@@ -1664,10 +1830,12 @@
         "year": 2019,
         "note_fr": "Version RK3229 sous Android 9, Ethernet 100 Mbit/s. Le nom Q96 est aussi porté par d'autres boxes.",
         "sources": ["src-cnx-software-q96-rk3229", "src-test-de-la-q96-igeekphone"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "RK3229 version under Android 9, 100 Mbit/s Ethernet. The Q96 name is also used by other boxes."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "q96-stick",
@@ -1682,10 +1850,12 @@
         "year": 2022,
         "note_fr": "LPDDR3 dans la fiche ; une annonce de 8 Go de RAM est jugée irréaliste par l'article.",
         "sources": ["src-androidpctv-stick-q96-h313-et-annonce-de-8"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "LPDDR3 in the sheet; an advertisement of 8 GB of RAM is judged unrealistic by the article."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "r-box-rk3229",
@@ -1703,10 +1873,12 @@
           "src-cnx-software-r-box-rk3229-2-go",
           "src-r-box-a-base-de-rk3229-androidtvbox"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "One of the first RK3229 boxes with 2 GB; the advertised Gigabit was judged doubtful by CNX."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "r-tv-box-k99",
@@ -1724,10 +1896,12 @@
           "src-cnx-software-r-tv-box-k99-rk3399",
           "src-test-du-r-tv-box-k99-hometheatrelife"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Gigabit Ethernet, 4 GB of DDR3."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "r39-4k",
@@ -1742,10 +1916,12 @@
         "year": null,
         "note_fr": "Annoncée 2 Go ; un fil Armbian explique que Linux n'en voyait qu'environ 1 Go à cause d'un réglage de noyau (HIGHMEM désactivé), pas d'un défaut matériel.",
         "sources": ["src-armbian-rk322x"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Advertised 2 GB; an Armbian thread explains that Linux only saw about 1 GB because of a kernel setting (HIGHMEM disabled), not a hardware defect."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "radxa-rock-3a",
@@ -1764,10 +1940,12 @@
           "src-presentation-de-la-rock-3a-cnx-software",
           "src-comparatif-rock-3-modeles-a-et-c-designspa"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Radxa documentation: LPDDR4, optional eMMC, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "radxa-rock-3c",
@@ -1785,10 +1963,12 @@
           "src-documentation-radxa-rock-3c-rk3566",
           "src-comparatif-rock-3-modeles-a-et-c-designspa"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Soldered LPDDR4, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "radxa-rock-5b",
@@ -1806,10 +1986,12 @@
           "src-cnx-software-rock-5-model-b-rk3588",
           "src-documentation-radxa-rock-5b-rk3588"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "2.5 Gbit/s Ethernet, HDMI outputs up to 8K."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "radxa-rock-pi-4",
@@ -1824,10 +2006,12 @@
         "year": 2018,
         "note_fr": "Modèles A et B, LPDDR4, gigabit.",
         "sources": ["src-cnx-software-rock-pi-4-rk3399", "src-wiki-radxa-rock-pi-4-rk3399"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "A and B models, LPDDR4, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "ruach-a20s",
@@ -1845,10 +2029,12 @@
           "src-cnx-software-ruach-a20s-rk3128",
           "src-ruach-a20s-a-base-de-rk3128-androidtvbox"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Android 4.4, 10/100 Ethernet, 512 MB version also sold."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "s96-mate",
@@ -1863,10 +2049,12 @@
         "year": 2021,
         "note_fr": "Un site décrit les cœurs comme Cortex-A53, d'autres comme A35 (divergence).",
         "sources": ["src-androidtvbox-s96-mate-s905w2", "src-androidpctv-s96-mate-s905w2"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "One site describes the cores as Cortex-A53, others as A35 (discrepancy)."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "sdmc-dv8919",
@@ -1881,10 +2069,12 @@
         "year": 2019,
         "note_fr": "Annonce de 2019 avec un S905X4 encore en préparation ; Ethernet 10/100 avec gigabit en option.",
         "sources": ["src-cnx-software-sdmc-dv8919-s905x4"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "2019 announcement with an S905X4 still in preparation; 10/100 Ethernet with Gigabit as an option."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "sunchip-cx-s806",
@@ -1902,10 +2092,12 @@
           "src-cnx-software-test-du-sunchip-cx-s806-s812",
           "src-androidpimp-test-de-la-cx-s806-s812"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "10/100 Ethernet; the test notes that the 4K output is probably limited to 30 frames per second. The unit tested exposed about 1.6 GB to Android."
       }
     ],
-    "notes_fr": "Même SoC S812 que la Minix NEO X8-H Plus mais Ethernet 10/100 au lieu de gigabit : la carte décide."
+    "notes_fr": "Même SoC S812 que la Minix NEO X8-H Plus mais Ethernet 10/100 au lieu de gigabit : la carte décide.",
+    "notes_en": "Same S812 SoC as the Minix NEO X8-H Plus but 10/100 Ethernet instead of Gigabit: the board decides."
   },
   {
     "id": "sunvell-t95p",
@@ -1920,10 +2112,12 @@
         "year": 2016,
         "note_fr": "Format prise murale.",
         "sources": ["src-cnx-sunvell-t95p-s905x", "src-androidtvbox-sunvell-t95p-s905x"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Wall-plug format."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "t9",
@@ -1938,10 +2132,12 @@
         "year": 2018,
         "note_fr": "Android 8.1, Ethernet 10/100. Le nom T9 est repris par plusieurs marques.",
         "sources": ["src-androidpctv-t9-rk3328-android-8-1", "src-test-du-t9-rk3328-wirelesshack"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Android 8.1, 10/100 Ethernet. The T9 name is used by several brands."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "t95-h616",
@@ -1959,10 +2155,12 @@
           "src-androidpctv-t95-avec-allwinner-h616",
           "src-cnx-processeur-allwinner-h616-tanix-tx6s-e"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "10/100 Ethernet; DDR3 according to the article."
       }
     ],
-    "notes_fr": "Le nom T95 est réutilisé pour des SoC différents (voir T95 Max, T95Z Plus)."
+    "notes_fr": "Le nom T95 est réutilisé pour des SoC différents (voir T95 Max, T95Z Plus).",
+    "notes_en": "The T95 name is reused for different SoCs (see T95 Max, T95Z Plus)."
   },
   {
     "id": "t95-max",
@@ -1980,10 +2178,12 @@
           "src-androidpctv-t95-max-avec-h618",
           "src-cnx-allwinner-h618-t95z-plus-et-t95-max"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet, Android 11; another article notes that an advertisement's sheet seemed copied from an H6 model."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "t95h",
@@ -1998,10 +2198,12 @@
         "year": null,
         "note_fr": "DDR4 annoncée, Ethernet 10/100.",
         "sources": ["src-androidpctv-t95h-avec-h616"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR4 advertised, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "t95n-mini-m8-pro",
@@ -2014,12 +2216,14 @@
         "ram_gb": [1, 2],
         "storage_gb": [8],
         "year": 2016,
-        "note_fr": "La Mini MX+ associee n'a que 1 Go ; la M8Spro 2 Go.",
+        "note_fr": "La Mini MX+ associée n'a que 1 Go ; la M8Spro 2 Go.",
         "sources": ["src-androidtvbox-t95n-mini-m8spro-s905"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "The associated Mini MX+ only has 1 GB; the M8Spro 2 GB."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "t95z-plus",
@@ -2032,9 +2236,10 @@
         "ram_gb": [2],
         "storage_gb": [16],
         "year": 2016,
-        "note_fr": "Ecran LCD en facade, Ethernet gigabit ; des offres de detaillants parlent de 3/32.",
+        "note_fr": "Écran LCD en façade, Ethernet gigabit ; des offres de détaillants parlent de 3/32.",
         "sources": ["src-cnx-t95z-plus-s912", "src-droix-fiche-de-vente-de-la-t95z-plus-s912"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Front LCD screen, Gigabit Ethernet; retailer offers mention 3/32."
       },
       {
         "soc": "allwinner-h618",
@@ -2043,10 +2248,12 @@
         "year": 2022,
         "note_fr": "Ethernet Gigabit annoncé, Android 12.",
         "sources": ["src-cnx-allwinner-h618-t95z-plus-et-t95-max"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Gigabit Ethernet advertised, Android 12."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tanix-tx2-r2",
@@ -2064,10 +2271,12 @@
           "src-androidpctv-tanix-tx2-r2-rk3229",
           "src-tanix-tx2-r2-a-base-de-rk3229-androidtvbox"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "10/100 Ethernet, Android 6 then 7.1."
       }
     ],
-    "notes_fr": "Autre gamme que la TX6, qui n'est pas Rockchip."
+    "notes_fr": "Autre gamme que la TX6, qui n'est pas Rockchip.",
+    "notes_en": "Different range from the TX6, which is not Rockchip."
   },
   {
     "id": "tanix-tx3",
@@ -2082,10 +2291,12 @@
         "year": 2019,
         "note_fr": "DDR3, Ethernet 10/100 d'après AndroidPCTV ; la version 2 Go n'a pas de Bluetooth.",
         "sources": ["src-androidpctv-tanix-tx3-s905x3", "src-tanix-fiche-de-la-tx3-s905x3"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet according to AndroidPCTV; the 2 GB version has no Bluetooth."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tanix-tx3-max",
@@ -2104,10 +2315,12 @@
           "src-coreelec-tanix-tx3-max-et-son-device-tree",
           "src-pchouse-fiche-de-vente-de-la-tanix-tx3-max"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "10/100 Ethernet, Android 7.1."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tanix-tx3-mini",
@@ -2122,7 +2335,8 @@
         "year": 2017,
         "note_fr": "Présenté à sa sortie comme une box à base d'Amlogic S905W.",
         "sources": ["src-cnx-tx3mini", "src-androidtvbox-tanix-tx3-mini-s905w-en-preco"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Presented at launch as an Amlogic S905W-based box."
       },
       {
         "soc": "amlogic-s905w2",
@@ -2131,10 +2345,12 @@
         "year": 2021,
         "note_fr": "Nouvelle version annoncée en 2021 avec un S905W2 et Android 11.",
         "sources": ["src-androidpctv-nouvelle-version-de-la-tx3-min"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "New version announced in 2021 with an S905W2 and Android 11."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tanix-tx3-mini-plus",
@@ -2149,10 +2365,12 @@
         "year": 2021,
         "note_fr": "Android 11, AV1, Ethernet 10/100.",
         "sources": ["src-androidpctv-tanix-tx3-mini-s905w2"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Android 11, AV1, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tanix-tx5-max",
@@ -2165,15 +2383,17 @@
         "ram_gb": [4],
         "storage_gb": [32],
         "year": 2019,
-        "note_fr": "4 Go DDR4 annonces, Ethernet gigabit.",
+        "note_fr": "4 Go DDR4 annoncés, Ethernet gigabit.",
         "sources": [
           "src-androidtvbox-tanix-tx5-max-et-tx5-pro-s905",
           "src-tv-box-stop-test-de-la-tanix-tx5-max-s905x"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "4 GB DDR4 advertised, Gigabit Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tanix-tx5-pro",
@@ -2186,9 +2406,10 @@
         "ram_gb": [2],
         "storage_gb": [16],
         "year": 2016,
-        "note_fr": "Premiere TX5 Pro (S905X), Ethernet 10/100.",
+        "note_fr": "Première TX5 Pro (S905X), Ethernet 10/100.",
         "sources": ["src-cnx-tanix-tx5-pro-s905x-demontage"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "First TX5 Pro (S905X), 10/100 Ethernet."
       },
       {
         "soc": "amlogic-s905x2",
@@ -2200,10 +2421,12 @@
           "src-androidtvbox-tanix-tx5-max-et-tx5-pro-s905",
           "src-geekbuying-fiche-de-la-tanix-tx5-pro-s905x"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "2019 version with an S905X2, Gigabit Ethernet."
       }
     ],
-    "notes_fr": "Même nom, deux SoC selon l'annee."
+    "notes_fr": "Même nom, deux SoC selon l'année.",
+    "notes_en": "Same name, two SoCs depending on the year."
   },
   {
     "id": "tanix-tx6",
@@ -2216,12 +2439,13 @@
         "ram_gb": [4],
         "storage_gb": [32],
         "year": 2019,
-        "note_fr": "Hors famille Amlogic, listee pour référence ; Ethernet 10/100.",
+        "note_fr": "Hors famille Amlogic, listée pour référence ; Ethernet 10/100.",
         "sources": [
           "src-cnx-tanix-tx6-allwinner-h6",
           "src-noyau-linux-devicetree-de-la-tanix-tx6-com"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Outside the Amlogic family, listed for reference; 10/100 Ethernet."
       },
       {
         "soc": "allwinner-h6",
@@ -2233,10 +2457,12 @@
           "src-cnx-software-tanix-tx6-h6",
           "src-noyau-linux-devicetree-de-la-tanix-tx6-com"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3 4 GB advertised; a reader comment points out that the H6 only addresses 3 GB at a time, which matches the ambiguity already noted on allwinner-h6. 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tanix-tx6s",
@@ -2251,10 +2477,12 @@
         "year": 2020,
         "note_fr": "Nom proche du TX6 mais SoC différent ; Ethernet 10/100.",
         "sources": ["src-cnx-processeur-allwinner-h616-tanix-tx6s-e"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Name close to the TX6 but different SoC; 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tanix-tx9s",
@@ -2269,7 +2497,8 @@
         "year": null,
         "note_fr": "Ethernet gigabit selon l'article ; un catalogue en ligne parle de 100 Mbit/s (sources divergentes).",
         "sources": ["src-androidpctv-tanix-tx9s-s912"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Gigabit Ethernet according to the article; an online catalogue says 100 Mbit/s (sources differ)."
       },
       {
         "soc": "amlogic-s912",
@@ -2278,10 +2507,12 @@
         "year": 2019,
         "note_fr": "DDR3, Mali-T820 MP3 ; l'article parle d'un « port Gigabyte », probablement une coquille pour gigabit.",
         "sources": ["src-androidpctv-tanix-tx9s-s912"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, Mali-T820 MP3; the article mentions a \"Gigabyte port\", probably a typo for Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tanix-w2",
@@ -2296,10 +2527,12 @@
         "year": 2022,
         "note_fr": "Ethernet 10/100.",
         "sources": ["src-androidpctv-tanix-w2-s905w2"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "transpeed-8k618-t",
@@ -2317,10 +2550,12 @@
           "src-armbian-forum-transpeed-8k618-t-h618",
           "src-noyau-linux-devicetree-de-la-transpeed-8k6"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "An Armbian user saw U-Boot detect 4 GiB; storage not specified."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "transpeed-av1",
@@ -2335,10 +2570,12 @@
         "year": 2022,
         "note_fr": "DDR3, Ethernet 10/100.",
         "sources": ["src-androidpctv-transpeed-av1-s905w2"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "transpeed-p10",
@@ -2353,10 +2590,12 @@
         "year": 2022,
         "note_fr": "Projecteur Android et non TV box ; cité pour le SoC H700.",
         "sources": ["src-cnx-projecteur-transpeed-p10-allwinner-h70"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Android projector and not a TV box; cited for the H700 SoC."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "transpeed-x3-air",
@@ -2371,10 +2610,12 @@
         "year": 2020,
         "note_fr": "DDR3, Ethernet gigabit.",
         "sources": ["src-androidpctv-transpeed-x3-air-s905x3"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, Gigabit Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tronsmart-orion-r28",
@@ -2392,7 +2633,8 @@
           "src-cnx-software-tronsmart-orion-r28-rk3288-tr",
           "src-test-de-la-tronsmart-orion-r28-android-aut"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Pro (8 GB) and Meta (16 GB) variants, beta batch aimed at tinkerers."
       },
       {
         "soc": "rockchip-rk3288",
@@ -2404,10 +2646,12 @@
           "src-cnx-software-tronsmart-orion-r28-rk3288-tr",
           "src-test-de-la-tronsmart-orion-r28-android-aut"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Telos variant."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "tvpp0030",
@@ -2422,10 +2666,12 @@
         "year": 2015,
         "note_fr": "DDR3, NAND 8 Go, Ethernet 10/100.",
         "sources": ["src-cnx-premieres-boxes-allwinner-h3"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 8 GB NAND, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "ugoos-am6-plus",
@@ -2443,10 +2689,12 @@
           "src-cnx-software-ugoos-am6-plus-s922x-j",
           "src-ugoos-fiche-de-l-am6-plus-s922xj"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S922X-J (2.2 GHz); the original AM6 had an S922X at 1.8 GHz with less memory according to the article."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "ugoos-am6b-plus",
@@ -2464,10 +2712,12 @@
           "src-cnx-software-ugoos-am6b-plus-2021",
           "src-techxreviews-test-de-l-ugoos-am6b-plus-s92"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Only difference from the AM6 Plus: Wi-Fi 6 module instead of Wi-Fi 5."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "ugoos-am7",
@@ -2482,10 +2732,12 @@
         "year": 2021,
         "note_fr": "Contrairement à une idée reçue, ce modèle utilise un S905X4 (pas de S928X). LPDDR4, gigabit, AV1 4Kp60.",
         "sources": ["src-cnx-software-ugoos-am7-s905x4", "src-ugoos-fiche-de-l-am7-s905x4"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Contrary to a common belief, this model uses an S905X4 (not an S928X). LPDDR4, Gigabit, AV1 4Kp60."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "ugoos-am8",
@@ -2500,10 +2752,12 @@
         "year": 2023,
         "note_fr": "S928X-J avec sortie HDMI 2.1 jusqu'à 8Kp60 ; LPDDR4, gigabit.",
         "sources": ["src-cnx-software-ugoos-am8-s928x-j", "src-ugoos-fiche-de-l-am8-s928x-j"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S928X-J with HDMI 2.1 output up to 8Kp60; LPDDR4, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "ugoos-am9",
@@ -2522,10 +2776,12 @@
           "src-ugoos-fiche-de-l-am9-s905x5",
           "src-androidpctv-presentation-de-l-ugoos-am9-s9"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S905X5 with Cortex-A510 cores, LPDDR4x, Gigabit, H.266 and AV1 up to 4Kp60."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "ugoos-ut3-plus",
@@ -2540,10 +2796,12 @@
         "year": 2015,
         "note_fr": "Entrée HDMI avec incrustation ; Ethernet 100/1000.",
         "sources": ["src-cnx-software-ugoos-ut3-rk3288", "src-annonce-ugoos-ut3-rk3288"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "HDMI input with overlay; 100/1000 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "ugoos-ut8",
@@ -2561,10 +2819,12 @@
           "src-cnx-software-ugoos-ut8-et-ut8-pro-rk3568",
           "src-page-produit-ugoos-ut8-pro-rk3568"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "UT8: 4 GB / 32 GB, Wi-Fi 5; UT8 Pro: 8 GB / 64 GB, Wi-Fi 6; Gigabit Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "ugoos-x5m-pro",
@@ -2582,10 +2842,12 @@
           "src-cnx-software-ugoos-x5m-pro-s905x5m",
           "src-ugoos-fiche-de-l-x5m-pro-s905x5m"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S905X5M, 4 GB LPDDR4, Gigabit; 4Kp60 10-bit decoding according to CNX."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "vontar-kk-max",
@@ -2603,10 +2865,12 @@
           "src-armbian-forum-vontar-kk-max-hk1-rbox-r2-et",
           "src-vontar-kk-max-a-base-de-rk3566-androidtvbo"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Advertised 4 GB with 32 or 64 GB of storage; see the point about the HK1 RBOX R2's memory chips, whose DTB it shares."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "vontar-v1",
@@ -2621,10 +2885,12 @@
         "year": 2018,
         "note_fr": "Android TV 7.1.2, Ethernet 10/100.",
         "sources": ["src-androidpctv-vontar-v1-s905w"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Android TV 7.1.2, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "vontar-x2",
@@ -2639,10 +2905,12 @@
         "year": 2022,
         "note_fr": "DDR3, Ethernet 10/100.",
         "sources": ["src-androidpctv-vontar-x2-s905w2"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "vontar-x3",
@@ -2660,10 +2928,12 @@
           "src-androidpctv-vontar-x3-s905x3",
           "src-tv-box-stop-test-de-la-vontar-x3-s905x3"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "vorke-z1",
@@ -2681,10 +2951,12 @@
           "src-cnx-vorke-z1-s912-3-go-ddr4",
           "src-profesional-review-vorke-z1-en-espagnol"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR4, Gigabit Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "wechip-r69",
@@ -2699,10 +2971,12 @@
         "year": 2019,
         "note_fr": "DDR3, Ethernet 10/100.",
         "sources": ["src-cnx-wechip-r69-h3"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "x7-s905l2",
@@ -2720,7 +2994,8 @@
           "src-cnx-boxes-dites-s905l2-vendues-vers-20-dol",
           "src-androidtvbox-box-x7-annoncee-s905l2"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Advertised S905L2; see the reported case where buyers report an S905L."
       },
       {
         "soc": "amlogic-s905l",
@@ -2729,10 +3004,12 @@
         "year": 2020,
         "note_fr": "SoC signalé par des acheteurs à la place du S905L2 annoncé.",
         "sources": ["src-cnx-boxes-dites-s905l2-vendues-vers-20-dol"],
-        "kind": "reported"
+        "kind": "reported",
+        "note_en": "SoC reported by buyers in place of the advertised S905L2."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "x88-pro",
@@ -2747,10 +3024,12 @@
         "year": 2019,
         "note_fr": "Version d'origine, SoC bon marché dérivé du RK3328, Ethernet 10/100.",
         "sources": ["src-cnx-x88pro-rk3318"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Original version, cheap SoC derived from the RK3328, 10/100 Ethernet."
       }
     ],
-    "notes_fr": "Une version « X88 Pro X3 » existe sous un autre SoC annoncé (S905X3) : voir les cas signalés."
+    "notes_fr": "Une version « X88 Pro X3 » existe sous un autre SoC annoncé (S905X3) : voir les cas signalés.",
+    "notes_en": "An \"X88 Pro X3\" version exists with a different advertised SoC (S905X3): see the reported cases."
   },
   {
     "id": "x88-pro-10",
@@ -2768,10 +3047,12 @@
           "src-androidpctv-transpeed-x88-pro-10-rk3318",
           "src-test-de-la-x88-pro-10-hyperhdr"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet, Mali-450 MP5 GPU according to AndroidPCTV. This is not an Amlogic SoC despite the name resemblance to the X88 Pro X3."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "x88-pro-x3",
@@ -2789,10 +3070,12 @@
           "src-coreelec-x88prox3-fake4gb",
           "src-techxreviews-test-de-la-x88-pro-x3-s905x3"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "A CoreELEC thread reports a box sold with 4 GB whose bootloader only announces 2 GB; the kernel log and an application test give partially contradictory indications (case already in data/cases.json)."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "x96-air",
@@ -2807,10 +3090,12 @@
         "year": 2019,
         "note_fr": "DDR3, Ethernet 10/100 selon l'article.",
         "sources": ["src-cnx-x96-air-s905x3", "src-tv-box-stop-test-de-la-x96-air-s905x3"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet according to the article."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "x96-max",
@@ -2825,7 +3110,8 @@
         "year": 2018,
         "note_fr": "Version 2 Go en Ethernet 100M, versions 4 Go en gigabit.",
         "sources": ["src-cnx-x96-max-s905x2", "src-androidtvbox-firmware-de-la-x96-max-s905x2"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "2 GB version with 100M Ethernet, 4 GB versions with Gigabit."
       },
       {
         "soc": "allwinner-h616",
@@ -2834,10 +3120,12 @@
         "year": 2020,
         "note_fr": "Même nom, SoC différent : DDR3, Ethernet 10/100.",
         "sources": ["src-androidpctv-x96-max-avec-h616"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Same name, different SoC: DDR3, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "x96-max-plus",
@@ -2856,10 +3144,12 @@
           "src-coreelec-x96-max-plus-s905x3-et-ses-varian",
           "src-techxreviews-test-de-la-x96-max-s905x3"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "According to a reseller, 2 GB/16 GB without 5 GHz or Bluetooth, and 4 GB with 32 or 64 GB; Ethernet advertised 100M. CoreELEC users describe 100M boards and others Gigabit, plus a 4 GB/64 GB revision. A gap between sheet and measurement therefore exists: test the port."
       }
     ],
-    "notes_fr": "Une fiche revendeur annonce 100M pour toutes les versions alors qu'un fil communautaire rapporte des cartes gigabit : contradiction non tranchée."
+    "notes_fr": "Une fiche revendeur annonce 100M pour toutes les versions alors qu'un fil communautaire rapporte des cartes gigabit : contradiction non tranchée.",
+    "notes_en": "A reseller sheet states 100M for all versions whereas a community thread reports Gigabit boards: contradiction not settled."
   },
   {
     "id": "x96-mini",
@@ -2878,7 +3168,8 @@
           "src-coreelec-x96-mini-p281-et-p282",
           "src-androidpctv-test-de-la-x96-mini-s905w"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Original version advertised with an S905W; p281/p282 boards circulate under CoreELEC."
       },
       {
         "soc": "rockchip-rk3228a",
@@ -2891,10 +3182,12 @@
           "src-armbian-forum-x96-mini-annoncee-s905w-rk32",
           "src-fil-coreelec-x96-mini-avec-rk3229-au-lieu"
         ],
-        "kind": "reported"
+        "kind": "reported",
+        "note_en": "Reported case: a unit marked S905W (4 GB / 32 GB sticker) was identified as RK322x under Armbian with 1 GB / 8 GB. It should not be inferred that all X96 mini units are like this."
       }
     ],
-    "notes_fr": "Un cas signalé (voir les modèles signalés) décrit une box de ce nom annoncée S905W mais identifiée RK3229 : le nom seul ne garantit pas le SoC."
+    "notes_fr": "Un cas signalé (voir les modèles signalés) décrit une box de ce nom annoncée S905W mais identifiée RK3229 : le nom seul ne garantit pas le SoC.",
+    "notes_en": "A reported case (see the reported cases) describes a box of this name advertised as S905W but identified as RK3229: the name alone does not guarantee the SoC."
   },
   {
     "id": "x96-mini-plus",
@@ -2912,7 +3205,8 @@
           "src-androidpctv-x96-mini-et-le-s905w4-annonce",
           "src-androidtvbox-x96-mini-annoncee-s905w4"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Advertised S905W4; the tester deduces from the system information that it is in practice a renamed S905W (tester's hypothesis)."
       },
       {
         "soc": "amlogic-s905w4",
@@ -2925,10 +3219,12 @@
           "src-androidpctv-x96-mini-5g-s905w4",
           "src-androidtvbox-x96-mini-annoncee-s905w4"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet, Cortex-A53 at 1.2 GHz; the \"5G\" version is advertised without Bluetooth."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "x96-x4",
@@ -2946,10 +3242,12 @@
           "src-androidpctv-test-du-x96-x4-s905x4",
           "src-techxreviews-test-de-la-x96-x4-s905x4"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3 4 GB RAM and 10/100 Ethernet according to an AndroidPCTV test; other sales sheets mention Gigabit: contradiction, test the port."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "x96q",
@@ -2968,10 +3266,12 @@
           "src-androidpctv-test-du-x96q-h313",
           "src-androidpctv-h313-et-x96q"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet, Wi-Fi without Bluetooth, Android 10."
       }
     ],
-    "notes_fr": "Des cartes X96Q avec d'autres configurations mémoire ont été décrites sur le forum Armbian (voir cas)."
+    "notes_fr": "Des cartes X96Q avec d'autres configurations mémoire ont été décrites sur le forum Armbian (voir cas).",
+    "notes_en": "X96Q boards with other memory configurations have been described on the Armbian forum (see cases)."
   },
   {
     "id": "x96q-max",
@@ -2986,10 +3286,12 @@
         "year": 2020,
         "note_fr": "DDR3, Ethernet 10/100.",
         "sources": ["src-androidpctv-x96q-max-h616"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, 10/100 Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "xiaomi-mi-box-2016",
@@ -3007,10 +3309,12 @@
           "src-cnx-xiaomi-mi-box-2016-s905x-h",
           "src-android-tv-guide-xiaomi-mi-box-2016"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "The SoC is an S905X-H, with no Ethernet port."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "xiaomi-mi-box-s",
@@ -3025,10 +3329,12 @@
         "year": 2018,
         "note_fr": "S905X, Android TV 8.1.",
         "sources": ["src-cnx-xiaomi-mi-box-s-s905x", "src-android-tv-guide-xiaomi-mi-box-s"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "S905X, Android TV 8.1."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "yundoo-y8",
@@ -3047,10 +3353,12 @@
           "src-test-du-yundoo-y8-rk3399-androidtvbox",
           "src-fiche-du-yundoo-y8-tv-box-stop"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "Presented as one of the first RK3399 boxes; Gigabit Ethernet."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "zidoo-x9s",
@@ -3065,10 +3373,12 @@
         "year": 2016,
         "note_fr": "DDR3, Ethernet Gigabit, SATA.",
         "sources": ["src-cnx-zidoo-x9s-realtek-rtd1295"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR3, Gigabit Ethernet, SATA."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "zidoo-z10",
@@ -3083,10 +3393,12 @@
         "year": 2018,
         "note_fr": "RTD1296DD, DDR3, Gigabit, une baie SATA 3,5 pouces.",
         "sources": ["src-cnx-zidoo-z9s-et-z10-rtd1296"],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "RTD1296DD, DDR3, Gigabit, one 3.5-inch SATA bay."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "zidoo-z10-pro",
@@ -3104,10 +3416,12 @@
           "src-cnx-zidoo-z9x-et-z10-pro-rtd1619dr",
           "src-annonce-des-zidoo-z9x-et-z10-pro-androidpc"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR4, Gigabit, 3.5-inch SATA bay."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "zidoo-z9s",
@@ -3125,10 +3439,12 @@
           "src-cnx-zidoo-z9s-et-z10-rtd1296",
           "src-test-de-la-zidoo-z9s-a-base-de-rtd1296dd-a"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "RTD1296DD, DDR3, Gigabit, 2 external SATA bays."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   },
   {
     "id": "zidoo-z9x",
@@ -3146,9 +3462,11 @@
           "src-cnx-zidoo-z9x-et-z10-pro-rtd1619dr",
           "src-test-de-la-zidoo-z9x-a-base-de-rtd1619dr-a"
         ],
-        "kind": "official"
+        "kind": "official",
+        "note_en": "DDR4, Gigabit."
       }
     ],
-    "notes_fr": null
+    "notes_fr": null,
+    "notes_en": null
   }
 ]

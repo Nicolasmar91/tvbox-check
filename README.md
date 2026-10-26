@@ -4,7 +4,7 @@
 
 Beaucoup de TV box Android bon marché affichent de fausses specs : RAM, stockage, parfois le SoC. Le firmware est modifié pour mentir, et la vraie information est éparpillée dans des fils de forum (Armbian, CoreELEC, LibreELEC…). tvbox-check la rassemble, avec ses sources.
 
-Un projet [NM Labs](https://nm-labs.fr). Site en français, code MIT, données CC BY 4.0.
+Un projet [NM Labs](https://nm-labs.fr). Site **bilingue, français et anglais** (`/en/`), code MIT, données CC BY 4.0.
 
 ## Ce que fait le site
 

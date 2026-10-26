@@ -16,14 +16,20 @@ Chaque PR est relue avec cette grille, que tout le monde peut consulter. Le main
 - [ ] Les contradictions entre sources sont signalées dans `community_findings`, pas masquées.
 - [ ] Une valeur ne passe pas `verified` parce qu'« on la connaît » : sans document lu ni deux sources indépendantes concordantes, elle reste non vérifiée.
 
-## 3. Texte et éthique
+## 3. Traduction (français et anglais)
+
+- [ ] Chaque texte français ajouté a son équivalent anglais (`*_en`), fidèle au sens et au niveau de prudence du français.
+- [ ] Les nouvelles chaînes d'interface et messages du moteur existent dans les deux langues.
+- [ ] `pnpm i18n` passe : chaque page existe en français et en anglais.
+
+## 4. Texte et éthique
 
 - [ ] Résumé avec les mots du contributeur, **pas de copier-coller** de forum ou de datasheet.
 - [ ] Vocabulaire neutre : « cas signalé », « écart observé ». Jamais « arnaque », « escroc », ni nom de vendeur individuel.
 - [ ] Pas de donnée personnelle (email, nom, adresse) dans les fichiers ou les logs joints.
 - [ ] Photos et captures : uniquement celles du contributeur ou libres de droits.
 
-## 4. Code
+## 5. Code
 
 - [ ] Un test accompagne tout changement du moteur de règles (`packages/core`) ; le moteur reste pur, sans dépendance navigateur.
 - [ ] Les textes de l'interface restent dans `apps/web/src/i18n/`, pas en dur dans les composants.
@@ -32,7 +38,7 @@ Chaque PR est relue avec cette grille, que tout le monde peut consulter. Le main
 - [ ] Pas de nouvelle dépendance sans justification (poids, licence, maintenance).
 - [ ] Pas de script ou de commande exécutés à l'installation qui sortent du périmètre de la PR.
 
-## 5. Périmètre
+## 6. Périmètre
 
 - [ ] La PR fait une chose. Les gros changements se discutent d'abord dans une issue.
 - [ ] Le message de PR explique le pourquoi, pas seulement le quoi.

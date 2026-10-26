@@ -73,13 +73,27 @@ describe("verdicts sur la base réelle", () => {
 describe("base « recoupée » (corroborated)", () => {
   type Raw = {
     socs: { id: string; ram_max_gb: unknown }[];
-    sources: { id: string; url: string; title: string; type: string; accessed: string }[];
+    sources: {
+      id: string;
+      url: string;
+      title: string;
+      title_en: string;
+      type: string;
+      accessed: string;
+    }[];
   };
   const withSources = (urls: string[]) => {
     const raw = structuredClone(loadRawDatabase()) as Raw;
     const ids = urls.map((url, i) => {
       const id = `src-test-${i}`;
-      raw.sources.push({ id, url, title: `Test ${i}`, type: "article", accessed: "2026-10-25" });
+      raw.sources.push({
+        id,
+        url,
+        title: `Test ${i}`,
+        title_en: `Test ${i}`,
+        type: "article",
+        accessed: "2026-10-25",
+      });
       return id;
     });
     raw.sources.sort((a, b) => (a.id < b.id ? -1 : 1));
@@ -122,5 +136,39 @@ describe("base « recoupée » (corroborated)", () => {
     expect(registrableDomain("https://forum.armbian.com/topic/1")).toBe("armbian.com");
     expect(registrableDomain("https://www.cnx-software.com/x")).toBe("cnx-software.com");
     expect(registrableDomain("https://exemple.co.uk/x")).toBe("exemple.co.uk");
+  });
+});
+
+describe("traduction obligatoire (champs _en)", () => {
+  type Raw = {
+    socs: { notes_fr: string | null; notes_en: string | null }[];
+    cases: { summary_en?: string }[];
+    sources: { title_en?: string }[];
+  };
+  const base = () => structuredClone(loadRawDatabase()) as Raw;
+
+  it("rejette un cas sans résumé anglais", () => {
+    const raw = base();
+    delete raw.cases[0]!.summary_en;
+    expect(validateDatabase(raw).ok).toBe(false);
+  });
+
+  it("rejette une source sans titre anglais", () => {
+    const raw = base();
+    delete raw.sources[0]!.title_en;
+    expect(validateDatabase(raw).ok).toBe(false);
+  });
+
+  it("rejette une note française sans sa traduction (et l'inverse)", () => {
+    const withNote = base().socs.find((s) => s.notes_fr !== null)!;
+    const raw = base();
+    const soc = raw.socs.find((s) => s.notes_fr === withNote.notes_fr)!;
+    soc.notes_en = null;
+    expect(validateDatabase(raw).errors.join()).toContain("traduction obligatoire");
+
+    const raw2 = base();
+    const empty = raw2.socs.find((s) => s.notes_fr === null)!;
+    empty.notes_en = "Orphan translation";
+    expect(validateDatabase(raw2).ok).toBe(false);
   });
 });
