@@ -2,13 +2,24 @@
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import { beforeAll, describe, expect, it } from "vitest";
-import { loadBundledDatabase, loadDatabase, parseDatabase } from "../src/data.ts";
+import {
+  DEFAULT_DB_URL,
+  DatabaseProvider,
+  loadBundledDatabase,
+  parseDatabase,
+} from "../src/data.ts";
+import type { DatabaseState } from "../src/data.ts";
 import { SERVER_INSTRUCTIONS, createServer } from "../src/server.ts";
 
 const db = loadBundledDatabase();
 
-async function connect(defaultLocale: "fr" | "en" = "en") {
-  const server = createServer(db, defaultLocale);
+const bundledState: DatabaseState = { db, source: "bundled", updatedAt: null };
+
+async function connect(
+  defaultLocale: "fr" | "en" = "en",
+  getState: () => DatabaseState = () => bundledState,
+) {
+  const server = createServer(getState, defaultLocale);
   const client = new Client({ name: "test", version: "0.0.0" });
   const [clientTransport, serverTransport] = InMemoryTransport.createLinkedPair();
   await Promise.all([server.connect(serverTransport), client.connect(clientTransport)]);
@@ -131,33 +142,164 @@ describe("serveur MCP", () => {
   });
 });
 
-describe("chargement des données", () => {
-  it("utilise la base embarquée par défaut", async () => {
-    const r = await loadDatabase({}, (() => {
-      throw new Error("aucun appel réseau attendu");
-    }) as unknown as typeof fetch);
-    expect(r.source).toBe("bundled");
-    expect(r.db.socs.length).toBeGreaterThan(40);
+describe("fraîcheur des données dans les réponses", () => {
+  it("indique que la copie embarquée est utilisée", async () => {
+    const client = await connect("en");
+    const r = await call(client, "search", { query: "tx3" });
+    expect(r.structuredContent.meta).toEqual({ data_source: "bundled", data_checked_at: null });
+    expect(r.content[0]!.text).toContain("bundled");
   });
 
-  it("refuse une adresse non HTTPS et garde la base embarquée", async () => {
-    const r = await loadDatabase({ TVBOX_CHECK_DB_URL: "http://exemple.org/db.json" });
-    expect(r.source).toBe("bundled");
-    expect(r.warning).toContain("https://");
+  it("indique la date de vérification quand les données viennent du site", async () => {
+    const online: DatabaseState = { db, source: "online", updatedAt: "2026-10-26T10:30:00.000Z" };
+    const client = await connect("fr", () => online);
+    const r = await call(client, "search", { query: "tx3" });
+    expect(r.structuredContent.meta.data_source).toBe("online");
+    expect(r.content[0]!.text).toContain("2026-10-26 10:30 UTC");
+    expect(r.content[0]!.text).toContain("en ligne");
   });
 
-  it("ignore une base distante invalide", async () => {
-    const fake = (async () =>
-      new Response(JSON.stringify({ socs: [] }))) as unknown as typeof fetch;
-    const r = await loadDatabase({ TVBOX_CHECK_DB_URL: "https://exemple.org/db.json" }, fake);
-    expect(r.source).toBe("bundled");
-    expect(r.warning).toContain("ignorée");
+  it("prend en compte une base mise à jour pendant la vie du serveur", async () => {
+    let state = bundledState;
+    const client = await connect("en", () => state);
+    const before = await call(client, "search", { query: "x96" });
+    state = {
+      db: { ...db, models: [], cases: [] },
+      source: "online",
+      updatedAt: "2026-10-26T10:30:00.000Z",
+    };
+    const after = await call(client, "search", { query: "x96" });
+    expect(after.structuredContent.results.length).toBeLessThan(
+      before.structuredContent.results.length,
+    );
+  });
+});
+
+const ok = (body: unknown, etag?: string) =>
+  new Response(JSON.stringify(body), { headers: etag ? { etag } : {} });
+const smaller = () => ({ ...db, cases: db.cases.slice(0, 5) });
+// Valide, mais anormalement réduite : moins de la moitié des SoC de la copie embarquée.
+const tooSmall = () => ({ socs: db.socs.slice(0, 3), models: [], cases: [], sources: db.sources });
+const URL_OK = "https://exemple.org/db.json";
+
+describe("mise à jour en ligne des données", () => {
+  it("vérifie le site par défaut, sauf mode hors ligne", () => {
+    expect(new DatabaseProvider({ env: {} }).url).toBe(DEFAULT_DB_URL);
+    expect(new DatabaseProvider({ env: { TVBOX_CHECK_OFFLINE: "1" } }).url).toBeNull();
+    expect(new DatabaseProvider({ env: { TVBOX_CHECK_DB_URL: URL_OK } }).url).toBe(URL_OK);
   });
 
-  it("utilise une base distante valide", async () => {
-    const fake = (async () => new Response(JSON.stringify(db))) as unknown as typeof fetch;
-    const r = await loadDatabase({ TVBOX_CHECK_DB_URL: "https://exemple.org/db.json" }, fake);
-    expect(r.source).toBe("remote");
-    expect(parseDatabase(r.db).socs.length).toBe(db.socs.length);
+  it("hors ligne : aucun appel réseau et copie embarquée", async () => {
+    let called = false;
+    const p = new DatabaseProvider({
+      env: { TVBOX_CHECK_OFFLINE: "true" },
+      fetchImpl: (async () => {
+        called = true;
+        return ok(db);
+      }) as unknown as typeof fetch,
+    });
+    p.start();
+    expect(await p.refresh()).toBe(false);
+    expect(called).toBe(false);
+    expect(p.get().source).toBe("bundled");
+    p.stop();
+  });
+
+  it("applique une base en ligne valide", async () => {
+    const seen: Record<string, string>[] = [];
+    const newer = { ...db, cases: db.cases.slice(0, 3) };
+    const p = new DatabaseProvider({
+      env: { TVBOX_CHECK_DB_URL: URL_OK },
+      fetchImpl: (async (_url: string, init: RequestInit) => {
+        seen.push(init.headers as Record<string, string>);
+        return ok(newer, '"v1"');
+      }) as unknown as typeof fetch,
+      now: () => new Date("2026-10-26T10:30:00Z"),
+    });
+    expect(await p.refresh()).toBe(true);
+    expect(p.get()).toMatchObject({ source: "online", updatedAt: "2026-10-26T10:30:00.000Z" });
+    expect(p.get().db.cases).toHaveLength(3);
+    expect(seen[0]!["User-Agent"]).toBe("tvbox-check-mcp");
+  });
+
+  it("utilise l'ETag : une réponse 304 ne change rien", async () => {
+    let count = 0;
+    const headers: Record<string, string>[] = [];
+    const p = new DatabaseProvider({
+      env: { TVBOX_CHECK_DB_URL: URL_OK },
+      fetchImpl: (async (_url: string, init: RequestInit) => {
+        headers.push(init.headers as Record<string, string>);
+        return count++ === 0 ? ok(db, '"v1"') : new Response(null, { status: 304 });
+      }) as unknown as typeof fetch,
+    });
+    expect(await p.refresh()).toBe(true);
+    expect(await p.refresh()).toBe(false);
+    expect(headers[1]!["If-None-Match"]).toBe('"v1"');
+    expect(p.get().source).toBe("online");
+  });
+
+  it("ignore une base invalide, anormalement réduite, une erreur HTTP ou un JSON illisible", async () => {
+    const cases: [() => Response, string][] = [
+      [() => ok({ socs: [] }), "invalide"],
+      [() => ok(tooSmall()), "anormalement réduite"],
+      [() => new Response("oups", { status: 500 }), "HTTP 500"],
+      [() => new Response("pas du json"), "impossible"],
+    ];
+    for (const [make, expected] of cases) {
+      const logs: string[] = [];
+      const p = new DatabaseProvider({
+        env: { TVBOX_CHECK_DB_URL: URL_OK },
+        fetchImpl: (async () => make()) as unknown as typeof fetch,
+        log: (m) => logs.push(m),
+      });
+      expect(await p.refresh()).toBe(false);
+      expect(p.get().source).toBe("bundled");
+      expect(logs.join()).toContain(expected);
+    }
+  });
+
+  it("refuse une adresse non HTTPS", async () => {
+    const p = new DatabaseProvider({
+      env: { TVBOX_CHECK_DB_URL: "http://exemple.org/db.json" },
+      fetchImpl: (async () => ok(db)) as unknown as typeof fetch,
+    });
+    expect(await p.refresh()).toBe(false);
+    expect(p.get().source).toBe("bundled");
+  });
+
+  it("garde la base en ligne précédente quand une vérification échoue", async () => {
+    let first = true;
+    const p = new DatabaseProvider({
+      env: { TVBOX_CHECK_DB_URL: URL_OK },
+      fetchImpl: (async () => {
+        if (first) {
+          first = false;
+          return ok(smaller());
+        }
+        throw new Error("réseau coupé");
+      }) as unknown as typeof fetch,
+    });
+    expect(await p.refresh()).toBe(true);
+    const kept = p.get().db.cases.length;
+    expect(await p.refresh()).toBe(false);
+    expect(p.get().source).toBe("online");
+    expect(p.get().db.cases.length).toBe(kept);
+  });
+
+  it("ne bloque jamais le démarrage : le serveur répond avant la fin du réseau", async () => {
+    const p = new DatabaseProvider({
+      env: { TVBOX_CHECK_DB_URL: URL_OK },
+      fetchImpl: (() => new Promise(() => {})) as unknown as typeof fetch,
+    });
+    p.start();
+    const client = await connect("en", () => p.get());
+    const r = await call(client, "get_soc", { soc: "S905X" });
+    expect(r.structuredContent.found).toBe(true);
+    expect(r.structuredContent.meta.data_source).toBe("bundled");
+    p.stop();
+  });
+
+  it("parseDatabase refuse une base invalide", () => {
+    expect(() => parseDatabase({ socs: [] })).toThrow();
   });
 });

@@ -4,8 +4,9 @@
 <p class="lead">
   The MCP connector gives an assistant (Claude Desktop, Claude Code…) access to this site's
   database: it can check the advertised specs of a box, look up the limits of a SoC and the
-  revisions of a model, with the status and sources of every value. It is read-only and contacts no
-  server by default.
+  revisions of a model, with the status and sources of every value. It is read-only, and it checks
+  online that its data is up to date (a single HTTPS request to this site, with no information about
+  you), while still working offline with a bundled copy.
 </p>
 
 <h2>What it can do</h2>
@@ -94,16 +95,36 @@ pnpm build:mcp</code></pre>
     <code>en</code> (default: <code>en</code>).
   </li>
   <li>
-    <code>TVBOX_CHECK_DB_URL</code>: optional. HTTPS address of an up-to-date database, for example
-    <code>https://tvbox-check.nm-labs.dev/data/db.json</code>. It is validated against the schema
-    before use; on failure the bundled database is kept. Without this variable, nothing goes over
-    the network.
+    <code>TVBOX_CHECK_OFFLINE=1</code>: turns off all network access; only the bundled copy is used.
+  </li>
+  <li>
+    <code>TVBOX_CHECK_DB_URL</code>: HTTPS address of another database (default:
+    <code>https://tvbox-check.nm-labs.dev/data/db.json</code>).
+  </li>
+</ul>
+
+<h2>Always up-to-date data</h2>
+<ul>
+  <li>
+    The server starts immediately with the bundled copy, then checks the site's database in the
+    background, at startup and every 6 hours. It downloads nothing again if nothing has changed.
+  </li>
+  <li>
+    The database received is validated against the schema before use. On any error (network down,
+    invalid data, abnormally reduced database), the previous data is kept.
+  </li>
+  <li>
+    Every answer says where the data comes from: online (with the check date) or bundled copy.
   </li>
 </ul>
 
 <h2>Security</h2>
 <ul>
-  <li>The four tools are read-only: they change nothing and run no command.</li>
+  <li>
+    The four tools are read-only: they change nothing and run no command. The only network access is
+    an HTTPS GET request to the site's published database (turn it off with
+    <code>TVBOX_CHECK_OFFLINE=1</code>).
+  </li>
   <li>
     Summaries and source titles come from public third-party pages: they are returned as data, which
     the assistant must never treat as instructions.

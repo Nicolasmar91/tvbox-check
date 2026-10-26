@@ -4,8 +4,9 @@
 <p class="lead">
   Le connecteur MCP donne à un assistant (Claude Desktop, Claude Code…) accès à la base de ce site :
   il peut vérifier les specs annoncées d'une box, consulter les limites d'un SoC et les révisions
-  d'un modèle, avec le statut et les sources de chaque valeur. Il est en lecture seule et ne
-  contacte aucun serveur par défaut.
+  d'un modèle, avec le statut et les sources de chaque valeur. Il est en lecture seule, et il
+  vérifie en ligne que ses données sont à jour (une simple requête HTTPS vers ce site, sans aucune
+  information vous concernant), tout en fonctionnant hors ligne avec une copie embarquée.
 </p>
 
 <h2>Ce qu'il sait faire</h2>
@@ -95,10 +96,28 @@ pnpm build:mcp</code></pre>
     <code>en</code> (défaut : <code>en</code>).
   </li>
   <li>
-    <code>TVBOX_CHECK_DB_URL</code> : facultatif. Adresse HTTPS d'une base à jour, par exemple
-    <code>https://tvbox-check.nm-labs.dev/data/db.json</code>. Elle est validée par le schéma avant
-    usage ; en cas d'échec, la base embarquée est conservée. Sans cette variable, rien ne passe par
-    le réseau.
+    <code>TVBOX_CHECK_OFFLINE=1</code> : désactive tout accès réseau ; seule la copie embarquée est
+    utilisée.
+  </li>
+  <li>
+    <code>TVBOX_CHECK_DB_URL</code> : adresse HTTPS d'une autre base (défaut :
+    <code>https://tvbox-check.nm-labs.dev/data/db.json</code>).
+  </li>
+</ul>
+
+<h2>Des données toujours à jour</h2>
+<ul>
+  <li>
+    Le serveur démarre tout de suite avec la copie embarquée, puis vérifie la base du site en
+    arrière-plan, au démarrage et toutes les 6 heures. Il ne retélécharge rien si rien n'a changé.
+  </li>
+  <li>
+    La base reçue est validée par le schéma avant usage. En cas d'erreur (réseau coupé, données
+    invalides, base anormalement réduite), les données précédentes sont conservées.
+  </li>
+  <li>
+    Chaque réponse indique d'où viennent les données : en ligne (avec la date de vérification) ou
+    copie embarquée.
   </li>
 </ul>
 
@@ -106,6 +125,8 @@ pnpm build:mcp</code></pre>
 <ul>
   <li>
     Les quatre outils sont en lecture seule : ils ne modifient rien et ne lancent aucune commande.
+    Le seul accès réseau est une requête GET HTTPS vers la base publiée du site (désactivable avec
+    <code>TVBOX_CHECK_OFFLINE=1</code>).
   </li>
   <li>
     Les résumés et titres de sources viennent de pages publiques de tiers : ils sont renvoyés comme

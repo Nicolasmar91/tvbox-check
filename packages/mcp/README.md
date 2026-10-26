@@ -48,11 +48,17 @@ claude mcp add tvbox-check -e TVBOX_CHECK_LANG=en -- node /path/to/tvbox-check/p
 ## Réglages / Settings
 
 - `TVBOX_CHECK_LANG` : `fr` ou `en` (défaut / default: `en`).
-- `TVBOX_CHECK_DB_URL` : facultatif / optional. HTTPS URL of an up-to-date database, e.g. `https://tvbox-check.nm-labs.dev/data/db.json`. Validated against the schema; falls back to the bundled data on any failure. Sans cette variable, aucun accès réseau / without it, no network access.
+- `TVBOX_CHECK_OFFLINE=1` : aucun accès réseau, copie embarquée seulement / no network access, bundled copy only.
+- `TVBOX_CHECK_DB_URL` : autre base, HTTPS / another HTTPS database (default: `https://tvbox-check.nm-labs.dev/data/db.json`).
+
+## Données à jour / Up-to-date data
+
+Au démarrage, le serveur répond tout de suite avec la copie embarquée, puis vérifie la base du site en arrière-plan (au démarrage et toutes les 6 h, avec `ETag`). La base reçue est validée par le schéma ; en cas d'erreur, les données précédentes sont conservées. Chaque réponse indique d'où viennent les données.
+The server starts at once with the bundled copy, then checks the site's database in the background (at startup and every 6 h, with `ETag`). The database received is validated against the schema; on any error the previous data is kept. Every answer says where the data comes from.
 
 ## Sécurité / Security
 
-- Outils en lecture seule, aucune commande exécutée / read-only tools, no command executed.
+- Outils en lecture seule, aucune commande exécutée ; seul accès réseau : une requête GET HTTPS vers la base du site / read-only tools, no command executed; the only network access is an HTTPS GET to the site's database.
 - Les textes issus de pages tierces sont renvoyés comme des **données** ; le serveur le rappelle au client dans ses instructions / third-party texts are returned as **data**, and the server says so in its instructions.
 
 ## Contribuer / Contributing

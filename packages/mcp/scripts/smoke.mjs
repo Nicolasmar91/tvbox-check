@@ -8,7 +8,7 @@ const entry = fileURLToPath(new URL("../dist/index.js", import.meta.url));
 const transport = new StdioClientTransport({
   command: process.execPath,
   args: [entry],
-  env: { ...process.env, TVBOX_CHECK_LANG: "fr" },
+  env: { ...process.env, TVBOX_CHECK_LANG: "fr", TVBOX_CHECK_OFFLINE: "1" },
   stderr: "pipe",
 });
 const client = new Client({ name: "smoke", version: "0.0.0" });
@@ -36,6 +36,8 @@ try {
   });
   if (en.structuredContent?.ram_max_gb?.value !== 3)
     fail("get_soc : RAM max du S905X attendue = 3");
+  if (r.structuredContent?.meta?.data_source !== "bundled")
+    fail("mode hors ligne : source attendue = bundled");
   console.log(`smoke OK : ${tools.length} outils, base embarquée, réponses fr et en.`);
   await client.close();
 } catch (error) {

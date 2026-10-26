@@ -1,6 +1,8 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import type { Database, Locale } from "@tvbox-check/core";
+import type { Locale } from "@tvbox-check/core";
+import type { DatabaseState } from "./data.ts";
+import { dataMeta, dataNote } from "./meta.ts";
 import { checkBox, getModel, getSoc, searchTool } from "./tools.ts";
 import type { ToolOutput } from "./tools.ts";
 
@@ -19,8 +21,14 @@ const readOnly = {
   openWorldHint: false,
 } as const;
 
-/** Crée le serveur MCP (sans le connecter) : les outils sont en lecture seule sur `db`. */
-export function createServer(db: Database, defaultLocale: Locale = "en"): McpServer {
+/**
+ * Crée le serveur MCP (sans le connecter). Les outils sont en lecture seule ; `getState` donne la
+ * base courante à chaque appel (elle peut être mise à jour en ligne pendant la vie du serveur).
+ */
+export function createServer(
+  getState: () => DatabaseState,
+  defaultLocale: Locale = "en",
+): McpServer {
   const server = new McpServer(
     { name: "tvbox-check", version: "0.1.0" },
     { instructions: SERVER_INSTRUCTIONS },
@@ -31,9 +39,9 @@ export function createServer(db: Database, defaultLocale: Locale = "en"): McpSer
     .optional()
     .describe(`Language of the answer (fr or en). Default: ${defaultLocale}.`);
 
-  const respond = (out: ToolOutput) => ({
-    content: [{ type: "text" as const, text: out.text }],
-    structuredContent: out.data,
+  const respond = (out: ToolOutput, state: DatabaseState, locale: Locale) => ({
+    content: [{ type: "text" as const, text: `${out.text}\n\n${dataNote(state, locale)}` }],
+    structuredContent: { ...out.data, meta: dataMeta(state) },
   });
   const pick = (l: Locale | undefined): Locale => l ?? defaultLocale;
 
@@ -57,7 +65,11 @@ export function createServer(db: Database, defaultLocale: Locale = "en"): McpSer
       },
       annotations: { title: "Check a TV box", ...readOnly },
     },
-    async (args) => respond(checkBox(db, args, pick(args.language))),
+    async (args) => {
+      const state = getState();
+      const locale = pick(args.language);
+      return respond(checkBox(state.db, args, locale), state, locale);
+    },
   );
 
   server.registerTool(
@@ -75,7 +87,11 @@ export function createServer(db: Database, defaultLocale: Locale = "en"): McpSer
       },
       annotations: { title: "SoC limits", ...readOnly },
     },
-    async (args) => respond(getSoc(db, args, pick(args.language))),
+    async (args) => {
+      const state = getState();
+      const locale = pick(args.language);
+      return respond(getSoc(state.db, args, locale), state, locale);
+    },
   );
 
   server.registerTool(
@@ -90,7 +106,11 @@ export function createServer(db: Database, defaultLocale: Locale = "en"): McpSer
       },
       annotations: { title: "Model revisions", ...readOnly },
     },
-    async (args) => respond(getModel(db, args, pick(args.language))),
+    async (args) => {
+      const state = getState();
+      const locale = pick(args.language);
+      return respond(getModel(state.db, args, locale), state, locale);
+    },
   );
 
   server.registerTool(
@@ -112,7 +132,11 @@ export function createServer(db: Database, defaultLocale: Locale = "en"): McpSer
       },
       annotations: { title: "Search", ...readOnly },
     },
-    async (args) => respond(searchTool(db, args, pick(args.language))),
+    async (args) => {
+      const state = getState();
+      const locale = pick(args.language);
+      return respond(searchTool(state.db, args, locale), state, locale);
+    },
   );
 
   return server;

@@ -1,18 +1,23 @@
 #!/usr/bin/env node
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { loadDatabase } from "./data.ts";
+import { DatabaseProvider } from "./data.ts";
 import { createServer } from "./server.ts";
 
 async function main(): Promise<void> {
-  const { db, source, warning } = await loadDatabase();
-  const lang = process.env.TVBOX_CHECK_LANG === "fr" ? "fr" : "en";
   // stdout est réservé au protocole MCP : les messages vont sur stderr.
-  if (warning) console.error(`[tvbox-check] ${warning}`);
-  console.error(
-    `[tvbox-check] ${db.socs.length} SoC, ${db.models.length} modèles, ${db.cases.length} cas (${source})`,
+  const log = (message: string) => console.error(`[tvbox-check] ${message}`);
+  const provider = new DatabaseProvider({ log });
+  const { db } = provider.get();
+  log(
+    `${db.socs.length} SoC, ${db.models.length} modèles, ${db.cases.length} cas (copie embarquée)` +
+      (provider.url ? ` ; vérification en ligne : ${provider.url}` : " ; mode hors ligne"),
   );
-  const server = createServer(db, lang);
+
+  const lang = process.env.TVBOX_CHECK_LANG === "fr" ? "fr" : "en";
+  const server = createServer(() => provider.get(), lang);
   await server.connect(new StdioServerTransport());
+  // Après la connexion : le client n'attend jamais le réseau.
+  provider.start();
 }
 
 main().catch((error) => {
