@@ -15,7 +15,7 @@ Choisissez une idée, ouvrez une issue pour dire que vous la prenez, puis propos
 - **[contenu]** Relire le guide « vérifier les vraies specs » et signaler ce qui est faux ou flou.
 - **[contenu]** Ajouter une troisième langue (espagnol, allemand…) : dictionnaire dans `apps/web/src/i18n/`, messages du moteur dans `packages/core/src/`, champs `_xx` des données.
 - **[contenu]** Relire les traductions anglaises existantes (elles ont été rédigées d'après le français).
-- **[code]** Connecteur MCP en lecture seule (`check_box`, `get_soc`, `get_model`, `search`) réutilisant `packages/core`, avec les messages dans les deux langues.
+- **[code]** Publier le connecteur MCP sur npm (`npx`) ; aujourd'hui il se construit depuis le dépôt.
 - **[contenu]** Ajouter au guide la lecture des puces mémoire courantes (Samsung, Micron, SK hynix) avec des exemples de références.
 
 ## Code

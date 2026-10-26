@@ -8,7 +8,7 @@ La base (`data/`) est ouverte. Une contribution passe par une **issue** (modèle
 
 - **Données** : chaque texte français a son équivalent anglais (`notes_fr`/`notes_en`, `summary_fr`/`summary_en`, `note_fr`/`note_en`, `title`/`title_en`). Les deux sont renseignés ensemble ou vides ensemble.
 - **Interface** : toute nouvelle chaîne va dans `apps/web/src/i18n/fr.ts` **et** `en.ts` (le type `Strings` empêche d'en oublier une). Aucun texte en dur dans les composants.
-- **Moteur** : tout nouveau message de `packages/core` va dans `messages.fr.ts` **et** `messages.en.ts`.
+- **Moteur et connecteur MCP** : tout nouveau message de `packages/core` va dans `messages.fr.ts` **et** `messages.en.ts` ; tout nouveau libellé partagé dans `labels.ts` (les deux langues).
 - **Pages** : toute nouvelle page existe dans les deux langues (`pnpm i18n` le vérifie après le build).
 
 Une traduction approximative est acceptée : elle sera relue. Une absence de traduction ne l'est pas.

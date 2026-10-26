@@ -5,12 +5,12 @@ Read-only MCP server to query the tvbox-check database from an assistant.
 
 ## Outils / Tools
 
-| Outil / Tool | FR | EN |
-| --- | --- | --- |
-| `check_box` | Compare les specs annoncées aux limites du SoC et aux cas signalés. | Compares advertised specs with the SoC's limits and reported cases. |
-| `get_soc` | Limites d'un SoC, constats, box répertoriées. | SoC limits, findings, listed boxes. |
-| `get_model` | Révisions d'un modèle, confirmation, cas signalés. | Model revisions, confirmation level, reported cases. |
-| `search` | Recherche un SoC, un modèle ou un cas. | Finds a SoC, a model or a case. |
+| Outil / Tool | FR                                                                  | EN                                                                  |
+| ------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `check_box`  | Compare les specs annoncées aux limites du SoC et aux cas signalés. | Compares advertised specs with the SoC's limits and reported cases. |
+| `get_soc`    | Limites d'un SoC, constats, box répertoriées.                       | SoC limits, findings, listed boxes.                                 |
+| `get_model`  | Révisions d'un modèle, confirmation, cas signalés.                  | Model revisions, confirmation level, reported cases.                |
+| `search`     | Recherche un SoC, un modèle ou un cas.                              | Finds a SoC, a model or a case.                                     |
 
 Chaque outil accepte `language` (`fr` ou `en`). Chaque valeur renvoyée porte son statut, sa base et ses sources. Un verdict « plausible » ne prouve jamais qu'une box est authentique.
 Every tool accepts `language` (`fr` or `en`). Every value returned carries its status, basis and sources. A "plausible" verdict never proves that a box is genuine.

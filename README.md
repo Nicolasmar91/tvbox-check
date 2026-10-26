@@ -40,11 +40,12 @@ Prérequis : Node 24 et pnpm 9.
 
 ## Comment le dépôt est organisé
 
-| Dossier         | Contenu                                                                          |
-| --------------- | -------------------------------------------------------------------------------- |
-| `data/`         | La base ouverte : `socs.json`, `cases.json`, `sources.json` (+ JSON Schema).     |
-| `packages/core` | Schémas Zod, moteur de règles pur, validation. Réutilisable (futur scanner CLI). |
-| `apps/web`      | Le site Astro : vérificateur, fiches SoC et modèles, recherche, guide.           |
+| Dossier         | Contenu                                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `data/`         | La base ouverte : `socs.json`, `cases.json`, `sources.json` (+ JSON Schema).                                                  |
+| `packages/core` | Schémas Zod, moteur de règles pur, validation. Réutilisable (futur scanner CLI).                                              |
+| `packages/mcp`  | Connecteur MCP en lecture seule (`check_box`, `get_soc`, `get_model`, `search`), voir [packages/mcp](packages/mcp/README.md). |
+| `apps/web`      | Le site Astro : vérificateur, fiches SoC et modèles, recherche, guide.                                                        |
 
 ## Participer
 
