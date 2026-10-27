@@ -97,7 +97,8 @@ const isCurrent = (n: { href: string; home?: boolean }) =>
         <p>{t.footer.note}</p>
         <p>
           <a href={`${routePath(lang, "about")}#correction`}>{t.footer.correction}</a> ·{" "}
-          <a href={routePath(lang, "mcp")}>{t.nav.mcp}</a> · {t.footer.credit}
+          <a href={routePath(lang, "mcp")}>{t.nav.mcp}</a> ·{" "}
+          <a href={`https://nm-labs.dev/${lang}/`} rel="noopener">{t.footer.credit}</a>
         </p>
       </div>
     </footer>
