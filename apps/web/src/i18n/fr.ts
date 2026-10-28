@@ -26,6 +26,10 @@ export const fr = {
       "Renseignez ce que le vendeur annonce. Le site compare avec les limites matérielles connues du SoC et avec les écarts déjà signalés.",
     caveat:
       "Ce site ne prouve jamais qu'une box est authentique : il détecte des impossibilités et des cas signalés.",
+    whyTitle: "Pourquoi vérifier ?",
+    why: "Sur le marché des TV box Android, les caractéristiques annoncées (RAM, stockage, processeur) ne correspondent pas toujours au matériel réel : une box annoncée avec 4 Go de RAM peut embarquer un processeur limité à 2 Go, par exemple. Avant d'acheter, ou si un doute vous vient après coup, comparez ce qui est annoncé avec ce que le matériel permet.",
+    whyGuide: "Comment vérifier soi-même",
+    whyCases: "Les modèles déjà signalés",
   },
   form: {
     model: "Nom du modèle",

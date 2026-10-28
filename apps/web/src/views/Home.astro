@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Checker from "../components/Checker";
 import { db } from "../lib/db";
-import { useT } from "../i18n";
+import { routePath, useT } from "../i18n";
 import type { Lang } from "../i18n";
 import { config } from "../config";
 
@@ -27,6 +27,14 @@ const jsonLd = {
 <Base title={config.siteName} description={t.home.description} lang={lang} jsonLd={jsonLd}>
   <h1>{t.home.title}</h1>
   <p class="lead">{t.home.intro}</p>
+  <section class="card why" aria-labelledby="why-title">
+    <h2 id="why-title">{t.home.whyTitle}</h2>
+    <p>{t.home.why}</p>
+    <p class="why-links">
+      <a href={routePath(lang, "guide")}>{t.home.whyGuide}</a> ·{" "}
+      <a href={routePath(lang, "cases")}>{t.home.whyCases}</a>
+    </p>
+  </section>
   <p class="notice">{t.home.caveat}</p>
   <Checker client:load db={db} repo={config.repo} lang={lang} />
 </Base>

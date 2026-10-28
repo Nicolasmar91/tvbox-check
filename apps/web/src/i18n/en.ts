@@ -23,6 +23,10 @@ export const en: Strings = {
       "Enter what the seller advertises. The site compares it with the known hardware limits of the SoC and with discrepancies already reported.",
     caveat:
       "This site never proves that a box is genuine: it detects impossibilities and reported cases.",
+    whyTitle: "Why check?",
+    why: "On the Android TV box market, the advertised specs (RAM, storage, processor) do not always match the real hardware: a box advertised with 4 GB of RAM may use a processor limited to 2 GB, for example. Before buying, or if you doubt it afterwards, compare what is advertised with what the hardware allows.",
+    whyGuide: "How to check it yourself",
+    whyCases: "Models already reported",
   },
   form: {
     model: "Model name",
