@@ -35,7 +35,7 @@ const t = useT(lang);
             <td>
               {s.ram_max_gb ? `${s.ram_max_gb.value} ${t.fields.gb}` : t.fields.unknownValue}
               {s.ram_max_gb && (
-                <span class={`tag ${s.ram_max_gb.status}`}>{t.basis[s.ram_max_gb.basis]}</span>
+                <span class={`tag tag--after ${s.ram_max_gb.status}`}>{t.basis[s.ram_max_gb.basis]}</span>
               )}
             </td>
             <td>

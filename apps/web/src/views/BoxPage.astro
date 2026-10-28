@@ -53,8 +53,8 @@ const evidenceLabel = {
           <tr>
             <th scope="row">
               <a href={routePath(lang, "soc", v.soc)}>{socName(v.soc)}</a>
-              {v.kind === "reported" && <span class="tag">{t.boxes.reported}</span>}
-              <span class={`tag ${variantEvidence(v) === "single" ? "" : "verified"}`}>
+              {v.kind === "reported" && <span class="tag tag--after">{t.boxes.reported}</span>}
+              <span class={`tag tag--after ${variantEvidence(v) === "single" ? "" : "verified"}`}>
                 {evidenceLabel[variantEvidence(v)]}
               </span>
               {tx(lang, v, "note") && <div class="hint">{tx(lang, v, "note")}</div>}

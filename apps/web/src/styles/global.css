@@ -304,6 +304,9 @@ ul.criteria li {
   color: var(--muted);
   background: var(--bg);
 }
+.tag--after {
+  margin-left: 0.5rem;
+}
 .tag.verified {
   color: var(--plausible-fg);
   border-color: currentColor;
